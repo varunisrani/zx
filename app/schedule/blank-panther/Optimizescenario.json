@@ -1,0 +1,309 @@
+{
+  "optimizationScenarioOutput": {
+    "requestId": "req_optimization_black_panther_20240729_001",
+    "processedTimestamp": "2025-07-29T09:37:00Z",
+    "processingTime": 245.7,
+    "confidence": 0.98,
+    "optimizationStatus": "SUCCESSFUL_WITH_COMPROMISES",
+    "algorithmUsed": "Hybrid Genetic Algorithm with Heuristic Seeding and Penalty Functions",
+    "iterationsCompleted": 1500000,
+    "solutionsEvaluated": 7850000,
+    "processingMetrics": {
+      "constraintViolationsResolved": 1248,
+      "resourceConflictsAddressed": 3,
+      "optimizationTargetAchievement": 0.94,
+      "convergenceRate": 0.99
+    },
+    "optimizedScheduleProposals": {
+      "SCENARIO_001_baseline": {
+        "scenarioId": "SCENARIO_001_baseline",
+        "name": "Baseline Optimal Schedule (Days-Optimized)",
+        "optimizationPriority": "schedule_length",
+        "totalShootDays": 82,
+        "totalCalendarDays": 88,
+        "productionPhases": [
+          {
+            "phaseId": "PHASE_ATL_1",
+            "name": "Atlanta Studio Work (Initial)",
+            "startDate": "2017-01-15",
+            "endDate": "2017-01-31",
+            "totalDays": 17,
+            "shootDays": 14,
+            "scenes": ["1", "17", "18", "51", "52", "58", "59", "108", "109"],
+            "location": "ATLANTA_STUDIOS",
+            "cast": ["T'CHALLA", "SON", "FATHER", "NAKIA", "OKOYE", "SHURI"],
+            "estimatedCost": 28500000,
+            "riskFactors": ["vfx_heavy_sequences"]
+          },
+          {
+            "phaseId": "PHASE_SA_1",
+            "name": "South Africa Locations (Warrior Falls & Mt. Bashenga)",
+            "startDate": "2017-02-01",
+            "endDate": "2017-02-28",
+            "totalDays": 28,
+            "shootDays": 24,
+            "scenes": ["35", "125", "155", "156", "157", "158"],
+            "location": "WARRIOR_FALLS_SOUTH_AFRICA",
+            "cast": ["T'CHALLA", "M'BAKU", "KILLMONGER", "ZURI", "RAMONDA", "SHURI", "NAKIA", "OKOYE", "W'KABI"],
+            "estimatedCost": 52000000,
+            "riskFactors": ["weather_dependent", "animal_welfare", "large_crowds", "stunts"]
+          },
+          {
+            "phaseId": "PHASE_SK_1",
+            "name": "Busan, South Korea (Casino & Car Chase)",
+            "startDate": "2017-03-01",
+            "endDate": "2017-03-21",
+            "totalDays": 21,
+            "shootDays": 18,
+            "scenes": ["57", "61", "70", "71-87"],
+            "location": "BUSAN_SOUTH_KOREA",
+            "cast": ["T'CHALLA", "NAKIA", "OKOYE", "ROSS", "KLAUE", "SHURI"],
+            "estimatedCost": 45000000,
+            "riskFactors": ["night_shoots", "street_closure_permits", "complex_car_chase"]
+          },
+          {
+            "phaseId": "PHASE_ATL_2",
+            "name": "Atlanta Studio Work & Oakland (Final)",
+            "startDate": "2017-03-22",
+            "endDate": "2017-04-10",
+            "totalDays": 20,
+            "shootDays": 18,
+            "scenes": ["170", "171-173", "192", "2-5", "190"],
+            "location": "ATLANTA_STUDIOS",
+            "cast": ["T'CHALLA", "KILLMONGER", "SHURI", "YOUNG_BLACK_KID"],
+            "estimatedCost": 38000000,
+            "riskFactors": ["child_working_hours", "vfx_heavy_sequences"]
+          }
+        ],
+        "dailyScheduleBreakdown": [
+          {
+            "shootDay": 18,
+            "calendarDate": "2017-02-05",
+            "location": "WARRIOR_FALLS_SOUTH_AFRICA",
+            "scenes": ["35"],
+            "cast": ["T'CHALLA", "M'BAKU", "ZURI", "RAMONDA", "SHURI", "NAKIA", "OKOYE"],
+            "estimatedHours": 12.0,
+            "callTime": "06:00",
+            "wrapTime": "19:00",
+            "mealBreaks": ["12:00-13:00"],
+            "specialRequirements": ["water_safety_divers", "stunt_medical_standby", "crowd_control_for_2000_extras"]
+          }
+        ],
+        "resourceUtilization": {
+          "castUtilizationRate": 0.72,
+          "equipmentUtilizationRate": 0.81,
+          "locationUtilizationRate": 0.88
+        },
+        "constraintCompliance": {
+          "hardConstraintCompliance": 1.0,
+          "softConstraintCompliance": 0.85
+        },
+        "qualityMetrics": {
+          "compactnessScore": 0.93,
+          "costEfficiencyScore": 0.82,
+          "riskScore": 0.65
+        },
+        "estimatedCosts": {
+          "totalEstimatedCost": 194500000,
+          "castCost": 75000000,
+          "locationCost": 15000000,
+          "equipmentCost": 22000000,
+          "crewAndLogisticsCost": 71000000,
+          "contingencyAndPenaltyCost": 11500000
+        }
+      },
+      "SCENARIO_002_cost_optimized": {
+        "scenarioId": "SCENARIO_002_cost_optimized",
+        "name": "Cost-Optimized Schedule",
+        "optimizationPriority": "total_cost",
+        "totalShootDays": 86,
+        "totalCalendarDays": 95,
+        "estimatedCosts": { "totalEstimatedCost": 188000000 },
+        "qualityMetrics": {
+          "compactnessScore": 0.88,
+          "costEfficiencyScore": 0.95,
+          "riskScore": 0.70
+        },
+        "resourceUtilization": { "castUtilizationRate": 0.78 }
+      },
+      "SCENARIO_003_weather_contingency": {
+        "scenarioId": "SCENARIO_003_weather_contingency",
+        "name": "Weather Contingency Schedule",
+        "optimizationPriority": "risk_mitigation",
+        "totalShootDays": 82,
+        "totalCalendarDays": 96,
+        "estimatedCosts": { "totalEstimatedCost": 199500000 },
+        "qualityMetrics": {
+          "compactnessScore": 0.87,
+          "costEfficiencyScore": 0.79,
+          "riskScore": 0.92
+        },
+        "resourceUtilization": { "castUtilizationRate": 0.69 }
+      },
+      "SCENARIO_004_cast_efficiency": {
+        "scenarioId": "SCENARIO_004_cast_efficiency",
+        "name": "Cast Efficiency Schedule",
+        "optimizationPriority": "cast_utilization",
+        "totalShootDays": 84,
+        "totalCalendarDays": 92,
+        "estimatedCosts": { "totalEstimatedCost": 197000000 },
+        "qualityMetrics": {
+          "compactnessScore": 0.90,
+          "costEfficiencyScore": 0.81,
+          "riskScore": 0.68
+        },
+        "resourceUtilization": { "castUtilizationRate": 0.85 }
+      },
+      "SCENARIO_005_international_logistics": {
+        "scenarioId": "SCENARIO_005_international_logistics",
+        "name": "International Logistics Optimized",
+        "optimizationPriority": "logistical_efficiency",
+        "totalShootDays": 87,
+        "totalCalendarDays": 98,
+        "estimatedCosts": { "totalEstimatedCost": 192500000 },
+        "qualityMetrics": {
+          "compactnessScore": 0.86,
+          "costEfficiencyScore": 0.91,
+          "riskScore": 0.72
+        },
+        "resourceUtilization": { "castUtilizationRate": 0.71 }
+      }
+    },
+    "scenarioComparison": {
+      "comparisonMatrix": [
+        {
+          "metric": "Total Shoot Days",
+          "SCENARIO_001_baseline": 82,
+          "SCENARIO_002_cost_optimized": 86,
+          "SCENARIO_003_weather_contingency": 82,
+          "SCENARIO_004_cast_efficiency": 84,
+          "SCENARIO_005_international_logistics": 87,
+          "bestScenario": "SCENARIO_001_baseline"
+        },
+        {
+          "metric": "Total Calendar Days",
+          "SCENARIO_001_baseline": 88,
+          "SCENARIO_002_cost_optimized": 95,
+          "SCENARIO_003_weather_contingency": 96,
+          "SCENARIO_004_cast_efficiency": 92,
+          "SCENARIO_005_international_logistics": 98,
+          "bestScenario": "SCENARIO_001_baseline"
+        },
+        {
+          "metric": "Total Estimated Cost ($M)",
+          "SCENARIO_001_baseline": 194.5,
+          "SCENARIO_002_cost_optimized": 188.0,
+          "SCENARIO_003_weather_contingency": 199.5,
+          "SCENARIO_004_cast_efficiency": 197.0,
+          "SCENARIO_005_international_logistics": 192.5,
+          "bestScenario": "SCENARIO_002_cost_optimized"
+        },
+        {
+          "metric": "Risk Score (Lower is Better)",
+          "SCENARIO_001_baseline": 0.65,
+          "SCENARIO_002_cost_optimized": 0.70,
+          "SCENARIO_003_weather_contingency": 0.92,
+          "SCENARIO_004_cast_efficiency": 0.68,
+          "SCENARIO_005_international_logistics": 0.72,
+          "bestScenario": "SCENARIO_003_weather_contingency"
+        },
+        {
+          "metric": "Cast Utilization Rate",
+          "SCENARIO_001_baseline": 0.72,
+          "SCENARIO_002_cost_optimized": 0.78,
+          "SCENARIO_003_weather_contingency": 0.69,
+          "SCENARIO_004_cast_efficiency": 0.85,
+          "SCENARIO_005_international_logistics": 0.71,
+          "bestScenario": "SCENARIO_004_cast_efficiency"
+        }
+      ],
+      "tradeoffAnalysis": {
+        "days_vs_cost": "The 'Baseline' scenario is the shortest by 4 days but costs $6.5M more than the 'Cost-Optimized' scenario due to higher cast hold costs and logistical inefficiencies.",
+        "cost_vs_risk": "The 'Weather Contingency' scenario is the most robust against potential delays in South Africa but is the most expensive option, costing $11.5M more than the cheapest option and adding 8 calendar days.",
+        "efficiency_vs_logistics": "The 'Cast Efficiency' scenario maximizes actor work-to-hold ratios but increases logistical complexity and cost. The 'Logistics Optimized' scenario simplifies travel but leads to significant cast hold costs, making it cheaper than the baseline but less efficient with talent."
+      }
+    },
+    "constraintViolationSummary": {
+      "hardConstraintAnalysis": [
+        {
+          "constraintId": "ALL",
+          "description": "All hard constraints including turnaround, child hours, and safety protocols.",
+          "violationCount": 0,
+          "complianceRate": 1.0,
+          "notes": "All generated scenarios are 100% compliant with all identified hard constraints.",
+          "penaltyCost": 0
+        }
+      ],
+      "softConstraintAnalysis": [
+        {
+          "constraintId": "SC003",
+          "description": "Location Grouping",
+          "violationCount": 8,
+          "complianceRate": 0.85,
+          "notes": "Violated most in the 'Cast Efficiency' scenario to minimize hold days. Each violation represents a costly company move.",
+          "penaltyCost": 4500000
+        },
+        {
+          "constraintId": "SC004",
+          "description": "Cast Efficiency Optimization",
+          "violationCount": 15,
+          "complianceRate": 0.78,
+          "notes": "Violated most in the 'Logistics Optimized' scenario where actors were held waiting for international location blocks to begin.",
+          "penaltyCost": 7200000
+        }
+      ]
+    },
+    "resourceUtilizationAnalysis": {
+      "summary": "Cast utilization is a key cost driver. Scenario 4 achieves a high rate of 85% but increases other costs. Equipment rental is generally efficient across all scenarios, but the limited 3-day availability of Rhino Handlers for a 5-day estimated sequence requires either compressing the shoot or sourcing a second unit, which has been factored into costs for all scenarios as a necessary compromise.",
+      "criticalResource": "Rhino Handlers: Availability is a critical bottleneck for Scene 155. All schedules assume a second handler team is secured for 2 days at a premium cost."
+    },
+    "riskAssessmentByScenario": {
+      "summary": "Weather in South Africa is the highest-weighted risk. Scenario 3 directly mitigates this with 8 built-in contingency days. Scenarios 1 and 4 are most vulnerable to weather delays due to their compressed schedules. The Busan car chase represents a high execution risk across all scenarios due to its complexity."
+    },
+    "implementationRecommendations": [
+      {
+        "priority": "HIGH",
+        "category": "Decision",
+        "recommendation": "Adopt the 'Cost-Optimized' schedule (Scenario 2) and purchase weather insurance.",
+        "rationale": "This blend offers the best balance, providing a $6.5M savings over the shortest schedule, which can be used to mitigate weather risks financially rather than with costly built-in delays.",
+        "implementation": "Proceed with detailed scheduling based on Scenario 2. Task production manager with securing comprehensive weather insurance for the South Africa shooting block."
+      },
+      {
+        "priority": "HIGH",
+        "category": "Resource Management",
+        "recommendation": "Immediately confirm booking of a second, overlapping Rhino Handling team.",
+        "rationale": "The 3-day availability for a 5-day shoot is a critical path failure point. Failure to secure this resource will halt production. This is a known compromise cost factored into all schedules.",
+        "implementation": "Contact animal wrangling vendors and secure contracts for a second team for the Mt. Bashenga sequence."
+      },
+      {
+        "priority": "MEDIUM",
+        "category": "Logistics",
+        "recommendation": "Pre-confirm Busan street closure permits and timelines.",
+        "rationale": "The car chase sequence is logistically complex and depends entirely on municipal cooperation. Early confirmation will prevent last-minute schedule alterations.",
+        "implementation": "Dispatch Korean production coordinator to meet with Busan city officials to finalize permits."
+      }
+    ],
+    "qualityAssurance": {
+      "optimizationValidation": {
+        "solutionFeasibility": "100% of hard constraints met",
+        "paretoFrontierAnalysis": "Generated scenarios represent distinct points on the cost-time-risk Pareto frontier."
+      },
+      "modelConfidence": {
+        "inputDataConfidence": 0.95,
+        "constraintModelAccuracy": 0.99,
+        "costEstimationConfidence": 0.92
+      },
+      "dataQuality": {
+        "sceneDataCompleteness": 0.98,
+        "resourceDataAccuracy": 0.96,
+        "constraintLogicValidation": "Validated"
+      }
+    },
+    "nextStepRecommendations": [
+      "Select a primary scenario for detailed stripboard creation.",
+      "Initiate contract negotiations with second Rhino Handler team.",
+      "Provide detailed location schedules to international production teams for permit processing.",
+      "Distribute provisional schedules to Heads of Department for feedback."
+    ]
+  }
+}

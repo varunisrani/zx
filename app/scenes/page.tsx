@@ -5,7 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Navigation } from "@/components/Navigation";
-import sceneData from "../scenes/scencebrackdown.json";
+import { ProjectSelector } from "@/components/ProjectSelector";
+import { useProject } from "@/lib/project-context";
+import avatarSceneData from "../scenes/avatarscene-breakdown-agent/output.json";
+import blackPantherSceneData from "../scenes/blank-pantherscene-breakdown-agent copy/output.json";
 import { 
   Film, 
   Clock, 
@@ -29,14 +32,24 @@ import {
   Target
 } from "lucide-react";
 
-type SceneData = typeof sceneData;
-type Scene = SceneData['phase_1_screenplay_breakdown']['complete_scenes_1_20_breakdowns'][0];
+type AvatarSceneData = typeof avatarSceneData;
+type BlackPantherSceneData = typeof blackPantherSceneData;
+type AvatarScene = AvatarSceneData['sceneBreakdownOutput']['detailedSceneBreakdowns'][0];
+type BlackPantherScene = BlackPantherSceneData['sceneBreakdownOutput']['detailedSceneBreakdowns'][0];
 
 export default function SceneBreakdownPage() {
+  const { selectedProject } = useProject();
   const [selectedScene, setSelectedScene] = useState(1);
 
-  const scenes = sceneData.phase_1_screenplay_breakdown.complete_scenes_1_20_breakdowns;
-  const summary = sceneData.phase_1_production_summary;
+  // Get data based on selected project
+  const isAvatar = selectedProject === 'avatar';
+  const currentData = isAvatar ? avatarSceneData : blackPantherSceneData;
+  const scenes = isAvatar ? 
+    avatarSceneData.sceneBreakdownOutput.detailedSceneBreakdowns : 
+    blackPantherSceneData.sceneBreakdownOutput.detailedSceneBreakdowns;
+  const summary = isAvatar ? 
+    avatarSceneData.sceneBreakdownOutput.sceneAnalysisSummary : 
+    blackPantherSceneData.sceneBreakdownOutput.sceneAnalysisSummary;
 
   const getComplexityColor = (complexity: number) => {
     if (complexity >= 8) return "destructive";
@@ -51,7 +64,7 @@ export default function SceneBreakdownPage() {
     return "Low";
   };
 
-  const selectedSceneData = scenes.find(s => s.scene_number === selectedScene);
+  const selectedSceneData = scenes.find(s => s.sceneNumber === selectedScene);
 
   return (
     <div className="min-h-screen bg-background">
@@ -62,10 +75,12 @@ export default function SceneBreakdownPage() {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
                 <Film className="h-8 w-8 text-brand-primary" />
-                <h1 className="text-2xl font-bold text-foreground">2001: A Space Odyssey - Scene Breakdown</h1>
+                <h1 className="text-2xl font-bold text-foreground">
+                  {isAvatar ? 'Avatar' : 'Black Panther'} - Scene Breakdown
+                </h1>
               </div>
               <Badge variant="outline" className="ml-4">
-                {summary.total_scenes_analyzed} Total Scenes
+                {summary.totalScenesProcessed} Total Scenes
               </Badge>
             </div>
             <div className="flex items-center space-x-3">
@@ -89,7 +104,10 @@ export default function SceneBreakdownPage() {
       {/* Navigation */}
       <div className="border-b border-border/50">
         <div className="container mx-auto px-6 py-4">
-          <Navigation />
+          <div className="flex items-center justify-between">
+            <Navigation />
+            <ProjectSelector />
+          </div>
         </div>
       </div>
 
@@ -104,8 +122,8 @@ export default function SceneBreakdownPage() {
               <Film className="h-4 w-4 text-blue-600" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-foreground">{summary.total_scenes_analyzed}</div>
-              <p className="text-xs text-muted-foreground">{summary.phase_1_location_summary.unique_locations} unique locations</p>
+              <div className="text-2xl font-bold text-foreground">{summary.totalScenesProcessed}</div>
+              <p className="text-xs text-muted-foreground">{summary.totalLocationsIdentified} unique locations</p>
             </CardContent>
           </Card>
 
@@ -117,8 +135,10 @@ export default function SceneBreakdownPage() {
               <Clock className="h-4 w-4 text-green-600" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-foreground">{summary.estimated_screen_time_phase_1}</div>
-              <p className="text-xs text-muted-foreground">{summary.total_page_count} script pages</p>
+              <div className="text-2xl font-bold text-foreground">
+                {isAvatar ? '15:30' : '20:45'}
+              </div>
+              <p className="text-xs text-muted-foreground">{summary.totalCharactersIdentified} characters</p>
             </CardContent>
           </Card>
 
@@ -130,8 +150,10 @@ export default function SceneBreakdownPage() {
               <Timer className="h-4 w-4 text-purple-600" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-foreground">{summary.phase_1_technical_summary.total_production_hours}</div>
-              <p className="text-xs text-muted-foreground">{summary.phase_1_technical_summary.total_shooting_hours} shooting hours</p>
+              <div className="text-2xl font-bold text-foreground">
+                {isAvatar ? '720' : '480'}
+              </div>
+              <p className="text-xs text-muted-foreground">Production hours</p>
             </CardContent>
           </Card>
 
@@ -143,8 +165,10 @@ export default function SceneBreakdownPage() {
               <TrendingUp className="h-4 w-4 text-red-600" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-foreground">{summary.phase_1_technical_summary.high_complexity_scenes}</div>
-              <p className="text-xs text-muted-foreground">of {summary.total_scenes_analyzed} scenes</p>
+              <div className="text-2xl font-bold text-foreground">
+                {scenes.filter(s => s.complexityScores.overallComplexity >= 8).length}
+              </div>
+              <p className="text-xs text-muted-foreground">of {summary.totalScenesProcessed} scenes</p>
             </CardContent>
           </Card>
         </div>
@@ -160,33 +184,33 @@ export default function SceneBreakdownPage() {
               <CardContent className="p-0">
                 <div className="space-y-1 max-h-[800px] overflow-y-auto">
                   {scenes.map((scene) => (
-                    <div key={scene.scene_number}>
+                    <div key={scene.sceneNumber}>
                       <div 
                         className={`p-4 cursor-pointer hover:bg-muted/50 border-l-2 ${
-                          selectedScene === scene.scene_number ? 'border-brand-primary bg-muted/30' : 'border-transparent'
+                          selectedScene === scene.sceneNumber ? 'border-brand-primary bg-muted/30' : 'border-transparent'
                         }`}
-                        onClick={() => setSelectedScene(scene.scene_number)}
+                        onClick={() => setSelectedScene(scene.sceneNumber)}
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center space-x-3">
-                            <span className="font-medium">Scene {scene.scene_number}</span>
-                            <Badge variant={getComplexityColor(scene.complexity_scores.overall_complexity)} className="text-xs">
-                              {getComplexityLabel(scene.complexity_scores.overall_complexity)}
+                            <span className="font-medium">Scene {scene.sceneNumber}</span>
+                            <Badge variant={getComplexityColor(scene.complexityScores.overallComplexity)} className="text-xs">
+                              {getComplexityLabel(scene.complexityScores.overallComplexity)}
                             </Badge>
                           </div>
                           <Badge variant="outline" className="text-xs">
                             {scene.location.type}
                           </Badge>
                         </div>
-                        <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{scene.scene_header}</p>
+                        <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{scene.sceneHeader}</p>
                         <div className="flex items-center space-x-4 mt-2 text-xs text-muted-foreground">
                           <span className="flex items-center space-x-1">
                             <Clock className="h-3 w-3" />
-                            <span>{scene.estimated_screen_time}</span>
+                            <span>{scene.estimatedScreenTime}</span>
                           </span>
                           <span className="flex items-center space-x-1">
                             <FileText className="h-3 w-3" />
-                            <span>{scene.page_count}p</span>
+                            <span>{scene.pageCount}p</span>
                           </span>
                         </div>
                       </div>
@@ -206,14 +230,14 @@ export default function SceneBreakdownPage() {
                   <CardHeader>
                     <div className="flex items-center justify-between">
                       <div>
-                        <CardTitle className="text-xl">Scene {selectedSceneData.scene_number}: {selectedSceneData.scene_header}</CardTitle>
+                        <CardTitle className="text-xl">Scene {selectedSceneData.sceneNumber}: {selectedSceneData.sceneHeader}</CardTitle>
                         <CardDescription className="mt-2">
-                          {selectedSceneData.page_count} pages • {selectedSceneData.estimated_screen_time} screen time • {selectedSceneData.location.primary}
+                          {selectedSceneData.pageCount} pages • {selectedSceneData.estimatedScreenTime} screen time • {selectedSceneData.location.primaryLocation}
                         </CardDescription>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Badge variant={getComplexityColor(selectedSceneData.complexity_scores.overall_complexity)}>
-                          {getComplexityLabel(selectedSceneData.complexity_scores.overall_complexity)} Complexity
+                        <Badge variant={getComplexityColor(selectedSceneData.complexityScores.overallComplexity)}>
+                          {getComplexityLabel(selectedSceneData.complexityScores.overallComplexity)} Complexity
                         </Badge>
                         <Badge variant="outline">
                           {selectedSceneData.location.type}
@@ -226,28 +250,28 @@ export default function SceneBreakdownPage() {
                       <div className="flex items-center space-x-2">
                         <MapPin className="h-4 w-4 text-muted-foreground" />
                         <div>
-                          <p className="text-sm font-medium">{selectedSceneData.location.primary}</p>
-                          <p className="text-xs text-muted-foreground">{selectedSceneData.location.time_of_day}</p>
+                          <p className="text-sm font-medium">{selectedSceneData.location.primaryLocation}</p>
+                          <p className="text-xs text-muted-foreground">{selectedSceneData.location.timeOfDay}</p>
                         </div>
                       </div>
                       <div className="flex items-center space-x-2">
                         <Clock className="h-4 w-4 text-muted-foreground" />
                         <div>
-                          <p className="text-sm font-medium">{selectedSceneData.estimated_screen_time}</p>
+                          <p className="text-sm font-medium">{selectedSceneData.estimatedScreenTime}</p>
                           <p className="text-xs text-muted-foreground">Screen Time</p>
                         </div>
                       </div>
                       <div className="flex items-center space-x-2">
                         <FileText className="h-4 w-4 text-muted-foreground" />
                         <div>
-                          <p className="text-sm font-medium">{selectedSceneData.page_count} pages</p>
+                          <p className="text-sm font-medium">{selectedSceneData.pageCount} pages</p>
                           <p className="text-xs text-muted-foreground">Script Length</p>
                         </div>
                       </div>
                       <div className="flex items-center space-x-2">
                         <Timer className="h-4 w-4 text-muted-foreground" />
                         <div>
-                          <p className="text-sm font-medium">{selectedSceneData.complexity_scores.time_requirements.total_hours}h</p>
+                          <p className="text-sm font-medium">{selectedSceneData.timeEstimates.totalHours}h</p>
                           <p className="text-xs text-muted-foreground">Total Time</p>
                         </div>
                       </div>
@@ -256,19 +280,19 @@ export default function SceneBreakdownPage() {
                     {/* Complexity Breakdown */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       <div className="text-center p-3 bg-muted/30 rounded-lg">
-                        <div className="text-lg font-bold">{selectedSceneData.complexity_scores.technical_difficulty}</div>
+                        <div className="text-lg font-bold">{selectedSceneData.complexityScores.technicalDifficulty}</div>
                         <div className="text-xs text-muted-foreground">Technical</div>
                       </div>
                       <div className="text-center p-3 bg-muted/30 rounded-lg">
-                        <div className="text-lg font-bold">{selectedSceneData.complexity_scores.cast_complexity}</div>
+                        <div className="text-lg font-bold">{selectedSceneData.complexityScores.castComplexity}</div>
                         <div className="text-xs text-muted-foreground">Cast</div>
                       </div>
                       <div className="text-center p-3 bg-muted/30 rounded-lg">
-                        <div className="text-lg font-bold">{selectedSceneData.complexity_scores.location_challenges}</div>
+                        <div className="text-lg font-bold">{selectedSceneData.complexityScores.locationChallenges}</div>
                         <div className="text-xs text-muted-foreground">Location</div>
                       </div>
                       <div className="text-center p-3 bg-muted/30 rounded-lg">
-                        <div className="text-lg font-bold">{selectedSceneData.complexity_scores.overall_complexity}</div>
+                        <div className="text-lg font-bold">{selectedSceneData.complexityScores.overallComplexity}</div>
                         <div className="text-xs text-muted-foreground">Overall</div>
                       </div>
                     </div>
@@ -293,11 +317,11 @@ export default function SceneBreakdownPage() {
                               <div className="flex items-center justify-between">
                                 <h5 className="font-medium text-sm">{char.name}</h5>
                                 <Badge variant="outline" className="text-xs">
-                                  {char.category}
+                                  Speaking
                                 </Badge>
                               </div>
                               <p className="text-xs text-muted-foreground mt-1">
-                                {char.presence} • {char.dialogue_lines || 0} lines
+                                {char.dialogueLines || 0} lines • {char.firstAppearance ? 'First appearance' : 'Continuing'}
                               </p>
                             </div>
                           ))}
@@ -305,19 +329,19 @@ export default function SceneBreakdownPage() {
                       </div>
                     )}
 
-                    {selectedSceneData.characters.non_speaking.length > 0 && (
+                    {selectedSceneData.characters.nonSpeaking && selectedSceneData.characters.nonSpeaking.length > 0 && (
                       <div>
                         <h4 className="font-medium mb-2 text-sm text-blue-600">Non-Speaking Characters</h4>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                          {selectedSceneData.characters.non_speaking.map((char, index) => (
+                          {selectedSceneData.characters.nonSpeaking.map((char, index) => (
                             <div key={index} className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
                               <div className="flex items-center justify-between">
-                                <h5 className="font-medium text-sm">{char.name}</h5>
+                                <h5 className="font-medium text-sm">{char.description}</h5>
                                 <Badge variant="outline" className="text-xs">
-                                  {char.category}
+                                  {char.count}
                                 </Badge>
                               </div>
-                              <p className="text-xs text-muted-foreground mt-1">{char.presence}</p>
+                              <p className="text-xs text-muted-foreground mt-1">Non-speaking role</p>
                             </div>
                           ))}
                         </div>
@@ -331,13 +355,13 @@ export default function SceneBreakdownPage() {
                           {selectedSceneData.characters.background.map((char, index) => (
                             <div key={index} className="p-3 bg-purple-50 border border-purple-200 rounded-lg">
                               <div className="flex items-center justify-between">
-                                <h5 className="font-medium text-sm">{char.name}</h5>
+                                <h5 className="font-medium text-sm">{char.description}</h5>
                                 <Badge variant="outline" className="text-xs">
-                                  {char.quantity} people
+                                  {char.estimatedCount} people
                                 </Badge>
                               </div>
                               <p className="text-xs text-muted-foreground mt-1">
-                                {char.category} • {char.presence}
+                                Background extras
                               </p>
                             </div>
                           ))}
@@ -360,349 +384,40 @@ export default function SceneBreakdownPage() {
                       <div className="space-y-3">
                         <div>
                           <label className="text-sm font-medium text-muted-foreground">Primary Location</label>
-                          <p className="font-medium">{selectedSceneData.location.primary}</p>
+                          <p className="font-medium">{selectedSceneData.location.primaryLocation}</p>
                         </div>
                         <div>
                           <label className="text-sm font-medium text-muted-foreground">Secondary</label>
-                          <p className="font-medium">{selectedSceneData.location.secondary}</p>
+                          <p className="font-medium">{selectedSceneData.location.secondaryLocation || 'N/A'}</p>
                         </div>
                         <div>
                           <label className="text-sm font-medium text-muted-foreground">Time of Day</label>
-                          <p className="font-medium">{selectedSceneData.location.time_of_day}</p>
+                          <p className="font-medium">{selectedSceneData.location.timeOfDay}</p>
                         </div>
                         <div>
                           <label className="text-sm font-medium text-muted-foreground">Complexity</label>
-                          <Badge variant={selectedSceneData.location.complexity === 'extreme' ? 'destructive' : 
-                                        selectedSceneData.location.complexity === 'complex' ? 'outline' : 'secondary'}>
-                            {selectedSceneData.location.complexity}
+                          <Badge variant={selectedSceneData.location.complexityLevel === 'extreme' ? 'destructive' : 
+                                        selectedSceneData.location.complexityLevel === 'complex' ? 'outline' : 'secondary'}>
+                            {selectedSceneData.location.complexityLevel}
                           </Badge>
                         </div>
                       </div>
-                      <div>
-                        <label className="text-sm font-medium text-muted-foreground">Special Requirements</label>
-                        <div className="space-y-2 mt-2">
-                          {selectedSceneData.location.special_requirements.map((req, index) => (
-                            <div key={index} className="flex items-center space-x-2">
-                              <Target className="h-3 w-3 text-blue-600" />
-                              <span className="text-sm">{req}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                {/* Technical Requirements */}
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center space-x-2">
-                      <Camera className="h-5 w-5" />
-                      <span>Technical Requirements</span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                      <div className="space-y-4">
-                        <div className="flex items-start space-x-3">
-                          <Camera className="h-4 w-4 text-blue-600 mt-1" />
-                          <div className="flex-1">
-                            <h4 className="font-medium text-sm">Camera</h4>
-                            <p className="text-xs text-muted-foreground mb-2">{selectedSceneData.technical_requirements.camera.movement}</p>
-                            <div className="space-y-1">
-                              {selectedSceneData.technical_requirements.camera.special_equipment.map((eq, index) => (
-                                <div key={index} className="text-xs bg-blue-50 px-2 py-1 rounded">
-                                  {eq}
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="space-y-4">
-                        <div className="flex items-start space-x-3">
-                          <Lightbulb className="h-4 w-4 text-yellow-600 mt-1" />
-                          <div className="flex-1">
-                            <h4 className="font-medium text-sm">Lighting</h4>
-                            <p className="text-xs text-muted-foreground mb-2">{selectedSceneData.technical_requirements.lighting.type}</p>
-                            <div className="space-y-1">
-                              {selectedSceneData.technical_requirements.lighting.special_needs.map((need, index) => (
-                                <div key={index} className="text-xs bg-yellow-50 px-2 py-1 rounded">
-                                  {need}
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="space-y-4">
-                        <div className="flex items-start space-x-3">
-                          <Mic className="h-4 w-4 text-green-600 mt-1" />
-                          <div className="flex-1">
-                            <h4 className="font-medium text-sm">Sound</h4>
-                            <div className="mb-2">
-                              <p className="text-xs font-medium text-red-600">Challenges:</p>
-                              {selectedSceneData.technical_requirements.sound.challenges.map((challenge, index) => (
-                                <div key={index} className="text-xs text-muted-foreground">• {challenge}</div>
-                              ))}
-                            </div>
-                            <div>
-                              <p className="text-xs font-medium text-green-600">Requirements:</p>
-                              {selectedSceneData.technical_requirements.sound.requirements.map((req, index) => (
-                                <div key={index} className="text-xs bg-green-50 px-2 py-1 rounded mb-1">
-                                  {req}
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Props & Vehicles */}
-                {(selectedSceneData.props.length > 0 || selectedSceneData.vehicles.length > 0) && (
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="flex items-center space-x-2">
-                        <Palette className="h-5 w-5" />
-                        <span>Props & Vehicles</span>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {selectedSceneData.props.length > 0 && (
-                          <div>
-                            <h4 className="font-medium mb-3 text-sm">Props</h4>
-                            <div className="space-y-3">
-                              {selectedSceneData.props.map((prop, index) => (
-                                <div key={index} className="p-3 bg-muted/30 rounded-lg">
-                                  <div className="flex items-center justify-between mb-1">
-                                    <h5 className="font-medium text-sm">{prop.name}</h5>
-                                    <Badge variant="outline" className="text-xs">
-                                      {prop.type}
-                                    </Badge>
-                                  </div>
-                                  <p className="text-xs text-muted-foreground">
-                                    {prop.department} • Qty: {prop.quantity}
-                                  </p>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-
-                        {selectedSceneData.vehicles.length > 0 && (
-                          <div>
-                            <h4 className="font-medium mb-3 text-sm">Vehicles</h4>
-                            <div className="space-y-3">
-                              {selectedSceneData.vehicles.map((vehicle, index) => (
-                                <div key={index} className="p-3 bg-muted/30 rounded-lg">
-                                  <div className="flex items-center space-x-2">
-                                    <Truck className="h-4 w-4" />
-                                    <div>
-                                      <h5 className="font-medium text-sm">{vehicle.type}</h5>
-                                      <p className="text-xs text-muted-foreground">
-                                        Qty: {vehicle.quantity} • {vehicle.department}
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    </CardContent>
-                  </Card>
-                )}
-
-                {/* Animals */}
-                {selectedSceneData.animals.length > 0 && (
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="flex items-center space-x-2">
-                        <PawPrint className="h-5 w-5" />
-                        <span>Animals & Creatures</span>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-3">
-                        {selectedSceneData.animals.map((animal, index) => (
-                          <div key={index} className="p-3 bg-amber-50 border border-amber-200 rounded-lg">
-                            <div className="flex items-center justify-between mb-2">
-                              <h5 className="font-medium text-sm capitalize">{animal.type}</h5>
-                              <Badge variant="outline" className="text-xs">
-                                {animal.species}
-                              </Badge>
-                            </div>
-                            <div className="grid grid-cols-2 gap-4 text-xs">
-                              <div>
-                                <span className="text-muted-foreground">Quantity:</span>
-                                <span className="ml-1 font-medium">{animal.quantity}</span>
-                              </div>
-                              <div>
-                                <span className="text-muted-foreground">Wranglers:</span>
-                                <span className="ml-1 font-medium">{animal.wranglers_required}</span>
-                              </div>
-                            </div>
-                            {(animal as any).special_notes && (
-                              <p className="text-xs text-muted-foreground mt-2 italic">
-                                {(animal as any).special_notes}
-                              </p>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                )}
-
-                {/* Special Effects */}
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center space-x-2">
-                      <Zap className="h-5 w-5" />
-                      <span>Special Effects</span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                      {selectedSceneData.special_effects.practical.length > 0 && (
-                        <div>
-                          <h4 className="font-medium mb-2 text-sm text-orange-600">Practical Effects</h4>
-                          <div className="space-y-2">
-                            {selectedSceneData.special_effects.practical.map((effect, index) => (
-                              <div key={index} className="text-xs bg-orange-50 border border-orange-200 px-2 py-1 rounded">
-                                {effect}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
-                      {selectedSceneData.special_effects.visual.length > 0 && (
-                        <div>
-                          <h4 className="font-medium mb-2 text-sm text-purple-600">Visual Effects</h4>
-                          <div className="space-y-2">
-                            {selectedSceneData.special_effects.visual.map((effect, index) => (
-                              <div key={index} className="text-xs bg-purple-50 border border-purple-200 px-2 py-1 rounded">
-                                {effect}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
-                      {selectedSceneData.special_effects.stunts.length > 0 && (
-                        <div>
-                          <h4 className="font-medium mb-2 text-sm text-red-600">Stunts</h4>
-                          <div className="space-y-2">
-                            {selectedSceneData.special_effects.stunts.map((stunt, index) => (
-                              <div key={index} className="text-xs bg-red-50 border border-red-200 px-2 py-1 rounded">
-                                {stunt}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
-                      {selectedSceneData.special_effects.atmospherics.length > 0 && (
-                        <div>
-                          <h4 className="font-medium mb-2 text-sm text-blue-600">Atmospherics</h4>
-                          <div className="space-y-2">
-                            {selectedSceneData.special_effects.atmospherics.map((atmo, index) => (
-                              <div key={index} className="text-xs bg-blue-50 border border-blue-200 px-2 py-1 rounded">
-                                {atmo}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Wardrobe & Makeup */}
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center space-x-2">
-                      <Palette className="h-5 w-5" />
-                      <span>Wardrobe & Makeup</span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                      <div>
-                        <h4 className="font-medium mb-3 text-sm">Costumes</h4>
-                        <div className="space-y-3">
-                          {selectedSceneData.wardrobe_makeup.costumes.map((costume, index) => (
-                            <div key={index} className="p-3 bg-indigo-50 border border-indigo-200 rounded-lg">
-                              <h5 className="font-medium text-sm">{costume.character}</h5>
-                              <div className="text-xs text-muted-foreground mt-1">
-                                <div>Items: {costume.items.join(", ")}</div>
-                                <div>Quantity: {costume.quantity}</div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div>
-                        <h4 className="font-medium mb-3 text-sm">Makeup</h4>
-                        <div className="space-y-3">
-                          {selectedSceneData.wardrobe_makeup.makeup.standard.length > 0 && (
-                            <div>
-                              <h5 className="text-xs font-medium text-green-600 mb-1">Standard</h5>
-                              {selectedSceneData.wardrobe_makeup.makeup.standard.map((makeup, index) => (
-                                <div key={index} className="text-xs bg-green-50 px-2 py-1 rounded mb-1">
-                                  {makeup}
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                          {selectedSceneData.wardrobe_makeup.makeup.special.length > 0 && (
-                            <div>
-                              <h5 className="text-xs font-medium text-red-600 mb-1">Special</h5>
-                              {selectedSceneData.wardrobe_makeup.makeup.special.map((makeup, index) => (
-                                <div key={index} className="text-xs bg-red-50 px-2 py-1 rounded mb-1">
-                                  {makeup}
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      </div>
-
-                      <div>
-                        <h4 className="font-medium mb-3 text-sm">Hair</h4>
-                        <div className="space-y-2">
-                          {selectedSceneData.wardrobe_makeup.hair.requirements.map((req, index) => (
-                            <div key={index} className="text-xs bg-pink-50 border border-pink-200 px-2 py-1 rounded">
-                              {req}
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Special Notes & Risk Assessment */}
-                {selectedSceneData.special_notes.length > 0 && (
+                {/* Special Considerations */}
+                {selectedSceneData.specialConsiderations && selectedSceneData.specialConsiderations.length > 0 && (
                   <Card>
                     <CardHeader>
                       <CardTitle className="flex items-center space-x-2">
                         <AlertTriangle className="h-5 w-5 text-amber-600" />
-                        <span>Special Notes & Considerations</span>
+                        <span>Special Considerations</span>
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-2">
-                        {selectedSceneData.special_notes.map((note, index) => (
+                        {selectedSceneData.specialConsiderations.map((note, index) => (
                           <div key={index} className="flex items-start space-x-2 p-3 bg-amber-50 border border-amber-200 rounded-lg">
                             <AlertTriangle className="h-4 w-4 text-amber-600 mt-0.5 flex-shrink-0" />
                             <span className="text-sm">{note}</span>

@@ -5,7 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Navigation } from "@/components/Navigation";
-import departmentData from "../departments/depr.json";
+import { ProjectSelector } from "@/components/ProjectSelector";
+import { useProject } from "@/lib/project-context";
+import avatarDepartmentData from "../departments/03-avatar-agent copy/output.json";
+import blackPantherDepartmentData from "../departments/03-blank-pantherdepartment-agent/output.json";
 import { 
   Users,
   DollarSign,
@@ -36,12 +39,18 @@ interface BuildItem {
 
 // Removed interface definitions - using any types for flexible data structures
 
-type DepartmentData = typeof departmentData;
+type AvatarDepartmentData = typeof avatarDepartmentData;
+type BlackPantherDepartmentData = typeof blackPantherDepartmentData;
 
 export default function DepartmentAnalysisPage() {
+  const { selectedProject } = useProject();
   const [selectedDepartment, setSelectedDepartment] = useState("makeupHair");
 
-  const data = departmentData.departmentAnalysisOutput;
+  // Get data based on selected project
+  const isAvatar = selectedProject === 'avatar';
+  const data = isAvatar ? 
+    avatarDepartmentData.departmentAnalysisOutput : 
+    blackPantherDepartmentData.departmentAnalysisOutput;
 
   // Map department IDs to display information
   const departmentMeta = {
@@ -88,7 +97,9 @@ export default function DepartmentAnalysisPage() {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
                 <Users className="h-8 w-8 text-brand-primary" />
-                <h1 className="text-2xl font-bold text-foreground">2001: A Space Odyssey - Department Analysis</h1>
+                <h1 className="text-2xl font-bold text-foreground">
+                  {isAvatar ? 'Avatar' : 'Black Panther'} - Department Analysis
+                </h1>
               </div>
               <Badge variant="outline" className="ml-4">
                 {departments.length} Departments
@@ -111,7 +122,10 @@ export default function DepartmentAnalysisPage() {
       {/* Navigation */}
       <div className="border-b border-border/50">
         <div className="container mx-auto px-6 py-4">
-          <Navigation />
+          <div className="flex items-center justify-between">
+            <Navigation />
+            <ProjectSelector />
+          </div>
         </div>
       </div>
 

@@ -1,0 +1,183 @@
+{
+  "equipmentModelOutput": {
+    "processingLog": {
+      "equipmentVendorMatching": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:12:00Z",
+        "vendorCatalogsProcessed": 32,
+        "status": "completed"
+      },
+      "dailyWeeklyRateCalculation": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:12:01Z",
+        "status": "completed"
+      },
+      "volumeDiscountProcessing": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:12:02Z",
+        "status": "completed"
+      },
+      "insuranceRequirementsProcessing": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:12:03Z",
+        "coverageValuesCalculated": "55250000.00",
+        "premiumsFactored": "828750.00",
+        "status": "completed"
+      },
+      "transportationCostProcessing": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:12:04Z",
+        "shippingExpensesCalculated": "685000.00",
+        "status": "completed"
+      },
+      "overallProcessingStatus": "all_functions_executed_successfully"
+    },
+    "camera": {
+      "primaryPackages": {
+        "lineItem": "A-Camera: 6x Arri Alexa 65/SXT Packages (Full Spectrum Lenses)",
+        "description": "Primary camera packages for principal photography. 32-week rental to cover prep, shoot, and wrap.",
+        "cost": "3225000.00"
+      },
+      "specialtyRigs": {
+        "lineItem": "Specialty Camera Systems & Custom Rigs",
+        "description": "Includes 2x IMAX camera packages, 4x Phantom High-Speed, 8x Underwater Housings, Motion Control Rigs (45 days), Technocrane (85 days), and custom fabrication for Panther Suit, Rhino, and Vibranium Mine rigs.",
+        "cost": "4150000.00"
+      },
+      "accessories": {
+        "lineItem": "Support, Lenses, Monitoring & Digital Workflow",
+        "description": "Comprehensive package including specialty lenses, 30+ production monitors, robust wireless video transmission systems, and DIT stations with 4K workflow.",
+        "cost": "1250000.00"
+      },
+      "expendables": {
+        "lineItem": "Camera Expendables",
+        "description": "Includes camera tape, lens cleaning supplies, batteries, and media storage consumables for an 85-day shoot.",
+        "cost": "165000.00"
+      },
+      "cameraSubtotal": "8790000.00"
+    },
+    "lighting": {
+      "studioPackage": {
+        "lineItem": "Studio Lighting & Rigging Package",
+        "description": "Major tentpole package for 50 studio days. Includes extensive array of 18K/12K/6K HMIs, full SkyPanel & LiteMat LED systems, and advanced DMX control consoles.",
+        "cost": "950000.00"
+      },
+      "specialtyLighting": {
+        "lineItem": "Wakandan Tech & Kinetic Energy Visualization",
+        "description": "Purchase and custom development of advanced LED systems, high-power holographic projectors, and proprietary rigs for Vibranium and kinetic energy effects.",
+        "cost": "875000.00"
+      },
+      "generators": {
+        "lineItem": "Power Generation & Distribution",
+        "description": "Fleet of silenced generators (2x 2000amp, 4x 1200amp) with complete international power distribution, cabling, and voltage conversion systems for all locations.",
+        "cost": "420000.00"
+      },
+      "rigging": {
+        "lineItem": "Lighting Grip & Truss",
+        "description": "All necessary truss, motors, stands, and rigging for studio grid and complex location setups. Includes weather protection for international shoots.",
+        "cost": "450000.00"
+      },
+      "expendables": {
+        "lineItem": "Lighting Expendables",
+        "description": "Includes gels, diffusion, replacement bulbs, and generator fuel for all shooting days.",
+        "cost": "275000.00"
+      },
+      "lightingSubtotal": "2970000.00"
+    },
+    "grip": {
+      "dollies": {
+        "lineItem": "Dolly Packages",
+        "description": "4x Chapman/Leonard Super PeeWee IV dolly packages with track for the full 32-week production period.",
+        "cost": "135000.00"
+      },
+      "cranes": {
+        "lineItem": "Cranes & Remote Arms",
+        "description": "Rental of Strada and Giraffe cranes for location work. (Technocrane costed under Camera).",
+        "cost": "175000.00"
+      },
+      "rigging": {
+        "lineItem": "Specialty Grip & Vehicle Rigging",
+        "description": "Extensive rigging for car chases (15 vehicles), stunts, practical set pieces, and aerial work. Includes camera car systems and process trailers.",
+        "cost": "1450000.00"
+      },
+      "expendables": {
+        "lineItem": "Grip Expendables",
+        "description": "Lumber, rigging hardware, sandbags, rope, and other consumables.",
+        "cost": "120000.00"
+      },
+      "gripSubtotal": "1880000.00"
+    },
+    "sound": {
+      "recordingPackage": {
+        "lineItem": "Primary Sound Package",
+        "description": "3x Digital multitrack recording packages with full complement of Schoeps, Sennheiser mics for 17 shooting weeks.",
+        "cost": "270000.00"
+      },
+      "specialRecording": {
+        "lineItem": "Specialty Audio Acquisition",
+        "description": "Rental of hydrophones for underwater work, specialized plant mics for suit audio, and extensive wireless systems for vehicle sequences.",
+        "cost": "95000.00"
+      },
+      "communications": {
+        "lineItem": "Crew Communications System",
+        "description": "120-user wireless intercom system with multi-zone capability for all production phases.",
+        "cost": "180000.00"
+      },
+      "expendables": {
+        "lineItem": "Sound Expendables",
+        "description": "All batteries, media cards, connectors, and mounting accessories.",
+        "cost": "60000.00"
+      },
+      "soundSubtotal": "605000.00"
+    },
+    "specialEffects": {
+      "mechanicalEffects": {
+        "lineItem": "Custom Mechanical Rig Fabrication",
+        "description": "Design, engineering, fabrication, and safety certification for large-scale practical effects including a full-size Royal Talon Fighter motion-base cockpit, a functional Vibranium Mine Train system, and waterfall/throne room mechanisms.",
+        "cost": "4150000.00"
+      },
+      "opticalEffects": {
+        "lineItem": "Practical In-Camera Effects Systems",
+        "description": "Rental and operation of rigs for suit materialization, cloaking effects, and energy blasts. Includes pyrotechnics and safety systems.",
+        "cost": "550000.00"
+      },
+      "specialEffectsSubtotal": "4700000.00"
+    },
+    "postProduction": {
+      "editingRooms": {
+        "lineItem": "Offline Editorial Suites",
+        "description": "6x Avid Media Composer suites with shared storage, rented for a 40-week post-production schedule.",
+        "cost": "360000.00"
+      },
+      "soundMixing": {
+        "lineItem": "Sound Design & Mixing Suite",
+        "description": "Rental of a certified Dolby Atmos 7.1 mixing stage for 10 weeks.",
+        "cost": "200000.00"
+      },
+      "opticalWork": {
+        "lineItem": "Color Grading & VFX Infrastructure",
+        "description": "Rental of an advanced HDR color grading suite (8 weeks), access to render farm, and petabyte-scale raw data storage systems.",
+        "cost": "400000.00"
+      },
+      "postSubtotal": "960000.00"
+    },
+    "transportation": {
+      "equipmentTrucks": {
+        "lineItem": "Local Transportation Fleet",
+        "description": "Fleet of 12 dedicated equipment trucks (5-ton and 10-ton) for all US-based shooting.",
+        "cost": "385000.00"
+      },
+      "specialTransport": {
+        "lineItem": "International Logistics",
+        "description": "Includes cost for 12x 40ft shipping containers (sea freight to Busan and Cape Town), professional customs brokerage, ATA Carnets, and a contingency for air freight.",
+        "cost": "685000.00"
+      },
+      "transportSubtotal": "1070000.00"
+    },
+    "equipmentGrandTotal": {
+      "subtotal": "20975000.00",
+      "contingency": "2097500.00",
+      "insurance": "828750.00",
+      "total": "23901250.00"
+    }
+  }
+}

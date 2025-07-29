@@ -1,0 +1,188 @@
+{
+  "postModelOutput": {
+    "processingLog": {
+      "editorialTimeEstimation": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:00:00Z",
+        "status": "completed"
+      },
+      "vfxCostCalculation": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:00:01Z",
+        "status": "completed"
+      },
+      "soundDesignMixingProcessing": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:00:02Z",
+        "status": "completed"
+      },
+      "colorCorrectionProcessing": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:00:03Z",
+        "status": "completed"
+      },
+      "deliveryCostProcessing": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:00:04Z",
+        "status": "completed"
+      },
+      "overallProcessingStatus": "all_functions_executed_successfully"
+    },
+    "editorial": {
+      "labor": {
+        "description": "1 Supervising Editor for 65 weeks, 1 Editor for 52 weeks, and 3 Assistant Editors for 52 weeks at high-end 1960s rates.",
+        "cost": 577200
+      },
+      "facility": {
+        "description": "Rental of 2 cutting rooms and regular screening room access at a major studio lot for the duration of the edit.",
+        "cost": 182000
+      },
+      "equipment": {
+        "description": "Rental of Moviola/Steenbeck flatbeds, splicers, viewers, and synchronization equipment.",
+        "cost": 67000
+      },
+      "stock": {
+        "description": "Costs for physical 35mm workprint film, magnetic sound stock, and splicing supplies.",
+        "cost": 70000
+      },
+      "editorialTotal": 896200
+    },
+    "visualEffects": {
+      "slitScanPhotography": {
+        "description": "25 complex Stargate sequence shots including R&D for custom slit-scan rig.",
+        "cost": 1025000
+      },
+      "modelPhotography": {
+        "description": "40 complex model shots (Discovery, Orion, etc.) with R&D for pioneering motion control systems.",
+        "cost": 1200000
+      },
+      "opticalEffects": {
+        "description": "Over 100 complex optical compositing passes, rotoscoping, and matte paintings over a 30-week period.",
+        "cost": 750000
+      },
+      "frontProjection": {
+        "description": "35 front projection shots for 'Dawn of Man' sequence including custom large-format rig build and Scotchlite screen.",
+        "cost": 450000
+      },
+      "supervision": {
+        "description": "Dedicated VFX supervision team for the entire multi-year post-production duration.",
+        "cost": 820000
+      },
+      "vfxGrandTotal": 4245000
+    },
+    "sound": {
+      "dialogue": {
+        "description": "Extensive dialogue editing, 25% ADR for clarity, and special processing for HAL 9000 voice.",
+        "cost": 113000
+      },
+      "soundEffects": {
+        "description": "Revolutionary sound design including creation of a custom library for space ambiances and effects.",
+        "cost": 265000
+      },
+      "foley": {
+        "description": "High-complexity foley for prop interactions, character movements, and space suit sounds.",
+        "cost": 34800
+      },
+      "music": {
+        "description": "A-list composer fee, recording sessions with a full orchestra, extensive licensing for iconic classical music, and music editing.",
+        "cost": 1200000
+      },
+      "mixing": {
+        "description": "Final mix on a high-end stage for the pioneering 6-track stereo format, including multiple re-recording mixers.",
+        "cost": 225000
+      },
+      "soundGrandTotal": 1637800
+    },
+    "colorAndFinishing": {
+      "timing": {
+        "description": "Specialized color timer labor for matching complex VFX shots and creating final 35mm and 70mm timings.",
+        "cost": 45000
+      },
+      "labServices": {
+        "description": "Extensive lab work at Technicolor for processing dailies, VFX elements, interpositives, internegatives, and answer prints.",
+        "cost": 450000
+      },
+      "technicalServices": {
+        "description": "Special processes for 65mm to 70mm blow-up and creating elements for Cinerama projection.",
+        "cost": 250000
+      },
+      "colorTotal": 745000
+    },
+    "delivery": {
+      "masters": {
+        "description": "Creation of the final 65mm Interpositive (IP), Internegative (IN), and 6-track magnetic sound masters.",
+        "cost": 100000
+      },
+      "prints": {
+        "description": "Manufacturing of 50 70mm roadshow prints and 200 35mm theatrical prints for initial distribution.",
+        "cost": 800000
+      },
+      "international": {
+        "description": "Creation of a comprehensive Music & Effects (M&E) track and subtitling for 15 languages.",
+        "cost": 245000
+      },
+      "archive": {
+        "description": "Creation of long-term archival protection masters, including black and white separation masters.",
+        "cost": 50000
+      },
+      "deliveryTotal": 1195000
+    },
+    "postGrandTotal": {
+      "editorial": 896200,
+      "visualEffects": 4245000,
+      "sound": 1637800,
+      "colorAndFinishing": 745000,
+      "delivery": 1195000,
+      "subtotal": 8719000,
+      "contingency": 2179750,
+      "supervision": 337500,
+      "total": 11236250
+    },
+    "timeline": {
+      "phases": [
+        {
+          "phase": "Editorial & VFX R&D",
+          "startDate": "1966-11-01",
+          "endDate": "1967-07-31",
+          "weeks": 39,
+          "milestones": [
+            "Assembly Complete",
+            "Rough Cut Lock",
+            "VFX R&D Complete"
+          ]
+        },
+        {
+          "phase": "VFX Production, Sound Design & Finishing",
+          "startDate": "1967-08-01",
+          "endDate": "1968-01-31",
+          "weeks": 26,
+          "milestones": [
+            "Fine Cut Lock",
+            "ADR/Foley Complete",
+            "Score Recorded",
+            "Key VFX Sequences Finaled"
+          ]
+        },
+        {
+          "phase": "Final Mix & Delivery",
+          "startDate": "1968-02-01",
+          "endDate": "1968-04-03",
+          "weeks": 9,
+          "milestones": [
+            "Final 6-Track Mix Complete",
+            "70mm Answer Print Approved",
+            "Delivery Masters & Prints Created"
+          ]
+        }
+      ]
+    },
+    "qualityMetrics": {
+      "technicalInnovation": "Pioneering",
+      "visualEffectsComplexity": "Extreme",
+      "soundDesign": "Revolutionary",
+      "deliveryComplexity": "Very High",
+      "scheduleRisk": "Very High",
+      "budgetConfidence": 0.60
+    }
+  }
+}

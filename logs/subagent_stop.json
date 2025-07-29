@@ -1,0 +1,9 @@
+[
+  {
+    "session_id": "f68cdc8a-4a89-48ad-a29d-a3fe64c11489",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/f68cdc8a-4a89-48ad-a29d-a3fe64c11489.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  }
+]

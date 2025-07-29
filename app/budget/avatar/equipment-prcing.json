@@ -1,0 +1,140 @@
+{
+  "equipmentModelOutput": {
+    "processingLog": {
+      "equipmentVendorMatching": {
+        "executed": true,
+        "timestamp": "2024-07-29T12:30:00Z",
+        "vendorCatalogsProcessed": 8,
+        "status": "completed"
+      },
+      "dailyWeeklyRateCalculation": {
+        "executed": true,
+        "timestamp": "2024-07-29T12:30:00Z",
+        "status": "completed"
+      },
+      "volumeDiscountProcessing": {
+        "executed": true,
+        "timestamp": "2024-07-29T12:30:00Z",
+        "status": "completed"
+      },
+      "insuranceRequirementsProcessing": {
+        "executed": true,
+        "timestamp": "2024-07-29T12:30:00Z",
+        "coverageValuesCalculated": 89500000.00,
+        "premiumsFactored": 19220000.00,
+        "status": "completed"
+      },
+      "transportationCostProcessing": {
+        "executed": true,
+        "timestamp": "2024-07-29T12:30:00Z",
+        "shippingExpensesCalculated": 1410000.00,
+        "status": "completed"
+      },
+      "overallProcessingStatus": "all_functions_executed_successfully"
+    },
+    "camera": {
+      "primaryPackages": {
+        "arri535": 2520000.00,
+        "panavisionPlatinum": 1920000.00
+      },
+      "specialtyRigs": {
+        "revolutionaryVirtualCameraSystem": 9480000.00,
+        "performanceCaptureVolumeStages": 15200000.00,
+        "threeDStereoscopicCameraSystem": 11865600.00,
+        "facialCaptureRigs": 17100000.00
+      },
+      "accessories": {
+        "technocranes": 900000.00
+      },
+      "expendables": 0.00,
+      "cameraSubtotal": 58985600.00
+    },
+    "lighting": {
+      "studioPackage": {
+        "tungsten_package": 1800000.00,
+        "hmi_package": 1440000.00,
+        "led_supplemental": 960000.00
+      },
+      "specialtyLighting": {
+        "bioluminescentFiberOpticSystems": 1440000.00,
+        "massiveLEDLightingArrays": 11520000.00
+      },
+      "generators": {
+        "twoThousandAmpPrimary": 1260000.00,
+        "oneThousandAmpSecondary": 960000.00
+      },
+      "rigging": 0.00,
+      "expendables": 0.00,
+      "lightingSubtotal": 19380000.00
+    },
+    "grip": {
+      "dollies": 0.00,
+      "cranes": {
+        "hometreeConstructionCranes": 1440000.00,
+        "helicopterCameraPlatforms": 1125000.00
+      },
+      "rigging": {
+        "heightSafetySystems": 420000.00,
+        "ropeBridgeRigging": 125000.00,
+        "bansheeRidingRigs": 980000.00,
+        "aerialSafetyEquipment": 240000.00
+      },
+      "expendables": 0.00,
+      "gripSubtotal": 4330000.00
+    },
+    "sound": {
+      "recordingPackage": {
+        "soundDevicesPackage": 360000.00,
+        "wirelessMicrophonePackage": 300000.00
+      },
+      "specialRecording": {
+        "mocapAudioSyncSystem": 320000.00
+      },
+      "communications": {
+        "naViLanguagePlayback": 97500.00,
+        "creatureSoundReference": 54000.00
+      },
+      "expendables": 0.00,
+      "soundSubtotal": 1131500.00
+    },
+    "specialEffects": {
+      "mechanicalEffects": {
+        "naViProstheticFabricationLab": 425000.00,
+        "bioluminescentMakeupStations": 768000.00,
+        "fullBodyAirbrushingBooths": 576000.00
+      },
+      "opticalEffects": 0.00,
+      "specialEffectsSubtotal": 1769000.00
+    },
+    "postProduction": {
+      "editingRooms": {
+        "vfxAnimationWorkstations": 5700000.00,
+        "realTimeRenderingFarm": 9000000.00
+      },
+      "soundMixing": 0.00,
+      "opticalWork": 0.00,
+      "postSubtotal": 14700000.00
+    },
+    "transportation": {
+      "equipmentTrucks": {
+        "cameraTrucks": 1152000.00,
+        "lightingTrucks": 2160000.00,
+        "specializedEquipmentTrucks": 1440000.00
+      },
+      "specialTransport": {
+        "internationalShippingContainers": 1125000.00,
+        "customsAndCarnets": 285000.00,
+        "localDeliveryLA": 125000.00,
+        "localDeliveryNZ": 285000.00,
+        "currencyExchangeRiskNZ": 254250.00
+      },
+      "transportSubtotal": 6826250.00
+    },
+    "equipmentGrandTotal": {
+      "subtotal": 158613973.00,
+      "contingency": 68204008.39,
+      "insurance": 19220000.00,
+      "total": 246037981.39
+    }
+  }
+}

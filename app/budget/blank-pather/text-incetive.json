@@ -1,0 +1,179 @@
+{
+  "taxModelOutput": {
+    "processingLog": {
+      "multiJurisdictionEvaluation": {
+        "executed": true,
+        "timestamp": "1968-06-15T10:00:00Z",
+        "status": "completed"
+      },
+      "qualifiedExpenseCalculation": {
+        "executed": true,
+        "timestamp": "1968-06-15T10:05:00Z",
+        "status": "completed"
+      },
+      "qualificationProbabilityAssessment": {
+        "executed": true,
+        "timestamp": "1968-06-15T10:10:00Z",
+        "status": "completed"
+      },
+      "netBenefitComparison": {
+        "executed": true,
+        "timestamp": "1968-06-15T10:15:00Z",
+        "status": "completed"
+      },
+      "optimalStrategyRecommendation": {
+        "executed": true,
+        "timestamp": "1968-06-15T10:20:00Z",
+        "status": "completed"
+      },
+      "overallProcessingStatus": "all_functions_executed_successfully"
+    },
+    "ukIncentives": {
+      "filmProductionTaxCredit": {
+        "description": "Refundable tax credit at 25% of the lower of UK qualifying expenditure or 80% of total core expenditure.",
+        "qualifyingExpenditure": 38982700,
+        "rate": 0.25,
+        "calculatedValue": 9745675,
+        "cap": 15000000,
+        "finalValue": 9745675
+      },
+      "enterpriseInvestmentScheme": {
+        "description": "Tax relief for UK resident investors at 30% on investments up to a specified maximum.",
+        "qualifyingInvestment": 5000000,
+        "rate": 0.30,
+        "calculatedValue": 1500000,
+        "note": "Benefit accrues to investors, facilitating capital raise for the production."
+      },
+      "regionalDevelopmentGrants": {
+        "description": "Grant for stimulating local employment and skills development in designated regions.",
+        "grantAmount": 500000,
+        "status": "awarded"
+      },
+      "ukIncentiveSubtotal": 11745675
+    },
+    "californiaIncentives": {
+      "filmTaxCredit": {
+        "description": "Non-refundable tax credit at 20% of qualified expenditures for productions in California.",
+        "qualifyingExpenditure": 12352145,
+        "rate": 0.20,
+        "calculatedValue": 2470429,
+        "cap": 2500000,
+        "finalValue": 2470429
+      },
+      "investmentTaxCredit": {
+        "description": "Tax credit for the purchase of qualified equipment used in-state.",
+        "qualifyingExpenditure": 3250000,
+        "rate": 0.07,
+        "calculatedValue": 227500
+      },
+      "californiaIncentiveSubtotal": 2697929
+    },
+    "namibiaIncentives": {
+      "locationIncentives": {
+        "description": "Value of non-cash incentives including waivers for permits and relief on import duties.",
+        "permitFeeWaiver": 250000,
+        "equipmentDutyRelief": 450000,
+        "totalValue": 700000
+      },
+      "namibiaIncentiveSubtotal": 700000
+    },
+    "totalIncentiveValue": {
+      "ukCreditsAndGrants": 11745675,
+      "californiaCredits": 2697929,
+      "namibiaIncentives": 700000,
+      "grossTotal": 15143604,
+      "professionalFees": -585000,
+      "netIncentiveValue": 14558604
+    },
+    "cashFlowTiming": {
+      "year1_1965": {
+        "inflows": 1500000,
+        "source": "UK Enterprise Investment Scheme (EIS) capital injection."
+      },
+      "year2_1966": {
+        "inflows": 700000,
+        "source": "Namibia location waivers and duty relief realized during principal photography."
+      },
+      "year3_1967": {
+        "inflows": 0,
+        "source": "No cash incentives received during this period."
+      },
+      "year4_1968": {
+        "inflows": 12943604,
+        "source": "Receipt of UK Film Tax Credit, UK Regional Grant, and California Tax Credits post-final claim submission."
+      }
+    },
+    "complianceStatus": {
+      "uk": {
+        "culturalTestStatus": "passed",
+        "score": "18/16",
+        "minimumSpendMet": true,
+        "reportingStatus": "final_reports_submitted"
+      },
+      "california": {
+        "laborCompliance": "compliant",
+        "environmentalCompliance": "compliant",
+        "diversityReporting": "submitted"
+      },
+      "namibia": {
+        "localHireRequirementMet": true,
+        "actualPercentage": 0.45,
+        "requiredPercentage": 0.40
+      }
+    },
+    "riskAssessment": {
+      "incentiveSecurityRating": "A-",
+      "riskFactors": [
+        {
+          "factor": "Currency Fluctuation (GBP/USD)",
+          "probability": "High",
+          "impact": "Medium",
+          "mitigation": "Implement forward contracts and currency hedging strategies for budgeted cross-border expenditures."
+        },
+        {
+          "factor": "Audit Risk (UK QE)",
+          "probability": "Medium-High",
+          "impact": "High",
+          "mitigation": "Meticulous documentation of all UK qualifying expenditures; engage experienced UK production accountants (KPMG); conduct pre-audit review."
+        },
+        {
+          "factor": "Regulatory Changes",
+          "probability": "Low",
+          "impact": "Medium",
+          "mitigation": "Incentive applications filed and locked in under 1965 rules; monitor for any retroactive changes, although unlikely."
+        },
+        {
+          "factor": "Compliance Complexity",
+          "probability": "High",
+          "impact": "Medium",
+          "mitigation": "Retain specialized legal (Loeb & Loeb, Clifford Chance) and tax (Deloitte, EY) advisors in each jurisdiction to manage filings and ensure adherence to all requirements."
+        }
+      ],
+      "overallRiskScore": "Medium",
+      "confidence": 0.95
+    },
+    "recommendations": [
+      "Establish separate Special Purpose Vehicle (SPV) production companies in the UK and US to isolate liabilities and streamline incentive claims.",
+      "Maintain a centralized, real-time tracking system for qualified expenditures across all three jurisdictions to avoid errors and maximize claims.",
+      "Execute a currency hedging strategy immediately upon budget approval to mitigate risk from GBP/USD volatility during the long production cycle.",
+      "Appoint a dedicated compliance officer to oversee the timely submission of all required reports for UK and California authorities."
+    ],
+    "alternativeScenarios": {
+      "conservative": {
+        "assumptions": "10% disallowance of UK QE, CA ITC not approved.",
+        "netIncentiveValue": 13356537,
+        "variance": -1202067
+      },
+      "optimistic": {
+        "assumptions": "CA Tax Credit reaches its cap due to additional uplifts being granted.",
+        "netIncentiveValue": 14588175,
+        "variance": 29571
+      }
+    },
+    "effectiveIncentiveRate": {
+      "percentageOfBudget": 22.33,
+      "netPercentageAfterFees": 21.47,
+      "roiOnIncentiveEffort": 24.88
+    }
+  }
+}

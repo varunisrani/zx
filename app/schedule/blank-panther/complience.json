@@ -1,0 +1,268 @@
+{
+  "complianceConstraintsOutput": {
+    "requestId": "req_comp_black_panther_20240729_001",
+    "processedTimestamp": "2025-07-29T09:37:00Z",
+    "processingTime": 15.7,
+    "confidence": 0.98,
+    "complianceStatus": "CONDITIONALLY_COMPLIANT",
+    "rulebaseSources": [
+      "SAG-AFTRA Basic Agreement",
+      "IATSE Local 600 (Camera)",
+      "IATSE Local 728 (Lighting)",
+      "IATSE Local 695 (Sound)",
+      "IATSE Local 706 (Makeup)",
+      "AHA (American Humane Association) Guidelines",
+      "California Child Labor Laws",
+      "Georgia Child Labor Laws",
+      "South Korean Labor Law & Work Permit Regulations"
+    ],
+    "constraintAnalysis": {
+      "turnaroundRequirements": {
+        "leadPerformers": "12-hour minimum. 14-hour turnaround required for T'CHALLA and ERIK KILLMONGER on days following their 3-hour makeup sessions.",
+        "supportingPerformers": "11-hour minimum standard.",
+        "dayPlayers": "10-hour minimum standard.",
+        "stuntPerformers": "12-hour minimum standard. 14-hour turnaround required after high-risk work (e.g., Scenes 35, 70, 125, 155).",
+        "childPerformers": "16-hour minimum turnaround. Maximum 3 consecutive work days.",
+        "crew": "11-hour minimum for Department Heads, 10-hour minimum for general crew.",
+        "nightToDayTurnaround": "12-hour minimum for all cast and crew when transitioning from a night shoot to a day shoot."
+      },
+      "mealBreakRequirements": {
+        "firstMeal": "Must be provided within 6 hours of call time. Minimum 30 minutes.",
+        "secondMeal": "Must be provided within 12 hours of call time. Minimum 30 minutes. Scenes 35, 70, 125, 155 will require second meals and likely incur penalties.",
+        "childPerformers": "Meal break required every 3 hours. Minimum 45 minutes duration. Critical for Scene 192.",
+        "penaltyApplicability": "Penalties apply for late or missed meals for all SAG-AFTRA and IATSE personnel."
+      },
+      "overtimeRegulations": {
+        "standardPerformers": "Time-and-a-half after 10 hours, double-time after 14 hours, golden time after 16 hours.",
+        "stuntPerformers": "Time-and-a-half after 8 hours, double-time after 12 hours, golden time after 14 hours.",
+        "crew": "Per IATSE agreements, typically 1.5x after 10 or 12 hours, and 2x after 14 hours. Specific local agreements may vary.",
+        "nightPremium": "25% pay bump for work between 8 PM and 6 AM. Affects scenes 61 and 70.",
+        "weekendPremium": "50% premium for Saturday work, 100% premium for Sunday work."
+      },
+      "childActorRestrictions": {
+        "workingHours": {
+          "ages_8_11": "Maximum 4.5 hours/day on set. Scene 192 (10 hours) is non-compliant and requires specific scheduling for these children.",
+          "ages_12_14": "Maximum 6 hours/day on set.",
+          "ages_15_16": "Maximum 8 hours/day on set."
+        },
+        "onSetRequirements": "Tutor and certified welfare officer required for scenes with children (e.g., Scene 192). Parent/guardian must be present for each child.",
+        "turnaround": "16-hour minimum turnaround between work days.",
+        "breakSchedule": "Mandatory 15-minute break for every hour of work.",
+        "nightWork": "Prohibited between 7 PM and 7 AM."
+      },
+      "animalWelfareRequirements": {
+        "applicability": "Applies to Scene 155 (trained rhinos).",
+        "onSetPersonnel": "AHA-certified handler and a certified veterinarian must be on set during all animal work.",
+        "workRestSchedule": "Minimum 2-hour rest period for every 4 hours of work. The 20-hour shoot day for Scene 155 requires a detailed rotation and rest plan.",
+        "weatherRestrictions": "No work below 10°C or above 32°C.",
+        "safetyProtocols": "Minimum 50-meter safety distance for crew from rhinos when not in a controlled shot. Emergency containment plan required."
+      },
+      "stuntSafetyProtocols": {
+        "applicability": "Scenes 35, 61, 70, 125, 155 and any scene with stunt performers.",
+        "personnel": "IATSE-certified stunt coordinator and a dedicated safety officer required on set for all stunt sequences.",
+        "medical": "Paramedic standby is mandatory for high-risk stunts (e.g., car chases, water work, falls, animal interaction).",
+        "rehearsal": "Minimum of 3 full rehearsals required for complex or high-risk stunt sequences.",
+        "certifications": "Engineer certification required for any custom mechanical rigs (e.g., vehicle rigs, wire work rigs)."
+      },
+      "foreignLocationRegulations": {
+        "location": "Busan, South Korea.",
+        "workPermits": "Work permits/visas are mandatory for all non-Korean cast and crew. Processing time must be factored into pre-production schedule.",
+        "localCrew": "South Korean regulations may mandate a minimum percentage of local crew hires. This must be verified.",
+        "laborLaws": "Adherence to local South Korean labor laws regarding work hours, overtime, and rest periods is required.",
+        "permitting": "Street closure, vehicle, and general filming permits must be secured from Busan municipal authorities."
+      }
+    },
+    "hardConstraints": [
+      {
+        "constraintId": "HC-CHILD-HOURS-01",
+        "type": "childActorRestrictions",
+        "description": "Child performers aged 8-11 cannot work more than 4.5 hours per day. Child performers aged 12-14 cannot work more than 6 hours per day. The 10-hour schedule for Scene 192 is not permissible for the children involved.",
+        "applicableTo": ["OAKLAND_KIDS", "WAKANDAN_CHILDREN", "sceneId:192"],
+        "violation": "Legal violation, production shutdown, significant fines.",
+        "flexibility": "none"
+      },
+      {
+        "constraintId": "HC-TURNAROUND-PERF-01",
+        "type": "turnaroundRequirements",
+        "description": "Minimum 12-hour turnaround for lead performers, 11-hour for supporting, and 10-hour for day players.",
+        "applicableTo": ["all_performers"],
+        "violation": "Forced call, payment for rest hours as work hours, union grievance.",
+        "flexibility": "low"
+      },
+      {
+        "constraintId": "HC-TURNAROUND-CHILD-01",
+        "type": "childActorRestrictions",
+        "description": "Minimum 16-hour turnaround for all child performers.",
+        "applicableTo": ["OAKLAND_KIDS", "WAKANDAN_CHILDREN"],
+        "violation": "Legal violation, endangerment of minors, permit revocation.",
+        "flexibility": "none"
+      },
+      {
+        "constraintId": "HC-MEAL-BREAK-01",
+        "type": "mealBreakRequirements",
+        "description": "First meal break must be provided no later than 6 hours after initial call time.",
+        "applicableTo": ["all_cast", "all_crew"],
+        "violation": "Mandatory financial penalties per violation, per person.",
+        "flexibility": "none"
+      },
+      {
+        "constraintId": "HC-FOREIGN-PERMIT-01",
+        "type": "foreignLocationRegulations",
+        "description": "All non-Korean cast and crew must have a valid work permit before commencing any work in South Korea.",
+        "applicableTo": ["all_cast", "all_crew", "location:busan_south_korea"],
+        "violation": "Deportation, fines, production halt, potential ban on future filming.",
+        "flexibility": "none"
+      },
+      {
+        "constraintId": "HC-ANIMAL-SAFETY-01",
+        "type": "animalWelfareRequirements",
+        "description": "AHA-certified handler and veterinarian must be physically present on set during all work involving rhinos (Scene 155).",
+        "applicableTo": ["sceneId:155", "animal:trained_rhinos"],
+        "violation": "Violation of AHA guidelines, insurance voided, potential for severe injury, animal welfare investigation.",
+        "flexibility": "none"
+      },
+      {
+        "constraintId": "HC-STUNT-SAFETY-01",
+        "type": "stuntSafetyProtocols",
+        "description": "A certified stunt coordinator and safety officer must be present for all stunt sequences.",
+        "applicableTo": ["scenes:35,61,70,125,155", "all_stunt_performers"],
+        "violation": "Violation of union safety bulletins, insurance voided, high risk of injury or death.",
+        "flexibility": "none"
+      }
+    ],
+    "softConstraints": [
+      {
+        "constraintId": "SC-WORK-DAY-LIMIT-01",
+        "type": "overtimeRegulations",
+        "description": "Limit consecutive work days to 6 to provide a 24-hour rest period (weekend) and avoid cumulative fatigue.",
+        "applicableTo": ["all_cast", "all_crew"],
+        "violation": "Increased fatigue, safety risks, potential for premium pay on 7th day.",
+        "flexibility": "medium",
+        "penalty": "Premium pay rates for 7th consecutive day work."
+      },
+      {
+        "constraintId": "SC-WEEKEND-WORK-01",
+        "type": "overtimeRegulations",
+        "description": "Minimize work on Saturdays and especially Sundays to avoid significant premium pay.",
+        "applicableTo": ["all_cast", "all_crew"],
+        "violation": "Budget impact due to mandatory premium pay (50% on Saturday, 100% on Sunday).",
+        "flexibility": "high",
+        "penalty": "1.5x pay rate for Saturday, 2.0x pay rate for Sunday."
+      },
+      {
+        "constraintId": "SC-MAKEUP-TURNAROUND-01",
+        "type": "turnaroundRequirements",
+        "description": "Actors with makeup time over 2 hours (T'Challa, Killmonger, Okoye) trigger a 14-hour turnaround, impacting next day's call time.",
+        "applicableTo": ["T'CHALLA / BLACK PANTHER", "ERIK KILLMONGER", "OKOYE"],
+        "violation": "Forced call violation if 14-hour turnaround is not respected.",
+        "flexibility": "low",
+        "penalty": "Payment for invaded turnaround time at the performer's hourly rate."
+      },
+      {
+        "constraintId": "SC-WEATHER-DEPENDENCY-01",
+        "type": "scheduling",
+        "description": "Schedule weather-dependent exterior scenes with backup interior scenes to avoid company-wide shutdown.",
+        "applicableTo": ["scenes:35,70,125,155,192"],
+        "violation": "Lost production day and associated costs if weather is unfavorable.",
+        "flexibility": "high",
+        "penalty": "Cost of a full unproductive shoot day."
+      }
+    ],
+    "penaltyCalculations": {
+      "mealPenalties": {
+        "structure": "For SAG-AFTRA performers, violations are paid in 30-minute increments. First 30 mins late = $7.50, second 30 mins = $10.00, each subsequent 30 mins = $12.50, until break is given. Crew penalties are based on fractions of the hourly rate per IATSE agreements.",
+        "trigger": "Meal break not provided within 6 hours of call time."
+      },
+      "overtimePenalties": {
+        "structure": "Calculated based on performer/crew member's daily rate converted to an hourly rate. T&H (1.5x), DT (2x), and Golden Time (3x+) rates apply after specific hour thresholds are met (8 for stunts, 10 for other performers).",
+        "trigger": "Workday extending beyond standard hours."
+      },
+      "turnaroundPenalties": {
+        "structure": "If a performer's rest period is invaded, they are paid their hourly rate for the invaded time, and their next work clock starts from when the turnaround *should* have ended.",
+        "trigger": "Providing less than the contractually mandated rest period between wrap and next call time."
+      }
+    },
+    "complianceRecommendations": [
+      {
+        "priority": "HIGH",
+        "category": "childActorRestrictions",
+        "recommendation": "Immediately redesign the schedule for Scene 192. Child performers can only be on set for their legally allowed work hours (e.g., 4.5 hours for an 8-year-old). Use stand-ins for lighting/camera setup and schedule the children to arrive only for their performance block.",
+        "impactIfIgnored": "Legal action, fines from the Department of Labor, and revocation of filming permits."
+      },
+      {
+        "priority": "HIGH",
+        "category": "foreignLocationRegulations",
+        "recommendation": "Engage a South Korean production services company or immigration lawyer immediately to begin the work permit application process. Confirm exact processing times and local crew hiring quotas.",
+        "impactIfIgnored": "Inability to film in South Korea, leading to catastrophic schedule and budget disruption."
+      },
+      {
+        "priority": "MEDIUM",
+        "category": "penaltyCalculations",
+        "recommendation": "Pre-calculate and budget for guaranteed overtime and meal penalties for the long shoot days (Scenes 35, 70, 125, 155). These are not exceptional events; they are planned and must be funded.",
+        "impactIfIgnored": "Significant budget overruns in crew and cast payroll."
+      },
+      {
+        "priority": "MEDIUM",
+        "category": "turnaroundRequirements",
+        "recommendation": "The scheduling system must automatically flag and enforce 14-hour turnarounds for lead actors on days following heavy makeup application to avoid forced call violations.",
+        "impactIfIgnored": "Accumulating penalty payments and potential union grievances."
+      },
+      {
+        "priority": "LOW",
+        "category": "animalWelfareRequirements",
+        "recommendation": "For Scene 155, schedule the animal work as the first sequence of the day to ensure animals are fresh and to minimize their time on set.",
+        "impactIfIgnored": "Increased risk of animal fatigue or incident, potential delays."
+      }
+    ],
+    "riskAssessment": [
+      {
+        "riskId": "RISK-CHILD-01",
+        "category": "legalCompliance",
+        "severity": "HIGH",
+        "description": "Violation of child labor laws due to the planned 10-hour shoot day for Scene 192 with child actors present.",
+        "probability": 0.9,
+        "impact": "Production shutdown, fines, negative publicity.",
+        "mitigation": "Strict adherence to work-hour limits for each child's age group. Utilize a welfare officer to enforce rules. Use doubles/stand-ins for non-performance time."
+      },
+      {
+        "riskId": "RISK-FOREIGN-01",
+        "category": "logistics",
+        "severity": "HIGH",
+        "description": "Delay or denial of work permits for South Korea shoot.",
+        "probability": 0.4,
+        "impact": "Entire 20-day foreign shoot schedule jeopardized, requiring costly relocation or script changes.",
+        "mitigation": "Start application process 3-4 months in advance. Use an experienced local fixer. Have a contingency plan for a different location."
+      },
+      {
+        "riskId": "RISK-BUDGET-OT-01",
+        "category": "financial",
+        "severity": "MEDIUM",
+        "description": "Budget overruns due to systemic overtime and meal penalties from multiple planned 15-20 hour shoot days.",
+        "probability": 1.0,
+        "impact": "Payroll costs for affected days could be 200-300% of the baseline.",
+        "mitigation": "Accurately forecast these costs and secure the funds. Explore using splinter units to complete work more efficiently and shorten the main unit's day."
+      },
+      {
+        "riskId": "RISK-SAFETY-ANIMAL-01",
+        "category": "safety",
+        "severity": "MEDIUM",
+        "description": "Safety incident involving trained rhinos on a long, complex shoot day (Scene 155).",
+        "probability": 0.2,
+        "impact": "Serious injury to cast/crew, death of an animal, production halt.",
+        "mitigation": "Strictly follow handler and vet protocols. Rehearse all interactions without animals first. Minimize personnel near animals. Have a clear emergency response plan."
+      }
+    ],
+    "validationResults": {
+      "inputDataCompleteness": 0.99,
+      "ruleApplicationSuccess": 0.99,
+      "constraintGenerationComplete": true,
+      "penaltyCalculationsValid": true
+    },
+    "nextStepRecommendations": [
+      "Forward generated Hard and Soft Constraints to the Scheduler Agent.",
+      "Send Penalty Calculation structures and Risk Assessment to the Budget Agent.",
+      "Alert the 1st Assistant Director and Unit Production Manager to the critical compliance issue with Scene 192 (Child Labor).",
+      "Task the Location Manager with immediately actioning the South Korean permit process."
+    ]
+  }
+}

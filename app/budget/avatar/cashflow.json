@@ -1,0 +1,191 @@
+{
+  "cashFlowModelOutput": {
+    "processingLog": {
+      "timelineCostMapping": {
+        "executed": true,
+        "timestamp": "2024-05-21T14:30:10Z",
+        "status": "completed"
+      },
+      "weeklyBurnRateCalculation": {
+        "executed": true,
+        "timestamp": "2024-05-21T14:30:15Z",
+        "status": "completed"
+      },
+      "fundingNeedsProjection": {
+        "executed": true,
+        "timestamp": "2024-05-21T14:30:20Z",
+        "status": "completed"
+      },
+      "peakCashRequirements": {
+        "executed": true,
+        "timestamp": "2024-05-21T14:30:25Z",
+        "status": "completed"
+      },
+      "multipleScenarioModeling": {
+        "executed": true,
+        "timestamp": "2024-05-21T14:30:30Z",
+        "status": "completed"
+      },
+      "overallProcessingStatus": "all_functions_executed_successfully"
+    },
+    "executiveSummary": {
+      "peakFunding": 293880000,
+      "totalInterestCost": 15260000,
+      "netIncentiveValue": 49811000,
+      "projectIRR": 115.5,
+      "paybackPeriod": 3.8,
+      "projectNPV": 772000000
+    },
+    "fundingDrawdown": {
+      "drawdownBySourceAndQuarter": [
+        { "period": "1967-Q1", "equity": 14220000, "bankCredit": 0, "studioFinancing": 0, "total": 14220000 },
+        { "period": "1967-Q2", "equity": 35550000, "bankCredit": 0, "studioFinancing": 0, "total": 35550000 },
+        { "period": "1967-Q3", "equity": 42660000, "bankCredit": 0, "studioFinancing": 0, "total": 42660000 },
+        { "period": "1967-Q4", "equity": 37920000, "bankCredit": 1170000, "studioFinancing": 0, "total": 39090000 },
+        { "period": "1968-Q1", "equity": 0, "bankCredit": 47400000, "studioFinancing": 0, "total": 47400000 },
+        { "period": "1968-Q2", "equity": 0, "bankCredit": 10680000, "studioFinancing": 24870000, "total": 35550000 },
+        { "period": "1968-Q3", "equity": 0, "bankCredit": 0, "studioFinancing": 28440000, "total": 28440000 },
+        { "period": "1968-Q4", "equity": 0, "bankCredit": 0, "studioFinancing": 23700000, "total": 23700000 },
+        { "period": "1969-Q1", "equity": 0, "bankCredit": 0, "studioFinancing": 16590000, "total": 16590000 },
+        { "period": "1969-Q2", "equity": 0, "bankCredit": 0, "studioFinancing": 9480000, "total": 9480000 },
+        { "period": "1969-Q3", "equity": 0, "bankCredit": 0, "studioFinancing": 7110000, "total": 7110000 },
+        { "period": "1969-Q4", "equity": 0, "bankCredit": 0, "studioFinancing": 4290000, "total": 4290000 }
+      ],
+      "totalDrawdown": {
+        "equity": 130350000,
+        "bankCredit": 59250000,
+        "studioFinancing": 114480000,
+        "total": 304080000
+      }
+    },
+    "monthlyProjections": {
+      "1967": {
+        "q1": { "receipts": { "equityDraw": 16590000 }, "expenditures": { "productionCosts": 14220000, "financingFees": 2133000 }, "netCashFlow": 237000, "cumulativeCash": -16353000, "interestIncome": 0, "interestExpense": 0 },
+        "q2": { "receipts": { "equityDraw": 35550000 }, "expenditures": { "productionCosts": 35550000 }, "netCashFlow": 0, "cumulativeCash": -51903000, "interestIncome": 0, "interestExpense": 0 },
+        "q3": { "receipts": { "equityDraw": 35550000 }, "expenditures": { "productionCosts": 42660000 }, "netCashFlow": -7110000, "cumulativeCash": -94563000, "interestIncome": 0, "interestExpense": 0 },
+        "q4": { "receipts": { "equityDraw": 23700000, "taxIncentiveReceipts": 0 }, "expenditures": { "productionCosts": 39090000 }, "netCashFlow": -15390000, "cumulativeCash": -133653000, "interestIncome": 0, "interestExpense": 25000 }
+      },
+      "1968": {
+        "q1": { "receipts": { "bankDraw": 35550000, "taxIncentiveReceipts": 7110000 }, "expenditures": { "productionCosts": 47400000 }, "netCashFlow": -4740000, "cumulativeCash": -181053000, "interestIncome": 0, "interestExpense": 475000 },
+        "q2": { "receipts": { "bankDraw": 23700000 }, "expenditures": { "productionCosts": 35550000 }, "netCashFlow": -11850000, "cumulativeCash": -216603000, "interestIncome": 0, "interestExpense": 1210000 },
+        "q3": { "receipts": { "studioDraw": 23700000, "taxIncentiveReceipts": 10000000 }, "expenditures": { "productionCosts": 28440000 }, "netCashFlow": 5260000, "cumulativeCash": -245043000, "interestIncome": 0, "interestExpense": 1850000 },
+        "q4": { "receipts": { "studioDraw": 23700000 }, "expenditures": { "productionCosts": 23700000 }, "netCashFlow": 0, "cumulativeCash": -268743000, "interestIncome": 0, "interestExpense": 2150000 }
+      },
+      "1969": {
+        "q1": { "receipts": { "studioDraw": 23700000, "taxIncentiveReceipts": 10000000 }, "expenditures": { "productionCosts": 16590000 }, "netCashFlow": 17110000, "cumulativeCash": -285333000, "interestIncome": 0, "interestExpense": 2550000 },
+        "q2": { "receipts": { "studioDraw": 16590000 }, "expenditures": { "productionCosts": 9480000 }, "netCashFlow": 7110000, "cumulativeCash": -294813000, "interestIncome": 0, "interestExpense": 2600000 },
+        "q3": { "receipts": { "studioDraw": 11850000, "taxIncentiveReceipts": 11850000 }, "expenditures": { "productionCosts": 7110000 }, "netCashFlow": 16590000, "cumulativeCash": -301923000, "interestIncome": 0, "interestExpense": 2400000 },
+        "q4": { "receipts": { "studioDraw": 23700000, "taxIncentiveReceipts": 10851000, "theatricalRevenue": 75000000 }, "expenditures": { "productionCosts": 14220000 }, "netCashFlow": 95331000, "cumulativeCash": -218841000, "interestIncome": 0, "interestExpense": 2000000 }
+      }
+    },
+    "interestCalculations": {
+      "studioFinancing": {
+        "principalDrawn": 114480000,
+        "interestRate": 0.055,
+        "estimatedInterest": 8600000,
+        "arrangementFees": 2133000
+      },
+      "bankCredit": {
+        "principalDrawn": 59250000,
+        "interestRate": 0.075,
+        "estimatedInterest": 6660000,
+        "arrangementFees": 1777500
+      },
+      "totalFinancingCost": 29330500
+    },
+    "revenueProjections": {
+      "theatrical": {
+        "domestic": 374883070,
+        "international": 1014204816,
+        "total": 1389087886,
+        "timing": "Q4 1969 - Q4 1970"
+      },
+      "television": {
+        "domestic": 59250000,
+        "international": 118500000,
+        "total": 177750000,
+        "timing": "Q1 1971 - Q4 1976"
+      },
+      "ancillary": {
+        "homeEntertainment": 355500000,
+        "digitalAndOther": 284400000,
+        "total": 639900000,
+        "timing": "Q2 1970 onwards"
+      }
+    },
+    "scenarioAnalysis": {
+      "baseCase": {
+        "finalCost": 237000000,
+        "completionDate": "1969-12-18",
+        "peakCashRequirement": 47400000,
+        "impactOnProfitability": "Exceeds target IRR by over 100%",
+        "probability": 0.4
+      },
+      "optimisticCase": {
+        "finalCost": 213300000,
+        "completionDate": "1969-11-15",
+        "peakCashRequirement": 42660000,
+        "impactOnProfitability": "Increases project IRR by an additional 15%",
+        "probability": 0.25
+      },
+      "pessimisticCase": {
+        "finalCost": 284400000,
+        "completionDate": "1970-03-15",
+        "peakCashRequirement": 56880000,
+        "impactOnProfitability": "Reduces project IRR by 25%, but still highly profitable",
+        "probability": 0.35
+      }
+    },
+    "riskAnalysis": {
+      "sensitivity": {
+        "costOverrun_10_percent": "Reduces NPV by $28M but remains highly positive.",
+        "revenueShortfall_10_percent": "Reduces NPV by $132M; payback extended by 3 months.",
+        "delay_3_months": "Increases total financing cost by approximately $4.5M."
+      },
+      "riskFactors": [
+        {
+          "factor": "Technical Risk: Unproven performance capture and 3D camera systems.",
+          "probability": 0.7,
+          "impact": 18960000,
+          "mitigation": "Extensive R&D phase; dedicated technical contingency budget; key personnel insurance."
+        },
+        {
+          "factor": "Completion Risk: Massive scope of visual effects and potential for delays.",
+          "probability": 0.6,
+          "impact": 47400000,
+          "mitigation": "Completion Bond secured; milestone-based payments to VFX vendors; experienced post-production supervision."
+        },
+        {
+          "factor": "Currency Risk: Significant spend in New Zealand (NZD).",
+          "probability": 0.8,
+          "impact": 5000000,
+          "mitigation": "Forward hedging contracts secured for 80% of estimated NZD exposure."
+        },
+        {
+          "factor": "Market Risk: Audience appetite for 3D and a high-concept science fiction narrative is uncertain.",
+          "probability": 0.5,
+          "impact": 150000000,
+          "mitigation": "Secure substantial international pre-sales and distribution guarantees; innovative marketing campaign."
+        }
+      ]
+    },
+    "recommendedActions": [
+      "Finalize and execute all foreign exchange hedging contracts (NZD, GBP, EUR) prior to the start of principal photography to mitigate currency volatility.",
+      "Implement a rigorous daily cost reporting system integrated with the completion bonder's requirements to ensure timely funding drawdowns.",
+      "Draw down available fixed-rate studio financing before utilizing the variable-rate bank credit facility to minimize exposure to potential interest rate hikes.",
+      "Aggressively pursue monetization of tax incentives, ensuring all documentation is filed promptly to accelerate cash receipts and reduce borrowing costs."
+    ],
+    "complianceMonitoring": {
+      "bankCovenants": {
+        "minimumLiquidity": { "requirement": "23700000", "status": "compliant", "lastChecked": "1968-12-31" },
+        "debtServiceCoverage": { "requirement": "1.5x", "status": "n/a_pre_revenue", "nextReportingDate": "1970-03-31" },
+        "distributionAgreements": { "requirement": "minimum_150M", "status": "compliant", "lastChecked": "1967-01-15" }
+      },
+      "bondingRequirements": {
+        "dailyCostReports": { "requirement": "daily", "status": "compliant", "lastSubmitted": "1969-01-15" },
+        "weeklyScheduleUpdates": { "requirement": "weekly", "status": "compliant", "lastSubmitted": "1969-01-12" },
+        "monthlyCashFlow": { "requirement": "monthly", "status": "compliant", "lastSubmitted": "1969-01-10" }
+      }
+    }
+  }
+}

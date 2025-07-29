@@ -1,0 +1,203 @@
+{
+  "scheduleModelOutput": {
+    "processingLog": {
+      "sceneLocationGrouping": {
+        "executed": true,
+        "timestamp": "1965-11-15T09:00:00Z",
+        "status": "completed"
+      },
+      "companyMoveMinimization": {
+        "executed": true,
+        "timestamp": "1965-11-15T09:01:00Z",
+        "status": "completed"
+      },
+      "castScheduleOptimization": {
+        "executed": true,
+        "timestamp": "1965-11-15T09:02:00Z",
+        "status": "completed"
+      },
+      "dayNightBalancing": {
+        "executed": true,
+        "timestamp": "1965-11-15T09:03:00Z",
+        "status": "completed"
+      },
+      "constraintRespectProcessing": {
+        "executed": true,
+        "timestamp": "1965-11-15T09:04:00Z",
+        "status": "completed"
+      },
+      "overallProcessingStatus": "all_functions_executed_successfully"
+    },
+    "optimizedSchedule": {
+      "summary": {
+        "totalDays": 385,
+        "efficiency": 0.85,
+        "pagesPerDay": 2.1,
+        "companyMoves": 1,
+        "overtimeEstimate": 1500.0
+      },
+      "productionPhases": [
+        {
+          "phase": "Primitive Earth",
+          "startDate": "1965-12-29",
+          "endDate": "1966-02-10",
+          "days": 32,
+          "location": "Namibia, Africa",
+          "scenes": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+          "keyConstraints": [
+            "Must be shot during African dry season (Dec-Mar).",
+            "Must be completed by MOONWATCHER's stop date (1966-02-15).",
+            "Requires animal wranglers and veterinary supervision."
+          ]
+        },
+        {
+          "phase": "Moon & Space Travel",
+          "startDate": "1966-03-07",
+          "endDate": "1966-05-27",
+          "days": 60,
+          "location": "Borehamwood Studios, UK",
+          "scenes": [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42],
+          "keyConstraints": [
+            "Covers Dr. Floyd's availability window.",
+            "Requires extensive set builds on soundstages."
+          ]
+        },
+        {
+          "phase": "Discovery Mission",
+          "startDate": "1966-06-01",
+          "endDate": "1967-02-17",
+          "days": 185,
+          "location": "Borehamwood Studios, UK",
+          "scenes": [43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70],
+          "keyConstraints": [
+            "Driven by BOWMAN and POOLE's availability.",
+            "Requires 145-day exclusive booking for the Centrifuge set and equipment.",
+            "Technically complex Zero-G and rotating set photography."
+          ]
+        },
+        {
+          "phase": "Stargate & Specialized VFX",
+          "startDate": "1967-02-20",
+          "endDate": "1967-07-28",
+          "days": 108,
+          "location": "Borehamwood Studios, UK / VFX Facility",
+          "scenes": [71],
+          "keyConstraints": [
+            "Heavy dependency on experimental slit-scan and front projection VFX.",
+            "Requires dedicated motion control rig for 60+ days.",
+            "BOWMAN is the key cast member."
+          ]
+        }
+      ],
+      "weeklyBreakdown": [
+        {
+          "week": 1,
+          "dates": "1965-12-29 to 1966-01-02",
+          "location": "Namibia, Africa",
+          "days": [
+            {
+              "date": "1965-12-29",
+              "scenes": [1],
+              "pages": 1.75,
+              "callTime": "04:00",
+              "wrapTime": "17:00",
+              "cast": ["MOONWATCHER", "TRIBE_MEMBERS", "THE_OTHERS"]
+            },
+            {
+              "date": "1965-12-30",
+              "scenes": [2],
+              "pages": 2.25,
+              "callTime": "05:00",
+              "wrapTime": "18:00",
+              "cast": ["MOONWATCHER", "TRIBE_MEMBERS"]
+            },
+            {
+              "date": "1965-12-31",
+              "scenes": [3],
+              "pages": 1.5,
+              "callTime": "06:00",
+              "wrapTime": "17:00",
+              "cast": ["MOONWATCHER", "THE_OTHERS"]
+            },
+            {
+              "date": "1966-01-01",
+              "scenes": [],
+              "pages": 0.0,
+              "callTime": "N/A",
+              "wrapTime": "N/A",
+              "cast": ["HOLIDAY - NEW YEAR'S DAY"]
+            },
+            {
+              "date": "1966-01-02",
+              "scenes": [],
+              "pages": 0.0,
+              "callTime": "N/A",
+              "wrapTime": "N/A",
+              "cast": ["DAY OFF"]
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "castUtilization": {
+          "MOONWATCHER": "100% utilization during Phase 1, no hold days required.",
+          "DR_FLOYD": "Scheduled in a single block during Phase 2 to minimize cost.",
+          "BOWMAN_POOLE": "Long schedule block in Phase 3 optimized for centrifuge scenes first, then other shared scenes."
+        },
+        "locationEfficiency": {
+          "AFRICAN_LOCATIONS": "Maximized by completing all scenes in one block during the required dry season.",
+          "STUDIO_STAGES": "Phased set construction and teardown planned to allow for continuous shooting across multiple stages."
+        },
+        "equipmentUtilization": {
+          "CENTRIFUGE": "Single, continuous 145-day booking prevents costly re-booking and setup.",
+          "VFX_RIGS": "Scheduled sequentially (front projection, then motion control) to reduce rental overlap."
+        }
+      }
+    },
+    "costImpact": {
+      "laborCosts": {
+        "overtime": "Minimized by adhering to 10-hour day baseline and respecting turnarounds.",
+        "penalties": "Meal penalties avoided by strict scheduling of 6-hour breaks.",
+        "holdDays": "Significantly reduced for key cast through block shooting."
+      },
+      "efficiencySavings": {
+        "companyMoves": "Estimated $2.5M (in 2025 dollars) saved by eliminating travel between UK and Africa.",
+        "locationBooking": "Grouped booking of African locations provides negotiation leverage."
+      },
+      "additionalCosts": {
+        "centrifugeConstruction": "High upfront capital cost for set build and machinery.",
+        "vfxOverages": "Budgetary reserve required for experimental VFX processes with high risk of delays.",
+        "contingency": "15% of budget allocated for weather and technical delays."
+      }
+    },
+    "riskFactors": [
+      {
+        "type": "Weather",
+        "location": "Namibia, Africa",
+        "probability": 0.3,
+        "impact": "High (up to 10 days delay)",
+        "mitigation": "Scheduled in driest part of the season (Jan/Feb). Added 5 buffer days to Phase 1 schedule."
+      },
+      {
+        "type": "Technical Failure",
+        "location": "Borehamwood Studios, UK",
+        "probability": 0.5,
+        "impact": "Very High (schedule-breaking)",
+        "mitigation": "Extended booking for Centrifuge allows for 2 weeks of pre-shoot testing. On-site engineering team contracted for duration of Phase 3."
+      },
+      {
+        "type": "VFX R&D",
+        "location": "VFX Facility",
+        "probability": 0.7,
+        "impact": "High (significant cost/time overrun)",
+        "mitigation": "Schedule VFX phase last to allow maximum development time. Begin small-scale tests during principal photography. Allocate 25% cost contingency for this phase."
+      }
+    ],
+    "recommendations": [
+      "Initiate immediate booking and permitting for Namibian locations and safari support teams.",
+      "Finalize contract with engineering firm for Centrifuge construction and operation by Q1 1966.",
+      "Allocate substantial budget for VFX research and development, treating it as a separate, parallel project during early production.",
+      "Secure production insurance with specific riders covering technical failure of experimental equipment and weather delays in remote locations."
+    ]
+  }
+}

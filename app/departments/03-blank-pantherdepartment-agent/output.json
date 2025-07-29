@@ -1,0 +1,529 @@
+{
+    "departmentAnalysisOutput": {
+      "projectId": "black_panther_script_analysis_001",
+      "processingTimestamp": "2025-07-29T08:54:00Z",
+      "analysisOverview": {
+        "totalScenesAnalyzed": 16,
+        "totalDepartmentsAssessed": 10,
+        "totalBudgetCalculated": 29655000,
+        "budgetConfidenceLevel": "medium"
+      },
+      "departmentBreakdowns": {
+        "makeupHair": {
+          "totalScenes": 10,
+          "characterMakeupApplications": 68,
+          "specialEffectsMakeups": [
+            {
+              "type": "Extensive Ritual Scarification Prosthetics (Killmonger)",
+              "scenesRequired": 2,
+              "complexity": "complex",
+              "estimatedCost": 150000
+            },
+            {
+              "type": "Bald Cap Application (Okoye)",
+              "scenesRequired": 2,
+              "complexity": "moderate",
+              "estimatedCost": 25000
+            },
+            {
+              "type": "Cross-Gender Disguise (Killmonger)",
+              "scenesRequired": 1,
+              "complexity": "moderate",
+              "estimatedCost": 15000
+            },
+            {
+              "type": "Injury, Blood, and Exhaustion Makeup (Final Fight)",
+              "scenesRequired": 1,
+              "complexity": "moderate",
+              "estimatedCost": 20000
+            }
+          ],
+          "totalDepartmentCost": 960000,
+          "crewRequirements": {
+            "departmentHead": 1,
+            "artists": 5,
+            "assistants": 3
+          }
+        },
+        "wardrobeCostume": {
+          "totalScenes": 12,
+          "costumesRequired": 45,
+          "periodCostumes": [
+            {
+              "character": "YOUNG N'JOBU'S SON, FRIEND",
+              "period": "1990s",
+              "complexity": "simple",
+              "estimatedCost": 5000
+            }
+          ],
+          "totalDepartmentCost": 3500000,
+          "crewRequirements": {
+            "costumeDesigner": 1,
+            "supervisors": 3,
+            "seamsters": 10
+          }
+        },
+        "artDepartmentConstruction": {
+          "totalScenes": 10,
+          "majorBuilds": [
+            {
+              "item": "Challenge Pool - Warrior Falls Set",
+              "complexity": "extreme",
+              "materialsNeeded": ["structural steel", "concrete", "pump systems", "rockwork", "landscaping"],
+              "estimatedCost": 2500000
+            },
+            {
+              "item": "Shuri's High-Tech Laboratory",
+              "complexity": "complex",
+              "materialsNeeded": ["plexiglass", "custom metal fabrication", "LED screens", "interactive consoles"],
+              "estimatedCost": 1200000
+            },
+            {
+              "item": "Vibranium Mine Bottom & Train Tracks",
+              "complexity": "extreme",
+              "materialsNeeded": ["structural supports", "custom track", "rock walls", "practical lighting rigs"],
+              "estimatedCost": 1800000
+            },
+            {
+              "item": "Royal Talon Fighter Interior Cockpit",
+              "complexity": "complex",
+              "materialsNeeded": ["fiberglass", "custom seating", "control panels", "lighting"],
+              "estimatedCost": 600000
+            },
+            {
+              "item": "Royal Palace Throne Room",
+              "complexity": "complex",
+              "materialsNeeded": ["custom throne", "scenic painting", "faux stone", "advanced tech elements"],
+              "estimatedCost": 950000
+            }
+          ],
+          "totalDepartmentCost": 8500000,
+          "crewRequirements": {
+            "productionDesigner": 1,
+            "artDirectors": 4,
+            "setDecorators": 5,
+            "constructionCrew": 50
+          }
+        },
+        "props": {
+          "totalScenes": 9,
+          "heroProps": [
+            {
+              "item": "Black Panther Suit (multiple versions)",
+              "category": "hero",
+              "specifications": "Vibranium suit with kinetic energy absorption. Requires multiple copies for stunts and damage.",
+              "estimatedCost": 350000
+            },
+            {
+              "item": "Golden Jaguar Suit (Killmonger)",
+              "category": "hero",
+              "specifications": "Modified Wakandan suit. Requires multiples for stunts.",
+              "estimatedCost": 300000
+            },
+            {
+              "item": "Kimoyo Beads (multiple sets)",
+              "category": "interactive",
+              "specifications": "Hero versions with practical lighting, stunt versions, and background versions.",
+              "estimatedCost": 75000
+            },
+            {
+              "item": "Vibranium Weapons (spears, swords)",
+              "category": "hero",
+              "specifications": "Stunt-safe and hero versions of various Wakandan weapons.",
+              "estimatedCost": 120000
+            }
+          ],
+          "totalDepartmentCost": 1250000,
+          "crewRequirements": {
+            "propMaster": 1,
+            "assistantProps": 4
+          }
+        },
+        "camera": {
+          "totalScenes": 16,
+          "equipmentPackages": [
+            {
+              "package": "A-Unit Main Package (3x ARRI Alexa 65)",
+              "scenes": 16,
+              "specialRequirements": ["anamorphic lenses", "high-speed capability"],
+              "rentalCost": 1800000
+            },
+            {
+              "package": "Underwater Package",
+              "scenes": 2,
+              "specialRequirements": ["underwater housing", "specialized lighting", "dive-certified crew"],
+              "rentalCost": 200000
+            },
+            {
+              "package": "Aerial/Drone Unit",
+              "scenes": 3,
+              "specialRequirements": ["heavy-lift drone", "gimbal system"],
+              "rentalCost": 150000
+            },
+            {
+              "package": "Action/Stunt Unit",
+              "scenes": 3,
+              "specialRequirements": ["vehicle mounting rigs", "crash cams", "body-mounted cams"],
+              "rentalCost": 250000
+            }
+          ],
+          "totalDepartmentCost": 3200000,
+          "crewRequirements": {
+            "directorPhotography": 1,
+            "cameraOperators": 4,
+            "assistants": 8
+          }
+        },
+        "lighting": {
+          "totalScenes": 16,
+          "lightingSetups": [
+            {
+              "setup": "Large Exterior Day (Warrior Falls, Mt. Bashenga)",
+              "scenes": 3,
+              "powerRequirements": "High (multiple generators)",
+              "equipmentCost": 450000
+            },
+            {
+              "setup": "Night Exterior Chase (Busan)",
+              "scenes": 1,
+              "powerRequirements": "High (mobile generators, condors)",
+              "equipmentCost": 300000
+            },
+            {
+              "setup": "Complex Interior (Shuri's Lab, Casino)",
+              "scenes": 3,
+              "powerRequirements": "Medium (house power tie-in, custom rigs)",
+              "equipmentCost": 250000
+            }
+          ],
+          "totalDepartmentCost": 2100000,
+          "crewRequirements": {
+            "gaffer": 1,
+            "bestBoy": 2,
+            "electricians": 12
+          }
+        },
+        "sound": {
+          "totalScenes": 16,
+          "recordingRequirements": [
+            {
+              "type": "dialogue",
+              "scenes": 15,
+              "complexity": "complex",
+              "equipmentCost": 300000
+            },
+            {
+              "type": "playback",
+              "scenes": 2,
+              "complexity": "moderate",
+              "equipmentCost": 50000
+            },
+            {
+              "type": "effects",
+              "scenes": 4,
+              "complexity": "complex",
+              "equipmentCost": 100000
+            }
+          ],
+          "totalDepartmentCost": 950000,
+          "crewRequirements": {
+            "soundMixer": 1,
+            "boomOperator": 2,
+            "soundUtility": 2
+          }
+        },
+        "specialEffects": {
+          "totalScenes": 8,
+          "effectsRequired": [
+            {
+              "effect": "Prosthetic Sonic Cannon Arm (Klaue)",
+              "scenes": 2,
+              "complexity": "complex",
+              "safetyRequirements": ["power source management", "actor comfort protocols"],
+              "estimatedCost": 125000
+            },
+            {
+              "effect": "Atmospherics (Waterfall Mist, Smoke)",
+              "scenes": 3,
+              "complexity": "moderate",
+              "safetyRequirements": ["crew respiration safety", "environmental controls"],
+              "estimatedCost": 80000
+            },
+            {
+              "effect": "Kinetic Energy Suit Effects (Practical elements)",
+              "scenes": 3,
+              "complexity": "complex",
+              "safetyRequirements": ["interactive lighting safety", "performer safety"],
+              "estimatedCost": 250000
+            }
+          ],
+          "totalDepartmentCost": 975000,
+          "crewRequirements": {
+            "sfxSupervisor": 1,
+            "sfxTechnicians": 6,
+            "safetyPersonnel": 2
+          }
+        },
+        "animalsCreatures": {
+          "totalScenes": 1,
+          "animalRequirements": [
+            {
+              "type": "Armored Rhinos",
+              "count": 4,
+              "scenes": 1,
+              "handlerRequirements": "Multiple expert large animal wranglers, on-set vet.",
+              "estimatedCost": 450000
+            }
+          ],
+          "totalDepartmentCost": 520000,
+          "crewRequirements": {
+            "animalWranglers": 4,
+            "veterinarians": 1,
+            "handlers": 4
+          }
+        },
+        "stuntsSafety": {
+          "totalScenes": 4,
+          "stuntRequirements": [
+            {
+              "type": "Large Scale Battle Choreography (50+ performers)",
+              "scenes": 1,
+              "riskLevel": "high",
+              "performersNeeded": 50,
+              "estimatedCost": 1500000
+            },
+            {
+              "type": "Vehicle Chase & Stunts (Busan)",
+              "scenes": 1,
+              "riskLevel": "high",
+              "performersNeeded": 10,
+              "estimatedCost": 1200000
+            },
+            {
+              "type": "High Fall & Underwater Combat (Warrior Falls)",
+              "scenes": 2,
+              "riskLevel": "extreme",
+              "performersNeeded": 6,
+              "estimatedCost": 950000
+            }
+          ],
+          "totalDepartmentCost": 4200000,
+          "crewRequirements": {
+            "stuntCoordinator": 2,
+            "stuntPerformers": 60,
+            "medics": 4
+          }
+        }
+      },
+      "sceneBySceneAnalysis": [
+        {
+          "sceneNumber": 1,
+          "sceneHeader": "1 EXT. DEEP SPACE",
+          "departmentRequirements": {
+            "makeupHair": {"characterApplications": 0, "specialRequirements": [], "estimatedTime": 0, "cost": 0},
+            "wardrobeCostume": {"costumesNeeded": 0, "quickChanges": 0, "specialRequirements": [], "cost": 0},
+            "artDepartment": {"setRequirements": ["VFX assets: nebulae, solar system, Earth"], "propsNeeded": [], "specialBuilds": [], "cost": 5000},
+            "technicalDepartments": {
+              "camera": {"equipment": ["VFX plate unit"], "specialMoves": ["simulated galaxy fly-through"], "cost": 10000},
+              "lighting": {"setup": "VFX", "powerNeeds": "N/A", "cost": 0},
+              "sound": {"requirements": ["V.O. narration", "drum soundscape"], "challenges": [], "cost": 5000}
+            }
+          },
+          "totalSceneCost": 20000
+        },
+        {
+          "sceneNumber": 6,
+          "sceneHeader": "6 INT. ROYAL TALON FIGHTER - NIGHT",
+          "departmentRequirements": {
+            "makeupHair": {"characterApplications": 2, "specialRequirements": ["Bald cap for Okoye"], "estimatedTime": 120, "cost": 8000},
+            "wardrobeCostume": {"costumesNeeded": 2, "quickChanges": 0, "specialRequirements": ["Dora Milaje uniform", "T'Challa's attire"], "cost": 25000},
+            "artDepartment": {"setRequirements": ["Advanced aircraft interior"], "propsNeeded": ["Wakandan tech controls"], "specialBuilds": ["Royal Talon Fighter Cockpit"], "cost": 600000},
+            "technicalDepartments": {
+              "camera": {"equipment": ["Main package"], "specialMoves": ["potential gimbal work for flight simulation"], "cost": 20000},
+              "lighting": {"setup": "Interior night aircraft", "powerNeeds": "Low", "cost": 15000},
+              "sound": {"requirements": ["dialogue in-cockpit"], "challenges": ["simulated engine noise"], "cost": 7000}
+            }
+          },
+          "totalSceneCost": 675000
+        },
+        {
+          "sceneNumber": 22,
+          "sceneHeader": "22 INT. LONDON MUSEUM - CONTINUOUS",
+          "departmentRequirements": {
+            "makeupHair": {"characterApplications": 2, "specialRequirements": ["Gender disguise reveal"], "estimatedTime": 30, "cost": 5000},
+            "wardrobeCostume": {"costumesNeeded": 2, "quickChanges": 1, "specialRequirements": ["Reveal of tactical gear under disguise"], "cost": 7500},
+            "artDepartment": {"setRequirements": ["Museum exhibit"], "propsNeeded": ["concealed firearms"], "specialBuilds": [], "cost": 2000},
+            "technicalDepartments": {
+              "camera": {"equipment": ["Main package"], "specialMoves": [], "cost": 15000},
+              "lighting": {"setup": "Interior day museum", "powerNeeds": "Low", "cost": 10000},
+              "sound": {"requirements": ["dialogue"], "challenges": ["museum acoustics"], "cost": 5000}
+            }
+          },
+          "totalSceneCost": 44500
+        },
+        {
+          "sceneNumber": 35,
+          "sceneHeader": "35 EXT. CHALLENGE POOL - WARRIOR FALLS - DAY",
+          "departmentRequirements": {
+            "makeupHair": {"characterApplications": 10, "specialRequirements": ["Multiple tribal makeup designs", "scarification"], "estimatedTime": 480, "cost": 25000},
+            "wardrobeCostume": {"costumesNeeded": 10, "quickChanges": 0, "specialRequirements": ["Jabari mountain attire", "Mining tribe ceremonial", "royal garments"], "cost": 150000},
+            "artDepartment": {"setRequirements": ["Massive waterfall set"], "propsNeeded": ["tribal banners", "ceremonial items"], "specialBuilds": ["Challenge Pool"], "cost": 2500000},
+            "technicalDepartments": {
+              "camera": {"equipment": ["multiple cameras", "crane/jib"], "specialMoves": ["sweeping crowd shots"], "cost": 50000},
+              "lighting": {"setup": "Exterior day - large area control", "powerNeeds": "High", "cost": 45000},
+              "sound": {"requirements": ["Gorilla call playback", "crowd reactions", "dialogue over waterfall"], "challenges": ["water noise"], "cost": 20000}
+            }
+          },
+          "totalSceneCost": 2790000
+        },
+        {
+          "sceneNumber": 70,
+          "sceneHeader": "70 EXT. WASHIRO YEONGDOGU - PANTHER'S HILLS - NIGHT",
+          "departmentRequirements": {
+            "makeupHair": {"characterApplications": 1, "specialRequirements": [], "estimatedTime": 30, "cost": 1000},
+            "wardrobeCostume": {"costumesNeeded": 1, "quickChanges": 1, "specialRequirements": ["Black Panther suit activation"], "cost": 15000},
+            "artDepartment": {"setRequirements": ["Industrial area dressing"], "propsNeeded": [], "specialBuilds": [], "cost": 30000},
+            "technicalDepartments": {
+              "camera": {"equipment": ["Action/Stunt Unit", "vehicle rigs"], "specialMoves": ["high speed tracking", "parkour follow"], "cost": 80000},
+              "lighting": {"setup": "Night exterior chase", "powerNeeds": "High", "cost": 300000},
+              "sound": {"requirements": ["SFX capture", "minimal dialogue"], "challenges": ["high-speed noise"], "cost": 10000}
+            }
+          },
+          "totalSceneCost": 436000
+        },
+        {
+          "sceneNumber": 106,
+          "sceneHeader": "106 INT. ROYAL PALACE - THRONE ROOM - CONTINUOUS",
+          "departmentRequirements": {
+            "makeupHair": {"characterApplications": 1, "specialRequirements": ["Full torso ritual scar prosthetics"], "estimatedTime": 360, "cost": 75000},
+            "wardrobeCostume": {"costumesNeeded": 1, "quickChanges": 0, "specialRequirements": ["Removable shirt for reveal"], "cost": 2000},
+            "artDepartment": {"setRequirements": ["Throne room set"], "propsNeeded": [], "specialBuilds": [], "cost": 5000},
+            "technicalDepartments": {
+              "camera": {"equipment": ["Main package"], "specialMoves": ["Slow push-in"], "cost": 15000},
+              "lighting": {"setup": "Dramatic interior", "powerNeeds": "Medium", "cost": 20000},
+              "sound": {"requirements": ["dialogue"], "challenges": ["room reverb"], "cost": 5000}
+            }
+          },
+          "totalSceneCost": 122000
+        },
+        {
+          "sceneNumber": 155,
+          "sceneHeader": "155 EXT. MT. BASHENGA - TOP OF THE HILL - DAY",
+          "departmentRequirements": {
+            "makeupHair": {"characterApplications": 20, "specialRequirements": ["Battle makeup"], "estimatedTime": 240, "cost": 15000},
+            "wardrobeCostume": {"costumesNeeded": 25, "quickChanges": 0, "specialRequirements": ["Black Panther suit", "Golden Jaguar suit", "Wakandan battle armor", "Rhino armor"], "cost": 250000},
+            "artDepartment": {"setRequirements": ["Mountain battlefield"], "propsNeeded": ["Vibranium weapons", "battle debris"], "specialBuilds": [], "cost": 100000},
+            "technicalDepartments": {
+              "camera": {"equipment": ["multiple units", "aerial unit"], "specialMoves": ["large battle coverage", "aerial combat"], "cost": 150000},
+              "lighting": {"setup": "Exterior day - large area", "powerNeeds": "High", "cost": 50000},
+              "sound": {"requirements": ["battle sounds", "animal sounds", "dialogue"], "challenges": ["chaotic environment"], "cost": 25000}
+            }
+          },
+          "totalSceneCost": 590000
+        }
+      ],
+      "budgetSummary": {
+        "departmentTotals": {
+          "makeupHair": 960000,
+          "wardrobeCostume": 3500000,
+          "artDepartmentConstruction": 8500000,
+          "props": 1250000,
+          "camera": 3200000,
+          "lighting": 2100000,
+          "sound": 950000,
+          "specialEffects": 975000,
+          "animalsCreatures": 520000,
+          "stuntsSafety": 4200000
+        },
+        "grandTotalDepartmentBudget": 26155000,
+        "contingencyRecommendation": "15%",
+        "budgetRiskFactors": [
+          {
+            "department": "ArtDepartmentConstruction",
+            "risk": "Large-scale set builds (Warrior Falls, Mine) are prone to overages.",
+            "impact": "high",
+            "mitigation": "Detailed pre-visualization and engineering surveys. Lock designs early."
+          },
+          {
+            "department": "StuntsSafety",
+            "risk": "High-risk sequences (waterfall fall, car chase, large battle) could lead to delays or increased safety costs.",
+            "impact": "high",
+            "mitigation": "Extensive rehearsal time, multiple safety coordinators, and pre-testing of all rigs."
+          },
+          {
+            "department": "AnimalsCreatures",
+            "risk": "Working with large, exotic animals (rhinos) is unpredictable and carries significant insurance and safety liabilities.",
+            "impact": "medium",
+            "mitigation": "Use VFX for any particularly dangerous shots. Ensure handlers are top-of-field and all regulations are strictly followed."
+          },
+          {
+            "department": "WardrobeCostume",
+            "risk": "Creation of numerous complex, bespoke costumes (Panther suits, tribal wear) has long lead times and high material costs.",
+            "impact": "medium",
+            "mitigation": "Start design and fabrication far in advance of pre-production. Source materials early."
+          }
+        ]
+      },
+      "productionRecommendations": {
+        "criticalPathDepartments": [
+          "ArtDepartmentConstruction",
+          "WardrobeCostume",
+          "StuntsSafety"
+        ],
+        "longLeadTimeItems": [
+          {
+            "item": "Warrior Falls Set Construction",
+            "department": "ArtDepartmentConstruction",
+            "leadTime": "180",
+            "criticalityLevel": "high"
+          },
+          {
+            "item": "Black Panther & Golden Jaguar Suits",
+            "department": "WardrobeCostume",
+            "leadTime": "200",
+            "criticalityLevel": "high"
+          },
+          {
+            "item": "Killmonger's Scar Prosthetics",
+            "department": "MakeupHair",
+            "leadTime": "90",
+            "criticalityLevel": "medium"
+          },
+          {
+            "item": "Sourcing and Training of Rhinos",
+            "department": "AnimalsCreatures",
+            "leadTime": "150",
+            "criticalityLevel": "high"
+          }
+        ],
+        "departmentInterdependencies": [
+          {
+            "primaryDepartment": "StuntsSafety",
+            "dependentDepartments": [
+              "WardrobeCostume",
+              "Camera",
+              "SpecialEffects",
+              "MakeupHair"
+            ],
+            "coordination": "Stunt choreography must be developed alongside costume design to ensure mobility. Camera placement and practical effects rigs must be integrated into rehearsals. Makeup must plan for sweat-proofing and damage during action sequences."
+          },
+          {
+            "primaryDepartment": "ArtDepartmentConstruction",
+            "dependentDepartments": [
+              "Lighting",
+              "Camera",
+              "StuntsSafety"
+            ],
+            "coordination": "Lighting and grip departments must be involved in set design to plan for rigging points and power distribution. Camera department needs to know sight-lines and access points. Stunt department must approve all surfaces and structural integrity for action sequences."
+          }
+        ]
+      },
+      "qualityControlChecks": {
+        "scriptTraceability": "PASS",
+        "budgetRealism": "CONDITIONAL",
+        "departmentCompleteness": "PASS",
+        "industryStandardCompliance": "PASS",
+        "confidenceScore": "85%"
+      }
+    }
+  }

@@ -1,0 +1,199 @@
+{
+  "insuranceModelOutput": {
+    "processingLog": {
+      "coverageRequirementsCalculation": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:17:01Z",
+        "status": "completed"
+      },
+      "riskFactorAssessment": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:17:02Z",
+        "status": "completed"
+      },
+      "actuarialTableApplication": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:17:03Z",
+        "status": "completed"
+      },
+      "deductibleFactorProcessing": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:17:04Z",
+        "status": "completed"
+      },
+      "completionBondProcessing": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:17:05Z",
+        "status": "completed"
+      },
+      "overallProcessingStatus": "all_functions_executed_successfully"
+    },
+    "generalLiability": {
+      "coverage": {
+        "perOccurrence": 2000000,
+        "generalAggregate": 5000000,
+        "excessLiability": 20000000
+      },
+      "premium": {
+        "primary": 95000,
+        "excess": 80000,
+        "total": 175000
+      },
+      "deductible": 25000,
+      "specialConditions": [
+        "Stunt safety plan required for all high-risk sequences",
+        "Animal handler liability and safety protocols mandatory",
+        "Higher deductible applies for work within Centrifuge set",
+        "Coverage extension required for international jurisdictions"
+      ]
+    },
+    "equipmentCoverage": {
+      "schedule": {
+        "camera": 2500000,
+        "lightingAndGrip": 1800000,
+        "sound": 600000,
+        "vehicles": 800000,
+        "propsSetsWardrobe": 1200000,
+        "specialtyTech": 2132000
+      },
+      "totalValue": 9032000.00,
+      "totalPremium": 406440.00,
+      "deductible": 25000,
+      "specialConditions": [
+        "Coverage for custom-built rigs (Centrifuge, Motion Control) subject to engineering approval and load testing",
+        "Underwater housing requires pre-shoot pressure test certification",
+        "ATA Carnet required for all equipment scheduled for international transit"
+      ]
+    },
+    "castInsurance": {
+      "essentialElements": {
+        "KeirDullea": {
+          "value": 3500000,
+          "rate": 0.025,
+          "premium": 87500
+        },
+        "GaryLockwood": {
+          "value": 2800000,
+          "rate": 0.025,
+          "premium": 70000
+        },
+        "WilliamSylvester": {
+          "value": 2200000,
+          "rate": 0.02,
+          "premium": 44000
+        },
+        "StanleyKubrick": {
+          "value": 8500000,
+          "rate": 0.03,
+          "premium": 255000
+        }
+      },
+      "totalCastPremium": 456500.00,
+      "specialConditions": [
+        "Full medical examinations required for all insured essential elements",
+        "Stunt work for Keir Dullea and Gary Lockwood requires sign-off from stunt coordinator on each sequence",
+        "Coverage excludes delays due to creative differences"
+      ]
+    },
+    "errorsOmissions": {
+      "coverage": 5000000,
+      "premium": 35000,
+      "deductible": 15000,
+      "retroactiveDate": "2024-01-01",
+      "specialConditions": [
+        "Subject to full script, title, and music clearance reports from a pre-approved law firm",
+        "Coverage for 'fair use' claims is excluded unless specifically reviewed and endorsed"
+      ]
+    },
+    "autoLiability": {
+      "totalAuto": 45000.00
+    },
+    "workersCompensation": {
+      "payroll": {
+        "officeClerical": 3897520,
+        "productionCrew": 15000000,
+        "stuntPerformers": 500000,
+        "internationalCrew": 2000000
+      },
+      "totalPayroll": 21397520.00,
+      "totalPremium": 854488.00
+    },
+    "completionBond": {
+      "required": true,
+      "bondableElements": {
+        "belowTheLine": 42795040,
+        "postProduction": 8500000,
+        "other": 4050000,
+        "contingency": 7953000,
+        "total": 63298040
+      },
+      "rate": 0.05,
+      "fee": 3164902.00,
+      "rebate": {
+        "percentage": 0.30,
+        "potentialAmount": 949470.60
+      },
+      "deliveryRequirements": [
+        "Final Cut Master",
+        "M&E Tracks",
+        "Chain of Title Documentation",
+        "Paid Billings Report"
+      ],
+      "specialConditions": [
+        "Bond company has right of takeover if production falls significantly behind schedule or over budget",
+        "Weekly detailed cost reporting is mandatory",
+        "Bond company approval required for any significant script or schedule changes"
+      ]
+    },
+    "additionalCoverages": {
+      "extraExpense": 50000,
+      "thirdPartyPropertyDamage": 35000,
+      "civilAuthority": 20000
+    },
+    "specialRiskCoverages": {
+      "politicalRisk": 75000,
+      "animalMortality": 15000,
+      "weatherInsurance": 25000,
+      "medicalEvacuation": 30000
+    },
+    "insuranceSummary": {
+      "subtotal": 2225428.00,
+      "completionBond": 3164902.00,
+      "brokerFee": 222542.80,
+      "taxes": 66762.84,
+      "grandTotal": 5679635.64
+    },
+    "riskAssessment": {
+      "overallRisk": "EXTREME",
+      "riskFactors": [
+        {
+          "type": "Technical",
+          "description": "Pioneering use of motion control, front projection, and custom-built rotating sets (Centrifuge). Lack of established safety or reliability data.",
+          "level": "Extreme"
+        },
+        {
+          "type": "Logistical",
+          "description": "Filming in remote international locations (Kenya, Tanzania) with political instability, wildlife, and limited infrastructure.",
+          "level": "High"
+        },
+        {
+          "type": "Personnel",
+          "description": "Complex zero-gravity wirework and underwater stunts for key cast members, increasing risk of injury and production delays.",
+          "level": "High"
+        },
+        {
+          "type": "Creative",
+          "description": "Highly ambitious and abstract script with unprecedented visual requirements, posing a risk to schedule and budget adherence.",
+          "level": "High"
+        }
+      ],
+      "recommendations": [
+        "Mandatory and extensive pre-production testing of all new technologies and custom rigs with engineering oversight.",
+        "Secure on-site engineering and specialized medical support for all high-risk filming days (Centrifuge, Stunts, Underwater).",
+        "Develop comprehensive emergency evacuation and medical response plans for international locations.",
+        "Implement a rigorous daily safety briefing protocol, especially on days involving stunts, animals, or complex machinery.",
+        "Strict adherence to cost reporting schedules and proactive communication with the completion bond provider."
+      ]
+    }
+  }
+}

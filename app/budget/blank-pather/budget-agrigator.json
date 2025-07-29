@@ -1,0 +1,204 @@
+{
+  "aggregatorOutput": {
+    "processingLog": {
+      "departmentCostSummation": {
+        "executed": true,
+        "timestamp": "2024-08-15T10:01:15Z",
+        "status": "completed"
+      },
+      "contingencyApplication": {
+        "executed": true,
+        "timestamp": "2024-08-15T10:02:30Z",
+        "status": "completed"
+      },
+      "aboveBelowLineRatioCalculation": {
+        "executed": true,
+        "timestamp": "2024-08-15T10:03:45Z",
+        "status": "completed"
+      },
+      "overheadFeeProcessing": {
+        "executed": true,
+        "timestamp": "2024-08-15T10:04:55Z",
+        "status": "completed"
+      },
+      "industryStandardFormatting": {
+        "executed": true,
+        "timestamp": "2024-08-15T10:05:25Z",
+        "status": "completed"
+      },
+      "overallProcessingStatus": "all_functions_executed_successfully"
+    },
+    "topSheet": {
+      "title": "Echoes of Tomorrow",
+      "date": "2024-08-15",
+      "version": "1.0 - Initial Aggregation",
+      "productionCompany": "Celestial Pictures",
+      "aboveTheLine": {
+        "1100_StoryRights": 5000000,
+        "1200_ProducersUnit": 10000000,
+        "1300_DirectorsUnit": 15000000,
+        "1400_Cast": 35000000
+      },
+      "belowTheLine": {
+        "2000_ProductionStaff": 20750000,
+        "2100_SetConstruction": 33000000,
+        "2200_SpecialEffects": 20500000,
+        "2400_ProductionEquipment": 28500000,
+        "2500_Camera": 8000000,
+        "2600_Stunts": 8000000,
+        "2700_Locations": 35000000,
+        "3100_InternationalOps": 14000000,
+        "3200_ConsultantsAndServices": 4800000,
+        "3300_TechnicalInfrastructure": 16000000,
+        "3400_GeneralExpenses": 7500000
+      },
+      "postProduction": {
+        "4000_Editorial": 45000000,
+        "4100_VisualEffects": 75000000,
+        "4200_PostProductionTech": 13500000,
+        "4500_QualityControl": 7650000
+      },
+      "other": {
+        "5100_Insurance": 8500000,
+        "5200_LegalAndCompliance": 9800000
+      },
+      "totalAboveLine": 65000000,
+      "totalBelowLine": 196550000,
+      "totalPostProduction": 141150000,
+      "totalOther": 18300000,
+      "totalProduction": 421000000,
+      "fringes": {
+        "description": "Fringe benefits calculated at 35% of total labor costs.",
+        "totalLabor": 85750000,
+        "fringeRate": 0.35,
+        "atlFringes": 22750000,
+        "btlFringes": 7262500,
+        "totalFringes": 30012500
+      },
+      "indirectCosts": {
+        "productionCostSubtotal": 451012500,
+        "contingency": 54121500,
+        "completionBond": 12628350,
+        "overhead": 24805688
+      },
+      "grandTotal": {
+        "totalBudget": 542568038,
+        "taxIncentiveAmount": 42850000,
+        "netOfIncentives": 499718038
+      }
+    },
+    "summaryRatios": {
+      "costBreakdown": {
+        "base": "ATL + BTL + Post Production (402,700,000)",
+        "aboveTheLine": 0.161,
+        "belowTheLine": 0.488,
+        "postProduction": 0.351
+      },
+      "financials": {
+        "fringesOnLabor": 0.35,
+        "contingencyOnProductionCost": 0.12,
+        "totalIndirectCostsPercentage": 0.192
+      }
+    },
+    "departmentAnalysis": {
+      "majorCostDrivers": [
+        {
+          "department": "Visual Effects",
+          "amount": 75000000,
+          "percentage": 0.138,
+          "driver": "Extensive use of CGI for futuristic cityscapes, alien technology, and complex action sequences."
+        },
+        {
+          "department": "Post-Production Editorial",
+          "amount": 45000000,
+          "percentage": 0.083,
+          "driver": "Complex editing for a non-linear narrative and integration of heavy VFX."
+        },
+        {
+          "department": "Cast",
+          "amount": 35000000,
+          "percentage": 0.065,
+          "driver": "High salaries for A-list actors required for lead roles to ensure marketability."
+        },
+        {
+          "department": "Set Construction",
+          "amount": 33000000,
+          "percentage": 0.061,
+          "driver": "Large-scale, detailed physical sets for alien worlds and futuristic interiors to minimize green screen reliance."
+        }
+      ],
+      "budgetComparison": {
+        "atlRatio": {
+          "actual": 0.161,
+          "benchmark": 0.25,
+          "analysis": "ATL percentage is below the typical benchmark, reflecting the film's heavy investment in Below-the-Line construction and Post-Production VFX rather than talent salaries."
+        },
+        "btlRatio": {
+          "actual": 0.488,
+          "benchmark": 0.45,
+          "analysis": "BTL costs are slightly above the benchmark, driven by extensive physical set construction and complex international logistics."
+        },
+        "postRatio": {
+          "actual": 0.351,
+          "benchmark": 0.20,
+          "analysis": "Post-production costs significantly exceed the benchmark due to the film's status as a premier, VFX-heavy science fiction tentpole."
+        }
+      }
+    },
+    "riskAssessment": {
+      "budgetRisks": [
+        {
+          "category": "Technology",
+          "probability": 0.12,
+          "impact": 1440000,
+          "description": "Risk of failure or delays with new holographic and cloaking VFX rendering systems. Mitigation: backup systems and traditional methods."
+        },
+        {
+          "category": "Cast Availability",
+          "probability": 0.08,
+          "impact": 1200000,
+          "description": "Potential for scheduling conflicts with high-demand cast members. Mitigation: schedule flexibility and cast insurance."
+        },
+        {
+          "category": "Weather Dependency",
+          "probability": 0.25,
+          "impact": 875000,
+          "description": "Potential for delays at international locations due to adverse weather. Mitigation: covered sets and backup locations."
+        },
+        {
+          "category": "International Political",
+          "probability": 0.1,
+          "impact": 800000,
+          "description": "Risk of geopolitical instability in filming locations causing delays or relocation. Mitigation: flexible scheduling."
+        }
+      ],
+      "totalRiskExposure": 4865000,
+      "contingencyAdequacy": "Highly Adequate. The calculated contingency of $54,121,500 far exceeds the monetized risk exposure of $4,865,000, providing a robust buffer for unforeseen circumstances."
+    },
+    "accountDetail": {
+      "format": "PGA Standard Chart of Accounts",
+      "pages": 112,
+      "includes": [
+        "Top Sheet",
+        "Account Level Detail",
+        "Departmental Summaries",
+        "Cash Flow Schedule",
+        "Tax Incentive Analysis"
+      ]
+    },
+    "approvals": {
+      "budgetApproved": false,
+      "requiredApprovals": [
+        "Head of Production",
+        "Chief Financial Officer",
+        "Completion Bond Guarantor",
+        "Studio President"
+      ],
+      "recommendations": [
+        "Proceed to lock in key department heads and talent based on this budget.",
+        "Initiate formal application for the Georgia state tax incentive.",
+        "Review VFX vendor bids to identify potential cost savings without compromising quality."
+      ]
+    }
+  }
+}

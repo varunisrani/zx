@@ -1,0 +1,244 @@
+{
+  "cashFlowModelOutput": {
+    "processingLog": {
+      "timelineCostMapping": {
+        "executed": true,
+        "timestamp": "2024-05-21T10:30:01Z",
+        "status": "completed"
+      },
+      "weeklyBurnRateCalculation": {
+        "executed": true,
+        "timestamp": "2024-05-21T10:30:02Z",
+        "status": "completed"
+      },
+      "fundingNeedsProjection": {
+        "executed": true,
+        "timestamp": "2024-05-21T10:30:03Z",
+        "status": "completed"
+      },
+      "peakCashRequirements": {
+        "executed": true,
+        "timestamp": "2024-05-21T10:30:04Z",
+        "status": "completed"
+      },
+      "multipleScenarioModeling": {
+        "executed": true,
+        "timestamp": "2024-05-21T10:30:05Z",
+        "status": "completed"
+      },
+      "overallProcessingStatus": "all_functions_executed_successfully"
+    },
+    "executiveSummary": {
+      "peakFunding": 12855000,
+      "totalInterestCost": 745850,
+      "netIncentiveValue": 500000,
+      "projectIRR": 22.5,
+      "paybackPeriod": 3.6,
+      "projectNPV": 8560000
+    },
+    "fundingDrawdown": {
+      "studioFinancing": {
+        "1966_q1": 600000,
+        "1966_q2": 600000,
+        "1966_q3": 600000,
+        "1966_q4": 600000,
+        "1967_q1": 2250000,
+        "1967_q2": 2250000,
+        "1967_q3": 2100000,
+        "1967_q4": 1000000
+      },
+      "bankCredit": {
+        "1967_q2": 500000,
+        "1967_q3": 1500000
+      },
+      "equity": {
+        "1966_q1": 200000
+      }
+    },
+    "monthlyProjections": {
+      "1966": {
+        "q4": {
+          "receipts": {
+            "total": 600000,
+            "fundingDrawdown": 600000
+          },
+          "expenditures": {
+            "total": 600000,
+            "preProduction": 600000
+          },
+          "netCashFlow": 0,
+          "cumulativeCash": 200000,
+          "interestIncome": 500,
+          "interestExpense": -30000
+        }
+      },
+      "1967": {
+        "q3": {
+          "receipts": {
+            "total": 3600000,
+            "fundingDrawdown": 3600000
+          },
+          "expenditures": {
+            "total": 2925000,
+            "principalPhotography": 2250000,
+            "postProduction": 675000
+          },
+          "netCashFlow": 675000,
+          "cumulativeCash": -2855000,
+          "interestIncome": 0,
+          "interestExpense": -156250
+        }
+      },
+      "1968": {
+        "q2_Release": {
+          "receipts": {
+            "total": 2000000,
+            "theatricalRevenue": 2000000
+          },
+          "expenditures": {
+            "total": 675000,
+            "postProduction": 675000
+          },
+          "netCashFlow": 1325000,
+          "cumulativeCash": -11875000,
+          "interestIncome": 0,
+          "interestExpense": -189850
+        },
+        "q4": {
+          "receipts": {
+            "total": 8500000,
+            "theatricalRevenue": 8000000,
+            "ukGrant": 500000
+          },
+          "expenditures": {
+            "total": 675000,
+            "postProduction": 675000
+          },
+          "netCashFlow": 7825000,
+          "cumulativeCash": -525000,
+          "interestIncome": 0,
+          "interestExpense": -125000
+        }
+      },
+      "1969": {
+        "q2": {
+          "receipts": {
+            "total": 5000000,
+            "theatricalRevenue": 5000000
+          },
+          "expenditures": {
+            "total": 0
+          },
+          "netCashFlow": 5000000,
+          "cumulativeCash": 8500000,
+          "interestIncome": 42500,
+          "interestExpense": 0
+        }
+      }
+    },
+    "interestCalculations": {
+      "studioFinancing": {
+        "principal": 10000000,
+        "rate": 6.0,
+        "totalInterest": 585850
+      },
+      "bankCredit": {
+        "principal": 2000000,
+        "rate": 7.5,
+        "totalInterest": 160000
+      },
+      "totalFinancingCost": 745850
+    },
+    "revenueProjections": {
+      "theatrical": {
+        "total": 22500000,
+        "collectionSchedule": {
+          "year1": 15000000,
+          "year2": 5000000,
+          "year3": 2500000
+        }
+      },
+      "television": {
+        "total": 3000000,
+        "collectionSchedule": {
+          "year4": 3000000
+        }
+      },
+      "ancillary": {
+        "total": 500000,
+        "collectionSchedule": {
+          "year2": 500000
+        }
+      }
+    },
+    "scenarioAnalysis": {
+      "baseCase": {
+        "totalCost": 12745850,
+        "totalRevenue": 26000000,
+        "netProfit": 13254150,
+        "irr": 22.5
+      },
+      "optimisticCase": {
+        "totalCost": 12500000,
+        "totalRevenue": 35000000,
+        "netProfit": 22500000,
+        "irr": 31.2
+      },
+      "pessimisticCase": {
+        "totalCost": 14500000,
+        "totalRevenue": 15000000,
+        "netProfit": 500000,
+        "irr": 1.5
+      }
+    },
+    "riskAnalysis": {
+      "sensitivity": {
+        "irr_to_revenue_change": "A 10% decrease in revenue results in a 4.5 point drop in IRR.",
+        "cost_to_schedule_overrun": "Each additional month of principal photography adds $750,000 in direct costs and $8,000 in interest."
+      },
+      "riskFactors": [
+        {
+          "factor": "Experimental VFX Failure",
+          "probability": 0.40,
+          "impact": 2000000,
+          "mitigation": "Extended R&D phase; budget allocation for top engineering talent; backup optical effect plans."
+        },
+        {
+          "factor": "Director Perfectionism & Schedule Overrun",
+          "probability": 0.60,
+          "impact": 1500000,
+          "mitigation": "Empowered Line Producer with studio backing; regular milestone reviews; strict set access protocols."
+        },
+        {
+          "factor": "Negative Audience Reception to Non-Linear Narrative",
+          "probability": 0.30,
+          "impact": 10000000,
+          "mitigation": "Marketing campaign focused on visual spectacle and innovation; secure top directorial and star talent to add prestige."
+        },
+        {
+          "factor": "Currency Fluctuation (GBP)",
+          "probability": 0.15,
+          "impact": 250000,
+          "mitigation": "Pre-purchase GBP when rates are favorable; structure UK vendor payments in USD where possible."
+        }
+      ]
+    },
+    "recommendedActions": [
+      "Secure a completion bond as a condition of financing to mitigate schedule and budget risk.",
+      "Authorize a dedicated R&D budget of at least $1,000,000 to be spent prior to official pre-production.",
+      "Implement a strict weekly cost reporting system for studio and bank review.",
+      "Develop a two-pronged marketing strategy: one for intellectual cinephiles, and one emphasizing the groundbreaking visual spectacle for mass audiences."
+    ],
+    "complianceMonitoring": {
+      "bankCovenants": {
+        "reporting": "Quarterly certified cost statements and updated cash flow projections required.",
+        "financialRatio": "Project leverage (Total Debt / Budgeted Cost) must not exceed 1.10 at any time."
+      },
+      "bondingRequirements": {
+        "costReports": "Weekly 'hot cost' reports during principal photography.",
+        "approvals": "Any single expenditure over $25,000 not in the approved budget requires bond company and studio sign-off.",
+        "takeoverRights": "Bond company reserves the right to take over production if it is more than 10% over budget or 15% behind schedule."
+      }
+    }
+  }
+}

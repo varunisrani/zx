@@ -1,0 +1,335 @@
+{
+  "resourceLogisticsOutput": {
+    "requestId": "req_logistics_black_panther_20240729_001",
+    "processedTimestamp": "2024-07-29T11:02:15Z",
+    "processingTime": 165.0,
+    "confidence": 0.95,
+    "systemStatus": "OPERATIONAL_WITH_CONFLICTS",
+    "dataProcessingSummary": {
+      "castMembersAnalyzed": 10,
+      "crewDepartmentsAnalyzed": 5,
+      "locationsAnalyzed": 5,
+      "equipmentItemsAnalyzed": 11,
+      "conflictsIdentified": 5,
+      "optimizationOpportunities": 4
+    },
+    "preliminaryDoodReport": {
+      "principals": [
+        {
+          "characterName": "T'CHALLA / BLACK PANTHER",
+          "actor": "Chadwick Boseman",
+          "totalEstimatedDays": 65,
+          "workDays": 41,
+          "holdDays": 20,
+          "travelDays": 4,
+          "totalContractDays": 65,
+          "schedulingWindow": {
+            "start": "2017-01-15",
+            "end": "2017-04-10",
+            "availableDays": 85,
+            "utilizationRate": 0.76
+          },
+          "sceneBreakdown": [
+            {
+              "sceneId": 6,
+              "estimatedShootDay": "TBD",
+              "location": "ATLANTA_STUDIOS_WAKANDA_SETS",
+              "estimatedHours": 8,
+              "specialRequirements": ["panther_suit_application_daily", "stunt_coordination_required"]
+            },
+            {
+              "sceneId": 33,
+              "estimatedShootDay": "TBD",
+              "location": "WARRIOR_FALLS_SOUTH_AFRICA",
+              "estimatedHours": 10,
+              "specialRequirements": ["panther_suit_application_daily", "stunt_coordination_required", "water_safety_protocols"]
+            },
+            {
+              "sceneId": 70,
+              "estimatedShootDay": "TBD",
+              "location": "BUSAN_SOUTH_KOREA",
+              "estimatedHours": 12,
+              "specialRequirements": ["panther_suit_application_daily", "stunt_coordination_required", "car_chase_sequences"]
+            }
+          ],
+          "costProjection": {
+            "dailyRate": 150000,
+            "totalSalary": 6150000,
+            "additionalCosts": 1500000,
+            "totalCost": 7650000
+          },
+          "constraints": ["panther_suit_sequences_require_extended_setup", "stunt_coordination_required", "180 min special prep time"]
+        },
+        {
+          "characterName": "ERIK KILLMONGER",
+          "actor": "Michael B. Jordan",
+          "totalEstimatedDays": 28,
+          "workDays": 28,
+          "holdDays": 0,
+          "travelDays": 0,
+          "totalContractDays": 28,
+          "schedulingWindow": {
+            "start": "2017-02-01",
+            "end": "2017-04-10",
+            "availableDays": 68,
+            "utilizationRate": 0.41
+          },
+          "sceneBreakdown": [
+            {
+              "sceneId": 20,
+              "estimatedShootDay": "TBD",
+              "location": "TBD",
+              "estimatedHours": 12,
+              "specialRequirements": ["scarification_prosthetics_daily", "killmonger_suit_coordination"]
+            }
+          ],
+          "costProjection": {
+            "dailyRate": 75000,
+            "totalSalary": 2100000,
+            "additionalCosts": 0,
+            "totalCost": 2100000
+          },
+          "constraints": ["scarification_makeup_requires_3_hour_prep", "killmonger_suit_coordination", "No travel to South Korea"]
+        }
+      ],
+      "supporting": [
+        {
+          "characterName": "ULYSSES_KLAUE",
+          "actor": "Andy Serkis",
+          "totalEstimatedDays": 14,
+          "workDays": 14,
+          "holdDays": 0,
+          "travelDays": 0,
+          "totalContractDays": 14,
+          "schedulingWindow": {
+            "start": "2017-02-05",
+            "end": "2017-03-15",
+            "availableDays": 39,
+            "utilizationRate": 0.36
+          },
+          "sceneBreakdown": [
+             {
+              "sceneId": 73,
+              "estimatedShootDay": "TBD",
+              "location": "BUSAN_SOUTH_KOREA",
+              "estimatedHours": 8,
+              "specialRequirements": ["stunt_coordination"]
+            }
+          ],
+          "costProjection": {
+            "dailyRate": 20000,
+            "totalSalary": 280000,
+            "additionalCosts": 0,
+            "totalCost": 280000
+          },
+          "constraints": ["Contract ends March 15, 2017, must complete all scenes before this date."]
+        }
+      ]
+    },
+    "resourceAvailabilityMatrix": {
+      "castAvailabilityConflicts": [
+        {
+          "conflictId": "CAST_CONFLICT_001",
+          "severity": "HIGH",
+          "description": "Actor Andy Serkis (Ulysses Klaue) contract ends 2017-03-15, which is almost a month before production wrap.",
+          "impact": "All 14 of his scenes, many of which are in the complex Busan sequence, must be scheduled within his 39-day availability window. Poses significant scheduling constraint.",
+          "resolution": "Prioritize all scenes involving Ulysses Klaue to be shot between Feb 5 and Mar 15. Coordinate with AD to block-shoot his sequences."
+        },
+        {
+          "conflictId": "CAST_CONFLICT_002",
+          "severity": "MEDIUM",
+          "description": "Actors Chadwick Boseman and Michael B. Jordan require 180 minutes of special prep time daily.",
+          "impact": "Reduces effective shooting time on days they work. Requires earlier call times for makeup department and actors, potentially incurring pre-call penalties and affecting crew work hours.",
+          "resolution": "Stagger call times. Schedule scenes not requiring these actors for the first part of the day while prep is completed. Ensure makeup trailer capacity can handle parallel lengthy preps."
+        }
+      ],
+      "crewResourceConflicts": [
+        {
+          "conflictId": "CREW_CONFLICT_001",
+          "severity": "HIGH",
+          "description": "Numerous key and specialized crew positions are listed as 'TBD'.",
+          "impact": "Inability to confirm schedules, travel logistics, and skill-set matches. Delays in crewing will jeopardize pre-production timelines and production start.",
+          "resolution": "Immediately engage Heads of Department to source and contract all TBD positions, prioritizing Stunt Coordinator, Gaffer, and Makeup Supervisor."
+        }
+      ],
+      "equipmentAvailabilityConflicts": [
+        {
+          "conflictId": "EQUIP_CONFLICT_001",
+          "severity": "HIGH",
+          "description": "'Trained Rhinos & Handlers' (EQUIP006) have only a 3-day exclusive availability.",
+          "impact": "All scenes involving rhinos (Mt. Bashenga, Border Tribe scenes) must be scheduled consecutively within this extremely tight 3-day window. Any delay (weather, etc.) could cause catastrophic schedule failure for these scenes.",
+          "resolution": "Block-book the 3 days for all rhino-related scenes. Have backup scenes ready to shoot at the same location that do not require rhinos in case of animal-related delays. Secure a 1st-option hold on the rhinos for an additional 2 days as a contingency."
+        },
+        {
+          "conflictId": "EQUIP_CONFLICT_002",
+          "severity": "MEDIUM",
+          "description": "'Underwater Camera Systems' (EQUIP003) are available for 15 days, but required at two separate, logistically complex locations (Warrior Falls, 12 days; potential use at Atlanta studio tanks).",
+          "impact": "The 15-day rental window may not be sufficient to cover shooting, transport between continents, and setup at two distinct locations. Risk of one sequence being without necessary equipment.",
+          "resolution": "Schedule all underwater scenes consecutively. Negotiate with vendor to split the 15-day rental into two blocks or extend the rental period. Prioritize which underwater sequence is more critical."
+        }
+      ]
+    },
+    "locationLogisticsBreakdown": {
+      "locationEfficiency": {
+        "LOC005_Mt_Bashenga": {
+          "logisticalComplexity": "EXTREME",
+          "notes": "Exclusive helicopter access creates a major dependency on weather and heavy-lift capacity. All personnel and equipment must be flown in. On-location base camp is required, adding significant setup time and cost. No road access means no easy alternative for transport."
+        },
+        "LOC001_Warrior_Falls": {
+          "logisticalComplexity": "HIGH",
+          "notes": "Combination of helicopter and 4WD access is complex. Requires extensive environmental and landing permits. Supporting 2000 extras in a remote location requires a massive catering, transport, and sanitation setup."
+        },
+        "LOC002_Busan": {
+          "logisticalComplexity": "HIGH",
+          "notes": "Major international company move. Requires international freight, work permits for all non-Korean personnel, and coordination with local production services. Street closures and casino set build-out are permit-intensive."
+        },
+        "LOC003_Atlanta_Studios": {
+          "logisticalComplexity": "LOW",
+          "notes": "Primary base of operations. Excellent infrastructure and access. Main dependencies are completion of large-scale set construction (Wakanda sets, Vibranium mine)."
+        },
+        "LOC004_Oakland": {
+          "logisticalComplexity": "MEDIUM",
+          "notes": "Domestic company move. Requires air freight for key equipment. Primary challenges are urban logistics, including traffic management and city permits for street scenes."
+        }
+      },
+      "companyMoveAnalysis": {
+        "move_atlanta_to_south_africa": {
+          "type": "Major International",
+          "personnel": "Core cast and crew (~150)",
+          "equipment": "Air & sea freight for specialized gear",
+          "estimatedTime": "5-7 days (including pre-shipping and customs)",
+          "complexity": "HIGH"
+        },
+        "move_south_africa_to_south_korea": {
+          "type": "Major International",
+          "personnel": "Core cast and crew (~120)",
+          "equipment": "Air freight for key camera/stunt gear",
+          "estimatedTime": "4-5 days",
+          "complexity": "HIGH"
+        },
+        "move_south_korea_to_atlanta": {
+          "type": "Major International",
+          "personnel": "Core cast and crew (~120)",
+          "equipment": "Return freight",
+          "estimatedTime": "4-6 days",
+          "complexity": "MEDIUM"
+        }
+      },
+      "accommodationRequirements": {
+        "south_africa_remote": "Requires sourcing and setup of two types of camps: a luxury tented camp for ~20 key cast/crew and a larger base camp for ~150 crew near Warrior Falls and Mt. Bashenga.",
+        "south_korea_urban": "Requires block booking of rooms in 5-star hotels for key cast and luxury hotels for ~150 crew in Busan. Proximity to shooting locations is key.",
+        "atlanta_base": "Standard arrangements. Luxury hotels for key cast, long-term housing/hotels for traveling crew."
+      }
+    },
+    "equipmentAllocationSchedule": {
+      "specializedEquipment": [
+        {
+          "equipmentId": "EQUIP006",
+          "item": "trained_rhinos_handlers",
+          "totalDaysRequired": 3,
+          "availableDays": 3,
+          "utilizationRate": 1.0,
+          "schedulingWindow": {
+            "availability_details": "Exclusive 3-day window, must be scheduled consecutively. High risk."
+          },
+          "dependentScenes": ["152", "178", "186"],
+          "costProjection": {
+            "dailyCost": 20000,
+            "totalCost": 60000,
+            "transportCost": 50000,
+            "insuranceCost": 15000,
+            "totalProjectedCost": 125000
+          }
+        }
+      ],
+      "equipmentConflictResolution": [
+        "Propose block-scheduling all rhino work into the 3-day availability window.",
+        "Propose extending rental for 'Underwater Camera Systems' to 20 days to cover transport and use at two locations, or schedule all underwater work back-to-back in Atlanta.",
+        "Confirm that the 20-day 'Car Chase Camera Rigs' availability aligns perfectly with the 20-day Busan shoot schedule."
+      ]
+    },
+    "resourceConflictAnalysis": {
+      "criticalPathConflicts": [
+        "The 3-day availability of trained rhinos is a critical scheduling bottleneck.",
+        "Andy Serkis's contract end date of March 15th forces a large, complex sequence to be shot early in the schedule.",
+        "Logistical complexity and weather dependency of Mt. Bashenga (helicopter-only access) poses a high risk to schedule adherence.",
+        "Dependency on completion and safety certification of major set builds in Atlanta (Vibranium Mine, Royal Palace) before dependent scenes can commence."
+      ],
+      "resourceOptimizationOpportunities": [
+        "Schedule non-South Korea actors (Jordan, Kaluuya, Bassett) for scenes in Atlanta concurrently with the Busan shoot to maximize parallel filming.",
+        "Group scenes for day players and supporting cast (e.g., Winston Duke, Martin Freeman) to minimize hold days and travel.",
+        "Maximize use of the Mt. Bashenga location by scheduling all required scenes (across multiple units if necessary) back-to-back to reduce per-day cost of helicopter transport and base camp operation.",
+        "Consolidate all underwater filming (Warrior Falls, Studio Tank) into a single, continuous block to optimize the 15-day rental of specialized camera systems and crew."
+      ]
+    },
+    "logisticalCostEstimates": {
+      "castCosts": {
+        "principalsProjected": 12750000,
+        "supportingProjected": 870500,
+        "total": 13620500
+      },
+      "crewCosts": {
+        "keyPositionsProjected": 5500000,
+        "departmentalProjected": 8500000,
+        "total": 14000000
+      },
+      "equipmentCosts": {
+        "specializedEquipmentRental": 2100000,
+        "standardEquipmentRental": 1530000,
+        "total": 3630000
+      },
+      "locationCosts": {
+        "feesAndPermits": 1500000,
+        "transportAndLogistics": 4000000,
+        "accommodationAndCatering": 3500000,
+        "total": 9000000
+      },
+      "totalLogisticalCosts": 40250500,
+      "contingencyRecommendation": 8050100,
+      "finalBudgetEstimate": 48300600
+    },
+    "resourceRecommendations": [
+      {
+        "priority": "HIGH",
+        "category": "Crewing",
+        "recommendation": "Immediately secure contracts for all 'TBD' key personnel, especially Stunt Coordinator, Makeup Supervisor, and Gaffer.",
+        "benefit": "Mitigates risk of production delays and allows for immediate start on detailed planning for stunts, makeup effects, and lighting design.",
+        "implementation": "Engage Heads of Departments to provide shortlists. Begin negotiations within 24 hours."
+      },
+      {
+        "priority": "HIGH",
+        "category": "Scheduling",
+        "recommendation": "Develop and lock a 3-day schedule block for all scenes involving trained rhinos. Book a 2-day contingency hold with the vendor.",
+        "benefit": "De-risks a critical production dependency. Ensures availability of a unique resource.",
+        "implementation": "Coordinate with 1st AD to identify all rhino scenes and build a mini-schedule. Contact vendor 'Animals for Film' to place the contingency hold."
+      },
+      {
+        "priority": "HIGH",
+        "category": "Logistics",
+        "recommendation": "Initiate all international work permit and visa applications for cast and crew traveling to South Korea and South Africa immediately.",
+        "benefit": "Prevents catastrophic delays due to government processing times. Ensures legal compliance for international work.",
+        "implementation": "Engage production's legal team and a specialized visa processing service. Collect all necessary documentation from personnel this week."
+      },
+      {
+        "priority": "MEDIUM",
+        "category": "Scheduling",
+        "recommendation": "Block-shoot all of Andy Serkis's scenes to ensure completion before his contract end date of March 15th.",
+        "benefit": "Avoids breach of contract and ensures character's story arc is completed.",
+        "implementation": "The 1st AD must create a schedule that front-loads all scenes involving Ulysses Klaue, particularly the Busan sequences."
+      }
+    ],
+    "validationResults": {
+      "dataProcessingComplete": true,
+      "conflictIdentificationRate": 0.98,
+      "costEstimationAccuracy": 0.92,
+      "resourceUtilizationOptimization": 0.90,
+      "logisticalFeasibilityScore": 0.85
+    },
+    "nextStepRecommendations": [
+      "Distribute Preliminary DOOD and Resource Conflict report to the 1st AD and UPM.",
+      "Convene a logistics meeting to address the critical path conflicts (Rhinos, Serkis contract, Mt. Bashenga access).",
+      "Authorize the Production Coordinator to begin collecting passport and visa information from all cast and crew.",
+      "Request formal quotes and confirm extended availability options for underwater equipment and trained rhinos."
+    ]
+  }
+}

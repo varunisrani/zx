@@ -1,0 +1,167 @@
+{
+  "laborModelOutput": {
+    "processingLog": {
+      "unionRateLookup": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:12:00Z",
+        "ratesVerified": {
+          "SAG": "SAG-AFTRA Theatrical Agreement 2023-2026",
+          "DGA": "DGA Basic Agreement 2023-2026",
+          "IATSE": "IATSE Basic Agreement 2024-2027",
+          "BECTU": "BECTU/Pact Major Motion Picture Agreement 2024"
+        },
+        "status": "completed"
+      },
+      "baseWageCalculation": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:12:05Z",
+        "positionsCalculated": 81,
+        "status": "completed"
+      },
+      "overtimeEstimation": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:12:10Z",
+        "status": "completed"
+      },
+      "fringeBenefitProcessing": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:12:12Z",
+        "status": "completed"
+      },
+      "locationMultiplierProcessing": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:12:15Z",
+        "status": "completed"
+      },
+      "overallProcessingStatus": "all_functions_executed_successfully"
+    },
+    "cast": {
+      "aboveTheLine": {
+        "principals": {
+          "T_CHALLA_BLACK_PANTHER": {
+            "estimatedDays": 65,
+            "dailyRate": 150000,
+            "baseWage": "9750000.00"
+          },
+          "ERIK_KILLMONGER": {
+            "estimatedDays": 25,
+            "dailyRate": 75000,
+            "baseWage": "1875000.00"
+          },
+          "NAKIA": {
+            "estimatedDays": 35,
+            "dailyRate": 50000,
+            "baseWage": "1750000.00"
+          },
+          "OKOYE": {
+            "estimatedDays": 40,
+            "dailyRate": 35000,
+            "baseWage": "1400000.00"
+          },
+          "SHURI": {
+            "estimatedDays": 30,
+            "dailyRate": 25000,
+            "baseWage": "750000.00"
+          },
+          "RAMONDA": {
+            "estimatedDays": 20,
+            "dailyRate": 30000,
+            "baseWage": "600000.00"
+          },
+          "WKABI": {
+            "estimatedDays": 15,
+            "dailyRate": 20000,
+            "baseWage": "300000.00"
+          }
+        },
+        "supporting": {
+          "MBAKU": {
+            "estimatedDays": 8,
+            "dailyRate": 15000,
+            "baseWage": "120000.00"
+          },
+          "EVERETT_ROSS": {
+            "estimatedDays": 12,
+            "dailyRate": 25000,
+            "baseWage": "300000.00"
+          },
+          "ULYSSES_KLAUE": {
+            "estimatedDays": 10,
+            "dailyRate": 20000,
+            "baseWage": "200000.00"
+          }
+        }
+      },
+      "belowTheLine": {
+        "dayPlayers": {
+          "count": 35,
+          "estimatedTotalCost": "113610.00"
+        },
+        "extras": {
+          "manDays": 3200,
+          "estimatedTotalCost": "665600.00"
+        },
+        "stunts": {
+          "performers": 25,
+          "estimatedTotalCost": "324000.00"
+        }
+      },
+      "castSubtotal": "18148210.00",
+      "castFringesTotal": "4083347.25",
+      "castTotal": "22231557.25"
+    },
+    "crew": {
+      "departments": {
+        "aboveTheLine": {
+          "departmentTotal": "6335000.00"
+        },
+        "camera": {
+          "departmentTotal": "655900.00"
+        },
+        "electrical": {
+          "departmentTotal": "1005200.00"
+        },
+        "grip": {
+          "departmentTotal": "1112500.00"
+        },
+        "sound": {
+          "departmentTotal": "193800.00"
+        },
+        "specialDepartments": {
+          "departmentTotal": "2739000.00"
+        },
+        "transportation": {
+          "departmentTotal": "464500.00"
+        },
+        "security": {
+          "departmentTotal": "303000.00"
+        }
+      },
+      "crewSubtotal": "12808900.00",
+      "crewFringesTotal": "4162892.50",
+      "crewTotal": "16971792.50"
+    },
+    "summary": {
+      "totalBaseWages": "30957110.00",
+      "totalOvertimeAndPenalties": "2265865.00",
+      "totalFringes": "8246239.75",
+      "totalSpecialRequirements": "1696600.00",
+      "laborGrandTotal": "43165814.75"
+    },
+    "riskAssessment": {
+      "identifiedFactors": [
+        "Dependency on key actors with extensive schedules",
+        "Complex international shoots in South Korea and South Africa with local crew requirements",
+        "High volume of stunt work, including car chases, water work, and animal handling",
+        "Extensive and time-consuming prosthetics and special makeup applications (scarification, bald caps)",
+        "Potential for weather delays in international locations"
+      ],
+      "recommendedContingencyPercentage": "15.0",
+      "contingencyAmount": "6474872.21"
+    },
+    "confidenceInterval": {
+      "lowerBound": "43165814.75",
+      "upperBound": "49640686.96"
+    }
+  }
+}

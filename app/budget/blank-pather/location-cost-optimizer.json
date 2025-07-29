@@ -1,0 +1,152 @@
+{
+  "locationModelOutput": {
+    "processingLog": {
+      "locationFeeEstimation": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:12:01Z",
+        "status": "completed"
+      },
+      "permitCostCalculation": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:12:02Z",
+        "status": "completed"
+      },
+      "securityRequirementsProcessing": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:12:03Z",
+        "status": "completed"
+      },
+      "restorationCostProcessing": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:12:04Z",
+        "status": "completed"
+      },
+      "parkingFacilitiesProcessing": {
+        "executed": true,
+        "timestamp": "2025-07-29T09:12:05Z",
+        "status": "completed"
+      },
+      "overallProcessingStatus": "all_functions_executed_successfully"
+    },
+    "locationFees": {
+      "practicalLocations": [
+        {
+          "locationId": "LOC002",
+          "name": "WARRIOR_FALLS_SOUTH_AFRICA",
+          "estimatedFee": 480000.00
+        },
+        {
+          "locationId": "LOC003",
+          "name": "BUSAN_SOUTH_KOREA",
+          "estimatedFee": 650000.00
+        },
+        {
+          "locationId": "LOC004",
+          "name": "MT_BASHENGA_SOUTH_AFRICA",
+          "estimatedFee": 560000.00
+        },
+        {
+          "locationId": "LOC005",
+          "name": "OAKLAND_CALIFORNIA",
+          "estimatedFee": 112500.00
+        },
+        {
+          "locationId": "LOC006",
+          "name": "LONDON_MUSEUM_PRACTICAL",
+          "estimatedFee": 300000.00
+        },
+        {
+          "locationId": "LOC007",
+          "name": "VIENNA_MUSEUM_CHASE",
+          "estimatedFee": 275000.00
+        }
+      ],
+      "studioFacilities": {
+        "description": "Rental for 10 stages across two Atlanta facilities (LOC001, LOC008) for a total of 50 shoot days.",
+        "stageDays": 270,
+        "cost": 1350000.00
+      },
+      "holdDays": {
+        "description": "Prep/Hold days for all practical and studio locations.",
+        "studioHoldCost": 875000.00,
+        "practicalHoldCost": 682500.00,
+        "totalHoldCost": 1557500.00
+      },
+      "locationFeesTotal": 4602500.00
+    },
+    "permits": {
+      "international": {
+        "description": "Permits for South Africa, South Korea, UK, and Austria, including local government, film commissions, and special access.",
+        "baseFees": 240000.00,
+        "additionalComplexityFees": 100000.00,
+        "total": 340000.00
+      },
+      "uk": {
+        "description": "Specific permits related to filming in a high-security London museum.",
+        "total": 15000.00
+      },
+      "aviation": {
+        "description": "Permits for 25 instances of aerial work, including helicopters and drones.",
+        "cost": 135000.00
+      },
+      "permitsTotal": 490000.00
+    },
+    "locationSupport": {
+      "security": {
+        "description": "Maximum security package for all locations, including 24/7 on-site personnel, mobile patrols, asset protection, and crowd control.",
+        "securityTotal": 1500000.00
+      },
+      "transportation": {
+        "description": "Comprehensive transport logistics including international flights, air freight, and local vehicle fleets.",
+        "internationalAirTravel": 1805000.00,
+        "equipmentFreightAndCustoms": 1000000.00,
+        "localAndSpecializedVehicles": 2000000.00,
+        "transportationTotal": 4805000.00
+      },
+      "accommodation": {
+        "description": "Housing for all traveling cast, crew, and key personnel for 32 weeks across multiple international locations.",
+        "castAccommodation": 4480000.00,
+        "crewAccommodation": 9800000.00,
+        "ancillaryAccommodation": 1000000.00,
+        "accommodationTotal": 15280000.00
+      },
+      "facilities": {
+        "description": "Temporary on-location facilities including production offices, catering tents, power generation, and waste management.",
+        "facilitiesTotal": 1200000.00
+      }
+    },
+    "specialRequirements": {
+      "animalWork": {
+        "description": "Coordination, transport, and welfare supervision for trained rhinos in South Africa.",
+        "animalTotal": 750000.00
+      },
+      "customConstruction": {
+        "description": "Design, engineering, and construction of large-scale, complex sets in Atlanta studios.",
+        "wakandaMainSetsCost": 7250000.00,
+        "additionalSetsCost": 2200000.00,
+        "constructionTotal": 9450000.00
+      },
+      "internationalLogistics": {
+        "description": "Local fixers, translators, legal/cultural consultants, and work permit processing for all non-US locations.",
+        "total": 450000.00
+      },
+      "specialTotal": 10650000.00
+    },
+    "contingency": {
+      "percentage": 0.18,
+      "amount": 6934950.00
+    },
+    "locationGrandTotal": {
+      "fees": 4602500.00,
+      "permits": 490000.00,
+      "security": 1500000.00,
+      "transportation": 4805000.00,
+      "accommodation": 15280000.00,
+      "facilities": 1200000.00,
+      "special": 10650000.00,
+      "subtotal": 38527500.00,
+      "contingency": 6934950.00,
+      "total": 45462450.00
+    }
+  }
+}

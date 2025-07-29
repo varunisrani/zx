@@ -1,0 +1,186 @@
+{
+  "aggregatorOutput": {
+    "processingLog": {
+      "departmentCostSummation": {
+        "executed": true,
+        "timestamp": "2025-07-29T10:25:11Z",
+        "status": "completed"
+      },
+      "contingencyApplication": {
+        "executed": true,
+        "timestamp": "2025-07-29T10:25:12Z",
+        "status": "completed"
+      },
+      "aboveBelowLineRatioCalculation": {
+        "executed": true,
+        "timestamp": "2025-07-29T10:25:13Z",
+        "status": "completed"
+      },
+      "overheadFeeProcessing": {
+        "executed": true,
+        "timestamp": "2025-07-29T10:25:14Z",
+        "status": "completed"
+      },
+      "industryStandardFormatting": {
+        "executed": true,
+        "timestamp": "2025-07-29T10:25:15Z",
+        "status": "completed"
+      },
+      "overallProcessingStatus": "all_functions_executed_successfully"
+    },
+    "topSheet": {
+      "title": "Project Chronos",
+      "date": "2025-07-29",
+      "version": "1.0 - Aggregated",
+      "productionCompany": "Starlight Pictures",
+      "aboveTheLine": {
+        "storyAndWriter": 1580000,
+        "producerUnit": 10625000,
+        "directorUnit": 19500000,
+        "cast": 38775000
+      },
+      "belowTheLine": {
+        "productionStaff": 35275000,
+        "camera": 15116000,
+        "artDepartment": 41700000,
+        "setOperations": 25196000,
+        "locationCosts": 35550000,
+        "transportation": 4752000,
+        "specialEffects": 9020000,
+        "wardrobeAndMakeup": 8248000
+      },
+      "postProduction": {
+        "editorial": 4250000,
+        "visualEffects": 70750000,
+        "postProductionSound": 3910000,
+        "techDevelopment": 32235000,
+        "finishingAndDelivery": 3545000
+      },
+      "other": {
+        "insurance": 11850000,
+        "generalExpenses": 21794750
+      },
+      "totalAboveLine": 70480000,
+      "totalBelowLine": 175409000,
+      "totalPostProduction": 114690000,
+      "totalOther": 33644750,
+      "totalProduction": 394223750,
+      "fringes": {
+        "totalFringesAndPensions": 30448500,
+        "rateOnLabor": 0.2657
+      },
+      "indirectCosts": {
+        "productionOverhead": 12621091,
+        "contingency": 47400000,
+        "completionBondFee": 8295000
+      },
+      "grandTotal": {
+        "totalDirectAndIndirect": 462979841,
+        "lessTaxIncentives": -46791000,
+        "netCost": 416188841
+      }
+    },
+    "summaryRatios": {
+      "costStructure": {
+        "aboveTheLine": 15.9,
+        "belowTheLine": 59.9,
+        "postProduction": 24.2,
+        "notes": "BTL costs are significantly higher than the industry benchmark of 45%, driven by extensive technology and crew requirements."
+      },
+      "financials": {
+        "fringeRateOnLabor": 26.57,
+        "contingencyOnCost": 10.23,
+        "overheadOnCost": 2.72
+      },
+      "benchmarks": {
+        "industryAverageATL": "25%",
+        "industryAverageBTL": "45%",
+        "industryAveragePost": "20%"
+      }
+    },
+    "departmentAnalysis": {
+      "majorCostDrivers": [
+        {
+          "department": "Visual Effects",
+          "amount": 70750000,
+          "percentage": 15.2,
+          "driver": "Unprecedented number of complex 3D and performance capture shots."
+        },
+        {
+          "department": "Revolutionary Technology (Equipment)",
+          "amount": 56520000,
+          "percentage": 12.1,
+          "driver": "Development and operation of new virtual camera and 3D stereoscopic systems."
+        },
+        {
+          "department": "Massive Set Construction",
+          "amount": 41700000,
+          "percentage": 8.9,
+          "driver": "Large-scale, intricate set pieces requiring significant materials and labor."
+        },
+        {
+          "department": "Cast",
+          "amount": 38775000,
+          "percentage": 8.3,
+          "driver": "A-list talent and extensive training for specialized performance capture roles."
+        }
+      ],
+      "budgetComparison": {
+        "aggregatedBudget": 462979841,
+        "targetBudget": 237000000,
+        "variance": 225979841,
+        "variancePercentage": 95.3,
+        "summary": "Aggregated costs from all departments are 95.3% over the initial target budget. The variance is primarily due to underestimation of the costs associated with the film's groundbreaking technological and visual ambitions."
+      }
+    },
+    "riskAssessment": {
+      "budgetRisks": [
+        {
+          "category": "Technology Development",
+          "probability": 0.8,
+          "impact": 18960000,
+          "description": "Delays or failures in the new performance capture and virtual camera systems could lead to catastrophic schedule slips and cost overruns."
+        },
+        {
+          "category": "VFX Pipeline Overload",
+          "probability": 0.7,
+          "impact": 14150000,
+          "description": "The sheer volume and complexity of VFX shots create a high risk of bottlenecks, requiring expensive rush charges or compromises in quality."
+        },
+        {
+          "category": "International Production",
+          "probability": 0.5,
+          "impact": 7110000,
+          "description": "Logistical complexity, currency fluctuations, and potential weather delays during the New Zealand shoot pose a significant financial risk."
+        }
+      ],
+      "totalRiskExposure": 40220000,
+      "contingencyAdequacy": "Adequate. The 47.4M contingency fund, representing 20% of the initial target budget, sufficiently covers the quantified high-impact risks."
+    },
+    "accountDetail": {
+      "format": "PGA Standard Chart of Accounts",
+      "pages": 135,
+      "includes": [
+        "Top Sheet",
+        "Account Detail (1000-5000 Series)",
+        "Departmental Summaries",
+        "Cash Flow Schedule",
+        "Tax Incentive Analysis Report"
+      ]
+    },
+    "approvals": {
+      "budgetApproved": false,
+      "requiredApprovals": [
+        "Studio Head",
+        "Head of Production",
+        "CFO",
+        "Completion Bond Guarantor"
+      ],
+      "recommendations": [
+        "Immediate budget summit required to address the 95.3% overage.",
+        "Implement proposed optimization plan, targeting a 35.5M reduction in VFX scope and 11.8M in location consolidation.",
+        "Re-evaluate the creative scope versus the financial viability; a fundamental reassessment of the technology and VFX strategy is necessary to proceed."
+      ]
+    }
+  }
+}
