@@ -11,7 +11,6 @@ import {
   AlertTriangle, 
   Calendar,
   Users,
-  Camera,
   MapPin,
   BarChart3,
   TrendingUp,

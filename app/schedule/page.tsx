@@ -762,7 +762,7 @@ export default function SchedulePage() {
 
       {/* Detailed Scenarios */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {Object.entries(optimization.optimizedScheduleProposals).map(([key, scenario]) => (
+        {Object.entries(optimization.optimizedScheduleProposals).map(([key, scenario]: [string, any]) => (
           <Card key={key}>
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
@@ -791,28 +791,28 @@ export default function SchedulePage() {
                   <div className="space-y-1 text-sm">
                     <div className="flex justify-between">
                       <span>Cast:</span>
-                      <span>${scenario.estimatedCosts.castCosts.toLocaleString()}</span>
+                      <span>${(scenario.estimatedCosts?.castCosts || 0).toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Crew:</span>
-                      <span>${scenario.estimatedCosts.crewCosts.toLocaleString()}</span>
+                      <span>${(scenario.estimatedCosts?.crewCosts || 0).toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Equipment:</span>
-                      <span>${scenario.estimatedCosts.equipmentCosts.toLocaleString()}</span>
+                      <span>${(scenario.estimatedCosts?.equipmentCosts || 0).toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Locations:</span>
-                      <span>${scenario.estimatedCosts.locationCosts.toLocaleString()}</span>
+                      <span>${(scenario.estimatedCosts?.locationCosts || 0).toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between font-bold border-t pt-1">
                       <span>Total:</span>
-                      <span>${scenario.estimatedCosts.finalBudgetProjection.toLocaleString()}</span>
+                      <span>${(scenario.estimatedCosts?.finalBudgetProjection || 0).toLocaleString()}</span>
                     </div>
-                    {scenario.estimatedCosts.savingsVsBaseline && (
+                    {scenario.estimatedCosts?.savingsVsBaseline && (
                       <div className="flex justify-between text-green-600">
                         <span>Savings:</span>
-                        <span>${scenario.estimatedCosts.savingsVsBaseline.toLocaleString()}</span>
+                        <span>${(scenario.estimatedCosts?.savingsVsBaseline || 0).toLocaleString()}</span>
                       </div>
                     )}
                   </div>
@@ -853,7 +853,7 @@ export default function SchedulePage() {
                 <div className="space-y-2">
                   <h5 className="font-medium">Production Phases:</h5>
                   <div className="space-y-2">
-                    {scenario.productionPhases.map((phase, idx) => (
+                    {scenario.productionPhases?.map((phase: any, idx: number) => (
                       <div key={idx} className="p-2 bg-muted/30 rounded text-sm">
                         <div className="font-medium">{phase.name}</div>
                         <div className="text-xs text-muted-foreground">

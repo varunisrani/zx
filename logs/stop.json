@@ -12,5 +12,26 @@
     "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
     "hook_event_name": "Stop",
     "stop_hook_active": false
+  },
+  {
+    "session_id": "072427ff-fb3f-4e4c-8423-616ecb333035",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/072427ff-fb3f-4e4c-8423-616ecb333035.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "Stop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "ce4762ef-84aa-4054-858c-1af630f025bf",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/ce4762ef-84aa-4054-858c-1af630f025bf.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "Stop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "30605425-af0e-447f-9af2-4519f87eb952",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/30605425-af0e-447f-9af2-4519f87eb952.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "Stop",
+    "stop_hook_active": false
   }
 ]

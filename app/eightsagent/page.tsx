@@ -8,13 +8,8 @@ import { Navigation } from "@/components/Navigation";
 import eightsData from "../eightsagent/eights.json";
 import { 
   Clock, 
-  Film, 
   BarChart3,
-  Zap,
-  Target,
-  TrendingUp,
   Timer,
-  Calendar,
   FileText,
   Activity,
   AlertTriangle,
@@ -23,15 +18,10 @@ import {
   Filter,
   Download,
   PieChart,
-  Layers,
-  Camera,
-  Users,
-  MapPin,
-  Palette,
-  Star,
+  Zap,
+  Target,
   Wrench,
-  Lightbulb,
-  Mic
+  Star
 } from "lucide-react";
 
 type EightsData = typeof eightsData;

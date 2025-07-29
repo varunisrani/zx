@@ -9,32 +9,32 @@ import departmentData from "../departments/depr.json";
 import { 
   Users,
   DollarSign,
-  TrendingUp,
-  TrendingDown,
   AlertTriangle,
   CheckCircle,
   Camera,
   Lightbulb,
   Palette,
   Mic,
-  Star,
-  Car,
   Shirt,
   Scissors,
   Shield,
-  Clock,
-  Target,
   BarChart3,
-  PieChart,
-  Calendar,
-  Settings,
-  Wrench,
   Zap,
   PawPrint,
-  HardHat,
-  Flame,
-  Construction
+  Construction,
+  Settings,
+  Target
 } from "lucide-react";
+
+interface BuildItem {
+  itemName: string;
+  description: string;
+  estimatedCost: number;
+  complexity: string;
+  deliveryDate: string;
+}
+
+// Removed interface definitions - using any types for flexible data structures
 
 type DepartmentData = typeof departmentData;
 
@@ -220,7 +220,7 @@ export default function DepartmentAnalysisPage() {
                         </div>
                         <div className="flex items-center justify-between text-xs">
                           <span className="text-muted-foreground">Crew</span>
-                          <span className="font-medium">{Object.values(dept.crewRequirements || {}).reduce((a: number, b: any) => a + (typeof b === 'number' ? b : 0), 0)}</span>
+                          <span className="font-medium">{Object.values(dept.crewRequirements || {}).reduce((a: number, b: number) => a + (typeof b === 'number' ? b : 0), 0)}</span>
                         </div>
                       </div>
                     </div>
@@ -243,7 +243,7 @@ export default function DepartmentAnalysisPage() {
                         <div>
                           <CardTitle className="text-xl">{selectedDept.name}</CardTitle>
                           <CardDescription>
-                            {Object.values(selectedDept.crewRequirements || {}).reduce((a: number, b: any) => a + (typeof b === 'number' ? b : 0), 0)} crew members
+                            {Object.values(selectedDept.crewRequirements || {}).reduce((a: number, b: number) => a + (typeof b === 'number' ? b : 0), 0)} crew members
                             {selectedDept.totalScenes && ` • ${selectedDept.totalScenes} scenes`}
                           </CardDescription>
                         </div>
@@ -269,7 +269,7 @@ export default function DepartmentAnalysisPage() {
                       </div>
                       <div className="text-center p-4 bg-muted/30 rounded-lg">
                         <p className="text-2xl font-bold text-foreground">
-                          {Object.values(selectedDept.crewRequirements || {}).reduce((a: number, b: any) => a + (typeof b === 'number' ? b : 0), 0)}
+                          {Object.values(selectedDept.crewRequirements || {}).reduce((a: number, b: number) => a + (typeof b === 'number' ? b : 0), 0)}
                         </p>
                         <p className="text-xs text-muted-foreground">Crew Members</p>
                       </div>
@@ -302,14 +302,14 @@ export default function DepartmentAnalysisPage() {
                 )}
 
                 {/* Major Builds/Equipment */}
-                {selectedDept.majorBuilds && (
+                {(selectedDept as any).majorBuilds && (
                   <Card>
                     <CardHeader>
                       <CardTitle>Major Builds & Construction</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
-                        {selectedDept.majorBuilds.map((build: any, index: number) => (
+                        {(selectedDept as any).majorBuilds.map((build: any, index: number) => (
                           <div key={index} className="p-4 border border-border rounded-lg">
                             <div className="flex items-center justify-between mb-2">
                               <h4 className="font-medium">{build.item}</h4>
@@ -324,7 +324,7 @@ export default function DepartmentAnalysisPage() {
                             <div>
                               <h5 className="text-sm font-medium mb-1">Materials Needed:</h5>
                               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                                {build.materialsNeeded.map((material: string, idx: number) => (
+                                {build.materialsNeeded?.map((material: string, idx: number) => (
                                   <div key={idx} className="text-xs bg-blue-50 px-2 py-1 rounded">
                                     {material}
                                   </div>
@@ -339,23 +339,23 @@ export default function DepartmentAnalysisPage() {
                 )}
 
                 {/* Hero Props */}
-                {selectedDept.heroProps && (
+                {(selectedDept as any).heroProps && (
                   <Card>
                     <CardHeader>
                       <CardTitle>Hero Props</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-3">
-                        {selectedDept.heroProps.map((prop: any, index: number) => (
+                        {(selectedDept as any).heroProps.map((prop: any, index: number) => (
                           <div key={index} className="p-4 border border-border rounded-lg">
                             <div className="flex items-center justify-between mb-2">
-                              <h4 className="font-medium">{prop.item}</h4>
+                              <h4 className="font-medium">{prop.item || prop.propName}</h4>
                               <Badge variant="outline" className="text-xs">
-                                {prop.category}
+                                {prop.category || 'N/A'}
                               </Badge>
                             </div>
                             <p className="text-sm text-muted-foreground mb-2">
-                              {prop.specifications}
+                              {prop.specifications || prop.description}
                             </p>
                             <p className="text-sm font-medium">
                               Cost: ${prop.estimatedCost.toLocaleString()}
@@ -368,27 +368,27 @@ export default function DepartmentAnalysisPage() {
                 )}
 
                 {/* Equipment Packages */}
-                {selectedDept.equipmentPackages && (
+                {(selectedDept as any).equipmentPackages && (
                   <Card>
                     <CardHeader>
                       <CardTitle>Equipment Packages</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
-                        {selectedDept.equipmentPackages.map((pkg: any, index: number) => (
+                        {(selectedDept as any).equipmentPackages.map((pkg: any, index: number) => (
                           <div key={index} className="p-4 border border-border rounded-lg">
                             <div className="flex items-center justify-between mb-2">
-                              <h4 className="font-medium">{pkg.package}</h4>
+                              <h4 className="font-medium">{pkg.package || pkg.packageName}</h4>
                               <div className="text-sm font-medium">
-                                ${pkg.rentalCost.toLocaleString()}
+                                ${(pkg.rentalCost || pkg.dailyRate || 0).toLocaleString()}
                               </div>
                             </div>
                             <p className="text-sm text-muted-foreground mb-2">
-                              {pkg.scenes} scenes
+                              {pkg.scenes || 'N/A'} scenes
                             </p>
                             <div>
                               <h5 className="text-sm font-medium mb-1">Special Requirements:</h5>
-                              {pkg.specialRequirements.map((req: string, idx: number) => (
+                              {(pkg.specialRequirements || pkg.itemList || []).map((req: string, idx: number) => (
                                 <div key={idx} className="text-xs bg-yellow-50 px-2 py-1 rounded mb-1">
                                   {req}
                                 </div>
@@ -402,29 +402,29 @@ export default function DepartmentAnalysisPage() {
                 )}
 
                 {/* Lighting Setups */}
-                {selectedDept.lightingSetups && (
+                {(selectedDept as any).lightingSetups && (
                   <Card>
                     <CardHeader>
                       <CardTitle>Lighting Setups</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
-                        {selectedDept.lightingSetups.map((setup: any, index: number) => (
+                        {(selectedDept as any).lightingSetups.map((setup: any, index: number) => (
                           <div key={index} className="p-4 border border-border rounded-lg">
                             <div className="flex items-center justify-between mb-2">
-                              <h4 className="font-medium">{setup.setup}</h4>
+                              <h4 className="font-medium">{setup.setup || setup.setupName}</h4>
                               <div className="text-sm font-medium">
-                                ${setup.equipmentCost.toLocaleString()}
+                                ${(setup.equipmentCost || 0).toLocaleString()}
                               </div>
                             </div>
                             <div className="grid grid-cols-2 gap-4 text-sm">
                               <div>
                                 <span className="text-muted-foreground">Scenes:</span>
-                                <span className="ml-1 font-medium">{setup.scenes}</span>
+                                <span className="ml-1 font-medium">{setup.scenes || 'N/A'}</span>
                               </div>
                               <div>
                                 <span className="text-muted-foreground">Power:</span>
-                                <span className="ml-1 font-medium">{setup.powerRequirements}</span>
+                                <span className="ml-1 font-medium">{setup.powerRequirements || setup.powerRequirement}</span>
                               </div>
                             </div>
                           </div>
@@ -435,14 +435,14 @@ export default function DepartmentAnalysisPage() {
                 )}
 
                 {/* Recording Requirements */}
-                {selectedDept.recordingRequirements && (
+                {(selectedDept as any).recordingRequirements && (
                   <Card>
                     <CardHeader>
                       <CardTitle>Recording Requirements</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-3">
-                        {selectedDept.recordingRequirements.map((req: any, index: number) => (
+                        {(selectedDept as any).recordingRequirements.map((req: any, index: number) => (
                           <div key={index} className="p-3 border border-border rounded-lg">
                             <div className="flex items-center justify-between mb-2">
                               <h4 className="font-medium capitalize">{req.type}</h4>
@@ -451,8 +451,8 @@ export default function DepartmentAnalysisPage() {
                               </Badge>
                             </div>
                             <div className="flex items-center justify-between text-sm">
-                              <span className="text-muted-foreground">Scenes: {req.scenes}</span>
-                              <span className="font-medium">${req.equipmentCost.toLocaleString()}</span>
+                              <span className="text-muted-foreground">Scenes: {req.scenes || 'N/A'}</span>
+                              <span className="font-medium">${(req.equipmentCost || 0).toLocaleString()}</span>
                             </div>
                           </div>
                         ))}
@@ -461,18 +461,18 @@ export default function DepartmentAnalysisPage() {
                   </Card>
                 )}
 
-                {/* Effects Required */}
-                {selectedDept.effectsRequired && (
+                {/* anys Required */}
+                {(selectedDept as any).effectsRequired && (
                   <Card>
                     <CardHeader>
-                      <CardTitle>Effects Required</CardTitle>
+                      <CardTitle>anys Required</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
-                        {selectedDept.effectsRequired.map((effect: any, index: number) => (
+                        {(selectedDept as any).effectsRequired.map((effect: any, index: number) => (
                           <div key={index} className="p-4 border border-border rounded-lg">
                             <div className="flex items-center justify-between mb-2">
-                              <h4 className="font-medium">{effect.effect}</h4>
+                              <h4 className="font-medium">{effect.effect || effect.effectName}</h4>
                               <Badge variant={effect.complexity === 'extreme' ? 'destructive' : 
                                             effect.complexity === 'complex' ? 'outline' : 'secondary'}>
                                 {effect.complexity}
@@ -481,17 +481,17 @@ export default function DepartmentAnalysisPage() {
                             <div className="grid grid-cols-2 gap-4 mb-3 text-sm">
                               <div>
                                 <span className="text-muted-foreground">Scenes:</span>
-                                <span className="ml-1 font-medium">{effect.scenes}</span>
+                                <span className="ml-1 font-medium">{effect.scenes || 'N/A'}</span>
                               </div>
                               <div>
                                 <span className="text-muted-foreground">Cost:</span>
-                                <span className="ml-1 font-medium">${effect.estimatedCost.toLocaleString()}</span>
+                                <span className="ml-1 font-medium">${(effect.estimatedCost || 0).toLocaleString()}</span>
                               </div>
                             </div>
                             <div>
                               <h5 className="text-sm font-medium mb-2">Safety Requirements:</h5>
                               <div className="space-y-1">
-                                {effect.safetyRequirements.map((safety: string, idx: number) => (
+                                {(effect.safetyRequirements || []).map((safety: string, idx: number) => (
                                   <div key={idx} className="flex items-center space-x-2">
                                     <Shield className="h-3 w-3 text-red-600" />
                                     <span className="text-xs">{safety}</span>
@@ -507,19 +507,19 @@ export default function DepartmentAnalysisPage() {
                 )}
 
                 {/* Animal Requirements */}
-                {selectedDept.animalRequirements && (
+                {(selectedDept as any).animalRequirements && (
                   <Card>
                     <CardHeader>
                       <CardTitle>Animal Requirements</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
-                        {selectedDept.animalRequirements.map((animal: any, index: number) => (
+                        {(selectedDept as any).animalRequirements.map((animal: any, index: number) => (
                           <div key={index} className="p-4 border border-amber-200 bg-amber-50 rounded-lg">
                             <div className="flex items-center justify-between mb-2">
-                              <h4 className="font-medium">{animal.type}</h4>
+                              <h4 className="font-medium">{animal.type || animal.animalType}</h4>
                               <div className="text-sm font-medium">
-                                ${animal.estimatedCost.toLocaleString()}
+                                ${(animal.estimatedCost || 0).toLocaleString()}
                               </div>
                             </div>
                             <div className="grid grid-cols-2 gap-4 mb-3 text-sm">
@@ -529,12 +529,12 @@ export default function DepartmentAnalysisPage() {
                               </div>
                               <div>
                                 <span className="text-muted-foreground">Scenes:</span>
-                                <span className="ml-1 font-medium">{animal.scenes}</span>
+                                <span className="ml-1 font-medium">{animal.scenes || animal.count || 'N/A'}</span>
                               </div>
                             </div>
                             <div>
                               <h5 className="text-sm font-medium mb-1">Handler Requirements:</h5>
-                              <p className="text-xs text-muted-foreground">{animal.handlerRequirements}</p>
+                              <p className="text-xs text-muted-foreground">{animal.handlerRequirements || animal.trainingLevel}</p>
                             </div>
                           </div>
                         ))}
@@ -544,34 +544,34 @@ export default function DepartmentAnalysisPage() {
                 )}
 
                 {/* Stunt Requirements */}
-                {selectedDept.stuntRequirements && (
+                {(selectedDept as any).stuntRequirements && (
                   <Card>
                     <CardHeader>
                       <CardTitle>Stunt Requirements</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
-                        {selectedDept.stuntRequirements.map((stunt: any, index: number) => (
+                        {(selectedDept as any).stuntRequirements.map((stunt: any, index: number) => (
                           <div key={index} className="p-4 border border-red-200 bg-red-50 rounded-lg">
                             <div className="flex items-center justify-between mb-2">
-                              <h4 className="font-medium">{stunt.type}</h4>
-                              <Badge variant={stunt.riskLevel === 'extreme' ? 'destructive' : 
-                                            stunt.riskLevel === 'high' ? 'outline' : 'secondary'}>
-                                {stunt.riskLevel} risk
+                              <h4 className="font-medium">{stunt.type || stunt.stuntType}</h4>
+                              <Badge variant={(stunt.riskLevel || stunt.complexity) === 'extreme' ? 'destructive' : 
+                                            (stunt.riskLevel || stunt.complexity) === 'high' ? 'outline' : 'secondary'}>
+                                {stunt.riskLevel || stunt.complexity} risk
                               </Badge>
                             </div>
                             <div className="grid grid-cols-3 gap-4 mb-3 text-sm">
                               <div>
                                 <span className="text-muted-foreground">Scenes:</span>
-                                <span className="ml-1 font-medium">{stunt.scenes}</span>
+                                <span className="ml-1 font-medium">{stunt.scenes || 'N/A'}</span>
                               </div>
                               <div>
                                 <span className="text-muted-foreground">Performers:</span>
-                                <span className="ml-1 font-medium">{stunt.performersNeeded}</span>
+                                <span className="ml-1 font-medium">{stunt.performersNeeded || 'N/A'}</span>
                               </div>
                               <div>
                                 <span className="text-muted-foreground">Cost:</span>
-                                <span className="ml-1 font-medium">${stunt.estimatedCost.toLocaleString()}</span>
+                                <span className="ml-1 font-medium">${(stunt.estimatedCost || 0).toLocaleString()}</span>
                               </div>
                             </div>
                           </div>
@@ -582,17 +582,17 @@ export default function DepartmentAnalysisPage() {
                 )}
 
                 {/* Special Effects Makeup */}
-                {selectedDept.specialEffectsMakeups && (
+                {(selectedDept as any).specialEffectsMakeups && (
                   <Card>
                     <CardHeader>
                       <CardTitle>Special Effects Makeup</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
-                        {selectedDept.specialEffectsMakeups.map((makeup: any, index: number) => (
+                        {(selectedDept as any).specialEffectsMakeups.map((makeup: any, index: number) => (
                           <div key={index} className="p-4 border border-border rounded-lg">
                             <div className="flex items-center justify-between mb-2">
-                              <h4 className="font-medium">{makeup.type}</h4>
+                              <h4 className="font-medium">{makeup.type || makeup.characterName}</h4>
                               <Badge variant={makeup.complexity === 'complex' ? 'destructive' : 'secondary'}>
                                 {makeup.complexity}
                               </Badge>
@@ -600,11 +600,11 @@ export default function DepartmentAnalysisPage() {
                             <div className="grid grid-cols-2 gap-4 text-sm">
                               <div>
                                 <span className="text-muted-foreground">Scenes Required:</span>
-                                <span className="ml-1 font-medium">{makeup.scenesRequired}</span>
+                                <span className="ml-1 font-medium">{makeup.scenesRequired || 'N/A'}</span>
                               </div>
                               <div>
                                 <span className="text-muted-foreground">Cost:</span>
-                                <span className="ml-1 font-medium">${makeup.estimatedCost.toLocaleString()}</span>
+                                <span className="ml-1 font-medium">${(makeup.estimatedCost || 0).toLocaleString()}</span>
                               </div>
                             </div>
                           </div>
@@ -615,14 +615,14 @@ export default function DepartmentAnalysisPage() {
                 )}
 
                 {/* Period Costumes */}
-                {selectedDept.periodCostumes && (
+                {(selectedDept as any).periodCostumes && (
                   <Card>
                     <CardHeader>
                       <CardTitle>Period Costumes</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-3">
-                        {selectedDept.periodCostumes.map((costume: any, index: number) => (
+                        {(selectedDept as any).periodCostumes.map((costume: any, index: number) => (
                           <div key={index} className="p-4 border border-border rounded-lg">
                             <div className="flex items-center justify-between mb-2">
                               <h4 className="font-medium">{costume.character}</h4>
@@ -637,7 +637,7 @@ export default function DepartmentAnalysisPage() {
                               </div>
                               <div>
                                 <span className="text-muted-foreground">Cost:</span>
-                                <span className="ml-1 font-medium">${costume.estimatedCost.toLocaleString()}</span>
+                                <span className="ml-1 font-medium">${(costume.estimatedCost || 0).toLocaleString()}</span>
                               </div>
                             </div>
                           </div>

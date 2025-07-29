@@ -16,30 +16,17 @@ import {
   Lightbulb,
   Mic,
   Palette,
-  Car,
-  Star,
   AlertTriangle,
-  CheckCircle,
-  ChevronDown,
-  ChevronRight,
   Search,
   Filter,
-  Eye,
   FileText,
   BarChart3,
   Zap,
-  Wrench,
   Truck,
   PawPrint,
-  Shield,
-  Clapperboard,
-  Target,
   TrendingUp,
   Timer,
-  Hammer,
-  Music,
-  Wind,
-  Flame
+  Target
 } from "lucide-react";
 
 type SceneData = typeof sceneData;
@@ -47,7 +34,6 @@ type Scene = SceneData['phase_1_screenplay_breakdown']['complete_scenes_1_20_bre
 
 export default function SceneBreakdownPage() {
   const [selectedScene, setSelectedScene] = useState(1);
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
   const scenes = sceneData.phase_1_screenplay_breakdown.complete_scenes_1_20_breakdowns;
   const summary = sceneData.phase_1_production_summary;
@@ -563,9 +549,9 @@ export default function SceneBreakdownPage() {
                                 <span className="ml-1 font-medium">{animal.wranglers_required}</span>
                               </div>
                             </div>
-                            {animal.special_notes && (
+                            {(animal as any).special_notes && (
                               <p className="text-xs text-muted-foreground mt-2 italic">
-                                {animal.special_notes}
+                                {(animal as any).special_notes}
                               </p>
                             )}
                           </div>

@@ -23,37 +23,67 @@ import {
   Clock, 
   Users, 
   MapPin, 
-  Settings, 
   BarChart3, 
-  PieChart, 
   Filter, 
   Search, 
   Download, 
   FileText, 
-  Target, 
   Zap, 
   Activity, 
-  Eye, 
-  Layers,
   ArrowRight,
-  ArrowUp,
-  ArrowDown,
-  Info,
-  Star,
   Shield,
   Camera,
   Film,
   Lightbulb,
+  PieChart,
   Wrench,
   Globe,
   Briefcase,
   Calculator,
-  CreditCard,
   Percent,
   Building,
   Truck,
-  HardDrive
+  HardDrive,
+  Star
 } from "lucide-react";
+
+// Type definitions
+interface CrewDepartment {
+  baseWages: number;
+}
+
+interface EquipmentItem {
+  item: string;
+  cost: string;
+  description: string;
+}
+
+interface InsuranceItem {
+  premium: number;
+  value: number;
+}
+
+interface LocationItem {
+  cost: string;
+  description: string;
+}
+
+interface PostProductionItem {
+  total: number;
+  [key: string]: number | string;
+}
+
+interface TaxIncentiveItem {
+  calculatedValue: number;
+  type: string;
+  notes: string;
+  rate?: number;
+}
+
+interface CashflowItem {
+  inflow: number;
+  description: string;
+}
 
 type Section = 'cashflow' | 'labour' | 'resources' | 'aggregator' | 'equipment' | 'insurance' | 'locations' | 'postproduction' | 'scenes' | 'tax';
 
@@ -354,7 +384,7 @@ export default function BudgetPage() {
               {Object.entries(labour.crew.departments).map(([dept, data]) => (
                 <div key={dept} className="flex justify-between items-center p-3 bg-muted/30 rounded-lg">
                   <span className="font-medium capitalize">{dept.replace(/([A-Z])/g, ' $1').trim()}</span>
-                  <span className="font-bold">{formatCurrency((data as any).baseWages)}</span>
+                  <span className="font-bold">{formatCurrency((data as CrewDepartment).baseWages)}</span>
                 </div>
               ))}
             </div>
@@ -667,10 +697,10 @@ export default function BudgetPage() {
             {Object.entries(equipment.camera).filter(([key]) => key !== 'cameraSubtotal').map(([key, data]) => (
               <div key={key} className="p-4 border rounded-lg">
                 <div className="flex justify-between items-start mb-2">
-                  <h4 className="font-medium">{(data as any).item}</h4>
-                  <span className="text-lg font-bold text-blue-600">{formatCurrency(parseFloat((data as any).cost))}</span>
+                  <h4 className="font-medium">{(data as EquipmentItem).item}</h4>
+                  <span className="text-lg font-bold text-blue-600">{formatCurrency(parseFloat((data as EquipmentItem).cost))}</span>
                 </div>
-                <p className="text-sm text-muted-foreground">{(data as any).description}</p>
+                <p className="text-sm text-muted-foreground">{(data as EquipmentItem).description}</p>
               </div>
             ))}
           </CardContent>
@@ -688,10 +718,10 @@ export default function BudgetPage() {
             {Object.entries(equipment.specialEffects).filter(([key]) => key !== 'specialEffectsSubtotal').map(([key, data]) => (
               <div key={key} className="p-4 border rounded-lg">
                 <div className="flex justify-between items-start mb-2">
-                  <h4 className="font-medium">{(data as any).item}</h4>
-                  <span className="text-lg font-bold text-orange-600">{formatCurrency(parseFloat((data as any).cost))}</span>
+                  <h4 className="font-medium">{(data as EquipmentItem).item}</h4>
+                  <span className="text-lg font-bold text-orange-600">{formatCurrency(parseFloat((data as EquipmentItem).cost))}</span>
                 </div>
-                <p className="text-sm text-muted-foreground">{(data as any).description}</p>
+                <p className="text-sm text-muted-foreground">{(data as EquipmentItem).description}</p>
               </div>
             ))}
           </CardContent>
@@ -799,8 +829,8 @@ export default function BudgetPage() {
                   <div key={name} className="flex justify-between items-center p-3 bg-green-50 border border-green-200 rounded-lg">
                     <span className="text-sm font-medium">{name.replace(/_/g, ' ')}</span>
                     <div className="text-right">
-                      <div className="text-sm font-bold text-green-800">{formatCurrency((data as any).premium)}</div>
-                      <div className="text-xs text-muted-foreground">{formatCurrency((data as any).value)} coverage</div>
+                      <div className="text-sm font-bold text-green-800">{formatCurrency((data as InsuranceItem).premium)}</div>
+                      <div className="text-xs text-muted-foreground">{formatCurrency((data as InsuranceItem).value)} coverage</div>
                     </div>
                   </div>
                 ))}
@@ -1043,10 +1073,10 @@ export default function BudgetPage() {
               <div key={key} className="p-4 border rounded-lg">
                 <div className="flex justify-between items-start mb-3">
                   <h4 className="font-medium capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</h4>
-                  <span className="text-lg font-bold text-purple-600">{formatCurrency((data as any).total)}</span>
+                  <span className="text-lg font-bold text-purple-600">{formatCurrency((data as PostProductionItem).total)}</span>
                 </div>
                 <div className="space-y-2">
-                  {Object.entries(data as any).filter(([subKey]) => subKey !== 'total').map(([subKey, subValue]) => (
+                  {Object.entries(data as PostProductionItem).filter(([subKey]) => subKey !== 'total').map(([subKey, subValue]) => (
                     <div key={subKey} className="flex justify-between items-center text-sm">
                       <span className="text-muted-foreground capitalize">{subKey.replace(/([A-Z])/g, ' $1').trim()}:</span>
                       <span className="font-medium">{formatCurrency(subValue as number)}</span>
@@ -1120,7 +1150,7 @@ export default function BudgetPage() {
             <Clock className="h-4 w-4 text-green-600" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-foreground">{scenes.phase_1_production_summary?.estimated_screen_time_phase_1 || 'N/A'}</div>
+            <div className="text-2xl font-bold text-foreground">{sceneData.phase_1_production_summary?.estimated_screen_time_phase_1 || 'N/A'}</div>
             <p className="text-xs text-muted-foreground">Estimated runtime</p>
           </CardContent>
         </Card>
@@ -1133,7 +1163,7 @@ export default function BudgetPage() {
             <Activity className="h-4 w-4 text-orange-600" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-foreground">{scenes.phase_1_production_summary?.phase_1_technical_summary?.total_production_hours || 'N/A'}</div>
+            <div className="text-2xl font-bold text-foreground">{sceneData.phase_1_production_summary?.phase_1_technical_summary?.total_production_hours || 'N/A'}</div>
             <p className="text-xs text-muted-foreground">Total shoot time</p>
           </CardContent>
         </Card>
@@ -1146,7 +1176,7 @@ export default function BudgetPage() {
             <Zap className="h-4 w-4 text-red-600" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-foreground">{scenes.phase_1_production_summary?.phase_1_technical_summary?.high_complexity_scenes || 'N/A'}</div>
+            <div className="text-2xl font-bold text-foreground">{sceneData.phase_1_production_summary?.phase_1_technical_summary?.high_complexity_scenes || 'N/A'}</div>
             <p className="text-xs text-muted-foreground">Complex scenes</p>
           </CardContent>
         </Card>
@@ -1164,25 +1194,25 @@ export default function BudgetPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="text-center p-4 bg-blue-50 border border-blue-200 rounded-lg">
               <div className="text-2xl font-bold text-blue-800">
-                {scenes.phase_1_production_summary?.phase_1_character_summary?.total_speaking_roles || 0}
+                {sceneData.phase_1_production_summary?.phase_1_character_summary?.total_speaking_roles || 0}
               </div>
               <div className="text-sm text-blue-600">Speaking Roles</div>
             </div>
             <div className="text-center p-4 bg-green-50 border border-green-200 rounded-lg">
               <div className="text-2xl font-bold text-green-800">
-                {scenes.phase_1_production_summary?.phase_1_character_summary?.total_non_speaking_roles || 0}
+                {sceneData.phase_1_production_summary?.phase_1_character_summary?.total_non_speaking_roles || 0}
               </div>
               <div className="text-sm text-green-600">Non-Speaking</div>
             </div>
             <div className="text-center p-4 bg-purple-50 border border-purple-200 rounded-lg">
               <div className="text-2xl font-bold text-purple-800">
-                {scenes.phase_1_production_summary?.phase_1_character_summary?.total_background || 0}
+                {sceneData.phase_1_production_summary?.phase_1_character_summary?.total_background || 0}
               </div>
               <div className="text-sm text-purple-600">Background</div>
             </div>
             <div className="text-center p-4 bg-orange-50 border border-orange-200 rounded-lg">
               <div className="text-2xl font-bold text-orange-800">
-                {scenes.phase_1_production_summary?.phase_1_character_summary?.total_extras || 0}
+                {sceneData.phase_1_production_summary?.phase_1_character_summary?.total_extras || 0}
               </div>
               <div className="text-sm text-orange-600">Extras</div>
             </div>
@@ -1202,25 +1232,25 @@ export default function BudgetPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             <div className="text-center p-4 bg-blue-50 border border-blue-200 rounded-lg">
               <div className="text-2xl font-bold text-blue-800">
-                {scenes.phase_1_production_summary?.phase_1_location_summary?.interior_scenes || 0}
+                {sceneData.phase_1_production_summary?.phase_1_location_summary?.interior_scenes || 0}
               </div>
               <div className="text-sm text-blue-600">Interior Scenes</div>
             </div>
             <div className="text-center p-4 bg-green-50 border border-green-200 rounded-lg">
               <div className="text-2xl font-bold text-green-800">
-                {scenes.phase_1_production_summary?.phase_1_location_summary?.exterior_scenes || 0}
+                {sceneData.phase_1_production_summary?.phase_1_location_summary?.exterior_scenes || 0}
               </div>
               <div className="text-sm text-green-600">Exterior Scenes</div>
             </div>
             <div className="text-center p-4 bg-purple-50 border border-purple-200 rounded-lg">
               <div className="text-2xl font-bold text-purple-800">
-                {scenes.phase_1_production_summary?.phase_1_location_summary?.unique_locations || 0}
+                {sceneData.phase_1_production_summary?.phase_1_location_summary?.unique_locations || 0}
               </div>
               <div className="text-sm text-purple-600">Unique Locations</div>
             </div>
             <div className="text-center p-4 bg-orange-50 border border-orange-200 rounded-lg">
               <div className="text-2xl font-bold text-orange-800">
-                {scenes.phase_1_production_summary?.phase_1_location_summary?.major_set_constructions || 0}
+                {sceneData.phase_1_production_summary?.phase_1_location_summary?.major_set_constructions || 0}
               </div>
               <div className="text-sm text-orange-600">Major Sets</div>
             </div>
@@ -1228,7 +1258,7 @@ export default function BudgetPage() {
 
           <div className="text-center p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
             <div className="text-xl font-bold text-yellow-800">
-              {(scenes.phase_1_production_summary?.phase_1_location_summary?.location_complexity_average || 0).toFixed(1)}/10
+              {(sceneData.phase_1_production_summary?.phase_1_location_summary?.location_complexity_average || 0).toFixed(1)}/10
             </div>
             <div className="text-sm text-yellow-600">Average Location Complexity</div>
           </div>
@@ -1245,7 +1275,7 @@ export default function BudgetPage() {
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            {Object.entries(scenes.phase_1_production_summary?.phase_1_department_alerts || {}).map(([dept, alert]) => (
+            {Object.entries(sceneData.phase_1_production_summary?.phase_1_department_alerts || {}).map(([dept, alert]) => (
               <div key={dept} className="p-4 border rounded-lg">
                 <h4 className="font-medium capitalize mb-2">{dept}</h4>
                 <p className="text-sm text-muted-foreground">{alert as string}</p>
@@ -1335,10 +1365,10 @@ export default function BudgetPage() {
               <div key={key} className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
                 <div className="flex justify-between items-start mb-2">
                   <h4 className="font-medium text-blue-800 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</h4>
-                  <span className="text-lg font-bold text-blue-800">{formatCurrency((data as any).calculatedValue)}</span>
+                  <span className="text-lg font-bold text-blue-800">{formatCurrency((data as TaxIncentiveItem).calculatedValue)}</span>
                 </div>
-                <div className="text-xs text-blue-600 mb-1">{(data as any).type}</div>
-                <p className="text-xs text-blue-700">{(data as any).notes}</p>
+                <div className="text-xs text-blue-600 mb-1">{(data as TaxIncentiveItem).type}</div>
+                <p className="text-xs text-blue-700">{(data as TaxIncentiveItem).notes}</p>
               </div>
             ))}
           </CardContent>
@@ -1357,11 +1387,11 @@ export default function BudgetPage() {
               <div key={key} className="p-4 bg-purple-50 border border-purple-200 rounded-lg">
                 <div className="flex justify-between items-start mb-2">
                   <h4 className="font-medium text-purple-800 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</h4>
-                  <span className="text-lg font-bold text-purple-800">{formatCurrency((data as any).calculatedValue)}</span>
+                  <span className="text-lg font-bold text-purple-800">{formatCurrency((data as TaxIncentiveItem).calculatedValue)}</span>
                 </div>
-                <div className="text-xs text-purple-600 mb-1">{(data as any).type}</div>
-                <div className="text-xs text-purple-700 mb-1">Rate: {((data as any).rate * 100).toFixed(0)}%</div>
-                <p className="text-xs text-purple-700">{(data as any).notes}</p>
+                <div className="text-xs text-purple-600 mb-1">{(data as TaxIncentiveItem).type}</div>
+                <div className="text-xs text-purple-700 mb-1">Rate: {((data as TaxIncentiveItem).rate! * 100).toFixed(0)}%</div>
+                <p className="text-xs text-purple-700">{(data as TaxIncentiveItem).notes}</p>
               </div>
             ))}
           </CardContent>
@@ -1380,10 +1410,10 @@ export default function BudgetPage() {
               <div key={key} className="p-4 bg-orange-50 border border-orange-200 rounded-lg">
                 <div className="flex justify-between items-start mb-2">
                   <h4 className="font-medium text-orange-800 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</h4>
-                  <span className="text-lg font-bold text-orange-800">{formatCurrency((data as any).calculatedValue)}</span>
+                  <span className="text-lg font-bold text-orange-800">{formatCurrency((data as TaxIncentiveItem).calculatedValue)}</span>
                 </div>
-                <div className="text-xs text-orange-600 mb-1">{(data as any).type}</div>
-                <p className="text-xs text-orange-700">{(data as any).notes}</p>
+                <div className="text-xs text-orange-600 mb-1">{(data as TaxIncentiveItem).type}</div>
+                <p className="text-xs text-orange-700">{(data as TaxIncentiveItem).notes}</p>
               </div>
             ))}
           </CardContent>
@@ -1404,9 +1434,9 @@ export default function BudgetPage() {
               <div key={year} className="p-4 border rounded-lg">
                 <div className="flex justify-between items-start mb-2">
                   <h4 className="font-medium">{year.replace('_', ' ')}</h4>
-                  <span className="text-lg font-bold text-green-600">{formatCurrency((data as any).inflow)}</span>
+                  <span className="text-lg font-bold text-green-600">{formatCurrency((data as CashflowItem).inflow)}</span>
                 </div>
-                <p className="text-sm text-muted-foreground">{(data as any).description}</p>
+                <p className="text-sm text-muted-foreground">{(data as CashflowItem).description}</p>
               </div>
             ))}
           </div>
