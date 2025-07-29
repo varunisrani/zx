@@ -1,0 +1,228 @@
+{
+    "insuranceModelOutput": {
+      "processingLog": {
+        "coverageRequirementsCalculation": {
+          "executed": true,
+          "timestamp": "2024-05-21T10:00:01Z",
+          "status": "completed"
+        },
+        "riskFactorAssessment": {
+          "executed": true,
+          "timestamp": "2024-05-21T10:00:02Z",
+          "status": "completed"
+        },
+        "actuarialTableApplication": {
+          "executed": true,
+          "timestamp": "2024-05-21T10:00:03Z",
+          "status": "completed"
+        },
+        "deductibleFactorProcessing": {
+          "executed": true,
+          "timestamp": "2024-05-21T10:00:04Z",
+          "status": "completed"
+        },
+        "completionBondProcessing": {
+          "executed": true,
+          "timestamp": "2024-05-21T10:00:05Z",
+          "status": "completed"
+        },
+        "overallProcessingStatus": "all_functions_executed_successfully"
+      },
+      "generalLiability": {
+        "coverage": {
+          "perOccurrence": 5000000,
+          "generalAggregate": 10000000,
+          "productsCompletedOps": 10000000
+        },
+        "premium": {
+          "basePremium": 60000.00,
+          "stuntMultiplier": 15000.00,
+          "animalWorkMultiplier": 12000.00,
+          "internationalOpsMultiplier": 24000.00,
+          "specialEffectsMultiplier": 14500.00,
+          "totalPremium": 125500.00
+        },
+        "deductible": 25000,
+        "specialConditions": [
+          "Coverage contingent on approved and certified stunt coordinators for all stunt sequences.",
+          "Licensed and insured animal handlers required for all scenes involving animals.",
+          "Specific safety protocols for centrifuge, zero-g rigs, and underwater work must be approved and followed.",
+          "International operations require local security consultation and a comprehensive medical evacuation plan."
+        ]
+      },
+      "equipmentCoverage": {
+        "schedule": {
+          "camera": 2500000.00,
+          "lighting": 1800000.00,
+          "sound": 600000.00,
+          "vehicles": 800000.00,
+          "props": 1200000.00,
+          "specialEquipment": 2132000.00
+        },
+        "totalValue": 9032000.00,
+        "totalPremium": 587080.00,
+        "deductible": 50000,
+        "specialConditions": [
+          "Coverage for custom rigs (centrifuge, motion control) requires pre-production engineering review, testing, and certification.",
+          "Underwater housing must be pressure-tested and certified before each use.",
+          "A comprehensive equipment carnet is required for all gear transported to international locations."
+        ]
+      },
+      "castInsurance": {
+        "essentialElements": {
+          "Keir Dullea": {
+            "value": 3500000,
+            "rate": 0.025,
+            "premium": 87500.00
+          },
+          "Gary Lockwood": {
+            "value": 2800000,
+            "rate": 0.025,
+            "premium": 70000.00
+          },
+          "William Sylvester": {
+            "value": 2200000,
+            "rate": 0.015,
+            "premium": 33000.00
+          },
+          "Stanley Kubrick": {
+            "value": 8500000,
+            "rate": 0.0075,
+            "premium": 63750.00
+          }
+        },
+        "totalCastPremium": 254250.00,
+        "specialConditions": [
+          "Full medical examinations required for all insured essential elements prior to binding coverage.",
+          "Stunt work performed by principal actors must be reviewed and approved by the stunt coordinator and insurer.",
+          "Coverage for child actors requires adherence to all local and international child labor laws and dedicated on-set supervision."
+        ]
+      },
+      "errorsOmissions": {
+        "coverage": 5000000,
+        "premium": 35000,
+        "deductible": 25000,
+        "retroactiveDate": "2024-01-15",
+        "specialConditions": [
+          "Clearance reports for script, music, stock footage, and chain of title are required prior to binding coverage."
+        ]
+      },
+      "autoLiability": {
+        "totalAuto": 45000.00
+      },
+      "workersCompensation": {
+        "payroll": {
+          "clerical": {
+            "amount": 5302004.00,
+            "rate": 0.005,
+            "premium": 26510.00
+          },
+          "productionCrew": {
+            "amount": 37114028.00,
+            "rate": 0.035,
+            "premium": 1298991.00
+          },
+          "stuntPerformers": {
+            "amount": 2651002.00,
+            "rate": 0.12,
+            "premium": 318120.00
+          },
+          "internationalCrew": {
+            "amount": 7953006.00,
+            "rate": 0.05,
+            "premium": 397650.00
+          }
+        },
+        "totalPayroll": 53020040.00,
+        "totalPremium": 2041271.00
+      },
+      "completionBond": {
+        "required": true,
+        "bondableElements": {
+          "aboveTheLine": 10225000.00,
+          "belowTheLine": 42795040.00,
+          "postProduction": 8500000.00,
+          "totalBondable": 61520040.00
+        },
+        "rate": 0.055,
+        "fee": 3383602.00,
+        "rebate": {
+          "potentialRebatePercentage": 0.40,
+          "potentialRebateAmount": 1353441.00
+        },
+        "deliveryRequirements": [
+          "Final cut delivered on or before approved delivery date.",
+          "Strict adherence to approved budget and shooting schedule.",
+          "All clearance documentation and legal deliverables finalized and submitted."
+        ],
+        "specialConditions": [
+          "Weekly detailed progress and cost reports required by bond company representative.",
+          "Bond company reserves the right to approve all key creative/production hires and any significant script, schedule, or budget changes.",
+          "Bond company has the right to take over production if critical deviations from the approved plan occur."
+        ]
+      },
+      "additionalCoverages": {
+        "animalMortality": {
+          "premium": 15000.00
+        },
+        "politicalRisk": {
+          "premium": 75000.00
+        },
+        "weatherInsurance": {
+          "premium": 50000.00
+        },
+        "thirdPartyPropertyDamage": {
+          "premium": 20000.00
+        }
+      },
+      "specialRiskCoverages": {
+        "unprecedentedTechnologyFailure": {
+          "description": "Covers delays from the failure of pioneering technologies (centrifuge, motion control, front projection).",
+          "premium": 250000.00,
+          "deductible": 500000
+        },
+        "civilAuthority": {
+          "description": "Covers delays due to unforeseen government action or civil unrest in international locations.",
+          "premium": 40000.00
+        }
+      },
+      "insuranceSummary": {
+        "subtotal": 3538101.00,
+        "completionBond": 3383602.00,
+        "brokerFee": 424572.00,
+        "taxes": 158507.00,
+        "grandTotal": 7504782.00
+      },
+      "riskAssessment": {
+        "overallRisk": "Extreme",
+        "riskFactors": [
+          {
+            "type": "Technical",
+            "description": "Pioneering use of unproven technology (centrifuge, motion control, front projection) with no historical data for failure rates.",
+            "level": "Extreme"
+          },
+          {
+            "type": "Logistical",
+            "description": "Production in remote international locations (Kenya, Tanzania) with moderate political risk, complex logistics, and wildlife exposure.",
+            "level": "High"
+          },
+          {
+            "type": "Personnel",
+            "description": "Complex stunt work, including simulated zero-gravity and underwater sequences, involving principal cast.",
+            "level": "High"
+          },
+          {
+            "type": "Creative",
+            "description": "Highly ambitious and abstract narrative combined with a director known for meticulous, schedule-extending perfectionism, increasing completion risk.",
+            "level": "High"
+          }
+        ],
+        "recommendations": [
+          "Implement a mandatory 'testing and sign-off' phase for all new technology before it is used in principal photography.",
+          "Establish a dedicated on-site medical team and medevac plan for all international and high-risk location work.",
+          "Engage a specialist risk management consultant to oversee stunt and special effects safety protocols.",
+          "Maintain a close and transparent relationship with the completion bond company, providing weekly detailed progress reports."
+        ]
+      }
+    } 
+  }

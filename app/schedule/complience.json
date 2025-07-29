@@ -1,0 +1,263 @@
+{
+    "complianceConstraintsOutput": {
+      "requestId": "req_comp_2001_20240722_001",
+      "processedTimestamp": "2024-07-22T10:18:45Z",
+      "processingTime": 195,
+      "confidence": 0.98,
+      "complianceStatus": "CONDITIONALLY_COMPLIANT",
+      "rulebaseSources": [
+        "BECTU UK Agreement",
+        "UK Child Performance Regulations 2014",
+        "Kenyan Labour Laws & Film Production Regulations",
+        "RSPCA & Animal Welfare in Entertainment Guidelines",
+        "IATSE Stunt Safety Protocols"
+      ],
+      "constraintAnalysis": {
+        "turnaroundRequirements": {
+          "leadPerformers": "12-hour minimum. Extended to 14 hours following days with over 2 hours of makeup/prosthetics (applies to MOONWATCHER, DAVE_BOWMAN).",
+          "stuntPerformers": "12-hour minimum. Extended to 14 hours after high-risk work (applies to FRANK_POOLE, Stunt Performers on scenes 3, 10, 66).",
+          "supportingPerformers": "11-hour minimum standard.",
+          "dayPlayers": "10-hour minimum standard.",
+          "childPerformers": "16-hour mandatory minimum turnaround.",
+          "crewHeads": "11-hour minimum standard.",
+          "generalCrew": "10-hour minimum standard.",
+          "nightToDay": "A mandatory 12-hour turnaround is required for all cast and crew when transitioning from a night shoot to a day shoot."
+        },
+        "mealBreakRequirements": {
+          "standard": "First meal break of minimum 30 minutes must be provided within 6 hours of call time. Second meal break of 30 minutes within 12 hours.",
+          "children": "Maximum 3 hours between meal breaks, with a minimum duration of 45 minutes for each break.",
+          "penalties": "Meal penalty payments apply for every 30-minute delay past the 6-hour and 12-hour marks."
+        },
+        "overtimeRegulations": {
+          "standardCrewPerformers": "Up to 10 hours at straight time. Hours 10-14 at 1.5x. Hours 14-16 at 2x. After 16 hours is Golden Time (premium rate).",
+          "stuntPerformers": "Up to 8 hours at straight time. Hours 8-12 at 1.5x. Hours 12-14 at 2x. After 14 hours is Golden Time.",
+          "nightPremium": "25% pay uplift for all work conducted between 8 PM and 6 AM.",
+          "weekendPremium": "Saturday work at 1.5x base rate. Sunday work at 2x base rate."
+        },
+        "childActorRestrictions": {
+          "applicableTo": "LUNAR_CHILDREN",
+          "workingHours": {
+            "ages_8_11": "Maximum 4.5 hours on set per day.",
+            "ages_12_14": "Maximum 6 hours on set per day."
+          },
+          "onSetRequirements": "Welfare officer and designated tutor must be present on set at all times. Parent/guardian must accompany each child.",
+          "breaks": "Mandatory 15-minute break for every hour of work.",
+          "workLimitations": "No work between 7 PM and 7 AM. Maximum of 3 consecutive work days."
+        },
+        "animalWelfareRequirements": {
+          "applicableTo": "scenes 1, 3, 10",
+          "onSetSupervision": "RSPCA-approved animal handlers and a certified veterinarian must be on set during all filming involving animals.",
+          "workingConditions": "Animals cannot work in temperatures below 10°C or above 32°C.",
+          "restPeriods": "Mandatory minimum 2-hour rest period for every 4 hours of work.",
+          "safetyProtocols": "Minimum 50-meter safety distance must be maintained for dangerous animals (lions). All animal sequences require pre-approval from relevant authorities."
+        },
+        "stuntSafetyProtocols": {
+          "applicableTo": "scenes 3, 10, 66",
+          "personnel": "IATSE-certified stunt coordinator and a dedicated safety officer must be on set. Paramedic standby is required for high-risk stunts (scene 66).",
+          "rehearsals": "A minimum of 3 full, on-site rehearsals are required before filming any stunt sequence.",
+          "equipmentCertification": "All mechanical rigs (scenes 10, 66) must be certified by a qualified engineer.",
+          "fireSafety": "Fire stunts (scene 66) are limited to a maximum of 15 seconds of exposure per take."
+        },
+        "foreignLocationRegulations": {
+          "location": "Kenya",
+          "workPermits": "Minimum 21 working days are required for processing temporary employment permits for all non-local cast and crew.",
+          "localCrew": "A minimum of 60% of the total crew must be hired locally.",
+          "specialApprovals": "Specific approval from the Kenyan Labour Office is required for any scheduled night work (scene 10) or weekend work.",
+          "mandatoryProvisions": "Comprehensive medical insurance with emergency evacuation coverage, satellite communication equipment, and a local fixer/security team are required."
+        }
+      },
+      "hardConstraints": [
+        {
+          "constraintId": "HC_CHILD_HOURS_AGE",
+          "type": "child_performer_restrictions",
+          "description": "Daily working hours for child performers are strictly limited by age. Ages 8-11: max 4.5 hours. Ages 12-14: max 6 hours. The 8-hour estimate for Scene 36 is in direct violation.",
+          "applicableTo": [
+            "LUNAR_CHILDREN",
+            "Scene 36"
+          ],
+          "violation": "Legal non-compliance, production shutdown, potential fines and prosecution.",
+          "flexibility": "none"
+        },
+        {
+          "constraintId": "HC_CHILD_TURNAROUND",
+          "type": "turnaround_time",
+          "description": "A minimum 16-hour rest period (turnaround) is mandatory for all child performers between work days.",
+          "applicableTo": [
+            "LUNAR_CHILDREN"
+          ],
+          "violation": "Legal non-compliance, revocation of child work permits.",
+          "flexibility": "none"
+        },
+        {
+          "constraintId": "HC_KENYA_PERMITS",
+          "type": "foreign_location_regulations",
+          "description": "Work permits for Kenya require a minimum of 21 working days for processing. No work can commence before permits are approved and issued.",
+          "applicableTo": [
+            "all_non_local_cast",
+            "all_non_local_crew"
+          ],
+          "violation": "Illegal employment, deportation of personnel, major production delay.",
+          "flexibility": "none"
+        },
+        {
+          "constraintId": "HC_ANIMAL_TEMP",
+          "type": "animal_welfare",
+          "description": "Animals cannot be worked in ambient temperatures below 10°C or above 32°C.",
+          "applicableTo": [
+            "scenes 1, 3, 10"
+          ],
+          "violation": "Violation of animal welfare laws, permit revocation, public relations crisis.",
+          "flexibility": "none"
+        },
+        {
+          "constraintId": "HC_MEAL_BREAK",
+          "type": "meal_break_requirements",
+          "description": "First meal break must be provided no later than 6 hours after the initial call time for all cast and crew.",
+          "applicableTo": [
+            "all_cast",
+            "all_crew"
+          ],
+          "violation": "Union grievance, mandatory penalty payments for all affected personnel.",
+          "flexibility": "low"
+        },
+        {
+          "constraintId": "HC_STUNT_PERSONNEL",
+          "type": "stunt_safety",
+          "description": "Mandatory presence of a certified Stunt Coordinator, Safety Officer, and (for high-risk scenes) Paramedics during stunt work.",
+          "applicableTo": [
+            "scenes 3, 10, 66"
+          ],
+          "violation": "Extreme safety risk, insurance invalidation, legal liability in case of accident.",
+          "flexibility": "none"
+        }
+      ],
+      "softConstraints": [
+        {
+          "constraintId": "SC_CONSECUTIVE_DAYS",
+          "type": "crew_welfare",
+          "description": "It is recommended to limit consecutive working days to a maximum of 6 before a mandatory 24-hour rest day.",
+          "applicableTo": [
+            "all_cast",
+            "all_crew"
+          ],
+          "violation": "Crew fatigue, increased risk of accidents, decreased productivity.",
+          "flexibility": "medium",
+          "penalty": "No direct financial penalty, but potential for negotiated crew bonuses or increased overtime due to reduced efficiency."
+        },
+        {
+          "constraintId": "SC_WEEKEND_WORK",
+          "type": "overtime_regulations",
+          "description": "Weekend work should be minimized due to significant premium pay rates.",
+          "applicableTo": [
+            "all_cast",
+            "all_crew"
+          ],
+          "violation": "Significant budget impact due to premium pay.",
+          "flexibility": "high",
+          "penalty": "Saturday work at 1.5x base rate. Sunday work at 2x base rate."
+        },
+        {
+          "constraintId": "SC_MAKEUP_TURNAROUND",
+          "type": "turnaround_time",
+          "description": "Actors with extensive makeup/prosthetics (over 2 hours) should be granted a 14-hour turnaround to ensure adequate rest.",
+          "applicableTo": [
+            "MOONWATCHER",
+            "DAVE_BOWMAN"
+          ],
+          "violation": "Potential for union grievance, actor fatigue affecting performance.",
+          "flexibility": "medium",
+          "penalty": "Forced call (violating turnaround) incurs a penalty equivalent to a full day's pay for the affected performer."
+        }
+      ],
+      "penaltyCalculations": {
+        "mealPenalties": {
+          "trigger": "Failure to provide a meal break within 6 hours of call.",
+          "penalty": "Payment for each affected person, calculated per 30-minute increment of delay, at their prevailing hourly rate (e.g., if delay pushes them into overtime, penalty is calculated at the overtime rate)."
+        },
+        "overtimePenalties": {
+          "trigger": "Work extending beyond standard hours (8 for stunts, 10 for others).",
+          "penalty": "Calculated based on rate tiers: 1.5x, 2x, and Golden Time, as applicable to the individual's union category."
+        },
+        "turnaroundPenalties": {
+          "trigger": "Providing less than the minimum required rest period between work days.",
+          "penalty": "A 'forced call' penalty, typically equivalent to one full day's pay for the affected individual, in addition to payment for hours worked."
+        }
+      },
+      "complianceRecommendations": [
+        {
+          "priority": "HIGH",
+          "category": "child_performer_restrictions",
+          "recommendation": "Immediately revise the schedule for Scene 36. The 8-hour estimated shoot time is illegal. Plan to shoot this scene over at least two days, segregating the children by age group (8-11 year olds on one schedule, 12-14 year olds on another) to comply with their respective maximum daily hours.",
+          "impactIfIgnored": "Production shutdown by authorities, fines, and potential legal action. Invalidation of production insurance for any incident involving minors."
+        },
+        {
+          "priority": "HIGH",
+          "category": "foreign_location_regulations",
+          "recommendation": "Initiate the application process for Kenyan work permits for all non-local cast and crew immediately. This 21-working-day lead time is a critical path item for the Africa shoot.",
+          "impactIfIgnored": "Inability to film in Kenya, forcing a costly and last-minute change of location or a major schedule delay."
+        },
+        {
+          "priority": "MEDIUM",
+          "category": "stunt_safety",
+          "recommendation": "Block out mandatory rehearsal days in the schedule prior to filming scenes 3, 10, and 66. A minimum of three full rehearsals per stunt sequence is required.",
+          "impactIfIgnored": "Violation of safety protocols, increased risk of injury, potential for stunt coordinator to refuse to proceed with the sequence."
+        },
+        {
+          "priority": "MEDIUM",
+          "category": "foreign_location_regulations",
+          "recommendation": "Submit a formal request to the Kenyan Labour Office for approval of the night shoot planned for Scene 10. Do not schedule this scene until written approval is received.",
+          "impactIfIgnored": "Fines and potential work stoppage by Kenyan authorities if night work is performed without a permit."
+        }
+      ],
+      "riskAssessment": [
+        {
+          "riskId": "RA_CHILD_LABOR",
+          "category": "Legal & Compliance",
+          "severity": "HIGH",
+          "description": "High probability of violating child labor laws with the current schedule for Scene 36.",
+          "probability": 0.9,
+          "impact": "Production halt, legal penalties, severe reputational damage.",
+          "mitigation": "Implement the high-priority recommendation to reschedule Scene 36 across multiple days, respecting strict time limits for each age group."
+        },
+        {
+          "riskId": "RA_PERMIT_DELAY",
+          "category": "Logistics & Scheduling",
+          "severity": "HIGH",
+          "description": "Potential for delays in Kenyan work permit processing beyond the 21-day minimum.",
+          "probability": 0.4,
+          "impact": "Delay to the entire production schedule, significant budget overruns for holding cast and crew.",
+          "mitigation": "Submit all paperwork 6-8 weeks in advance of travel. Engage the local fixer to monitor the application status with government offices daily."
+        },
+        {
+          "riskId": "RA_OT_BUDGET",
+          "category": "Financial",
+          "severity": "MEDIUM",
+          "description": "Scenes 10 (16hrs) and 66 (17hrs) will incur significant overtime and Golden Time penalties for all cast and crew.",
+          "probability": 1.0,
+          "impact": "Budget overruns in the personnel and overtime categories.",
+          "mitigation": "Ensure these scenes are scheduled on days with no other shooting. Use a second unit for setup/wrap where possible. Accurately budget for the full extent of overtime and Golden Time penalties."
+        },
+        {
+          "riskId": "RA_WEATHER_AFRICA",
+          "category": "Scheduling",
+          "severity": "MEDIUM",
+          "description": "Weather-dependent scenes in Kenya could be delayed by high temperatures, violating animal welfare rules.",
+          "probability": 0.5,
+          "impact": "Lost shooting days, requiring schedule reshuffles and extending the expensive foreign location shoot.",
+          "mitigation": "Schedule weather-dependent scenes early in the day. Build at least 3-4 contingency (weather cover) days into the 25-day Africa schedule."
+        }
+      ],
+      "validationResults": {
+        "inputDataCompleteness": 0.95,
+        "ruleApplicationSuccess": 0.99,
+        "constraintGenerationComplete": true,
+        "penaltyCalculationsValid": true
+      },
+      "nextStepRecommendations": [
+        "CoordinatorAgent: Revise schedule for Scene 36 to comply with child labor hour limits.",
+        "ProducerAgent: Initiate Kenyan work permit applications for all non-local personnel immediately.",
+        "LineProducerAgent: Budget for extensive overtime, Golden Time, and meal penalties for scenes 10 and 66.",
+        "FirstAssistantDirectorAgent: Add mandatory stunt rehearsal days to the schedule preceding scenes 3, 10, and 66."
+      ]
+    }
+  }

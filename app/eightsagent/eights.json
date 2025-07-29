@@ -1,0 +1,470 @@
+{
+    "eighthsAnalysisOutput": {
+      "projectId": "complete_screenplay_eighths_analysis",
+      "processingTimestamp": "2025-07-22T11:10:00Z",
+      "sceneAnalysisSummary": {
+        "totalScenesProcessed": 20,
+        "totalPagesAnalyzed": 17.5,
+        "totalEighthsCalculated": 193,
+        "estimatedTotalScreenTime": "00:24:08",
+        "averageEighthsPerScene": 9.65
+      },
+      "sceneBySceneBreakdown": [
+        {
+          "sceneNumber": 1,
+          "sceneHeader": "2 EXT. THE STREAM – THE OTHERS 2",
+          "sceneContent": "As the dawn sky brightens, Moonwatcher and his tribe reach the shallow stream. The Others are already there... As they see him coming, the Others begin to angrily dance and shriek...",
+          "pageCount": 1.0,
+          "eighthsCalculated": 12,
+          "estimatedScreenTime": "01:30",
+          "complexityLevel": "complex",
+          "complexityFactors": [
+            "Large Ensemble Action",
+            "Choreographed Group Confrontation",
+            "Prosthetic Makeup"
+          ],
+          "timingNotes": "The scene involves two large groups of hominids in a ritualized confrontation. Requires significant time for blocking, performance, and capturing reactions from both sides. Multiplier of 1.5x applied to page count due to action complexity.",
+          "productionConsiderations": [
+            "Large number of extras with full prosthetic makeup",
+            "Stunt/Movement coordinator for confrontation",
+            "Exterior location (stream), potential weather dependency"
+          ]
+        },
+        {
+          "sceneNumber": 2,
+          "sceneHeader": "3 EXT. AFRICAN PLAIN – HERBIVORES 3",
+          "sceneContent": "Moonwatcher and his companions search for berries, fruit and leaves, and fight off pangs of hunger... They are slowly starving to death in the midst of plenty.",
+          "pageCount": 0.5,
+          "eighthsCalculated": 4,
+          "estimatedScreenTime": "00:30",
+          "complexityLevel": "simple",
+          "complexityFactors": [
+            "Atmospheric",
+            "Character Exposition"
+          ],
+          "timingNotes": "Standard timing. Primarily descriptive and atmospheric, establishing the tribe's desperate situation. No complex action.",
+          "productionConsiderations": [
+            "Prosthetic makeup for main characters",
+            "Exterior plain location"
+          ]
+        },
+        {
+          "sceneNumber": 3,
+          "sceneHeader": "4 EXT. PARCHED COUNTRYSIDE – THE LION 4",
+          "sceneContent": "The tribe slowly wanders across the bare, flat countryside foraging... Suddenly, Moonwatcher becomes aware of a lion, stalking them about 300 yards away... they scatter in all directions...",
+          "pageCount": 0.5,
+          "eighthsCalculated": 5,
+          "estimatedScreenTime": "00:38",
+          "complexityLevel": "standard",
+          "complexityFactors": [
+            "Simple Action",
+            "Animal Actor/CGI"
+          ],
+          "timingNotes": "Slight timing increase (1.3x multiplier) for the tension of the lion stalk and the chaotic scattering of the tribe. Wide shots needed to establish distance and threat.",
+          "productionConsiderations": [
+            "Animal handling (trained lion) or CGI for the lion",
+            "Safety protocols for cast with animal/simulated animal"
+          ]
+        },
+        {
+          "sceneNumber": 4,
+          "sceneHeader": "5 EXT. DEAD TREE – FINDS HONEY 5",
+          "sceneContent": "It had not been a good day... he finds a hive of bees in the stump of a dead tree... Over the valley, a full moon rises... shrieks and screams echo up the slope from one of the lower caves...",
+          "pageCount": 1.5,
+          "eighthsCalculated": 14,
+          "estimatedScreenTime": "01:45",
+          "complexityLevel": "standard",
+          "complexityFactors": [
+            "Location Change (INT/EXT)",
+            "Night Scene",
+            "Atmospheric Tension"
+          ],
+          "timingNotes": "Long scene with multiple parts: finding honey, transitioning to the cave at night, and reacting to off-screen terror. The deliberate, atmospheric pacing of a Kubrick film warrants a 1.2x multiplier.",
+          "productionConsiderations": [
+            "Special prop (bee hive)",
+            "Night exterior lighting setup",
+            "Sound design is critical for off-screen lion attack"
+          ]
+        },
+        {
+          "sceneNumber": 5,
+          "sceneHeader": "7 EXT. THE STREAM – INVASION 7",
+          "sceneContent": "The Others are growing desperate... the invasion begins. In an uncertainly-moving horde, the Others cross the river... he is face to face with Big-Tooth... Rolling over and over, they come to a patch of stony ground...",
+          "pageCount": 1.5,
+          "eighthsCalculated": 22,
+          "estimatedScreenTime": "02:45",
+          "complexityLevel": "complex",
+          "complexityFactors": [
+            "Complex Action",
+            "Large Ensemble Action",
+            "Stunt Coordination",
+            "Fight Choreography"
+          ],
+          "timingNotes": "A major, chaotic battle sequence. Involves a large group invasion, a one-on-one fight, and a retreat. This will play much longer than the page count. A 1.8x multiplier is applied for the sustained, complex action and fight choreography.",
+          "productionConsiderations": [
+            "Stunt coordinator and performers",
+            "Extensive rehearsal time",
+            "Prosthetics for all participants",
+            "Shooting in and around water"
+          ]
+        },
+        {
+          "sceneNumber": 6,
+          "sceneHeader": "8 EXT. CAVE – NEW SOUND 8",
+          "sceneContent": "Dozing fitfully and weakened by his struggle, Moonwatcher is startled by a sound... Never in his life... has he heard a sound like this.",
+          "pageCount": 0.25,
+          "eighthsCalculated": 2,
+          "estimatedScreenTime": "00:15",
+          "complexityLevel": "simple",
+          "complexityFactors": [
+            "Atmospheric",
+            "Sound Design Focus"
+          ],
+          "timingNotes": "A very short, atmospheric scene focused entirely on Moonwatcher's reaction to a sound. Standard timing.",
+          "productionConsiderations": [
+            "Night interior cave set",
+            "Crucial sound design element"
+          ]
+        },
+        {
+          "sceneNumber": 7,
+          "sceneHeader": "9 EXT. CAVE – NEW ROCK 9",
+          "sceneContent": "Moonwatcher comes face to face with the New Rock... it is a cube about fifteen feet on a side, and it is made of some completely transparent material... he puts out his hand, and feels a warm, hard surface.",
+          "pageCount": 1.0,
+          "eighthsCalculated": 10,
+          "estimatedScreenTime": "01:15",
+          "complexityLevel": "standard",
+          "complexityFactors": [
+            "Key Prop Interaction",
+            "VFX Prop"
+          ],
+          "timingNotes": "The pacing will be deliberate to emphasize the mystery and scale of the monolith. A 1.2x multiplier accounts for the slow, awe-filled character reactions.",
+          "productionConsiderations": [
+            "Fabrication of large-scale, high-quality monolith prop",
+            "Potential VFX for transparency/material quality"
+          ]
+        },
+        {
+          "sceneNumber": 8,
+          "sceneHeader": "10 EXT. CUBE – FIRST LESSON 10",
+          "sceneContent": "A simple, maddeningly repetitious rhythm pulses out of the crystal cube... spinning wheels of light begin to merge... a perfectly normal scene appears... The big male suddenly bends down, picks up a heavy stone... and hurls it...",
+          "pageCount": 1.0,
+          "eighthsCalculated": 20,
+          "estimatedScreenTime": "02:30",
+          "complexityLevel": "complex",
+          "complexityFactors": [
+            "VFX Heavy",
+            "Abstract Visual Sequence",
+            "Complex Sound Design",
+            "Slow Motion Sequence"
+          ],
+          "timingNotes": "This is a major VFX sequence. The abstract lights, the projected scene-within-a-scene, and the slow-motion action require significant screen time, far beyond the page count. A 2.5x multiplier is necessary.",
+          "productionConsiderations": [
+            "Extensive VFX planning and supervision",
+            "Complex sound design and scoring",
+            "High-speed photography for slow-motion",
+            "Choreography for the mesmerized hominids"
+          ]
+        },
+        {
+          "sceneNumber": 9,
+          "sceneHeader": "11 EXT. CAVE AND PLAINS – UTOPIA 11",
+          "sceneContent": "Babies were born and sometimes lived... and the tribe prospered. In the course of a single year, Moonwatcher and his companions had changed almost beyond recognition.",
+          "pageCount": 0.5,
+          "eighthsCalculated": 4,
+          "estimatedScreenTime": "00:30",
+          "complexityLevel": "simple",
+          "complexityFactors": [
+            "Narrative Summary",
+            "Montage Potential"
+          ],
+          "timingNotes": "This is a bridging scene, likely to be handled as a montage showing the tribe's progress. Standard timing is appropriate for the on-page description.",
+          "productionConsiderations": [
+            "Requires showing passage of time through changes in props, physique, and actions (tool use, hunting)."
+          ]
+        },
+        {
+          "sceneNumber": 10,
+          "sceneHeader": "12 EXT. CAVES – KILLING THE LION 12",
+          "sceneContent": "With the partly devoured carcass of a warthog... Moonwatcher and three of his bravest companions wait for two consecutive nights... they strain themselves against the massive boulder... The rock moves slowly over the ledge...",
+          "pageCount": 1.0,
+          "eighthsCalculated": 14,
+          "estimatedScreenTime": "01:45",
+          "complexityLevel": "complex",
+          "complexityFactors": [
+            "Complex Action Sequence",
+            "Suspense",
+            "Practical Effects",
+            "Animal Actor/CGI"
+          ],
+          "timingNotes": "A suspenseful, multi-night sequence culminating in a complex action beat. Building tension and executing the boulder trap will take time. An 1.8x multiplier is applied.",
+          "productionConsiderations": [
+            "Stunt coordination for boulder push",
+            "Mechanical rig/SFX for the boulder drop",
+            "Animal handling or CGI for the lion",
+            "Night exterior lighting"
+          ]
+        },
+        {
+          "sceneNumber": 11,
+          "sceneHeader": "13 EXT. STREAM – MASTER OF THE WORLD 13",
+          "sceneContent": "the Others see Moonwatcher and fourteen males of his tribe appear... Moonwatcher... thrusts his arm high into the air. In his hand he holds... the bloody head of the lion... he begins to cross the stream...",
+          "pageCount": 1.5,
+          "eighthsCalculated": 24,
+          "estimatedScreenTime": "03:00",
+          "complexityLevel": "complex",
+          "complexityFactors": [
+            "Large Ensemble Confrontation",
+            "Climactic Moment",
+            "Complex Blocking",
+            "Symbolic Imagery"
+          ],
+          "timingNotes": "The climax of the 'Dawn of Man' sequence. The pacing will be slow, deliberate, and majestic to emphasize the shift in power. A 2.0x multiplier reflects the scene's weight, slow march, and the final, decisive confrontation.",
+          "productionConsiderations": [
+            "Large group of extras with prosthetics",
+            "High-quality prop (lion head)",
+            "Shooting in water",
+            "Major story transition"
+          ]
+        },
+        {
+          "sceneNumber": 12,
+          "sceneHeader": "14 INT. ORION-III PASSENGER AREA 14",
+          "sceneContent": "Dr. Heywood Floyd is the only passenger in the elegant cabin designed for 30 people. He is asleep. His pen floats near his hand.",
+          "pageCount": 0.25,
+          "eighthsCalculated": 2,
+          "estimatedScreenTime": "00:15",
+          "complexityLevel": "simple",
+          "complexityFactors": [
+            "Zero-G Effect"
+          ],
+          "timingNotes": "Short establishing shot. Slight time for the zero-g pen gag.",
+          "productionConsiderations": [
+            "Wire work or VFX for floating pen",
+            "High-tech passenger cabin set"
+          ]
+        },
+        {
+          "sceneNumber": 13,
+          "sceneHeader": "15 INT. ORION-III COCKPIT 15",
+          "sceneContent": "Pilot, Co-Pilot and Floyd can be seen asleep on a small TV monitor. Stewardess is putting on lipstick. She sees pen... rescues pen and clips it back in Floyd's pocket.",
+          "pageCount": 0.25,
+          "eighthsCalculated": 2,
+          "estimatedScreenTime": "00:15",
+          "complexityLevel": "simple",
+          "complexityFactors": [
+            "Zero-G Effect",
+            "Set-to-Set Interaction"
+          ],
+          "timingNotes": "Simple, continuous action from the previous scene, but shows coordination between sets (cockpit and passenger area).",
+          "productionConsiderations": [
+            "Wire work for stewardess movement and pen",
+            "Cockpit set with video playback"
+          ]
+        },
+        {
+          "sceneNumber": 14,
+          "sceneHeader": "16 INT. SPACE STATION-5 16",
+          "sceneContent": "The raw sunlight of space dazzles from the polished metal surfaces of the slowly revolving, thousand-foot diameter space station.",
+          "pageCount": 0.25,
+          "eighthsCalculated": 2,
+          "estimatedScreenTime": "00:15",
+          "complexityLevel": "simple",
+          "complexityFactors": [
+            "Establishing Shot",
+            "VFX Heavy"
+          ],
+          "timingNotes": "A pure VFX establishing shot. Time is for establishing the scale and location.",
+          "productionConsiderations": [
+            "High-quality CGI model of space station",
+            "Miniature effects work"
+          ]
+        },
+        {
+          "sceneNumber": 15,
+          "sceneHeader": "17 INT. ORION-III PASSENGER AREA 17",
+          "sceneContent": "Floyd awake but groggy, looks out of window.",
+          "pageCount": 0.125,
+          "eighthsCalculated": 1,
+          "estimatedScreenTime": "00:08",
+          "complexityLevel": "simple",
+          "complexityFactors": [
+            "Character Reaction"
+          ],
+          "timingNotes": "A simple beat. Very short.",
+          "productionConsiderations": [
+            "Back projection or green screen for window view"
+          ]
+        },
+        {
+          "sceneNumber": 16,
+          "sceneHeader": "18 INT. ORION-III COCKPIT 18",
+          "sceneContent": "The Co-Pilot in radio communication with the space station.",
+          "pageCount": 0.125,
+          "eighthsCalculated": 1,
+          "estimatedScreenTime": "00:08",
+          "complexityLevel": "simple",
+          "complexityFactors": [
+            "Dialogue Snippet"
+          ],
+          "timingNotes": "A simple dialogue beat, likely voice-over.",
+          "productionConsiderations": [
+            "Cockpit set dressing and lighting"
+          ]
+        },
+        {
+          "sceneNumber": 17,
+          "sceneHeader": "19 INT. THE ORION-III SPACECRAFT IN DOCKING APPROACH 19",
+          "sceneContent": "The Earth is seen in breath-taking view in background.",
+          "pageCount": 0.25,
+          "eighthsCalculated": 3,
+          "estimatedScreenTime": "00:23",
+          "complexityLevel": "standard",
+          "complexityFactors": [
+            "VFX Heavy",
+            "Establishing Shot"
+          ],
+          "timingNotes": "An iconic 'beauty shot' requiring time to appreciate. Slight timing increase (1.3x) for the visual spectacle, a hallmark of the director's style.",
+          "productionConsiderations": [
+            "High-quality VFX for Earth and spacecraft model",
+            "Miniature effects"
+          ]
+        },
+        {
+          "sceneNumber": 18,
+          "sceneHeader": "20 INT. INSIDE DOCKING CONTROL 20",
+          "sceneContent": "We see Orion-III maneuvering in background... From docking port we see the Orion-III inching in to complete its docking... We see the Pilot and Co-Pilot inside...",
+          "pageCount": 0.5,
+          "eighthsCalculated": 6,
+          "estimatedScreenTime": "00:45",
+          "complexityLevel": "complex",
+          "complexityFactors": [
+            "Complex Choreography (Docking)",
+            "Multiple POVs",
+            "VFX"
+          ],
+          "timingNotes": "A technical sequence shown from multiple viewpoints. Requires careful choreography of the model/CGI elements. Multiplier of 1.5x for technical complexity.",
+          "productionConsiderations": [
+            "Docking control set",
+            "Coordination between live-action on sets and VFX shots",
+            "Model/miniature work"
+          ]
+        },
+        {
+          "sceneNumber": 19,
+          "sceneHeader": "21 INT. SPACE STATION RECEPTION AREA 21",
+          "sceneContent": "Miller enters, hurrying... Elevator door opens and Floyd is seen unstrapping himself... Good morning and welcome to Voice Print Identification...",
+          "pageCount": 1.5,
+          "eighthsCalculated": 14,
+          "estimatedScreenTime": "01:45",
+          "complexityLevel": "standard",
+          "complexityFactors": [
+            "Dialogue Heavy",
+            "Technical Dialogue",
+            "Automated System Interaction"
+          ],
+          "timingNotes": "A dialogue-heavy scene with specific technical procedures (voice print). The pacing is informational. A slight multiplier of 1.2x is applied for the procedural elements and dialogue.",
+          "productionConsiderations": [
+            "Space station reception set",
+            "Elevator set with zero-g unstrapping rig",
+            "Voice Print ID booth with screen playback"
+          ]
+        },
+        {
+          "sceneNumber": 20,
+          "sceneHeader": "22 INT. SPACE STATION – LOUNGE 22",
+          "sceneContent": "Floyd and Miller walking... I've got to make a phone call... Vision Phone screen display sign... Hello Daddy. Where are you?... Good morning, Macy's. I'd like to buy a bush baby.",
+          "pageCount": 3.0,
+          "eighthsCalculated": 31,
+          "estimatedScreenTime": "03:53",
+          "complexityLevel": "complex",
+          "complexityFactors": [
+            "Dialogue Heavy",
+            "Multiple Conversations",
+            "Emotional Beats",
+            "VFX (Vision Phone)"
+          ],
+          "timingNotes": "A very long and complex scene with multiple distinct parts: the walk and talk with Miller, the emotional call with his daughter, and the transactional call to Macy's. A 1.3x multiplier is applied for the complex blocking and multiple sub-scenes within one scene number.",
+          "productionConsiderations": [
+            "Large space station lounge set",
+            "Vision Phone booths with interactive video playback",
+            "Requires filming the other side of the conversations (daughter, Macy's clerk)"
+          ]
+        }
+      ],
+      "timingDistribution": {
+        "shortestScene": {
+          "sceneNumber": 15,
+          "eighths": 1,
+          "screenTime": "00:08"
+        },
+        "longestScene": {
+          "sceneNumber": 20,
+          "eighths": 31,
+          "screenTime": "03:53"
+        },
+        "averageSceneLength": "01:12"
+      },
+      "genreTimingAnalysis": {
+        "prehistoricScenes": {
+          "sceneCount": 11,
+          "totalEighths": 131,
+          "averageComplexity": 2.45,
+          "specialRequirements": [
+            "Extensive prosthetic makeup",
+            "Stunt and fight choreography",
+            "Animal handling/CGI",
+            "Exterior location dependency",
+            "Special effects for monolith"
+          ]
+        },
+        "spaceScenes": {
+          "sceneCount": 9,
+          "totalEighths": 62,
+          "averageComplexity": 1.67,
+          "specialRequirements": [
+            "Extensive VFX and model work",
+            "High-tech set design (cockpits, space station)",
+            "Zero-G effects (wire work/rigs)",
+            "Complex video playback (Vision Phones)"
+          ]
+        }
+      },
+      "productionSchedulingRecommendations": {
+        "highComplexityScenes": [
+          1,
+          5,
+          8,
+          10,
+          11,
+          18,
+          20
+        ],
+        "specialSchedulingNeeds": [
+          "Block scheduling for all prehistoric scenes due to makeup requirements",
+          "Dedicated VFX unit for space sequences and monolith scenes",
+          "Stunt/choreography rehearsal days for scenes 1, 5, and 11",
+          "Allocate significant time for night shoots (scenes 4, 10)",
+          "Pre-recording/filming of Vision Phone content for playback on set"
+        ],
+        "potentialBottlenecks": [
+          "Scene 5 (Invasion): Requires large cast, stunts, and water work.",
+          "Scene 8 (First Lesson): Heavy VFX pipeline dependency.",
+          "Scene 11 (Master of the World): Climactic scene with large cast and emotional weight.",
+          "Scene 20 (Lounge): Logistically complex due to multiple sub-scenes and video elements."
+        ],
+        "timingRiskFactors": [
+          "Prosthetic makeup application time could significantly impact daily shooting schedule.",
+          "Complexity of VFX shots, especially the monolith and space travel, could extend post-production.",
+          "Weather dependency for numerous exterior prehistoric scenes.",
+          "Achieving a believable zero-gravity effect consistently."
+        ]
+      },
+      "qualityControlChecks": {
+        "dataValidation": "PASS",
+        "timingConsistency": "PASS",
+        "industryBenchmarkComparison": "WITHIN_RANGE",
+        "confidenceScore": "95%"
+      }
+    }
+  }

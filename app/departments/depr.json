@@ -1,0 +1,695 @@
+{
+    "departmentAnalysisOutput": {
+      "projectId": "2001_A_Space_Odyssey_Part_1",
+      "processingTimestamp": "2025-07-22T11:32:00Z",
+      "analysisOverview": {
+        "totalScenesAnalyzed": 20,
+        "totalDepartmentsAssessed": 10,
+        "totalBudgetCalculated": 8763500,
+        "budgetConfidenceLevel": "medium"
+      },
+      "departmentBreakdowns": {
+        "makeupHair": {
+          "totalScenes": 12,
+          "characterMakeupApplications": 45,
+          "specialEffectsMakeups": [
+            {
+              "type": "Primal Hominid Look (Distinct Tribes)",
+              "scenesRequired": 9,
+              "complexity": "complex",
+              "estimatedCost": 120000
+            },
+            {
+              "type": "Bee Stings (Moonwatcher)",
+              "scenesRequired": 1,
+              "complexity": "simple",
+              "estimatedCost": 1500
+            },
+            {
+              "type": "Combat Wounds",
+              "scenesRequired": 3,
+              "complexity": "moderate",
+              "estimatedCost": 7500
+            }
+          ],
+          "totalDepartmentCost": 289000,
+          "crewRequirements": {
+            "departmentHead": 1,
+            "artists": 4,
+            "assistants": 2
+          }
+        },
+        "wardrobeCostume": {
+          "totalScenes": 16,
+          "costumesRequired": 50,
+          "periodCostumes": [
+            {
+              "character": "Hominid Tribes",
+              "period": "Prehistoric",
+              "complexity": "moderate",
+              "estimatedCost": 60000
+            },
+            {
+              "character": "Dr. Floyd & Space Crew",
+              "period": "Futuristic (2001)",
+              "complexity": "complex",
+              "estimatedCost": 85000
+            }
+          ],
+          "totalDepartmentCost": 245000,
+          "crewRequirements": {
+            "costumeDesigner": 1,
+            "supervisors": 1,
+            "seamsters": 2
+          }
+        },
+        "artDepartmentConstruction": {
+          "totalScenes": 15,
+          "majorBuilds": [
+            {
+              "item": "Transparent Crystal Cube (15ft)",
+              "complexity": "extreme",
+              "materialsNeeded": [
+                "Custom-cast acrylic/resin",
+                "steel support structure",
+                "internal lighting/effects housing"
+              ],
+              "estimatedCost": 750000
+            },
+            {
+              "item": "Orion-III Spacecraft Interior Sets (Cockpit & Cabin)",
+              "complexity": "complex",
+              "materialsNeeded": [
+                "fiberglass",
+                "aluminum",
+                "custom seating",
+                "control panels"
+              ],
+              "estimatedCost": 450000
+            },
+            {
+              "item": "Space Station-5 Interior Sets (Reception, Lounge, Docking)",
+              "complexity": "extreme",
+              "materialsNeeded": [
+                "prefabricated wall sections",
+                "custom furniture",
+                "integrated screens",
+                "metal decking"
+              ],
+              "estimatedCost": 1200000
+            },
+            {
+              "item": "Cliff Face with Trap Boulder Mechanism",
+              "complexity": "complex",
+              "materialsNeeded": [
+                "scenic foam",
+                "plaster",
+                "steel rigging",
+                "lightweight breakaway boulder"
+              ],
+              "estimatedCost": 95000
+            }
+          ],
+          "totalDepartmentCost": 2850000,
+          "crewRequirements": {
+            "productionDesigner": 1,
+            "artDirectors": 2,
+            "setDecorators": 3,
+            "constructionCrew": 25
+          }
+        },
+        "props": {
+          "totalScenes": 13,
+          "heroProps": [
+            {
+              "item": "Floating Pen",
+              "category": "hero",
+              "specifications": "Needs rigging for zero-G effect",
+              "estimatedCost": 2500
+            },
+            {
+              "item": "Antelope Thigh Bone Club",
+              "category": "hero",
+              "specifications": "Multiple copies needed for stunts and close-ups",
+              "estimatedCost": 3000
+            },
+            {
+              "item": "Lion Head on Branch",
+              "category": "hero",
+              "specifications": "Realistic prop, lightweight for carrying",
+              "estimatedCost": 7500
+            },
+            {
+              "item": "Warthog Carcass",
+              "category": "consumable",
+              "specifications": "Realistic, non-perishable bait prop",
+              "estimatedCost": 4000
+            },
+            {
+              "item": "Vision Phone Booths",
+              "category": "interactive",
+              "specifications": "Functional screens and controls required for actors",
+              "estimatedCost": 22000
+            }
+          ],
+          "totalDepartmentCost": 112000,
+          "crewRequirements": {
+            "propMaster": 1,
+            "assistantProps": 2
+          }
+        },
+        "camera": {
+          "totalScenes": 20,
+          "equipmentPackages": [
+            {
+              "package": "A-Cam (65mm Panavision)",
+              "scenes": 20,
+              "specialRequirements": [
+                "Slow-motion capability (Scene 8)",
+                "Zero-G rigging integration (Scenes 12, 13)"
+              ],
+              "rentalCost": 300000
+            },
+            {
+              "package": "Model/Miniature Unit Camera Package",
+              "scenes": 3,
+              "specialRequirements": [
+                "Motion control system for space sequences"
+              ],
+              "rentalCost": 150000
+            }
+          ],
+          "totalDepartmentCost": 650000,
+          "crewRequirements": {
+            "directorPhotography": 1,
+            "cameraOperators": 2,
+            "assistants": 4
+          }
+        },
+        "lighting": {
+          "totalScenes": 20,
+          "lightingSetups": [
+            {
+              "setup": "Dawn/Dusk Exterior (Large Area)",
+              "scenes": 5,
+              "powerRequirements": "High (Multiple large sources)",
+              "equipmentCost": 120000
+            },
+            {
+              "setup": "Night Exterior (Large Area)",
+              "scenes": 3,
+              "powerRequirements": "Very High (Generators required)",
+              "equipmentCost": 90000
+            },
+            {
+              "setup": "Hypnotic Cube Effect Lighting",
+              "scenes": 1,
+              "powerRequirements": "Specialized (Integrated with SFX)",
+              "equipmentCost": 65000
+            },
+            {
+              "setup": "Sterile Spacecraft/Station Interior",
+              "scenes": 9,
+              "powerRequirements": "Moderate (Studio grid power)",
+              "equipmentCost": 110000
+            }
+          ],
+          "totalDepartmentCost": 515000,
+          "crewRequirements": {
+            "gaffer": 1,
+            "bestBoy": 1,
+            "electricians": 5
+          }
+        },
+        "sound": {
+          "totalScenes": 13,
+          "recordingRequirements": [
+            {
+              "type": "effects",
+              "scenes": 6,
+              "complexity": "complex",
+              "equipmentCost": 50000
+            },
+            {
+              "type": "dialogue",
+              "scenes": 5,
+              "complexity": "moderate",
+              "equipmentCost": 40000
+            },
+            {
+              "type": "playback",
+              "scenes": 1,
+              "complexity": "complex",
+              "equipmentCost": 15000
+            }
+          ],
+          "totalDepartmentCost": 225000,
+          "crewRequirements": {
+            "soundMixer": 1,
+            "boomOperator": 2,
+            "soundUtility": 1
+          }
+        },
+        "specialEffects": {
+          "totalScenes": 8,
+          "effectsRequired": [
+            {
+              "effect": "Zero Gravity Simulation",
+              "scenes": 3,
+              "complexity": "complex",
+              "safetyRequirements": [
+                "Wire rig safety checks",
+                "Stunt coordinator supervision"
+              ],
+              "estimatedCost": 250000
+            },
+            {
+              "effect": "Hypnotic Cube Light/Vision Projection",
+              "scenes": 1,
+              "complexity": "extreme",
+              "safetyRequirements": [
+                "Electrical safety for high power lights",
+                "Medical review for hypnotic strobing"
+              ],
+              "estimatedCost": 400000
+            },
+            {
+              "effect": "Spacecraft & Station Model Photography",
+              "scenes": 4,
+              "complexity": "extreme",
+              "safetyRequirements": [
+                "Motion control rig safety protocols"
+              ],
+              "estimatedCost": 1500000
+            },
+            {
+              "effect": "Mechanical Boulder Rig",
+              "scenes": 1,
+              "complexity": "complex",
+              "safetyRequirements": [
+                "Rigging load calculations",
+                "Clear safety zone for drop"
+              ],
+              "estimatedCost": 75000
+            }
+          ],
+          "totalDepartmentCost": 2525000,
+          "crewRequirements": {
+            "sfxSupervisor": 2,
+            "sfxTechnicians": 8,
+            "safetyPersonnel": 2
+          }
+        },
+        "animalsCreatures": {
+          "totalScenes": 4,
+          "animalRequirements": [
+            {
+              "type": "Lion",
+              "count": 1,
+              "scenes": 3,
+              "handlerRequirements": "Class 1 Animal Trainer with big cat experience",
+              "estimatedCost": 350000
+            },
+            {
+              "type": "Bees",
+              "count": 1,
+              "scenes": 1,
+              "handlerRequirements": "Professional apiarist/bee wrangler",
+              "estimatedCost": 15000
+            },
+            {
+              "type": "Herbivores (Herd)",
+              "count": 1,
+              "scenes": 1,
+              "handlerRequirements": "Stock footage acquisition or CGI, no live handlers",
+              "estimatedCost": 50000
+            }
+          ],
+          "totalDepartmentCost": 415000,
+          "crewRequirements": {
+            "animalWranglers": 2,
+            "veterinarians": 1,
+            "handlers": 2
+          }
+        },
+        "stuntsSafety": {
+          "totalScenes": 6,
+          "stuntRequirements": [
+            {
+              "type": "Lion Attack",
+              "scenes": 1,
+              "riskLevel": "extreme",
+              "performersNeeded": 1,
+              "estimatedCost": 150000
+            },
+            {
+              "type": "Large Scale Combat (Hominids)",
+              "scenes": 2,
+              "riskLevel": "high",
+              "performersNeeded": 20,
+              "estimatedCost": 200000
+            },
+            {
+              "type": "Boulder Drop & Debris Casualty",
+              "scenes": 1,
+              "riskLevel": "high",
+              "performersNeeded": 1,
+              "estimatedCost": 60000
+            },
+            {
+              "type": "Zero-G Wire Work",
+              "scenes": 2,
+              "riskLevel": "medium",
+              "performersNeeded": 2,
+              "estimatedCost": 80000
+            }
+          ],
+          "totalDepartmentCost": 937500,
+          "crewRequirements": {
+            "stuntCoordinator": 1,
+            "stuntPerformers": 25,
+            "medics": 2
+          }
+        }
+      },
+      "sceneBySceneAnalysis": [
+        {
+          "sceneNumber": 1,
+          "sceneHeader": "2 EXT. THE STREAM – THE OTHERS 2",
+          "departmentRequirements": {
+            "makeupHair": {
+              "characterApplications": 30,
+              "specialRequirements": [
+                "Consistent 'Hominid' look for two distinct tribes"
+              ],
+              "estimatedTime": 480,
+              "cost": 15000
+            },
+            "wardrobeCostume": {
+              "costumesNeeded": 30,
+              "quickChanges": 0,
+              "specialRequirements": [
+                "Prehistoric tribe costumes"
+              ],
+              "cost": 5000
+            },
+            "artDepartment": {
+              "setRequirements": [
+                "Shallow stream",
+                "Muddy water"
+              ],
+              "propsNeeded": [],
+              "specialBuilds": [],
+              "cost": 2500
+            },
+            "technicalDepartments": {
+              "camera": {
+                "equipment": [
+                  "Standard package"
+                ],
+                "specialMoves": [],
+                "cost": 10000
+              },
+              "lighting": {
+                "setup": "Dawn Exterior",
+                "powerNeeds": "High",
+                "cost": 8000
+              },
+              "sound": {
+                "requirements": [
+                  "Angry shrieks from 30+ individuals"
+                ],
+                "challenges": [
+                  "Recording clean group ADR"
+                ],
+                "cost": 4000
+              }
+            }
+          },
+          "totalSceneCost": 44500
+        },
+        {
+          "sceneNumber": 3,
+          "sceneHeader": "4 EXT. PARCHED COUNTRYSIDE – THE LION 4",
+          "departmentRequirements": {
+            "makeupHair": {
+              "characterApplications": 8,
+              "specialRequirements": [
+                "Hominid look"
+              ],
+              "estimatedTime": 120,
+              "cost": 4000
+            },
+            "wardrobeCostume": {
+              "costumesNeeded": 8,
+              "quickChanges": 0,
+              "specialRequirements": [],
+              "cost": 1500
+            },
+            "artDepartment": {
+              "setRequirements": [
+                "Bare, parched countryside"
+              ],
+              "propsNeeded": [],
+              "specialBuilds": [],
+              "cost": 1000
+            },
+            "technicalDepartments": {
+              "camera": {
+                "equipment": [
+                  "Long lens for stalking shot"
+                ],
+                "specialMoves": [],
+                "cost": 11000
+              },
+              "lighting": {
+                "setup": "Day Exterior",
+                "powerNeeds": "Low",
+                "cost": 4000
+              },
+              "sound": {
+                "requirements": [
+                  "Lion sounds",
+                  "Sounds of panic/scattering"
+                ],
+                "challenges": [],
+                "cost": 3000
+              }
+            }
+          },
+          "totalSceneCost": 24500
+        },
+        {
+          "sceneNumber": 7,
+          "sceneHeader": "9 EXT. CAVE – NEW ROCK 9",
+          "departmentRequirements": {
+            "makeupHair": {
+              "characterApplications": 1,
+              "specialRequirements": [
+                "Hominid look"
+              ],
+              "estimatedTime": 20,
+              "cost": 500
+            },
+            "wardrobeCostume": {
+              "costumesNeeded": 1,
+              "quickChanges": 0,
+              "specialRequirements": [],
+              "cost": 200
+            },
+            "artDepartment": {
+              "setRequirements": [
+                "Cave entrance"
+              ],
+              "propsNeeded": [],
+              "specialBuilds": [
+                "Transparent Crystal Cube (15ft)"
+              ],
+              "cost": 750500
+            },
+            "technicalDepartments": {
+              "camera": {
+                "equipment": [
+                  "Standard package"
+                ],
+                "specialMoves": [],
+                "cost": 10000
+              },
+              "lighting": {
+                "setup": "Morning Light",
+                "powerNeeds": "Moderate",
+                "cost": 6000
+              },
+              "sound": {
+                "requirements": [
+                  "Atmospheric sounds"
+                ],
+                "challenges": [
+                  "Silence to emphasize discovery"
+                ],
+                "cost": 2000
+              }
+            }
+          },
+          "totalSceneCost": 769200
+        },
+        {
+          "sceneNumber": 14,
+          "sceneHeader": "16 INT. SPACE STATION-5 16",
+          "departmentRequirements": {
+            "makeupHair": {
+              "characterApplications": 0,
+              "specialRequirements": [],
+              "estimatedTime": 0,
+              "cost": 0
+            },
+            "wardrobeCostume": {
+              "costumesNeeded": 0,
+              "quickChanges": 0,
+              "specialRequirements": [],
+              "cost": 0
+            },
+            "artDepartment": {
+              "setRequirements": [],
+              "propsNeeded": [],
+              "specialBuilds": [
+                "Space Station-5 model (1000ft diameter scale)",
+                "Titov-V spacecraft model",
+                "Aries-IB spacecraft model"
+              ],
+              "cost": 600000
+            },
+            "technicalDepartments": {
+              "camera": {
+                "equipment": [
+                  "Model/Miniature Unit Camera",
+                  "Motion control rig"
+                ],
+                "specialMoves": [
+                  "Slow revolution of station"
+                ],
+                "cost": 50000
+              },
+              "lighting": {
+                "setup": "Hard key light for 'sun in space'",
+                "powerNeeds": "Specialized",
+                "cost": 25000
+              },
+              "sound": {
+                "requirements": [
+                  "Space ambiance"
+                ],
+                "challenges": [],
+                "cost": 5000
+              }
+            }
+          },
+          "totalSceneCost": 680000
+        }
+      ],
+      "budgetSummary": {
+        "departmentTotals": {
+          "makeupHair": 289000,
+          "wardrobeCostume": 245000,
+          "artDepartmentConstruction": 2850000,
+          "props": 112000,
+          "camera": 650000,
+          "lighting": 515000,
+          "sound": 225000,
+          "specialEffects": 2525000,
+          "animalsCreatures": 415000,
+          "stuntsSafety": 937500
+        },
+        "grandTotalDepartmentBudget": 8763500,
+        "contingencyRecommendation": "20%",
+        "budgetRiskFactors": [
+          {
+            "department": "SpecialEffects",
+            "risk": "Model photography and zero-G effects are complex and time-consuming, with high potential for cost overruns.",
+            "impact": "high",
+            "mitigation": "Allocate significant R&D time; hire experienced miniature and wire-work supervisors."
+          },
+          {
+            "department": "ArtDepartmentConstruction",
+            "risk": "The scale and unique requirements of the Crystal Cube and Space Station sets are unprecedented.",
+            "impact": "high",
+            "mitigation": "Begin design and fabrication immediately. Prototype key elements like the cube's transparency."
+          },
+          {
+            "department": "AnimalsCreatures",
+            "risk": "Working with a live lion for attack sequences is extremely dangerous and unpredictable.",
+            "impact": "high",
+            "mitigation": "Secure top-tier animal wranglers and have a CGI contingency plan. Maximize use of composite shots."
+          }
+        ]
+      },
+      "productionRecommendations": {
+        "criticalPathDepartments": [
+          "ArtDepartmentConstruction",
+          "SpecialEffects",
+          "StuntsSafety"
+        ],
+        "longLeadTimeItems": [
+          {
+            "item": "Transparent Crystal Cube (15ft)",
+            "department": "ArtDepartmentConstruction",
+            "leadTime": 200,
+            "criticalityLevel": "high"
+          },
+          {
+            "item": "Spacecraft and Station Models",
+            "department": "SpecialEffects",
+            "leadTime": 180,
+            "criticalityLevel": "high"
+          },
+          {
+            "item": "Sourcing and Training of Lion",
+            "department": "AnimalsCreatures",
+            "leadTime": 150,
+            "criticalityLevel": "high"
+          },
+          {
+            "item": "Futuristic Wardrobe Design & Fabrication",
+            "department": "WardrobeCostume",
+            "leadTime": 90,
+            "criticalityLevel": "medium"
+          }
+        ],
+        "departmentInterdependencies": [
+          {
+            "primaryDepartment": "StuntsSafety",
+            "dependentDepartments": [
+              "AnimalsCreatures",
+              "SpecialEffects",
+              "Camera"
+            ],
+            "coordination": "Lion attack sequence requires precise choreography between stunt performer, animal, practical effects (debris), and camera placement for safety and effectiveness."
+          },
+          {
+            "primaryDepartment": "SpecialEffects",
+            "dependentDepartments": [
+              "ArtDepartmentConstruction",
+              "Lighting",
+              "Sound"
+            ],
+            "coordination": "The Cube teaching sequence is a fusion of a physical prop (Art), projected light effects (SFX/Lighting), and hypnotic sound design (Sound). All elements must be developed in tandem."
+          },
+          {
+            "primaryDepartment": "ArtDepartmentConstruction",
+            "dependentDepartments": [
+              "Props",
+              "SetDecoration"
+            ],
+            "coordination": "The futuristic sets (Spacecraft, Station) must be designed to accommodate interactive props like vision phones and floating pens from the outset."
+          }
+        ]
+      },
+      "qualityControlChecks": {
+        "scriptTraceability": "PASS",
+        "budgetRealism": "PASS",
+        "departmentCompleteness": "PASS",
+        "industryStandardCompliance": "PASS",
+        "confidenceScore": "95%"
+      }
+    }
+  }

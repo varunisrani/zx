@@ -1,0 +1,172 @@
+{
+    "aggregatorOutput": {
+      "processingLog": {
+        "departmentCostSummation": {
+          "executed": true,
+          "timestamp": "2024-05-21T10:01:15Z",
+          "status": "completed"
+        },
+        "contingencyApplication": {
+          "executed": true,
+          "timestamp": "2024-05-21T10:01:18Z",
+          "status": "completed"
+        },
+        "aboveBelowLineRatioCalculation": {
+          "executed": true,
+          "timestamp": "2024-05-21T10:01:21Z",
+          "status": "completed"
+        },
+        "overheadFeeProcessing": {
+          "executed": true,
+          "timestamp": "2024-05-21T10:01:24Z",
+          "status": "completed"
+        },
+        "industryStandardFormatting": {
+          "executed": true,
+          "timestamp": "2024-05-21T10:01:27Z",
+          "status": "completed"
+        },
+        "overallProcessingStatus": "all_functions_executed_successfully"
+      },
+      "topSheet": {
+        "title": "Beyond the Infinite",
+        "date": "2024-05-21",
+        "version": "1.0 - Aggregated",
+        "productionCompany": "Orion-Kubrick Productions",
+        "aboveTheLine": {
+          "1100-StoryAndRights": 1500000,
+          "1200-ProducersUnit": 2000000,
+          "1300-DirectorsUnit": 3500000,
+          "1400-Cast": 3625000
+        },
+        "belowTheLine": {
+          "2000s-ProductionDepartments": 16231653,
+          "3000s-LocationAndTravel": 5423000
+        },
+        "postProduction": {
+          "4000s-PostProductionComplete": 8500000
+        },
+        "other": {
+          "5000-Insurance": 2100000
+        },
+        "totalAboveLine": 10625000,
+        "totalBelowLine": 21654653,
+        "totalPostProduction": 8500000,
+        "totalOther": 2100000,
+        "totalProduction": 42879653,
+        "fringes": {
+          "ATL": 4250000,
+          "BTL": 3031045,
+          "total": 7281045
+        },
+        "indirectCosts": {
+          "contingency": 7524105,
+          "completionBond": 2595816,
+          "overhead": 2109822,
+          "total": 12229743
+        },
+        "grandTotal": {
+          "totalBudget": 62390441,
+          "taxIncentive": 2200000,
+          "netBudget": 60190441
+        }
+      },
+      "summaryRatios": {
+        "ATL_vs_ProductionCost": {
+          "value": 0.248,
+          "benchmark": 0.25,
+          "status": "On Target"
+        },
+        "BTL_vs_ProductionCost": {
+          "value": 0.505,
+          "benchmark": 0.45,
+          "status": "High - Driven by complex practical effects and construction."
+        },
+        "Post_vs_ProductionCost": {
+          "value": 0.198,
+          "benchmark": 0.20,
+          "status": "On Target"
+        },
+        "Fringes_on_Labor": {
+          "value": 0.400,
+          "status": "Standard Industry Rate"
+        },
+        "Contingency_Applied": {
+          "value": 0.150,
+          "status": "High - Reflects technological and schedule risks."
+        }
+      },
+      "departmentAnalysis": {
+        "majorCostDrivers": [
+          {
+            "department": "Below-the-Line Production",
+            "amount": 21654653,
+            "percentage": 0.347,
+            "driver": "Large-scale custom set construction (centrifuge), bespoke technology development (projection/motion-control), and extensive equipment rentals."
+          },
+          {
+            "department": "Above-the-Line Talent",
+            "amount": 10625000,
+            "percentage": 0.170,
+            "driver": "Fees for high-profile director, producers, and principal cast."
+          },
+          {
+            "department": "Post-Production",
+            "amount": 8500000,
+            "percentage": 0.136,
+            "driver": "Extensive visual effects work required for the sci-fi genre, plus long post-production schedule."
+          }
+        ],
+        "budgetComparison": {
+          "notes": "Budget structure aligns with a high-concept, effects-driven tentpole film. The Below-the-Line costs are inflated compared to industry benchmarks due to the ambitious practical effects and construction, a key creative requirement of the project."
+        }
+      },
+      "riskAssessment": {
+        "budgetRisks": [
+          {
+            "category": "Technological Innovation",
+            "probability": 0.60,
+            "impact": 3000000,
+            "description": "Development of bespoke front projection and motion control systems presents R&D risk, potentially causing delays and cost overruns."
+          },
+          {
+            "category": "Complex Construction",
+            "probability": 0.45,
+            "impact": 2500000,
+            "description": "Construction of the large-scale, functional centrifuge set is a major engineering challenge. Material and labor costs could exceed budget."
+          },
+          {
+            "category": "Schedule Overrun",
+            "probability": 0.50,
+            "impact": 4000000,
+            "description": "A 145-day schedule with extensive practical builds has a high probability of delays, leading to increased labor and rental costs."
+          }
+        ],
+        "totalRiskExposure": 4925000,
+        "contingencyAdequacy": "Adequate. The 15% contingency ($7.52M) sufficiently covers the quantified risk exposure of $4.93M."
+      },
+      "accountDetail": {
+        "format": "PGA Standard Chart of Accounts",
+        "pages": 120,
+        "includes": [
+          "Top Sheet",
+          "Account Detail",
+          "Cash Flow Schedule",
+          "UK Tax Credit Analysis"
+        ]
+      },
+      "approvals": {
+        "budgetApproved": false,
+        "requiredApprovals": [
+          "Studio Head",
+          "Head of Physical Production",
+          "Completion Guarantor"
+        ],
+        "recommendations": [
+          "Secure key department heads before finalizing Art Department and SFX budgets.",
+          "Lock shooting script to mitigate costly changes during construction phase.",
+          "Initiate early-stage engineering consultation for the centrifuge set."
+        ]
+      }
+    }
+  }

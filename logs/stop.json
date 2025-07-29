@@ -1,0 +1,16 @@
+[
+  {
+    "session_id": "978769f2-872e-4305-97c3-721b76c09216",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq/978769f2-872e-4305-97c3-721b76c09216.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "Stop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "978769f2-872e-4305-97c3-721b76c09216",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq/978769f2-872e-4305-97c3-721b76c09216.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "Stop",
+    "stop_hook_active": false
+  }
+]

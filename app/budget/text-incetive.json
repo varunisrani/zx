@@ -1,0 +1,176 @@
+{
+    "taxModelOutput": {
+      "processingLog": {
+        "multiJurisdictionEvaluation": {
+          "executed": true,
+          "timestamp": "1968-04-04T12:01:00Z",
+          "status": "completed"
+        },
+        "qualifiedExpenseCalculation": {
+          "executed": true,
+          "timestamp": "1968-04-04T12:02:00Z",
+          "status": "completed"
+        },
+        "qualificationProbabilityAssessment": {
+          "executed": true,
+          "timestamp": "1968-04-04T12:03:00Z",
+          "status": "completed"
+        },
+        "netBenefitComparison": {
+          "executed": true,
+          "timestamp": "1968-04-04T12:04:00Z",
+          "status": "completed"
+        },
+        "optimalStrategyRecommendation": {
+          "executed": true,
+          "timestamp": "1968-04-04T12:05:00Z",
+          "status": "completed"
+        },
+        "overallProcessingStatus": "all_functions_executed_successfully"
+      },
+      "ukIncentives": {
+        "filmProductionTaxCredit": {
+          "type": "Refundable Tax Credit",
+          "qualifyingExpenditure": 38982700,
+          "rate": 0.25,
+          "calculatedValue": 9745675,
+          "notes": "Calculated as 25% of qualifying UK expenditure, which is 85% of total UK spend. Value is within the £15M cap."
+        },
+        "enterpriseInvestmentScheme": {
+          "type": "Investor Tax Relief",
+          "maxInvestment": 5000000,
+          "rate": 0.30,
+          "calculatedValue": 1500000,
+          "notes": "Benefit to UK-resident investors, facilitating capital raising for the production. Value represents the tax relief for investors."
+        },
+        "regionalDevelopmentGrants": {
+          "type": "Cash Grant",
+          "eligibility": "Met local employment and skills development targets in a qualifying region.",
+          "calculatedValue": 500000,
+          "notes": "Grant for utilizing facilities and crew in a designated development zone."
+        },
+        "ukIncentiveSubtotal": 11745675
+      },
+      "californiaIncentives": {
+        "filmTaxCredit": {
+          "type": "Non-Refundable Tax Credit",
+          "qualifyingExpenditure": 12352145,
+          "rate": 0.20,
+          "calculatedValue": 2470429,
+          "notes": "Calculated at the base 20% rate on qualified in-state expenditures. No additional uplift applied."
+        },
+        "investmentTaxCredit": {
+          "type": "Non-Refundable Tax Credit",
+          "qualifyingExpenditure": 3250000,
+          "rate": 0.07,
+          "calculatedValue": 227500,
+          "notes": "7% credit on qualified equipment purchases made within California."
+        },
+        "californiaIncentiveSubtotal": 2697929
+      },
+      "namibiaIncentives": {
+        "locationIncentives": {
+          "type": "Waivers and Duty Relief",
+          "permitFeeWaiver": 250000,
+          "equipmentDutyRelief": 450000,
+          "calculatedValue": 700000,
+          "notes": "Negotiated benefits for filming in Namibia, contingent on meeting 40% local hire requirement (achieved 45%)."
+        },
+        "namibiaIncentiveSubtotal": 700000
+      },
+      "totalIncentiveValue": {
+        "ukCreditsAndGrants": 11745675,
+        "californiaCredits": 2697929,
+        "namibiaIncentives": 700000,
+        "grossTotal": 15143604,
+        "professionalFees": 585000,
+        "netIncentiveValue": 14558604
+      },
+      "cashFlowTiming": {
+        "year1_1966": {
+          "description": "Principal Photography phase: Realization of UK grant and Namibian duty relief.",
+          "inflow": 950000
+        },
+        "year2_1967": {
+          "description": "Post-Production phase: No major incentive cash events.",
+          "inflow": 0
+        },
+        "year3_1968": {
+          "description": "Post-Completion: Payout of UK Film Production Tax Credit and Namibian permit waiver value.",
+          "inflow": 9995675
+        },
+        "year4_1969": {
+          "description": "Tax Filing Year: Application of California tax credits against state tax liability.",
+          "inflow": 2697929
+        }
+      },
+      "complianceStatus": {
+        "uk": {
+          "status": "Compliant",
+          "culturalTest": "Passed (18/16)",
+          "localSpend": "Met (85%)",
+          "auditRequired": true
+        },
+        "california": {
+          "status": "Compliant",
+          "laborCompliance": "Monitored",
+          "environmentalCompliance": "Certified",
+          "auditRequired": true
+        },
+        "namibia": {
+          "status": "Compliant",
+          "localHire": "Met (45%)",
+          "documentation": "Submitted",
+          "auditRequired": false
+        }
+      },
+      "riskAssessment": {
+        "incentiveSecurityRating": "A-",
+        "riskFactors": [
+          {
+            "factor": "Regulatory/Political Risk",
+            "probability": "Medium",
+            "impact": "High",
+            "mitigation": "Secure binding rulings and maintain strong government relations. The UK Eady Levy and US tax codes were subject to change during this era."
+          },
+          {
+            "factor": "Currency Fluctuation (GBP/USD)",
+            "probability": "High",
+            "impact": "Medium",
+            "mitigation": "Utilize currency hedging strategies for budgeted cross-border expenditures to lock in favorable exchange rates."
+          },
+          {
+            "factor": "Audit and Compliance Failure",
+            "probability": "Medium",
+            "impact": "High",
+            "mitigation": "Engage top-tier advisors (Deloitte, EY, KPMG) and implement rigorous internal tracking and reporting protocols for all jurisdictions."
+          }
+        ],
+        "overallRiskScore": "Medium",
+        "confidence": 0.85
+      },
+      "recommendations": [
+        "Establish a UK-based Special Purpose Vehicle (SPV) to serve as the primary production company to isolate liabilities and streamline the UK tax credit application.",
+        "Aggressively pursue the full £5M Enterprise Investment Scheme (EIS) allocation by targeting UK-resident high-net-worth individuals, highlighting the 30% tax relief as a key benefit.",
+        "Maintain meticulous, contemporaneous documentation for all expenditures, crew residencies, and vendor locations across all three jurisdictions to withstand rigorous audits.",
+        "Finalize all Namibian waivers and duty exemptions in a formal, binding agreement with the relevant government bodies prior to commencing location work."
+      ],
+      "alternativeScenarios": {
+        "conservative": {
+          "description": "Assumes failure to qualify for the Enterprise Investment Scheme and only 80% of California credit is realized due to audit adjustments.",
+          "netIncentiveValue": 12519018,
+          "varianceFromBase": -2039586
+        },
+        "optimistic": {
+          "description": "Assumes successful EIS qualification and securing an additional 5% uplift on the California tax credit for 'out of zone' filming.",
+          "netIncentiveValue": 15176211,
+          "varianceFromBase": 617607
+        }
+      },
+      "effectiveIncentiveRate": {
+        "percentageOfBudget": 22.33,
+        "netPercentageAfterFees": 21.47,
+        "roiOnIncentiveEffort": 2488.65
+      }
+    }
+  }

@@ -1,0 +1,225 @@
+{
+    "postModelOutput": {
+      "processingLog": {
+        "editorialTimeEstimation": {
+          "executed": true,
+          "timestamp": "2024-05-21T10:00:01Z",
+          "status": "completed"
+        },
+        "vfxCostCalculation": {
+          "executed": true,
+          "timestamp": "2024-05-21T10:00:02Z",
+          "status": "completed"
+        },
+        "soundDesignMixingProcessing": {
+          "executed": true,
+          "timestamp": "2024-05-21T10:00:03Z",
+          "status": "completed"
+        },
+        "colorCorrectionProcessing": {
+          "executed": true,
+          "timestamp": "2024-05-21T10:00:04Z",
+          "status": "completed"
+        },
+        "deliveryCostProcessing": {
+          "executed": true,
+          "timestamp": "2024-05-21T10:00:05Z",
+          "status": "completed"
+        },
+        "overallProcessingStatus": "all_functions_executed_successfully"
+      },
+      "editorial": {
+        "labor": {
+          "supervisingEditor": 260000,
+          "editors": 260000,
+          "assistants": 187200,
+          "total": 707200
+        },
+        "facility": {
+          "editingSuites": 156000,
+          "screeningRoomRentals": 75000,
+          "total": 231000
+        },
+        "equipment": {
+          "moviolaKemRentals": 50000,
+          "total": 50000
+        },
+        "stock": {
+          "filmWorkprint": 50287,
+          "magneticSoundStock": 75000,
+          "total": 125287
+        },
+        "editorialTotal": 1113487
+      },
+      "visualEffects": {
+        "slitScanPhotography": {
+          "researchAndDevelopment": 150000,
+          "operationalCosts": 140000,
+          "total": 290000
+        },
+        "modelPhotography": {
+          "motionControlDevelopment": 300000,
+          "operationalCosts": 480000,
+          "total": 780000
+        },
+        "opticalEffects": {
+          "shotCosts": 4350000,
+          "opticalPrinterOperations": 210000,
+          "total": 4560000
+        },
+        "frontProjection": {
+          "equipmentAndDevelopment": 100000,
+          "total": 100000
+        },
+        "supervision": {
+          "vfxSupervisor": 225000,
+          "total": 225000
+        },
+        "vfxGrandTotal": 5955000
+      },
+      "sound": {
+        "dialogue": {
+          "dialogueEditing": 40000,
+          "adrRecording": 150000,
+          "halVoiceProcessing": 20000,
+          "total": 210000
+        },
+        "soundEffects": {
+          "supervision": 75000,
+          "designers": 100000,
+          "customLibraryCreation": 50000,
+          "total": 225000
+        },
+        "foley": {
+          "artistAndStageFees": 60000,
+          "total": 60000
+        },
+        "music": {
+          "composerFee": 400000,
+          "orchestraRecording": 350000,
+          "musicEditor": 27000,
+          "sourceMusicLicensing": 250000,
+          "total": 1027000
+        },
+        "mixing": {
+          "stageRental_6Track": 135000,
+          "reRecordingMixers": 81000,
+          "total": 216000
+        },
+        "soundGrandTotal": 1738000
+      },
+      "colorAndFinishing": {
+        "timing": {
+          "coloristLabor": 30000,
+          "total": 30000
+        },
+        "labServices": {
+          "negativeProcessingAndIntermediates": 500000,
+          "total": 500000
+        },
+        "technicalServices": {
+          "70mmElementCreation": 200000,
+          "cineramaFormatConversion": 150000,
+          "total": 350000
+        },
+        "colorTotal": 880000
+      },
+      "delivery": {
+        "masters": {
+          "negativeConformAndMasterElements": 250000,
+          "total": 250000
+        },
+        "prints": {
+          "70mmRoadshowPrints": 750000,
+          "35mmTheatricalPrints": 400000,
+          "total": 1150000
+        },
+        "international": {
+          "dubbing": 75000,
+          "subtitling": 75000,
+          "musicAndEffectsTrackCreation": 200000,
+          "total": 350000
+        },
+        "archive": {
+          "archivalMasterCreationAndStorage": 100000,
+          "total": 100000
+        },
+        "deliveryTotal": 1850000
+      },
+      "postGrandTotal": {
+        "editorial": 1113487,
+        "visualEffects": 5955000,
+        "sound": 1738000,
+        "colorAndFinishing": 880000,
+        "delivery": 1850000,
+        "subtotal": 11536487,
+        "contingency": 3460946,
+        "supervision": 576824,
+        "total": 15574257
+      },
+      "timeline": {
+        "phases": [
+          {
+            "phase": "Editorial (Assembly & Rough Cut)",
+            "startDate": "1966-11-01",
+            "endDate": "1967-03-21",
+            "weeks": 20,
+            "milestones": [
+              "First Assembly Complete",
+              "Director's Rough Cut Review"
+            ]
+          },
+          {
+            "phase": "VFX Production & Editorial (Fine Cut)",
+            "startDate": "1967-03-22",
+            "endDate": "1967-09-12",
+            "weeks": 25,
+            "milestones": [
+              "VFX Temp Integration",
+              "Fine Cut Lock"
+            ]
+          },
+          {
+            "phase": "Sound Design, Music & Final Conform",
+            "startDate": "1967-09-13",
+            "endDate": "1968-01-31",
+            "weeks": 20,
+            "milestones": [
+              "Final Picture Lock",
+              "Negative Conform Complete",
+              "Music Score Recorded",
+              "Sound Design Complete"
+            ]
+          },
+          {
+            "phase": "Final Mix, Color & Finishing",
+            "startDate": "1968-02-01",
+            "endDate": "1968-04-02",
+            "weeks": 9,
+            "milestones": [
+              "Final 6-Track Mix Complete",
+              "70mm Answer Print Approved"
+            ]
+          },
+          {
+            "phase": "Delivery & Distribution",
+            "startDate": "1968-04-03",
+            "endDate": "1968-06-30",
+            "weeks": 13,
+            "milestones": [
+              "Roadshow Prints Delivered to Theaters",
+              "International Masters Created"
+            ]
+          }
+        ]
+      },
+      "qualityMetrics": {
+        "technicalInnovation": "Revolutionary",
+        "visualEffectsComplexity": "Extreme",
+        "soundDesign": "Pioneering",
+        "deliveryComplexity": "Very High",
+        "scheduleRisk": "High",
+        "budgetConfidence": 0.65
+      }
+    }
+  }
