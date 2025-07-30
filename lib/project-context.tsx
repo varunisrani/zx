@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, ReactNode } from 'react';
 
-export type ProjectType = 'avatar' | 'black-panther';
+export type ProjectType = 'black-panther';
 
 interface ProjectContextType {
   selectedProject: ProjectType;
@@ -20,7 +20,7 @@ export const useProject = () => {
 };
 
 export const ProjectProvider = ({ children }: { children: ReactNode }) => {
-  const [selectedProject, setSelectedProject] = useState<ProjectType>('avatar');
+  const [selectedProject, setSelectedProject] = useState<ProjectType>('black-panther');
 
   return (
     <ProjectContext.Provider value={{ selectedProject, setSelectedProject }}>

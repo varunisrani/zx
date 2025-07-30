@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Navigation } from "@/components/Navigation";
 import { ProjectSelector } from "@/components/ProjectSelector";
 import { useProject } from "@/lib/project-context";
-import avatarSceneData from "../scenes/avatarscene-breakdown-agent/output.json";
-import blackPantherSceneData from "../scenes/blank-pantherscene-breakdown-agent copy/output.json";
+import part1SceneData from "./blank-pantherscene-breakdown-agent copy/output.json";
+import part2SceneData from "./blank-pantherscene-breakdown-agent copy/ouput.json";
 import { 
   Film, 
   Clock, 
@@ -32,24 +32,42 @@ import {
   Target
 } from "lucide-react";
 
-type AvatarSceneData = typeof avatarSceneData;
-type BlackPantherSceneData = typeof blackPantherSceneData;
-type AvatarScene = AvatarSceneData['sceneBreakdownOutput']['detailedSceneBreakdowns'][0];
-type BlackPantherScene = BlackPantherSceneData['sceneBreakdownOutput']['detailedSceneBreakdowns'][0];
+type SceneData = typeof part1SceneData;
+type Scene = SceneData['sceneBreakdownOutput']['detailedSceneBreakdowns'][0];
 
 export default function SceneBreakdownPage() {
   const { selectedProject } = useProject();
+  const [selectedPart, setSelectedPart] = useState<1 | 2>(1);
+  
+  // Set initial scene to scene 1 for Part 1
   const [selectedScene, setSelectedScene] = useState(1);
 
-  // Get data based on selected project
-  const isAvatar = selectedProject === 'avatar';
-  const currentData = isAvatar ? avatarSceneData : blackPantherSceneData;
-  const scenes = isAvatar ? 
-    avatarSceneData.sceneBreakdownOutput.detailedSceneBreakdowns : 
-    blackPantherSceneData.sceneBreakdownOutput.detailedSceneBreakdowns;
-  const summary = isAvatar ? 
-    avatarSceneData.sceneBreakdownOutput.sceneAnalysisSummary : 
-    blackPantherSceneData.sceneBreakdownOutput.sceneAnalysisSummary;
+  // Get data from both JSON files
+  const part1Data = part1SceneData.sceneBreakdownOutput.detailedSceneBreakdowns;
+  const part2Data = part2SceneData.sceneBreakdownOutput.detailedSceneBreakdowns;
+  
+  // Use data as-is from JSON files without any mapping
+  const part1Scenes = part1Data;
+  const part2Scenes = part2Data;
+  
+  // Show actual scene ranges from the JSON data
+  const part1Range = part1Scenes.length > 0 ? 
+    `Scenes ${Math.min(...part1Scenes.map(s => s.sceneNumber))}-${Math.max(...part1Scenes.map(s => s.sceneNumber))}` : 
+    'No scenes';
+  const part2Range = part2Scenes.length > 0 ? 
+    `Scenes ${Math.min(...part2Scenes.map(s => s.sceneNumber))}-${Math.max(...part2Scenes.map(s => s.sceneNumber))}` : 
+    'No scenes';
+  
+  // Get current scenes and summary based on selected part
+  const scenes = selectedPart === 1 ? part1Scenes : part2Scenes;
+  const currentDataSource = selectedPart === 1 ? part1SceneData : part2SceneData;
+  
+  const summary = {
+    ...currentDataSource.sceneBreakdownOutput.sceneAnalysisSummary,
+    totalScenesProcessed: scenes.length,
+    totalCharactersIdentified: new Set(scenes.flatMap(s => s.characters.speaking.map(c => c.name))).size,
+    totalLocationsIdentified: new Set(scenes.map(s => s.location.primaryLocation)).size
+  };
 
   const getComplexityColor = (complexity: number) => {
     if (complexity >= 8) return "destructive";
@@ -64,7 +82,7 @@ export default function SceneBreakdownPage() {
     return "Low";
   };
 
-  const selectedSceneData = scenes.find(s => s.sceneNumber === selectedScene);
+  const selectedSceneData = scenes.find(s => s.sceneNumber === selectedScene) || scenes[0];
 
   return (
     <div className="min-h-screen bg-background">
@@ -76,12 +94,17 @@ export default function SceneBreakdownPage() {
               <div className="flex items-center space-x-2">
                 <Film className="h-8 w-8 text-brand-primary" />
                 <h1 className="text-2xl font-bold text-foreground">
-                  {isAvatar ? 'Avatar' : 'Black Panther'} - Scene Breakdown
+                  Black Panther - Scene Breakdown
                 </h1>
               </div>
-              <Badge variant="outline" className="ml-4">
-                {summary.totalScenesProcessed} Total Scenes
-              </Badge>
+              <div className="flex items-center space-x-2 ml-4">
+                <Badge variant="outline">
+                  {summary.totalScenesProcessed} Total Scenes
+                </Badge>
+                <Badge variant="secondary">
+                  Part {selectedPart}
+                </Badge>
+              </div>
             </div>
             <div className="flex items-center space-x-3">
               <Button variant="outline" size="sm">
@@ -111,6 +134,44 @@ export default function SceneBreakdownPage() {
         </div>
       </div>
 
+      {/* Part Toggle */}
+      <div className="border-b border-border/50 bg-muted/20">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex items-center justify-center">
+            <div className="flex items-center bg-background rounded-lg p-1 border">
+              <Button
+                variant={selectedPart === 1 ? "default" : "ghost"}
+                size="sm"
+                onClick={() => {
+                  setSelectedPart(1);
+                  setSelectedScene(part1Scenes[0]?.sceneNumber || 1);
+                }}
+                className="rounded-md px-4 py-2"
+              >
+                Part 1
+                <Badge variant="outline" className="ml-2 text-xs">
+                  {part1Range}
+                </Badge>
+              </Button>
+              <Button
+                variant={selectedPart === 2 ? "default" : "ghost"}
+                size="sm"
+                onClick={() => {
+                  setSelectedPart(2);
+                  setSelectedScene(part2Scenes[0]?.sceneNumber || 101);
+                }}
+                className="rounded-md px-4 py-2"
+              >
+                Part 2
+                <Badge variant="outline" className="ml-2 text-xs">
+                  {part2Range}
+                </Badge>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="container mx-auto px-6 py-8">
         {/* Summary Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
@@ -130,30 +191,30 @@ export default function SceneBreakdownPage() {
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium text-muted-foreground">
-                Total Screen Time
+                Average Complexity
               </CardTitle>
               <Clock className="h-4 w-4 text-green-600" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold text-foreground">
-                {isAvatar ? '15:30' : '20:45'}
+                {(scenes.reduce((sum, s) => sum + s.complexityScores.overallComplexity, 0) / scenes.length).toFixed(1)}
               </div>
-              <p className="text-xs text-muted-foreground">{summary.totalCharactersIdentified} characters</p>
+              <p className="text-xs text-muted-foreground">out of 10</p>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium text-muted-foreground">
-                Production Hours
+                Total Pages
               </CardTitle>
               <Timer className="h-4 w-4 text-purple-600" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold text-foreground">
-                {isAvatar ? '720' : '480'}
+                {scenes.reduce((sum, s) => sum + s.pageCount, 0).toFixed(1)}
               </div>
-              <p className="text-xs text-muted-foreground">Production hours</p>
+              <p className="text-xs text-muted-foreground">script pages</p>
             </CardContent>
           </Card>
 
@@ -168,7 +229,7 @@ export default function SceneBreakdownPage() {
               <div className="text-2xl font-bold text-foreground">
                 {scenes.filter(s => s.complexityScores.overallComplexity >= 8).length}
               </div>
-              <p className="text-xs text-muted-foreground">of {summary.totalScenesProcessed} scenes</p>
+              <p className="text-xs text-muted-foreground">of {scenes.length} scenes</p>
             </CardContent>
           </Card>
         </div>
@@ -178,8 +239,8 @@ export default function SceneBreakdownPage() {
           <div className="lg:col-span-1">
             <Card>
               <CardHeader>
-                <CardTitle>Scene List</CardTitle>
-                <CardDescription>Click to view detailed breakdown</CardDescription>
+                <CardTitle>Scene List - Part {selectedPart}</CardTitle>
+                <CardDescription>Click to view detailed breakdown ({scenes.length} scenes)</CardDescription>
               </CardHeader>
               <CardContent className="p-0">
                 <div className="space-y-1 max-h-[800px] overflow-y-auto">

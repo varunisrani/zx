@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Navigation } from "@/components/Navigation";
 import { ProjectSelector } from "@/components/ProjectSelector";
 import { useProject } from "@/lib/project-context";
-import avatarEightsData from "../eightsagent/01-avatareighths-agent copy/output.json";
 import blackPantherEightsData from "../eightsagent/01-blank-panthereighths-agent/output.json";
 import { 
   Clock, 
@@ -27,9 +26,7 @@ import {
   Star
 } from "lucide-react";
 
-type AvatarEightsData = typeof avatarEightsData;
 type BlackPantherEightsData = typeof blackPantherEightsData;
-type AvatarScene = AvatarEightsData['eighthsAnalysisOutput']['sceneBySceneBreakdown'][0];
 type BlackPantherScene = BlackPantherEightsData['eighthsAnalysisOutput']['sceneBySceneBreakdown'][0];
 
 export default function EightsAnalysisPage() {
@@ -37,11 +34,8 @@ export default function EightsAnalysisPage() {
   const [selectedScene, setSelectedScene] = useState(1);
   const [sortBy, setSortBy] = useState<'scene' | 'eighths' | 'complexity'>('scene');
 
-  // Get data based on selected project
-  const isAvatar = selectedProject === 'avatar';
-  const data = isAvatar ? 
-    avatarEightsData.eighthsAnalysisOutput : 
-    blackPantherEightsData.eighthsAnalysisOutput;
+  // Get data from Black Panther project
+  const data = blackPantherEightsData.eighthsAnalysisOutput;
   const scenes = data.sceneBySceneBreakdown;
   const summary = data.sceneAnalysisSummary;
 
@@ -88,7 +82,7 @@ export default function EightsAnalysisPage() {
               <div className="flex items-center space-x-2">
                 <BarChart3 className="h-8 w-8 text-brand-primary" />
                 <h1 className="text-2xl font-bold text-foreground">
-                  {isAvatar ? 'Avatar' : 'Black Panther'} - Eighths Analysis
+                  Black Panther - Eighths Analysis
                 </h1>
               </div>
               <Badge variant="outline" className="ml-4">
@@ -287,13 +281,13 @@ export default function EightsAnalysisPage() {
                 <h4 className="font-medium mb-2 text-blue-600">Project Insights</h4>
                 <div className="space-y-1">
                   <div className="text-xs bg-blue-50 px-2 py-1 rounded">
-                    {isAvatar ? 'Heavy VFX requirements across most scenes' : 'Practical stunts and location work needed'}
+                    Practical stunts and location work needed
                   </div>
                   <div className="text-xs bg-blue-50 px-2 py-1 rounded">
-                    {isAvatar ? 'Performance capture technology essential' : 'Extensive costume and makeup departments'}
+                    Extensive costume and makeup departments
                   </div>
                   <div className="text-xs bg-blue-50 px-2 py-1 rounded">
-                    {isAvatar ? 'Complex creature animation pipelines' : 'Choreographed action sequences'}
+                    Choreographed action sequences
                   </div>
                 </div>
               </div>
@@ -550,7 +544,7 @@ export default function EightsAnalysisPage() {
                       <div className="flex items-start space-x-3 p-3 bg-red-50 border border-red-200 rounded-lg">
                         <AlertTriangle className="h-4 w-4 text-red-600 mt-0.5 flex-shrink-0" />
                         <span className="text-sm text-red-800">
-                          {isAvatar ? 'VFX-heavy scenes may experience rendering delays' : 'Action sequences require additional safety preparation'}
+                          Action sequences require additional safety preparation
                         </span>
                       </div>
                       <div className="flex items-start space-x-3 p-3 bg-red-50 border border-red-200 rounded-lg">

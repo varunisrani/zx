@@ -8,11 +8,6 @@ import { Navigation } from "@/components/Navigation";
 import { ProjectSelector } from "@/components/ProjectSelector";
 import { useProject } from "@/lib/project-context";
 
-// Avatar imports
-import avatarComplianceData from "./avatar/complience.json";
-import avatarResourceData from "./avatar/resource-logistic.json";
-import avatarOptimizationData from "./avatar/Optimizescenario.json";
-
 // Black Panther imports
 import blackPantherComplianceData from "./blank-panther/complience.json";
 import blackPantherResourceData from "./blank-panther/resource-logistic.json";
@@ -57,17 +52,10 @@ export default function SchedulePage() {
   const [activeSection, setActiveSection] = useState<Section>('compliance');
   const { selectedProject } = useProject();
 
-  // Dynamic data selection based on project
-  const isAvatar = selectedProject === 'avatar';
-  const compliance = isAvatar ? 
-    avatarComplianceData.complianceConstraintsOutput : 
-    blackPantherComplianceData.complianceConstraintsOutput;
-  const resources = isAvatar ? 
-    avatarResourceData.resourceLogisticsOutput : 
-    blackPantherResourceData.resourceLogisticsOutput;
-  const optimization = isAvatar ? 
-    avatarOptimizationData.optimizationScenarioOutput : 
-    blackPantherOptimizationData.optimizationScenarioOutput;
+  // Use Black Panther data
+  const compliance = blackPantherComplianceData.complianceConstraintsOutput;
+  const resources = blackPantherResourceData.resourceLogisticsOutput;
+  const optimization = blackPantherOptimizationData.optimizationScenarioOutput;
 
   const getSeverityColor = (severity: string): "destructive" | "secondary" | "outline" => {
     switch (severity.toLowerCase()) {
@@ -1003,7 +991,7 @@ export default function SchedulePage() {
               <div className="flex items-center space-x-2">
                 <Calendar className="h-8 w-8 text-brand-primary" />
                 <h1 className="text-2xl font-bold text-foreground">
-                  {isAvatar ? 'Avatar' : 'Black Panther'} - Production Schedule
+                  Black Panther - Production Schedule
                 </h1>
               </div>
               <Badge variant="outline" className="ml-4">

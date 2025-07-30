@@ -5,5 +5,47 @@
     "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
     "hook_event_name": "SubagentStop",
     "stop_hook_active": false
+  },
+  {
+    "session_id": "3066a29a-56ad-4770-bea1-9a20ce27a852",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/3066a29a-56ad-4770-bea1-9a20ce27a852.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "50da603d-fc8b-4968-9760-7e1cc0e1a3fe",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/50da603d-fc8b-4968-9760-7e1cc0e1a3fe.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "33361e0c-52b3-4ce9-9691-6f9b9b9d35a1",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/33361e0c-52b3-4ce9-9691-6f9b9b9d35a1.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "33361e0c-52b3-4ce9-9691-6f9b9b9d35a1",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/33361e0c-52b3-4ce9-9691-6f9b9b9d35a1.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "33361e0c-52b3-4ce9-9691-6f9b9b9d35a1",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/33361e0c-52b3-4ce9-9691-6f9b9b9d35a1.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "33361e0c-52b3-4ce9-9691-6f9b9b9d35a1",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/33361e0c-52b3-4ce9-9691-6f9b9b9d35a1.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
   }
 ]

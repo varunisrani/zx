@@ -1,0 +1,23 @@
+[
+  {
+    "session_id": "42c7f182-70a0-4fee-9624-84a41bbb53a6",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/42c7f182-70a0-4fee-9624-84a41bbb53a6.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated/app/scenes/blank-pantherscene-breakdown-agent copy",
+    "hook_event_name": "Stop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "42c7f182-70a0-4fee-9624-84a41bbb53a6",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/42c7f182-70a0-4fee-9624-84a41bbb53a6.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated/app/scenes/blank-pantherscene-breakdown-agent copy",
+    "hook_event_name": "Stop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "5ed1816d-fa42-4d7a-977b-d70038d4a9a1",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/5ed1816d-fa42-4d7a-977b-d70038d4a9a1.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated/app/scenes/blank-pantherscene-breakdown-agent copy",
+    "hook_event_name": "Stop",
+    "stop_hook_active": false
+  }
+]

@@ -1,0 +1,2332 @@
+{
+  "sceneBreakdownOutput": {
+    "projectId": "Project_Black_Panther_Analysis_1",
+    "processingTimestamp": "2024-07-30T08:54:00Z",
+    "sceneAnalysisSummary": {
+      "totalScenesProcessed": 100,
+      "totalCharactersIdentified": 28,
+      "totalLocationsIdentified": 35,
+      "totalPropsIdentified": 65,
+      "averageSceneComplexity": 4.8
+    },
+    "detailedSceneBreakdowns": [
+      {
+        "sceneNumber": 1,
+        "sceneHeader": "EXT. WAKANDA - DAWN OF TIME - DAY",
+        "pageCount": 0.25,
+        "estimatedScreenTime": "00:15",
+        "characters": {
+          "speaking": [],
+          "nonSpeaking": [
+            {
+              "description": "Ancient Wakandans",
+              "count": 50,
+              "specialRequirements": [
+                "Period tribal makeup and costumes"
+              ]
+            }
+          ],
+          "background": []
+        },
+        "location": {
+          "type": "EXT",
+          "primaryLocation": "WAKANDA - ANCIENT LANDS",
+          "secondaryLocation": "Wakanda",
+          "timeOfDay": "DAY",
+          "weatherConditions": "Clear",
+          "complexityLevel": "complex"
+        },
+        "productionElements": {
+          "props": [
+            {
+              "item": "Vibranium Meteorite",
+              "category": "hero",
+              "department": "Special Effects",
+              "specialRequirements": [
+                "Glowing VFX element"
+              ]
+            }
+          ],
+          "vehicles": [],
+          "animals": [
+            {
+              "type": "VFX Panthers",
+              "count": 5,
+              "specialRequirements": [
+                "Full CG panthers"
+              ]
+            }
+          ],
+          "specialEffects": [
+            {
+              "type": "VFX",
+              "description": "Meteorite impact and vibranium growth",
+              "complexity": "high",
+              "safetyRequirements": []
+            }
+          ]
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 50,
+            "specialEffectsMakeup": [],
+            "prosthetics": [],
+            "estimatedApplicationTime": 300
+          },
+          "wardrobe": {
+            "standardCostumes": 50,
+            "periodCostumes": [
+              "Ancient Wakandan tribal wear"
+            ],
+            "specialtyItems": [],
+            "quickChanges": 0
+          },
+          "artDepartment": {
+            "setConstruction": [],
+            "setDecoration": [
+              "Ancient Wakandan settlement",
+              "Meteorite impact site"
+            ],
+            "locationModifications": []
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 8,
+          "castComplexity": 6,
+          "locationChallenges": 7,
+          "overallComplexity": 7
+        },
+        "timeEstimates": {
+          "setupHours": 4,
+          "shootingHours": 3,
+          "wrapHours": 2,
+          "totalHours": 9
+        },
+        "specialConsiderations": [
+          "Extensive VFX work required for meteorite and vibranium effects",
+          "Large crowd of background actors requires careful coordination"
+        ],
+        "continuityNotes": [
+          "Establishes the origin of vibranium in Wakanda"
+        ]
+      },
+      {
+        "sceneNumber": 2,
+        "sceneHeader": "INT. RECORDING STUDIO - OAKLAND - DAY (1992)",
+        "pageCount": 0.5,
+        "estimatedScreenTime": "00:30",
+        "characters": {
+          "speaking": [
+            {
+              "description": "N'Jobu",
+              "count": 1,
+              "specialRequirements": [
+                "1990s period styling"
+              ]
+            }
+          ],
+          "nonSpeaking": [
+            {
+              "description": "Recording Artist",
+              "count": 1,
+              "specialRequirements": []
+            }
+          ],
+          "background": [
+            {
+              "description": "Studio Personnel",
+              "count": 3,
+              "specialRequirements": []
+            }
+          ]
+        },
+        "location": {
+          "type": "INT",
+          "primaryLocation": "RECORDING STUDIO",
+          "secondaryLocation": "Oakland",
+          "timeOfDay": "DAY",
+          "weatherConditions": "Not specified",
+          "complexityLevel": "moderate"
+        },
+        "productionElements": {
+          "props": [
+            {
+              "item": "Recording Equipment",
+              "category": "practical",
+              "department": "Props",
+              "specialRequirements": [
+                "1990s period accurate equipment"
+              ]
+            }
+          ],
+          "vehicles": [],
+          "animals": [],
+          "specialEffects": []
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 5,
+            "specialEffectsMakeup": [],
+            "prosthetics": [],
+            "estimatedApplicationTime": 60
+          },
+          "wardrobe": {
+            "standardCostumes": 5,
+            "periodCostumes": [
+              "1990s Oakland street wear"
+            ],
+            "specialtyItems": [],
+            "quickChanges": 0
+          },
+          "artDepartment": {
+            "setConstruction": [
+              "Recording studio interior"
+            ],
+            "setDecoration": [
+              "1990s recording equipment",
+              "Period posters and decor"
+            ],
+            "locationModifications": []
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 4,
+          "castComplexity": 3,
+          "locationChallenges": 5,
+          "overallComplexity": 4
+        },
+        "timeEstimates": {
+          "setupHours": 2,
+          "shootingHours": 3,
+          "wrapHours": 1,
+          "totalHours": 6
+        },
+        "specialConsiderations": [
+          "Period accurate set dressing required",
+          "Sound recording for music elements"
+        ],
+        "continuityNotes": [
+          "Establishes N'Jobu's presence in Oakland"
+        ]
+      },
+      {
+        "sceneNumber": 3,
+        "sceneHeader": "EXT. OAKLAND APARTMENT COMPLEX - NIGHT (1992)",
+        "pageCount": 0.75,
+        "estimatedScreenTime": "00:45",
+        "characters": {
+          "speaking": [
+            {
+              "description": "N'Jobu",
+              "count": 1,
+              "specialRequirements": []
+            },
+            {
+              "description": "Young T'Chaka",
+              "count": 1,
+              "specialRequirements": [
+                "Younger appearance makeup"
+              ]
+            },
+            {
+              "description": "Young Zuri",
+              "count": 1,
+              "specialRequirements": [
+                "Younger appearance makeup"
+              ]
+            }
+          ],
+          "nonSpeaking": [],
+          "background": []
+        },
+        "location": {
+          "type": "EXT",
+          "primaryLocation": "OAKLAND APARTMENT COMPLEX",
+          "secondaryLocation": "Oakland",
+          "timeOfDay": "NIGHT",
+          "weatherConditions": "Clear",
+          "complexityLevel": "moderate"
+        },
+        "productionElements": {
+          "props": [
+            {
+              "item": "Vibranium Weapons",
+              "category": "hero",
+              "department": "Props",
+              "specialRequirements": [
+                "Glowing vibranium effects"
+              ]
+            }
+          ],
+          "vehicles": [],
+          "animals": [],
+          "specialEffects": [
+            {
+              "type": "VFX",
+              "description": "Vibranium weapon glow effects",
+              "complexity": "moderate",
+              "safetyRequirements": []
+            }
+          ]
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 3,
+            "specialEffectsMakeup": [
+              "De-aging for T'Chaka and Zuri"
+            ],
+            "prosthetics": [],
+            "estimatedApplicationTime": 120
+          },
+          "wardrobe": {
+            "standardCostumes": 3,
+            "periodCostumes": [
+              "1990s Wakandan covert ops gear"
+            ],
+            "specialtyItems": [
+              "Vibranium weapon rigs"
+            ],
+            "quickChanges": 0
+          },
+          "artDepartment": {
+            "setConstruction": [],
+            "setDecoration": [
+              "1990s Oakland apartment exterior",
+              "Period accurate cars and streetscape"
+            ],
+            "locationModifications": []
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 6,
+          "castComplexity": 4,
+          "locationChallenges": 5,
+          "overallComplexity": 5
+        },
+        "timeEstimates": {
+          "setupHours": 3,
+          "shootingHours": 4,
+          "wrapHours": 2,
+          "totalHours": 9
+        },
+        "specialConsiderations": [
+          "Night shooting requires extensive lighting setup",
+          "De-aging makeup for principal cast"
+        ],
+        "continuityNotes": [
+          "Establishes the conflict between N'Jobu and T'Chaka"
+        ]
+      },
+      {
+        "sceneNumber": 4,
+        "sceneHeader": "INT. N'JOBU'S APARTMENT - NIGHT (1992)",
+        "pageCount": 1.0,
+        "estimatedScreenTime": "01:00",
+        "characters": {
+          "speaking": [
+            {
+              "description": "N'Jobu",
+              "count": 1,
+              "specialRequirements": []
+            },
+            {
+              "description": "Young T'Chaka",
+              "count": 1,
+              "specialRequirements": [
+                "Younger appearance makeup"
+              ]
+            },
+            {
+              "description": "Young Zuri",
+              "count": 1,
+              "specialRequirements": [
+                "Younger appearance makeup"
+              ]
+            },
+            {
+              "description": "Young Killmonger",
+              "count": 1,
+              "specialRequirements": [
+                "Child actor"
+              ]
+            }
+          ],
+          "nonSpeaking": [],
+          "background": []
+        },
+        "location": {
+          "type": "INT",
+          "primaryLocation": "N'JOBU'S APARTMENT",
+          "secondaryLocation": "Oakland",
+          "timeOfDay": "NIGHT",
+          "weatherConditions": "Not specified",
+          "complexityLevel": "complex"
+        },
+        "productionElements": {
+          "props": [
+            {
+              "item": "Handgun",
+              "category": "hero",
+              "department": "Props",
+              "specialRequirements": [
+                "Rubber stunt gun",
+                "Breakaway slide"
+              ]
+            },
+            {
+              "description": "Young T'Chaka's claws pop out and destroy the handgun slide.",
+              "category": "special",
+              "department": "Special Effects"
+            }
+          ],
+          "vehicles": [],
+          "animals": [],
+          "specialEffects": [
+            {
+              "type": "practical",
+              "description": "N'Jobu pulls gun on Zuri; T'Chaka springs forward and impales N'Jobu.",
+              "complexity": "high",
+              "safetyRequirements": [
+                "Stunt coordinator",
+                "Retractable blade prop",
+                "Blood effects"
+              ]
+            }
+          ]
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 4,
+            "specialEffectsMakeup": [
+              "Fatal stabbing wound for N'Jobu",
+              "De-aging for T'Chaka and Zuri"
+            ],
+            "prosthetics": [
+              "Chest wound prosthetic"
+            ],
+            "estimatedApplicationTime": 180
+          },
+          "wardrobe": {
+            "standardCostumes": 4,
+            "periodCostumes": [
+              "1990s Oakland civilian clothes",
+              "1990s Wakandan covert gear"
+            ],
+            "specialtyItems": [
+              "Retractable claw mechanism"
+            ],
+            "quickChanges": 0
+          },
+          "artDepartment": {
+            "setConstruction": [
+              "N'Jobu's apartment interior"
+            ],
+            "setDecoration": [
+              "1990s Oakland apartment furnishings",
+              "Personal effects and photos"
+            ],
+            "locationModifications": []
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 8,
+          "castComplexity": 6,
+          "locationChallenges": 4,
+          "overallComplexity": 6
+        },
+        "timeEstimates": {
+          "setupHours": 3,
+          "shootingHours": 6,
+          "wrapHours": 2,
+          "totalHours": 11
+        },
+        "specialConsiderations": [
+          "Critical story moment requiring precise choreography",
+          "Child actor safety protocols",
+          "Complex practical effects for killing"
+        ],
+        "continuityNotes": [
+          "N'Jobu's death establishes Killmonger's motivation",
+          "Claws burying into N'Jobu's chest"
+        ]
+      },
+      {
+        "sceneNumber": 5,
+        "sceneHeader": "EXT. GOLDEN CITY - WAKANDA - DAY (PRESENT)",
+        "pageCount": 0.5,
+        "estimatedScreenTime": "00:30",
+        "characters": {
+          "speaking": [],
+          "nonSpeaking": [],
+          "background": [
+            {
+              "description": "Wakandan Citizens",
+              "count": 100,
+              "specialRequirements": [
+                "Traditional Wakandan dress"
+              ]
+            }
+          ]
+        },
+        "location": {
+          "type": "EXT",
+          "primaryLocation": "GOLDEN CITY",
+          "secondaryLocation": "Wakanda",
+          "timeOfDay": "DAY",
+          "weatherConditions": "Clear",
+          "complexityLevel": "complex"
+        },
+        "productionElements": {
+          "props": [],
+          "vehicles": [
+            {
+              "type": "Wakandan Transport Vehicles",
+              "count": 5,
+              "specialRequirements": [
+                "Wakandan design aesthetic"
+              ]
+            }
+          ],
+          "animals": [],
+          "specialEffects": [
+            {
+              "type": "VFX",
+              "description": "Golden City establishing shot with advanced Wakandan architecture",
+              "complexity": "high",
+              "safetyRequirements": []
+            }
+          ]
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 100,
+            "specialEffectsMakeup": [],
+            "prosthetics": [],
+            "estimatedApplicationTime": 400
+          },
+          "wardrobe": {
+            "standardCostumes": 100,
+            "periodCostumes": [],
+            "specialtyItems": [
+              "Traditional Wakandan citizen attire"
+            ],
+            "quickChanges": 0
+          },
+          "artDepartment": {
+            "setConstruction": [
+              "Golden City plaza sections"
+            ],
+            "setDecoration": [
+              "Wakandan architecture details",
+              "Advanced technology integration"
+            ],
+            "locationModifications": []
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 7,
+          "castComplexity": 8,
+          "locationChallenges": 8,
+          "overallComplexity": 8
+        },
+        "timeEstimates": {
+          "setupHours": 4,
+          "shootingHours": 3,
+          "wrapHours": 2,
+          "totalHours": 9
+        },
+        "specialConsiderations": [
+          "Large crowd management required",
+          "Extensive VFX for Golden City environment"
+        ],
+        "continuityNotes": [
+          "Establishes present-day Wakanda's advanced civilization"
+        ]
+      },
+      {
+        "sceneNumber": 6,
+        "sceneHeader": "INT. ROYAL PALACE - THRONE ROOM - DAY",
+        "pageCount": 0.75,
+        "estimatedScreenTime": "00:45",
+        "characters": {
+          "speaking": [
+            {
+              "description": "T'Chaka",
+              "count": 1,
+              "specialRequirements": []
+            },
+            {
+              "description": "T'Challa",
+              "count": 1,
+              "specialRequirements": []
+            }
+          ],
+          "nonSpeaking": [
+            {
+              "description": "Dora Milaje",
+              "count": 4,
+              "specialRequirements": [
+                "Full Dora Milaje regalia"
+              ]
+            }
+          ],
+          "background": [
+            {
+              "description": "Royal Court Members",
+              "count": 20,
+              "specialRequirements": [
+                "Royal court attire"
+              ]
+            }
+          ]
+        },
+        "location": {
+          "type": "INT",
+          "primaryLocation": "ROYAL PALACE - THRONE ROOM",
+          "secondaryLocation": "Wakanda",
+          "timeOfDay": "DAY",
+          "weatherConditions": "Not specified",
+          "complexityLevel": "complex"
+        },
+        "productionElements": {
+          "props": [
+            {
+              "item": "Wakandan Throne",
+              "category": "hero",
+              "department": "Art Department",
+              "specialRequirements": [
+                "Advanced Wakandan design"
+              ]
+            }
+          ],
+          "vehicles": [],
+          "animals": [],
+          "specialEffects": []
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 26,
+            "specialEffectsMakeup": [],
+            "prosthetics": [],
+            "estimatedApplicationTime": 180
+          },
+          "wardrobe": {
+            "standardCostumes": 26,
+            "periodCostumes": [],
+            "specialtyItems": [
+              "King T'Chaka's royal robes",
+              "Prince T'Challa's formal attire",
+              "Dora Milaje armor",
+              "Royal court formal wear"
+            ],
+            "quickChanges": 0
+          },
+          "artDepartment": {
+            "setConstruction": [
+              "Throne room interior"
+            ],
+            "setDecoration": [
+              "Wakandan royal regalia",
+              "Advanced holographic displays"
+            ],
+            "locationModifications": []
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 5,
+          "castComplexity": 6,
+          "locationChallenges": 6,
+          "overallComplexity": 6
+        },
+        "timeEstimates": {
+          "setupHours": 3,
+          "shootingHours": 4,
+          "wrapHours": 2,
+          "totalHours": 9
+        },
+        "specialConsiderations": [
+          "Formal royal court protocol must be maintained",
+          "Multiple costume changes may be required"
+        ],
+        "continuityNotes": [
+          "Establishes T'Challa's relationship with his father before becoming king"
+        ]
+      },
+      {
+        "sceneNumber": 7,
+        "sceneHeader": "EXT. WAKANDAN BORDER - SURVEILLANCE POST - DAY",
+        "pageCount": 0.5,
+        "estimatedScreenTime": "00:30",
+        "characters": {
+          "speaking": [
+            {
+              "description": "Border Tribe Leader",
+              "count": 1,
+              "specialRequirements": []
+            }
+          ],
+          "nonSpeaking": [
+            {
+              "description": "Border Tribe Warriors",
+              "count": 8,
+              "specialRequirements": [
+                "Border Tribe armor and weapons"
+              ]
+            }
+          ],
+          "background": []
+        },
+        "location": {
+          "type": "EXT",
+          "primaryLocation": "WAKANDAN BORDER - SURVEILLANCE POST",
+          "secondaryLocation": "Wakanda",
+          "timeOfDay": "DAY",
+          "weatherConditions": "Clear",
+          "complexityLevel": "moderate"
+        },
+        "productionElements": {
+          "props": [
+            {
+              "item": "Holographic Surveillance Equipment",
+              "category": "hero",
+              "department": "Props",
+              "specialRequirements": [
+                "Wakandan tech design",
+                "Holographic display effects"
+              ]
+            }
+          ],
+          "vehicles": [],
+          "animals": [],
+          "specialEffects": [
+            {
+              "type": "VFX",
+              "description": "Holographic surveillance displays",
+              "complexity": "moderate",
+              "safetyRequirements": []
+            }
+          ]
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 9,
+            "specialEffectsMakeup": [],
+            "prosthetics": [],
+            "estimatedApplicationTime": 90
+          },
+          "wardrobe": {
+            "standardCostumes": 9,
+            "periodCostumes": [],
+            "specialtyItems": [
+              "Border Tribe tactical gear",
+              "Advanced Wakandan surveillance equipment"
+            ],
+            "quickChanges": 0
+          },
+          "artDepartment": {
+            "setConstruction": [
+              "Border surveillance outpost"
+            ],
+            "setDecoration": [
+              "Wakandan border fortifications",
+              "Advanced monitoring technology"
+            ],
+            "locationModifications": []
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 6,
+          "castComplexity": 4,
+          "locationChallenges": 5,
+          "overallComplexity": 5
+        },
+        "timeEstimates": {
+          "setupHours": 2,
+          "shootingHours": 3,
+          "wrapHours": 1,
+          "totalHours": 6
+        },
+        "specialConsiderations": [
+          "Remote location shooting",
+          "Holographic VFX coordination required"
+        ],
+        "continuityNotes": [
+          "Establishes Wakanda's border security capabilities"
+        ]
+      },
+      {
+        "sceneNumber": 8,
+        "sceneHeader": "INT. SHURI'S LAB - DAY",
+        "pageCount": 1.0,
+        "estimatedScreenTime": "01:00",
+        "characters": {
+          "speaking": [
+            {
+              "description": "Shuri",
+              "count": 1,
+              "specialRequirements": []
+            },
+            {
+              "description": "T'Challa",
+              "count": 1,
+              "specialRequirements": []
+            }
+          ],
+          "nonSpeaking": [
+            {
+              "description": "Lab Assistants",
+              "count": 3,
+              "specialRequirements": []
+            }
+          ],
+          "background": []
+        },
+        "location": {
+          "type": "INT",
+          "primaryLocation": "SHURI'S LAB",
+          "secondaryLocation": "Wakanda",
+          "timeOfDay": "DAY",
+          "weatherConditions": "Not specified",
+          "complexityLevel": "complex"
+        },
+        "productionElements": {
+          "props": [
+            {
+              "item": "Wakandan Tech Prototypes",
+              "category": "hero",
+              "department": "Props",
+              "specialRequirements": [
+                "Advanced holographic interfaces",
+                "Glowing vibranium elements"
+              ]
+            },
+            {
+              "item": "Panther Suit Components",
+              "category": "hero",
+              "department": "Costume",
+              "specialRequirements": [
+                "Practical and VFX elements"
+              ]
+            }
+          ],
+          "vehicles": [],
+          "animals": [],
+          "specialEffects": [
+            {
+              "type": "VFX",
+              "description": "Holographic lab interfaces and vibranium tech",
+              "complexity": "high",
+              "safetyRequirements": []
+            }
+          ]
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 5,
+            "specialEffectsMakeup": [],
+            "prosthetics": [],
+            "estimatedApplicationTime": 60
+          },
+          "wardrobe": {
+            "standardCostumes": 5,
+            "periodCostumes": [],
+            "specialtyItems": [
+              "Shuri's lab coat and tech gear",
+              "T'Challa's casual Wakandan attire"
+            ],
+            "quickChanges": 0
+          },
+          "artDepartment": {
+            "setConstruction": [
+              "Shuri's advanced laboratory"
+            ],
+            "setDecoration": [
+              "Wakandan super-science equipment",
+              "Holographic work stations",
+              "Vibranium research materials"
+            ],
+            "locationModifications": []
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 8,
+          "castComplexity": 3,
+          "locationChallenges": 6,
+          "overallComplexity": 6
+        },
+        "timeEstimates": {
+          "setupHours": 3,
+          "shootingHours": 5,
+          "wrapHours": 2,
+          "totalHours": 10
+        },
+        "specialConsiderations": [
+          "Complex VFX for holographic interfaces",
+          "Technical prop coordination required",
+          "Lighting for advanced technology aesthetic"
+        ],
+        "continuityNotes": [
+          "Establishes Shuri's technological genius and the advanced Wakandan tech"
+        ]
+      },
+      {
+        "sceneNumber": 9,
+        "sceneHeader": "EXT. WARRIOR FALLS - DAY",
+        "pageCount": 0.75,
+        "estimatedScreenTime": "00:45",
+        "characters": {
+          "speaking": [
+            {
+              "description": "T'Challa",
+              "count": 1,
+              "specialRequirements": []
+            },
+            {
+              "description": "Zuri",
+              "count": 1,
+              "specialRequirements": []
+            }
+          ],
+          "nonSpeaking": [
+            {
+              "description": "Tribal Representatives",
+              "count": 50,
+              "specialRequirements": [
+                "Traditional tribal regalia from all five tribes"
+              ]
+            }
+          ],
+          "background": [
+            {
+              "description": "Ceremonial Drummers",
+              "count": 10,
+              "specialRequirements": [
+                "Traditional drums and costumes"
+              ]
+            }
+          ]
+        },
+        "location": {
+          "type": "EXT",
+          "primaryLocation": "WARRIOR FALLS",
+          "secondaryLocation": "Wakanda",
+          "timeOfDay": "DAY",
+          "weatherConditions": "Clear",
+          "complexityLevel": "complex"
+        },
+        "productionElements": {
+          "props": [
+            {
+              "item": "Ceremonial Spears",
+              "category": "hero",
+              "department": "Props",
+              "specialRequirements": [
+                "Traditional Wakandan weapons"
+              ]
+            },
+            {
+              "item": "Tribal Banners",
+              "category": "practical",
+              "department": "Art Department",
+              "specialRequirements": [
+                "Five tribe insignias"
+              ]
+            }
+          ],
+          "vehicles": [],
+          "animals": [],
+          "specialEffects": []
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 62,
+            "specialEffectsMakeup": [
+              "Traditional tribal markings"
+            ],
+            "prosthetics": [],
+            "estimatedApplicationTime": 360
+          },
+          "wardrobe": {
+            "standardCostumes": 62,
+            "periodCostumes": [],
+            "specialtyItems": [
+              "Five distinct tribal ceremonial costumes",
+              "T'Challa's challenge ceremony attire",
+              "Zuri's shamanic robes"
+            ],
+            "quickChanges": 0
+          },
+          "artDepartment": {
+            "setConstruction": [
+              "Warrior Falls ceremonial platform"
+            ],
+            "setDecoration": [
+              "Tribal banners and totems",
+              "Ceremonial fire pits",
+              "Traditional Wakandan ceremony setup"
+            ],
+            "locationModifications": []
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 6,
+          "castComplexity": 8,
+          "locationChallenges": 7,
+          "overallComplexity": 7
+        },
+        "timeEstimates": {
+          "setupHours": 4,
+          "shootingHours": 6,
+          "wrapHours": 2,
+          "totalHours": 12
+        },
+        "specialConsiderations": [
+          "Large crowd coordination",
+          "Traditional ceremonial elements must be authentic",
+          "Waterfall location presents unique challenges"
+        ],
+        "continuityNotes": [
+          "Establishes the ritual for challenging the king"
+        ]
+      },
+      {
+        "sceneNumber": 10,
+        "sceneHeader": "INT. ANCESTRAL PLANE - SUNSET",
+        "pageCount": 1.0,
+        "estimatedScreenTime": "01:00",
+        "characters": {
+          "speaking": [
+            {
+              "description": "T'Challa",
+              "count": 1,
+              "specialRequirements": [
+                "Ancestral Plane costume"
+              ]
+            },
+            {
+              "description": "T'Chaka (Spirit)",
+              "count": 1,
+              "specialRequirements": [
+                "Ethereal appearance"
+              ]
+            }
+          ],
+          "nonSpeaking": [],
+          "background": []
+        },
+        "location": {
+          "type": "INT",
+          "primaryLocation": "ANCESTRAL PLANE",
+          "secondaryLocation": "Spiritual Realm",
+          "timeOfDay": "SUNSET",
+          "weatherConditions": "Surreal",
+          "complexityLevel": "complex"
+        },
+        "productionElements": {
+          "props": [],
+          "vehicles": [],
+          "animals": [
+            {
+              "type": "VFX Panthers",
+              "count": 3,
+              "specialRequirements": [
+                "Ethereal panther spirits"
+              ]
+            }
+          ],
+          "specialEffects": [
+            {
+              "type": "VFX",
+              "description": "Entire surreal landscape of the Ancestral Plane. VFX panthers.",
+              "complexity": "high",
+              "safetyRequirements": []
+            }
+          ]
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 2,
+            "specialEffectsMakeup": [
+              "Ethereal appearance for T'Chaka spirit"
+            ],
+            "prosthetics": [],
+            "estimatedApplicationTime": 120
+          },
+          "wardrobe": {
+            "standardCostumes": 2,
+            "periodCostumes": [],
+            "specialtyItems": [
+              "Ancestral Plane ritual garments",
+              "Spirit realm costumes"
+            ],
+            "quickChanges": 0
+          },
+          "artDepartment": {
+            "setConstruction": [
+              "Ancestral Plane environment"
+            ],
+            "setDecoration": [
+              "Surreal spiritual landscape",
+              "Ethereal baobab trees"
+            ],
+            "locationModifications": []
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 9,
+          "castComplexity": 3,
+          "locationChallenges": 8,
+          "overallComplexity": 7
+        },
+        "timeEstimates": {
+          "setupHours": 4,
+          "shootingHours": 6,
+          "wrapHours": 2,
+          "totalHours": 12
+        },
+        "specialConsiderations": [
+          "Extensive VFX environment work",
+          "Ethereal lighting and atmosphere required",
+          "Complex CG panther integration"
+        ],
+        "continuityNotes": [
+          "T'Challa's first meeting with his deceased father's spirit"
+        ]
+      },
+      {
+        "sceneNumber": 11,
+        "sceneHeader": "EXT. NIGERIAN RAINFOREST - DAY",
+        "pageCount": 0.5,
+        "estimatedScreenTime": "00:30",
+        "characters": {
+          "speaking": [],
+          "nonSpeaking": [
+            {
+              "description": "Boko Haram Militants",
+              "count": 15,
+              "specialRequirements": [
+                "Military tactical gear"
+              ]
+            },
+            {
+              "description": "Kidnapped Girls",
+              "count": 20,
+              "specialRequirements": [
+                "Distressed civilian clothing"
+              ]
+            }
+          ],
+          "background": []
+        },
+        "location": {
+          "type": "EXT",
+          "primaryLocation": "NIGERIAN RAINFOREST",
+          "secondaryLocation": "Nigeria",
+          "timeOfDay": "DAY",
+          "weatherConditions": "Humid",
+          "complexityLevel": "moderate"
+        },
+        "productionElements": {
+          "props": [
+            {
+              "item": "Military Weapons",
+              "category": "hero",
+              "department": "Props",
+              "specialRequirements": [
+                "Realistic military assault rifles",
+                "Safety protocols required"
+              ]
+            }
+          ],
+          "vehicles": [
+            {
+              "type": "Military Trucks",
+              "count": 2,
+              "specialRequirements": [
+                "Weathered military vehicles"
+              ]
+            }
+          ],
+          "animals": [],
+          "specialEffects": []
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 35,
+            "specialEffectsMakeup": [
+              "Distressed appearance for kidnapped victims"
+            ],
+            "prosthetics": [],
+            "estimatedApplicationTime": 180
+          },
+          "wardrobe": {
+            "standardCostumes": 35,
+            "periodCostumes": [],
+            "specialtyItems": [
+              "Military tactical gear",
+              "Distressed civilian clothing"
+            ],
+            "quickChanges": 0
+          },
+          "artDepartment": {
+            "setConstruction": [],
+            "setDecoration": [
+              "Temporary militant camp setup",
+              "Jungle camouflage netting"
+            ],
+            "locationModifications": []
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 5,
+          "castComplexity": 6,
+          "locationChallenges": 6,
+          "overallComplexity": 6
+        },
+        "timeEstimates": {
+          "setupHours": 3,
+          "shootingHours": 4,
+          "wrapHours": 2,
+          "totalHours": 9
+        },
+        "specialConsiderations": [
+          "Remote jungle location challenges",
+          "Weapon safety protocols critical",
+          "Sensitive subject matter requires careful handling"
+        ],
+        "continuityNotes": [
+          "Establishes the mission T'Challa and team will undertake"
+        ]
+      },
+      {
+        "sceneNumber": 12,
+        "sceneHeader": "EXT. NIGERIAN RAINFOREST - NIGHT",
+        "pageCount": 1.25,
+        "estimatedScreenTime": "01:15",
+        "characters": {
+          "speaking": [
+            {
+              "description": "T'Challa",
+              "count": 1,
+              "specialRequirements": [
+                "Black Panther suit"
+              ]
+            },
+            {
+              "description": "Nakia",
+              "count": 1,
+              "specialRequirements": [
+                "Undercover disguise"
+              ]
+            },
+            {
+              "description": "Okoye",
+              "count": 1,
+              "specialRequirements": [
+                "Tactical gear"
+              ]
+            }
+          ],
+          "nonSpeaking": [
+            {
+              "description": "Boko Haram Militants",
+              "count": 15,
+              "specialRequirements": [
+                "Combat ready gear"
+              ]
+            },
+            {
+              "description": "Kidnapped Girls",
+              "count": 20,
+              "specialRequirements": []
+            }
+          ],
+          "background": []
+        },
+        "location": {
+          "type": "EXT",
+          "primaryLocation": "NIGERIAN RAINFOREST",
+          "secondaryLocation": "Nigeria",
+          "timeOfDay": "NIGHT",
+          "weatherConditions": "Clear",
+          "complexityLevel": "complex"
+        },
+        "productionElements": {
+          "props": [
+            {
+              "item": "Panther Suit",
+              "category": "hero",
+              "department": "Costume",
+              "specialRequirements": [
+                "Practical suit with VFX enhancements"
+              ]
+            },
+            {
+              "item": "Wakandan Weapons",
+              "category": "hero",
+              "department": "Props",
+              "specialRequirements": [
+                "Spears and advanced tech weapons"
+              ]
+            }
+          ],
+          "vehicles": [],
+          "animals": [],
+          "specialEffects": [
+            {
+              "type": "mixed",
+              "description": "Panther suit activation and combat sequences",
+              "complexity": "high",
+              "safetyRequirements": [
+                "Stunt coordinators",
+                "Wire work safety"
+              ]
+            }
+          ]
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 39,
+            "specialEffectsMakeup": [
+              "Combat wounds and dirt",
+              "Sweat and jungle environment effects"
+            ],
+            "prosthetics": [],
+            "estimatedApplicationTime": 240
+          },
+          "wardrobe": {
+            "standardCostumes": 39,
+            "periodCostumes": [],
+            "specialtyItems": [
+              "Black Panther suit",
+              "Dora Milaje tactical gear",
+              "Nakia's undercover costume"
+            ],
+            "quickChanges": 1
+          },
+          "artDepartment": {
+            "setConstruction": [
+              "Militant camp structures"
+            ],
+            "setDecoration": [
+              "Jungle camp setup",
+              "Military equipment scatter"
+            ],
+            "locationModifications": []
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 8,
+          "castComplexity": 7,
+          "locationChallenges": 7,
+          "overallComplexity": 7
+        },
+        "timeEstimates": {
+          "setupHours": 4,
+          "shootingHours": 8,
+          "wrapHours": 3,
+          "totalHours": 15
+        },
+        "specialConsiderations": [
+          "Night shooting in jungle environment",
+          "Complex action choreography",
+          "Black Panther suit practical effects"
+        ],
+        "continuityNotes": [
+          "First appearance of T'Challa as Black Panther in action"
+        ]
+      },
+      {
+        "sceneNumber": 13,
+        "sceneHeader": "INT. ROYAL TALON FIGHTER - NIGHT",
+        "pageCount": 0.75,
+        "estimatedScreenTime": "00:45",
+        "characters": {
+          "speaking": [
+            {
+              "description": "T'Challa",
+              "count": 1,
+              "specialRequirements": []
+            },
+            {
+              "description": "Okoye",
+              "count": 1,
+              "specialRequirements": []
+            },
+            {
+              "description": "Nakia",
+              "count": 1,
+              "specialRequirements": []
+            }
+          ],
+          "nonSpeaking": [
+            {
+              "description": "Rescued Girls",
+              "count": 20,
+              "specialRequirements": [
+                "Relief and gratitude expressions"
+              ]
+            }
+          ],
+          "background": []
+        },
+        "location": {
+          "type": "INT",
+          "primaryLocation": "ROYAL TALON FIGHTER",
+          "secondaryLocation": "In Flight",
+          "timeOfDay": "NIGHT",
+          "weatherConditions": "Not specified",
+          "complexityLevel": "moderate"
+        },
+        "productionElements": {
+          "props": [
+            {
+              "item": "RTF Interior Controls",
+              "category": "hero",
+              "department": "Props",
+              "specialRequirements": [
+                "Wakandan aircraft technology"
+              ]
+            }
+          ],
+          "vehicles": [],
+          "animals": [],
+          "specialEffects": [
+            {
+              "type": "VFX",
+              "description": "Flight sequence and Wakandan aircraft interior",
+              "complexity": "moderate",
+              "safetyRequirements": []
+            }
+          ]
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 23,
+            "specialEffectsMakeup": [
+              "Post-mission fatigue and dirt"
+            ],
+            "prosthetics": [],
+            "estimatedApplicationTime": 120
+          },
+          "wardrobe": {
+            "standardCostumes": 23,
+            "periodCostumes": [],
+            "specialtyItems": [
+              "Post-mission Wakandan gear",
+              "Blankets for rescued victims"
+            ],
+            "quickChanges": 0
+          },
+          "artDepartment": {
+            "setConstruction": [
+              "Royal Talon Fighter interior"
+            ],
+            "setDecoration": [
+              "Advanced Wakandan aircraft controls",
+              "Medical supplies for victims"
+            ],
+            "locationModifications": []
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 6,
+          "castComplexity": 5,
+          "locationChallenges": 5,
+          "overallComplexity": 5
+        },
+        "timeEstimates": {
+          "setupHours": 2,
+          "shootingHours": 4,
+          "wrapHours": 1,
+          "totalHours": 7
+        },
+        "specialConsiderations": [
+          "Aircraft interior filming constraints",
+          "Multiple traumatized victim actors"
+        ],
+        "continuityNotes": [
+          "Aftermath of successful rescue mission"
+        ]
+      },
+      {
+        "sceneNumber": 14,
+        "sceneHeader": "EXT. VIENNA - UNITED NATIONS BUILDING - DAY",
+        "pageCount": 0.5,
+        "estimatedScreenTime": "00:30",
+        "characters": {
+          "speaking": [],
+          "nonSpeaking": [
+            {
+              "description": "International Delegates",
+              "count": 50,
+              "specialRequirements": [
+                "Formal diplomatic attire"
+              ]
+            },
+            {
+              "description": "Security Personnel",
+              "count": 10,
+              "specialRequirements": [
+                "UN security uniforms"
+              ]
+            }
+          ],
+          "background": [
+            {
+              "description": "Media Personnel",
+              "count": 20,
+              "specialRequirements": [
+                "Professional journalist attire"
+              ]
+            }
+          ]
+        },
+        "location": {
+          "type": "EXT",
+          "primaryLocation": "VIENNA - UNITED NATIONS BUILDING",
+          "secondaryLocation": "Vienna, Austria",
+          "timeOfDay": "DAY",
+          "weatherConditions": "Clear",
+          "complexityLevel": "moderate"
+        },
+        "productionElements": {
+          "props": [
+            {
+              "item": "UN Building Signage",
+              "category": "practical",
+              "department": "Art Department",
+              "specialRequirements": [
+                "Authentic UN branding"
+              ]
+            }
+          ],
+          "vehicles": [
+            {
+              "type": "Diplomatic Vehicles",
+              "count": 5,
+              "specialRequirements": [
+                "High-end diplomatic motorcade"
+              ]
+            }
+          ],
+          "animals": [],
+          "specialEffects": []
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 80,
+            "specialEffectsMakeup": [],
+            "prosthetics": [],
+            "estimatedApplicationTime": 240
+          },
+          "wardrobe": {
+            "standardCostumes": 80,
+            "periodCostumes": [],
+            "specialtyItems": [
+              "International diplomatic formal wear",
+              "UN security uniforms",
+              "Media professional attire"
+            ],
+            "quickChanges": 0
+          },
+          "artDepartment": {
+            "setConstruction": [],
+            "setDecoration": [
+              "UN building exterior dressing",
+              "International flags",
+              "Security barriers"
+            ],
+            "locationModifications": []
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 4,
+          "castComplexity": 7,
+          "locationChallenges": 6,
+          "overallComplexity": 6
+        },
+        "timeEstimates": {
+          "setupHours": 3,
+          "shootingHours": 4,
+          "wrapHours": 2,
+          "totalHours": 9
+        },
+        "specialConsiderations": [
+          "International location permits required",
+          "Large crowd management",
+          "UN protocol compliance"
+        ],
+        "continuityNotes": [
+          "Sets up T'Chaka's attendance at UN meeting"
+        ]
+      },
+      {
+        "sceneNumber": 15,
+        "sceneHeader": "INT. UNITED NATIONS ASSEMBLY HALL - DAY",
+        "pageCount": 1.0,
+        "estimatedScreenTime": "01:00",
+        "characters": {
+          "speaking": [
+            {
+              "description": "T'Chaka",
+              "count": 1,
+              "specialRequirements": [
+                "Formal diplomatic attire"
+              ]
+            },
+            {
+              "description": "UN Moderator",
+              "count": 1,
+              "specialRequirements": []
+            }
+          ],
+          "nonSpeaking": [
+            {
+              "description": "T'Challa",
+              "count": 1,
+              "specialRequirements": [
+                "Formal suit"
+              ]
+            }
+          ],
+          "background": [
+            {
+              "description": "International Delegates",
+              "count": 200,
+              "specialRequirements": [
+                "Diverse international delegation attire"
+              ]
+            }
+          ]
+        },
+        "location": {
+          "type": "INT",
+          "primaryLocation": "UNITED NATIONS ASSEMBLY HALL",
+          "secondaryLocation": "Vienna, Austria",
+          "timeOfDay": "DAY",
+          "weatherConditions": "Not specified",
+          "complexityLevel": "complex"
+        },
+        "productionElements": {
+          "props": [
+            {
+              "item": "UN Assembly Podium",
+              "category": "hero",
+              "department": "Art Department",
+              "specialRequirements": [
+                "Authentic UN assembly setup"
+              ]
+            },
+            {
+              "item": "Translation Equipment",
+              "category": "practical",
+              "department": "Props",
+              "specialRequirements": [
+                "Working UN translation booths"
+              ]
+            }
+          ],
+          "vehicles": [],
+          "animals": [],
+          "specialEffects": []
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 202,
+            "specialEffectsMakeup": [],
+            "prosthetics": [],
+            "estimatedApplicationTime": 600
+          },
+          "wardrobe": {
+            "standardCostumes": 202,
+            "periodCostumes": [],
+            "specialtyItems": [
+              "King T'Chaka's formal diplomatic robes",
+              "T'Challa's formal suit",
+              "International delegates' formal wear"
+            ],
+            "quickChanges": 0
+          },
+          "artDepartment": {
+            "setConstruction": [
+              "UN Assembly Hall interior"
+            ],
+            "setDecoration": [
+              "UN assembly hall authentic setup",
+              "International flags and insignia",
+              "Translation booth equipment"
+            ],
+            "locationModifications": []
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 6,
+          "castComplexity": 9,
+          "locationChallenges": 7,
+          "overallComplexity": 7
+        },
+        "timeEstimates": {
+          "setupHours": 4,
+          "shootingHours": 6,
+          "wrapHours": 3,
+          "totalHours": 13
+        },
+        "specialConsiderations": [
+          "Massive crowd of background actors",
+          "Authentic UN assembly protocol",
+          "Multiple camera angles required"
+        ],
+        "continuityNotes": [
+          "T'Chaka's speech to the UN about international cooperation"
+        ]
+      },
+      {
+        "sceneNumber": 16,
+        "sceneHeader": "EXT. VIENNA INTERNATIONAL CENTRE - DAY",
+        "pageCount": 1.5,
+        "estimatedScreenTime": "01:30",
+        "characters": {
+          "speaking": [
+            {
+              "description": "T'Challa",
+              "count": 1,
+              "specialRequirements": [
+                "Formal suit"
+              ]
+            },
+            {
+              "description": "Security Chief",
+              "count": 1,
+              "specialRequirements": []
+            }
+          ],
+          "nonSpeaking": [
+            {
+              "description": "T'Chaka",
+              "count": 1,
+              "specialRequirements": [
+                "Explosion victim makeup"
+              ]
+            },
+            {
+              "description": "Explosion Victims",
+              "count": 30,
+              "specialRequirements": [
+                "Injury makeup and torn clothing"
+              ]
+            }
+          ],
+          "background": [
+            {
+              "description": "Emergency Responders",
+              "count": 20,
+              "specialRequirements": [
+                "Emergency services uniforms"
+              ]
+            }
+          ]
+        },
+        "location": {
+          "type": "EXT",
+          "primaryLocation": "VIENNA INTERNATIONAL CENTRE",
+          "secondaryLocation": "Vienna, Austria",
+          "timeOfDay": "DAY",
+          "weatherConditions": "Clear",
+          "complexityLevel": "complex"
+        },
+        "productionElements": {
+          "props": [
+            {
+              "item": "Explosion Debris",
+              "category": "practical",
+              "department": "Special Effects",
+              "specialRequirements": [
+                "Safe debris materials",
+                "Smoke effects"
+              ]
+            }
+          ],
+          "vehicles": [
+            {
+              "type": "Emergency Vehicles",
+              "count": 8,
+              "specialRequirements": [
+                "Ambulances, fire trucks, police cars"
+              ]
+            }
+          ],
+          "animals": [],
+          "specialEffects": [
+            {
+              "type": "practical",
+              "description": "Large explosion aftermath with smoke, debris, and emergency response",
+              "complexity": "high",
+              "safetyRequirements": [
+                "Special effects coordinator",
+                "Medical standby",
+                "Safety perimeter"
+              ]
+            }
+          ]
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 52,
+            "specialEffectsMakeup": [
+              "Fatal injuries for T'Chaka",
+              "Various explosion injuries",
+              "Dust and debris effects"
+            ],
+            "prosthetics": [
+              "Severe injury prosthetics"
+            ],
+            "estimatedApplicationTime": 400
+          },
+          "wardrobe": {
+            "standardCostumes": 52,
+            "periodCostumes": [],
+            "specialtyItems": [
+              "Explosion-damaged formal wear",
+              "Emergency responder uniforms",
+              "Torn and bloodied clothing"
+            ],
+            "quickChanges": 0
+          },
+          "artDepartment": {
+            "setConstruction": [
+              "Explosion aftermath set pieces"
+            ],
+            "setDecoration": [
+              "Building facade damage",
+              "Debris and wreckage",
+              "Emergency response equipment"
+            ],
+            "locationModifications": [
+              "Controlled explosion damage to set"
+            ]
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 9,
+          "castComplexity": 7,
+          "locationChallenges": 8,
+          "overallComplexity": 8
+        },
+        "timeEstimates": {
+          "setupHours": 6,
+          "shootingHours": 8,
+          "wrapHours": 4,
+          "totalHours": 18
+        },
+        "specialConsiderations": [
+          "Critical story moment - T'Chaka's death",
+          "Complex special effects coordination",
+          "Extensive injury makeup requirements",
+          "Large emergency response coordination"
+        ],
+        "continuityNotes": [
+          "T'Chaka's death triggers T'Challa's ascension to throne",
+          "Sets up the main conflict of the film"
+        ]
+      },
+      {
+        "sceneNumber": 17,
+        "sceneHeader": "INT. WAKANDAN MEDICAL FACILITY - DAY",
+        "pageCount": 0.75,
+        "estimatedScreenTime": "00:45",
+        "characters": {
+          "speaking": [
+            {
+              "description": "T'Challa",
+              "count": 1,
+              "specialRequirements": [
+                "Grieving son appearance"
+              ]
+            },
+            {
+              "description": "Ramonda",
+              "count": 1,
+              "specialRequirements": [
+                "Queen Mother formal attire"
+              ]
+            },
+            {
+              "description": "Shuri",
+              "count": 1,
+              "specialRequirements": [
+                "Grief-stricken appearance"
+              ]
+            }
+          ],
+          "nonSpeaking": [
+            {
+              "description": "Medical Personnel",
+              "count": 5,
+              "specialRequirements": [
+                "Wakandan medical uniforms"
+              ]
+            }
+          ],
+          "background": []
+        },
+        "location": {
+          "type": "INT",
+          "primaryLocation": "WAKANDAN MEDICAL FACILITY",
+          "secondaryLocation": "Wakanda",
+          "timeOfDay": "DAY",
+          "weatherConditions": "Not specified",
+          "complexityLevel": "moderate"
+        },
+        "productionElements": {
+          "props": [
+            {
+              "item": "T'Chaka's Body",
+              "category": "hero",
+              "department": "Special Effects",
+              "specialRequirements": [
+                "Body double or prosthetic"
+              ]
+            },
+            {
+              "item": "Wakandan Medical Equipment",
+              "category": "practical",
+              "department": "Props",
+              "specialRequirements": [
+                "Advanced Wakandan technology"
+              ]
+            }
+          ],
+          "vehicles": [],
+          "animals": [],
+          "specialEffects": []
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 8,
+            "specialEffectsMakeup": [
+              "Grief and exhaustion makeup",
+              "Death makeup for T'Chaka"
+            ],
+            "prosthetics": [],
+            "estimatedApplicationTime": 120
+          },
+          "wardrobe": {
+            "standardCostumes": 8,
+            "periodCostumes": [],
+            "specialtyItems": [
+              "Ramonda's Queen Mother robes",
+              "T'Challa's formal mourning attire",
+              "Wakandan medical uniforms"
+            ],
+            "quickChanges": 0
+          },
+          "artDepartment": {
+            "setConstruction": [
+              "Wakandan medical facility interior"
+            ],
+            "setDecoration": [
+              "Advanced medical technology",
+              "Wakandan cultural elements",
+              "Solemn atmosphere setup"
+            ],
+            "locationModifications": []
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 5,
+          "castComplexity": 4,
+          "locationChallenges": 4,
+          "overallComplexity": 4
+        },
+        "timeEstimates": {
+          "setupHours": 2,
+          "shootingHours": 4,
+          "wrapHours": 1,
+          "totalHours": 7
+        },
+        "specialConsiderations": [
+          "Emotional scene requiring sensitive handling",
+          "Body double coordination",
+          "Respectful death scene presentation"
+        ],
+        "continuityNotes": [
+          "Family mourning T'Chaka's death",
+          "Sets up T'Challa's emotional state going forward"
+        ]
+      },
+      {
+        "sceneNumber": 18,
+        "sceneHeader": "INT. TRIBAL COUNCIL CHAMBER - DAY",
+        "pageCount": 1.25,
+        "estimatedScreenTime": "01:15",
+        "characters": {
+          "speaking": [
+            {
+              "description": "T'Challa",
+              "count": 1,
+              "specialRequirements": [
+                "Prince to King transition attire"
+              ]
+            },
+            {
+              "description": "Zuri",
+              "count": 1,
+              "specialRequirements": [
+                "High Shaman ceremonial robes"
+              ]
+            },
+            {
+              "description": "W'Kabi",
+              "count": 1,
+              "specialRequirements": [
+                "Border Tribe leader regalia"
+              ]
+            },
+            {
+              "description": "M'Baku",
+              "count": 1,
+              "specialRequirements": [
+                "Jabari tribe leader attire"
+              ]
+            }
+          ],
+          "nonSpeaking": [
+            {
+              "description": "Tribal Elders",
+              "count": 15,
+              "specialRequirements": [
+                "Five tribe elder ceremonial wear"
+              ]
+            }
+          ],
+          "background": [
+            {
+              "description": "Dora Milaje",
+              "count": 8,
+              "specialRequirements": [
+                "Full ceremonial armor"
+              ]
+            }
+          ]
+        },
+        "location": {
+          "type": "INT",
+          "primaryLocation": "TRIBAL COUNCIL CHAMBER",
+          "secondaryLocation": "Wakanda",
+          "timeOfDay": "DAY",
+          "weatherConditions": "Not specified",
+          "complexityLevel": "complex"
+        },
+        "productionElements": {
+          "props": [
+            {
+              "item": "Tribal Council Throne",
+              "category": "hero",
+              "department": "Art Department",
+              "specialRequirements": [
+                "Traditional Wakandan craftsmanship"
+              ]
+            },
+            {
+              "item": "Ceremonial Spears",
+              "category": "hero",
+              "department": "Props",
+              "specialRequirements": [
+                "Five tribal variants"
+              ]
+            }
+          ],
+          "vehicles": [],
+          "animals": [],
+          "specialEffects": []
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 28,
+            "specialEffectsMakeup": [
+              "Traditional tribal markings"
+            ],
+            "prosthetics": [],
+            "estimatedApplicationTime": 180
+          },
+          "wardrobe": {
+            "standardCostumes": 28,
+            "periodCostumes": [],
+            "specialtyItems": [
+              "Five distinct tribal leader regalia",
+              "T'Challa's ceremonial prince attire",
+              "Dora Milaje ceremonial armor",
+              "Zuri's High Shaman robes"
+            ],
+            "quickChanges": 0
+          },
+          "artDepartment": {
+            "setConstruction": [
+              "Tribal Council Chamber interior"
+            ],
+            "setDecoration": [
+              "Five tribal banners and totems",
+              "Traditional Wakandan architecture",
+              "Ceremonial throne platform"
+            ],
+            "locationModifications": []
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 6,
+          "castComplexity": 7,
+          "locationChallenges": 6,
+          "overallComplexity": 6
+        },
+        "timeEstimates": {
+          "setupHours": 3,
+          "shootingHours": 6,
+          "wrapHours": 2,
+          "totalHours": 11
+        },
+        "specialConsiderations": [
+          "Formal tribal council protocols",
+          "Multiple speaking characters with distinct tribal backgrounds",
+          "Important political dynamics"
+        ],
+        "continuityNotes": [
+          "Establishes T'Challa's political challenges as new king",
+          "Sets up tribal relationships and conflicts"
+        ]
+      },
+      {
+        "sceneNumber": 19,
+        "sceneHeader": "EXT. MOUNTAIN PASS - JABARI LANDS - DAY",
+        "pageCount": 0.5,
+        "estimatedScreenTime": "00:30",
+        "characters": {
+          "speaking": [],
+          "nonSpeaking": [
+            {
+              "description": "Jabari Scouts",
+              "count": 6,
+              "specialRequirements": [
+                "Jabari mountain gear",
+                "Cold weather makeup"
+              ]
+            }
+          ],
+          "background": []
+        },
+        "location": {
+          "type": "EXT",
+          "primaryLocation": "MOUNTAIN PASS - JABARI LANDS",
+          "secondaryLocation": "Wakanda",
+          "timeOfDay": "DAY",
+          "weatherConditions": "Cold, snowy",
+          "complexityLevel": "moderate"
+        },
+        "productionElements": {
+          "props": [
+            {
+              "item": "Jabari Weapons",
+              "category": "hero",
+              "department": "Props",
+              "specialRequirements": [
+                "Traditional wooden weapons",
+                "Mountain climbing gear"
+              ]
+            }
+          ],
+          "vehicles": [],
+          "animals": [],
+          "specialEffects": [
+            {
+              "type": "practical",
+              "description": "Snow packing on and around actor.",
+              "complexity": "moderate",
+              "safetyRequirements": [
+                "Cold weather safety protocols"
+              ]
+            }
+          ]
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 6,
+            "specialEffectsMakeup": [
+              "Cold weather effects"
+            ],
+            "prosthetics": [],
+            "estimatedApplicationTime": 60
+          },
+          "wardrobe": {
+            "standardCostumes": 6,
+            "periodCostumes": [],
+            "specialtyItems": [
+              "Jabari cold weather gear",
+              "Traditional mountain tribe attire"
+            ],
+            "quickChanges": 0
+          },
+          "artDepartment": {
+            "setConstruction": [],
+            "setDecoration": [
+              "Mountain pass environment",
+              "Jabari territorial markers"
+            ],
+            "locationModifications": []
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 6,
+          "castComplexity": 3,
+          "locationChallenges": 7,
+          "overallComplexity": 5
+        },
+        "timeEstimates": {
+          "setupHours": 3,
+          "shootingHours": 3,
+          "wrapHours": 2,
+          "totalHours": 8
+        },
+        "specialConsiderations": [
+          "Mountain location challenges",
+          "Cold weather filming conditions",
+          "Snow and weather effects"
+        ],
+        "continuityNotes": [
+          "Establishes Jabari territorial boundaries"
+        ]
+      },
+      {
+        "sceneNumber": 20,
+        "sceneHeader": "INT. JABARI THRONE ROOM - DAY",
+        "pageCount": 1.0,
+        "estimatedScreenTime": "01:00",
+        "characters": {
+          "speaking": [
+            {
+              "description": "M'Baku",
+              "count": 1,
+              "specialRequirements": [
+                "Jabari leader ceremonial attire"
+              ]
+            },
+            {
+              "description": "T'Challa",
+              "count": 1,
+              "specialRequirements": [
+                "Formal diplomatic attire"
+              ]
+            },
+            {
+              "description": "Okoye",
+              "count": 1,
+              "specialRequirements": [
+                "Dora Milaje formal armor"
+              ]
+            }
+          ],
+          "nonSpeaking": [
+            {
+              "description": "Jabari Warriors",
+              "count": 20,
+              "specialRequirements": [
+                "Traditional Jabari armor and weapons"
+              ]
+            }
+          ],
+          "background": [
+            {
+              "description": "Jabari Court Members",
+              "count": 30,
+              "specialRequirements": [
+                "Jabari tribal formal wear"
+              ]
+            }
+          ]
+        },
+        "location": {
+          "type": "INT",
+          "primaryLocation": "JABARI THRONE ROOM",
+          "secondaryLocation": "Wakanda",
+          "timeOfDay": "DAY",
+          "weatherConditions": "Not specified",
+          "complexityLevel": "complex"
+        },
+        "productionElements": {
+          "props": [
+            {
+              "item": "Jabari Throne",
+              "category": "hero",
+              "department": "Art Department",
+              "specialRequirements": [
+                "Wooden carved throne with gorilla motifs"
+              ]
+            },
+            {
+              "item": "Traditional Jabari Weapons",
+              "category": "hero",
+              "department": "Props",
+              "specialRequirements": [
+                "Wooden spears and clubs"
+              ]
+            }
+          ],
+          "vehicles": [],
+          "animals": [],
+          "specialEffects": []
+        },
+        "departmentRequirements": {
+          "makeup": {
+            "standardMakeup": 53,
+            "specialEffectsMakeup": [
+              "Jabari tribal markings and paint"
+            ],
+            "prosthetics": [],
+            "estimatedApplicationTime": 240
+          },
+          "wardrobe": {
+            "standardCostumes": 53,
+            "periodCostumes": [],
+            "specialtyItems": [
+              "M'Baku's ceremonial leader attire",
+              "Jabari warrior traditional armor",
+              "Jabari court formal wear"
+            ],
+            "quickChanges": 0
+          },
+          "artDepartment": {
+            "setConstruction": [
+              "Jabari throne room interior"
+            ],
+            "setDecoration": [
+              "Wooden carved architecture",
+              "Gorilla and mountain motifs",
+              "Traditional Jabari cultural elements"
+            ],
+            "locationModifications": []
+          }
+        },
+        "complexityScores": {
+          "technicalDifficulty": 5,
+          "castComplexity": 7,
+          "locationChallenges": 6,
+          "overallComplexity": 6
+        },
+        "timeEstimates": {
+          "setupHours": 3,
+          "shootingHours": 5,
+          "wrapHours": 2,
+          "totalHours": 10
+        },
+        "specialConsiderations": [
+          "Complex Jabari cultural protocols",
+          "Large cast coordination",
+          "Traditional tribal tension dynamics"
+        ],
+        "continuityNotes": [
+          "Establishes M'Baku's relationship with T'Challa",
+          "Sets up Jabari isolation from other tribes"
+        ]
+      }
+    ]
+  }
+}

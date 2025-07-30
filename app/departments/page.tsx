@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Navigation } from "@/components/Navigation";
 import { ProjectSelector } from "@/components/ProjectSelector";
 import { useProject } from "@/lib/project-context";
-import avatarDepartmentData from "../departments/03-avatar-agent copy/output.json";
 import blackPantherDepartmentData from "../departments/03-blank-pantherdepartment-agent/output.json";
 import { 
   Users,
@@ -39,18 +38,14 @@ interface BuildItem {
 
 // Removed interface definitions - using any types for flexible data structures
 
-type AvatarDepartmentData = typeof avatarDepartmentData;
 type BlackPantherDepartmentData = typeof blackPantherDepartmentData;
 
 export default function DepartmentAnalysisPage() {
   const { selectedProject } = useProject();
   const [selectedDepartment, setSelectedDepartment] = useState("makeupHair");
 
-  // Get data based on selected project
-  const isAvatar = selectedProject === 'avatar';
-  const data = isAvatar ? 
-    avatarDepartmentData.departmentAnalysisOutput : 
-    blackPantherDepartmentData.departmentAnalysisOutput;
+  // Get data from Black Panther project
+  const data = blackPantherDepartmentData.departmentAnalysisOutput;
 
   // Map department IDs to display information
   const departmentMeta = {
@@ -98,7 +93,7 @@ export default function DepartmentAnalysisPage() {
               <div className="flex items-center space-x-2">
                 <Users className="h-8 w-8 text-brand-primary" />
                 <h1 className="text-2xl font-bold text-foreground">
-                  {isAvatar ? 'Avatar' : 'Black Panther'} - Department Analysis
+                  Black Panther - Department Analysis
                 </h1>
               </div>
               <Badge variant="outline" className="ml-4">

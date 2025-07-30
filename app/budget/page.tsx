@@ -8,17 +8,6 @@ import { Navigation } from "@/components/Navigation";
 import { ProjectSelector } from "@/components/ProjectSelector";
 import { useProject } from "@/lib/project-context";
 
-// Avatar imports
-import avatarCashflowData from "./avatar/cashflow.json";
-import avatarLabourData from "./avatar/labour-cost.json";
-import avatarBudgetAggregatorData from "./avatar/budget-agrigator.json";
-import avatarEquipmentData from "./avatar/equipment-prcing.json";
-import avatarInsuranceData from "./avatar/insurence-callator.json";
-import avatarLocationData from "./avatar/location-cost-optimizer.json";
-import avatarPostProductionData from "./avatar/postproduciton.json";
-import avatarScheduleOptimizerData from "./avatar/schedule-optimizer.json";
-import avatarTaxIncentiveData from "./avatar/text-incetive.json";
-
 // Black Panther imports
 import blackPantherCashflowData from "./blank-pather/cashflow.json";
 import blackPantherLabourData from "./blank-pather/labour-cost.json";
@@ -67,38 +56,7 @@ interface CrewDepartment {
   baseWages: number;
 }
 
-interface EquipmentItem {
-  item: string;
-  cost: string;
-  description: string;
-}
-
-interface InsuranceItem {
-  premium: number;
-  value: number;
-}
-
-interface LocationItem {
-  cost: string;
-  description: string;
-}
-
-interface PostProductionItem {
-  total: number;
-  [key: string]: number | string;
-}
-
-interface TaxIncentiveItem {
-  calculatedValue: number;
-  type: string;
-  notes: string;
-  rate?: number;
-}
-
-interface CashflowItem {
-  inflow: number;
-  description: string;
-}
+// Using flexible any types since data structures vary between projects
 
 type Section = 'cashflow' | 'labour' | 'aggregator' | 'equipment' | 'insurance' | 'locations' | 'postproduction' | 'tax';
 
@@ -106,35 +64,16 @@ export default function BudgetPage() {
   const [activeSection, setActiveSection] = useState<Section>('cashflow');
   const { selectedProject } = useProject();
 
-  // Dynamic data selection based on project
-  const isAvatar = selectedProject === 'avatar';
-  const cashflow = isAvatar ? 
-    avatarCashflowData.cashFlowModelOutput : 
-    blackPantherCashflowData.cashFlowModelOutput;
-  const labour = isAvatar ? 
-    avatarLabourData.laborModelOutput : 
-    blackPantherLabourData.laborModelOutput;
-  const aggregator = isAvatar ? 
-    avatarBudgetAggregatorData.aggregatorOutput : 
-    blackPantherBudgetAggregatorData.aggregatorOutput;
-  const equipment = isAvatar ? 
-    avatarEquipmentData.equipmentModelOutput : 
-    blackPantherEquipmentData.equipmentModelOutput;
-  const insurance = isAvatar ? 
-    avatarInsuranceData.insuranceModelOutput : 
-    blackPantherInsuranceData.insuranceModelOutput;
-  const locations = isAvatar ? 
-    avatarLocationData.locationModelOutput : 
-    blackPantherLocationData.locationModelOutput;
-  const postProduction = isAvatar ? 
-    avatarPostProductionData.postModelOutput : 
-    blackPantherPostProductionData.postModelOutput;
-  const scheduleOptimizer = isAvatar ? 
-    avatarScheduleOptimizerData.scheduleModelOutput : 
-    blackPantherScheduleOptimizerData.scheduleModelOutput;
-  const taxIncentives = isAvatar ? 
-    avatarTaxIncentiveData.taxModelOutput : 
-    blackPantherTaxIncentiveData.taxModelOutput;
+  // Use Black Panther data
+  const cashflow = blackPantherCashflowData.cashFlowModelOutput;
+  const labour = blackPantherLabourData.laborModelOutput;
+  const aggregator = blackPantherBudgetAggregatorData.aggregatorOutput;
+  const equipment = blackPantherEquipmentData.equipmentModelOutput;
+  const insurance = blackPantherInsuranceData.insuranceModelOutput;
+  const locations = blackPantherLocationData.locationModelOutput;
+  const postProduction = blackPantherPostProductionData.postModelOutput;
+  const scheduleOptimizer = blackPantherScheduleOptimizerData.scheduleModelOutput;
+  const taxIncentives = blackPantherTaxIncentiveData.taxModelOutput;
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -229,75 +168,40 @@ export default function BudgetPage() {
             {/* Studio Financing */}
             <div className="space-y-4">
               <h4 className="font-medium text-blue-600">Studio Financing</h4>
-              {isAvatar ? (
-                // Avatar uses drawdownBySourceAndQuarter array
-                (cashflow.fundingDrawdown as any).drawdownBySourceAndQuarter ?
-                  (cashflow.fundingDrawdown as any).drawdownBySourceAndQuarter
-                    .filter((item: any) => item.studioFinancing > 0)
-                    .map((item: any) => (
-                      <div key={item.period} className="flex justify-between items-center p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                        <span className="text-sm font-medium">{item.period.replace('-', ' ')}</span>
-                        <span className="text-sm font-bold text-blue-800">{formatCurrency(item.studioFinancing)}</span>
-                      </div>
-                    )) : <div className="text-sm text-muted-foreground">No studio financing data</div>
-              ) : (
-                // Black Panther uses direct object structure
-                (cashflow.fundingDrawdown as any).studioFinancing ? 
-                  Object.entries((cashflow.fundingDrawdown as any).studioFinancing).map(([period, amount]) => (
-                    <div key={period} className="flex justify-between items-center p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                      <span className="text-sm font-medium">{period.replace('_', ' ').replace('q', 'Q')}</span>
-                      <span className="text-sm font-bold text-blue-800">{formatCurrency(amount as number)}</span>
-                    </div>
-                  )) : <div className="text-sm text-muted-foreground">No studio financing data</div>
-              )}
+              {(cashflow.fundingDrawdown as any).studioFinancing ? 
+                Object.entries((cashflow.fundingDrawdown as any).studioFinancing).map(([period, amount]) => (
+                  <div key={period} className="flex justify-between items-center p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                    <span className="text-sm font-medium">{period.replace('_', ' ').replace('q', 'Q')}</span>
+                    <span className="text-sm font-bold text-blue-800">{formatCurrency(amount as number)}</span>
+                  </div>
+                )) : <div className="text-sm text-muted-foreground">No studio financing data</div>
+              }
             </div>
 
             {/* Bank Credit */}
             <div className="space-y-4">
               <h4 className="font-medium text-green-600">Bank Credit</h4>
-              {isAvatar ? (
-                (cashflow.fundingDrawdown as any).drawdownBySourceAndQuarter ?
-                  (cashflow.fundingDrawdown as any).drawdownBySourceAndQuarter
-                    .filter((item: any) => item.bankCredit > 0)
-                    .map((item: any) => (
-                      <div key={item.period} className="flex justify-between items-center p-3 bg-green-50 border border-green-200 rounded-lg">
-                        <span className="text-sm font-medium">{item.period.replace('-', ' ')}</span>
-                        <span className="text-sm font-bold text-green-800">{formatCurrency(item.bankCredit)}</span>
-                      </div>
-                    )) : <div className="text-sm text-muted-foreground">No bank credit data</div>
-              ) : (
-                (cashflow.fundingDrawdown as any).bankCredit ? 
-                  Object.entries((cashflow.fundingDrawdown as any).bankCredit).map(([period, amount]) => (
-                    <div key={period} className="flex justify-between items-center p-3 bg-green-50 border border-green-200 rounded-lg">
-                      <span className="text-sm font-medium">{period.replace('_', ' ').replace('q', 'Q')}</span>
-                      <span className="text-sm font-bold text-green-800">{formatCurrency(amount as number)}</span>
-                    </div>
-                  )) : <div className="text-sm text-muted-foreground">No bank credit data</div>
-              )}
+              {(cashflow.fundingDrawdown as any).bankCredit ? 
+                Object.entries((cashflow.fundingDrawdown as any).bankCredit).map(([period, amount]) => (
+                  <div key={period} className="flex justify-between items-center p-3 bg-green-50 border border-green-200 rounded-lg">
+                    <span className="text-sm font-medium">{period.replace('_', ' ').replace('q', 'Q')}</span>
+                    <span className="text-sm font-bold text-green-800">{formatCurrency(amount as number)}</span>
+                  </div>
+                )) : <div className="text-sm text-muted-foreground">No bank credit data</div>
+              }
             </div>
 
             {/* Equity */}
             <div className="space-y-4">
               <h4 className="font-medium text-purple-600">Equity</h4>
-              {isAvatar ? (
-                (cashflow.fundingDrawdown as any).drawdownBySourceAndQuarter ?
-                  (cashflow.fundingDrawdown as any).drawdownBySourceAndQuarter
-                    .filter((item: any) => item.equity > 0)
-                    .map((item: any) => (
-                      <div key={item.period} className="flex justify-between items-center p-3 bg-purple-50 border border-purple-200 rounded-lg">
-                        <span className="text-sm font-medium">{item.period.replace('-', ' ')}</span>
-                        <span className="text-sm font-bold text-purple-800">{formatCurrency(item.equity)}</span>
-                      </div>
-                    )) : <div className="text-sm text-muted-foreground">No equity data</div>
-              ) : (
-                (cashflow.fundingDrawdown as any).equity ? 
-                  Object.entries((cashflow.fundingDrawdown as any).equity).map(([period, amount]) => (
-                    <div key={period} className="flex justify-between items-center p-3 bg-purple-50 border border-purple-200 rounded-lg">
-                      <span className="text-sm font-medium">{period.replace('_', ' ').replace('q', 'Q')}</span>
-                      <span className="text-sm font-bold text-purple-800">{formatCurrency(amount as number)}</span>
-                    </div>
-                  )) : <div className="text-sm text-muted-foreground">No equity data</div>
-              )}
+              {(cashflow.fundingDrawdown as any).equity ? 
+                Object.entries((cashflow.fundingDrawdown as any).equity).map(([period, amount]) => (
+                  <div key={period} className="flex justify-between items-center p-3 bg-purple-50 border border-purple-200 rounded-lg">
+                    <span className="text-sm font-medium">{period.replace('_', ' ').replace('q', 'Q')}</span>
+                    <span className="text-sm font-bold text-purple-800">{formatCurrency(amount as number)}</span>
+                  </div>
+                )) : <div className="text-sm text-muted-foreground">No equity data</div>
+              }
             </div>
           </div>
         </CardContent>
@@ -407,16 +311,16 @@ export default function BudgetPage() {
               <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
                 <div className="flex justify-between items-center mb-2">
                   <h4 className="font-medium text-blue-800">Above-the-Line Cast</h4>
-                  <Badge variant="outline">{isAvatar ? Object.keys(labour.cast.aboveTheLine.principals).length + Object.keys(labour.cast.aboveTheLine.supporting).length : (labour.cast.aboveTheLine.principals as any).count + (labour.cast.aboveTheLine.supporting as any).count} people</Badge>
+                  <Badge variant="outline">{(labour.cast.aboveTheLine.principals as any).count + (labour.cast.aboveTheLine.supporting as any).count} people</Badge>
                 </div>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
-                    <span className="text-muted-foreground">Principals ({isAvatar ? Object.keys(labour.cast.aboveTheLine.principals).length : (labour.cast.aboveTheLine.principals as any).count}):</span>
-                    <span className="ml-1 font-medium">{formatCurrency(isAvatar ? Object.values(labour.cast.aboveTheLine.principals as any).reduce((sum: number, val: any) => sum + parseFloat(val), 0) : (labour.cast.aboveTheLine.principals as any).baseWages)}</span>
+                    <span className="text-muted-foreground">Principals ({(labour.cast.aboveTheLine.principals as any).count}):</span>
+                    <span className="ml-1 font-medium">{formatCurrency((labour.cast.aboveTheLine.principals as any).baseWages)}</span>
                   </div>
                   <div>
-                    <span className="text-muted-foreground">Supporting ({isAvatar ? Object.keys(labour.cast.aboveTheLine.supporting).length : (labour.cast.aboveTheLine.supporting as any).count}):</span>
-                    <span className="ml-1 font-medium">{formatCurrency(isAvatar ? Object.values(labour.cast.aboveTheLine.supporting as any).reduce((sum: number, val: any) => sum + parseFloat(val), 0) : (labour.cast.aboveTheLine.supporting as any).baseWages)}</span>
+                    <span className="text-muted-foreground">Supporting ({(labour.cast.aboveTheLine.supporting as any).count}):</span>
+                    <span className="ml-1 font-medium">{formatCurrency((labour.cast.aboveTheLine.supporting as any).baseWages)}</span>
                   </div>
                 </div>
               </div>
@@ -424,21 +328,21 @@ export default function BudgetPage() {
               <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
                 <div className="flex justify-between items-center mb-2">
                   <h4 className="font-medium text-green-800">Below-the-Line Cast</h4>
-                  <Badge variant="outline">{isAvatar ? 'N/A' : ((labour.cast.belowTheLine.dayPlayers as any).count + (labour.cast.belowTheLine.stunts as any).performers)} people</Badge>
+                  <Badge variant="outline">{((labour.cast.belowTheLine.dayPlayers as any).count + (labour.cast.belowTheLine.stunts as any).performers)} people</Badge>
                 </div>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
                     <span className="text-muted-foreground">Day Players:</span>
-                    <span className="ml-1 font-medium">{formatCurrency(parseFloat(isAvatar ? (labour.cast.belowTheLine.dayPlayers as any).totalCost : (labour.cast.belowTheLine.dayPlayers as any).estimatedTotalCost))}</span>
+                    <span className="ml-1 font-medium">{formatCurrency(parseFloat((labour.cast.belowTheLine.dayPlayers as any).estimatedTotalCost))}</span>
                   </div>
                   <div>
                     <span className="text-muted-foreground">Stunts:</span>
-                    <span className="ml-1 font-medium">{formatCurrency(parseFloat(isAvatar ? (labour.cast.belowTheLine.stunts as any).totalCost : (labour.cast.belowTheLine.stunts as any).estimatedTotalCost))}</span>
+                    <span className="ml-1 font-medium">{formatCurrency(parseFloat((labour.cast.belowTheLine.stunts as any).estimatedTotalCost))}</span>
                   </div>
                 </div>
                 <div className="mt-2 text-sm">
-                  <span className="text-muted-foreground">Extras ({isAvatar ? 'N/A' : (labour.cast.belowTheLine.extras as any).manDays} man-days):</span>
-                  <span className="ml-1 font-medium">{formatCurrency(parseFloat(isAvatar ? (labour.cast.belowTheLine.extras as any).totalCost : (labour.cast.belowTheLine.extras as any).estimatedTotalCost))}</span>
+                  <span className="text-muted-foreground">Extras ({(labour.cast.belowTheLine.extras as any).manDays} man-days):</span>
+                  <span className="ml-1 font-medium">{formatCurrency(parseFloat((labour.cast.belowTheLine.extras as any).estimatedTotalCost))}</span>
                 </div>
               </div>
             </div>
@@ -463,7 +367,7 @@ export default function BudgetPage() {
               {Object.entries(labour.crew.departments).map(([dept, data]) => (
                 <div key={dept} className="flex justify-between items-center p-3 bg-muted/30 rounded-lg">
                   <span className="font-medium capitalize">{dept.replace(/([A-Z])/g, ' $1').trim()}</span>
-                  <span className="font-bold">{formatCurrency(parseFloat(isAvatar ? (data as any) : (data as any).departmentTotal))}</span>
+                  <span className="font-bold">{formatCurrency(parseFloat((data as any).departmentTotal))}</span>
                 </div>
               ))}
             </div>
@@ -679,10 +583,10 @@ export default function BudgetPage() {
             {Object.entries(equipment.camera).filter(([key]) => key !== 'cameraSubtotal').map(([key, data]) => (
               <div key={key} className="p-4 border rounded-lg">
                 <div className="flex justify-between items-start mb-2">
-                  <h4 className="font-medium">{(data as EquipmentItem).item}</h4>
-                  <span className="text-lg font-bold text-blue-600">{formatCurrency(parseFloat(String((data as EquipmentItem).cost)))}</span>
+                  <h4 className="font-medium">{(data as any).item || (data as any).lineItem || key}</h4>
+                  <span className="text-lg font-bold text-blue-600">{formatCurrency(parseFloat(String((data as any).cost)))}</span>
                 </div>
-                <p className="text-sm text-muted-foreground">{(data as EquipmentItem).description}</p>
+                <p className="text-sm text-muted-foreground">{(data as any).description}</p>
               </div>
             ))}
           </CardContent>
@@ -700,10 +604,10 @@ export default function BudgetPage() {
             {Object.entries(equipment.specialEffects).filter(([key]) => key !== 'specialEffectsSubtotal').map(([key, data]) => (
               <div key={key} className="p-4 border rounded-lg">
                 <div className="flex justify-between items-start mb-2">
-                  <h4 className="font-medium">{(data as EquipmentItem).item}</h4>
-                  <span className="text-lg font-bold text-orange-600">{formatCurrency(parseFloat(String((data as EquipmentItem).cost)))}</span>
+                  <h4 className="font-medium">{(data as any).item || (data as any).lineItem || key}</h4>
+                  <span className="text-lg font-bold text-orange-600">{formatCurrency(parseFloat(String((data as any).cost)))}</span>
                 </div>
-                <p className="text-sm text-muted-foreground">{(data as EquipmentItem).description}</p>
+                <p className="text-sm text-muted-foreground">{(data as any).description}</p>
               </div>
             ))}
           </CardContent>
@@ -811,8 +715,8 @@ export default function BudgetPage() {
                   <div key={name} className="flex justify-between items-center p-3 bg-green-50 border border-green-200 rounded-lg">
                     <span className="text-sm font-medium">{name.replace(/_/g, ' ')}</span>
                     <div className="text-right">
-                      <div className="text-sm font-bold text-green-800">{formatCurrency((data as InsuranceItem).premium)}</div>
-                      <div className="text-xs text-muted-foreground">{formatCurrency((data as InsuranceItem).value)} coverage</div>
+                      <div className="text-sm font-bold text-green-800">{formatCurrency((data as any).premium || 0)}</div>
+                      <div className="text-xs text-muted-foreground">{formatCurrency((data as any).value || 0)} coverage</div>
                     </div>
                   </div>
                 ))}
@@ -1055,13 +959,13 @@ export default function BudgetPage() {
               <div key={key} className="p-4 border rounded-lg">
                 <div className="flex justify-between items-start mb-3">
                   <h4 className="font-medium capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</h4>
-                  <span className="text-lg font-bold text-purple-600">{formatCurrency((data as PostProductionItem).total)}</span>
+                  <span className="text-lg font-bold text-purple-600">{formatCurrency((data as any).total || (data as any).cost || 0)}</span>
                 </div>
                 <div className="space-y-2">
-                  {Object.entries(data as PostProductionItem).filter(([subKey]) => subKey !== 'total').map(([subKey, subValue]) => (
+                  {Object.entries(data as any).filter(([subKey]) => subKey !== 'total' && subKey !== 'cost').map(([subKey, subValue]) => (
                     <div key={subKey} className="flex justify-between items-center text-sm">
                       <span className="text-muted-foreground capitalize">{subKey.replace(/([A-Z])/g, ' $1').trim()}:</span>
-                      <span className="font-medium">{formatCurrency(subValue as number)}</span>
+                      <span className="font-medium">{typeof subValue === 'number' ? formatCurrency(subValue) : String(subValue)}</span>
                     </div>
                   ))}
                 </div>
@@ -1187,10 +1091,10 @@ export default function BudgetPage() {
               <div key={key} className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
                 <div className="flex justify-between items-start mb-2">
                   <h4 className="font-medium text-blue-800 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</h4>
-                  <span className="text-lg font-bold text-blue-800">{formatCurrency((data as TaxIncentiveItem).calculatedValue)}</span>
+                  <span className="text-lg font-bold text-blue-800">{formatCurrency((data as any).calculatedValue || (data as any).finalValue || 0)}</span>
                 </div>
-                <div className="text-xs text-blue-600 mb-1">{(data as TaxIncentiveItem).type}</div>
-                <p className="text-xs text-blue-700">{(data as TaxIncentiveItem).notes}</p>
+                <div className="text-xs text-blue-600 mb-1">{(data as any).type || 'Tax Incentive'}</div>
+                <p className="text-xs text-blue-700">{(data as any).notes || (data as any).description || 'Tax incentive benefit'}</p>
               </div>
             ))}
           </CardContent>
@@ -1209,11 +1113,11 @@ export default function BudgetPage() {
               <div key={key} className="p-4 bg-purple-50 border border-purple-200 rounded-lg">
                 <div className="flex justify-between items-start mb-2">
                   <h4 className="font-medium text-purple-800 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</h4>
-                  <span className="text-lg font-bold text-purple-800">{formatCurrency((data as TaxIncentiveItem).calculatedValue)}</span>
+                  <span className="text-lg font-bold text-purple-800">{formatCurrency((data as any).calculatedValue || (data as any).finalValue || 0)}</span>
                 </div>
-                <div className="text-xs text-purple-600 mb-1">{(data as TaxIncentiveItem).type}</div>
-                <div className="text-xs text-purple-700 mb-1">Rate: {((data as TaxIncentiveItem).rate! * 100).toFixed(0)}%</div>
-                <p className="text-xs text-purple-700">{(data as TaxIncentiveItem).notes}</p>
+                <div className="text-xs text-purple-600 mb-1">{(data as any).type || 'Tax Credit'}</div>
+                <div className="text-xs text-purple-700 mb-1">Rate: {(((data as any).rate || 0) * 100).toFixed(0)}%</div>
+                <p className="text-xs text-purple-700">{(data as any).notes || (data as any).description || 'California tax credit benefit'}</p>
               </div>
             ))}
           </CardContent>
@@ -1232,10 +1136,10 @@ export default function BudgetPage() {
               <div key={key} className="p-4 bg-orange-50 border border-orange-200 rounded-lg">
                 <div className="flex justify-between items-start mb-2">
                   <h4 className="font-medium text-orange-800 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</h4>
-                  <span className="text-lg font-bold text-orange-800">{formatCurrency((data as TaxIncentiveItem).calculatedValue)}</span>
+                  <span className="text-lg font-bold text-orange-800">{formatCurrency((data as any).calculatedValue || (data as any).totalValue || 0)}</span>
                 </div>
-                <div className="text-xs text-orange-600 mb-1">{(data as TaxIncentiveItem).type}</div>
-                <p className="text-xs text-orange-700">{(data as TaxIncentiveItem).notes}</p>
+                <div className="text-xs text-orange-600 mb-1">{(data as any).type || 'Location Incentive'}</div>
+                <p className="text-xs text-orange-700">{(data as any).notes || (data as any).description || 'Location-based incentive benefit'}</p>
               </div>
             ))}
           </CardContent>
@@ -1256,9 +1160,9 @@ export default function BudgetPage() {
               <div key={year} className="p-4 border rounded-lg">
                 <div className="flex justify-between items-start mb-2">
                   <h4 className="font-medium">{year.replace('_', ' ')}</h4>
-                  <span className="text-lg font-bold text-green-600">{formatCurrency((data as CashflowItem).inflow)}</span>
+                  <span className="text-lg font-bold text-green-600">{formatCurrency((data as any).inflow || (data as any).inflows || 0)}</span>
                 </div>
-                <p className="text-sm text-muted-foreground">{(data as CashflowItem).description}</p>
+                <p className="text-sm text-muted-foreground">{(data as any).description || (data as any).source || 'Cash flow timing'}</p>
               </div>
             ))}
           </div>
@@ -1277,7 +1181,7 @@ export default function BudgetPage() {
               <div className="flex items-center space-x-2">
                 <DollarSign className="h-8 w-8 text-brand-primary" />
                 <h1 className="text-2xl font-bold text-foreground">
-                  {isAvatar ? 'Avatar' : 'Black Panther'} - Budget Analysis
+                  Black Panther - Budget Analysis
                 </h1>
               </div>
               <Badge variant="outline" className="ml-4">
