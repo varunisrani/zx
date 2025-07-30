@@ -299,5 +299,12 @@
     "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
     "hook_event_name": "Stop",
     "stop_hook_active": false
+  },
+  {
+    "session_id": "dc3289e2-8f75-49fa-b710-f85d553b8c83",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/dc3289e2-8f75-49fa-b710-f85d553b8c83.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "Stop",
+    "stop_hook_active": false
   }
 ]

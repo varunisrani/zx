@@ -2007,5 +2007,725 @@
       ],
       "userModified": false
     }
+  },
+  {
+    "session_id": "dc3289e2-8f75-49fa-b710-f85d553b8c83",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/dc3289e2-8f75-49fa-b710-f85d553b8c83.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Restore the main page.tsx file",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Convert it from dashboard to script page",
+          "status": "pending",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Update navigation to reflect the change",
+          "status": "pending",
+          "priority": "high",
+          "id": "3"
+        }
+      ]
+    },
+    "tool_response": {
+      "oldTodos": [
+        {
+          "content": "Locate all dashboard-related files",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Remove dashboard page files",
+          "status": "pending",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Update navigation to remove dashboard links",
+          "status": "pending",
+          "priority": "high",
+          "id": "3"
+        },
+        {
+          "content": "Update any routing or references",
+          "status": "pending",
+          "priority": "high",
+          "id": "4"
+        }
+      ],
+      "newTodos": [
+        {
+          "content": "Restore the main page.tsx file",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Convert it from dashboard to script page",
+          "status": "pending",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Update navigation to reflect the change",
+          "status": "pending",
+          "priority": "high",
+          "id": "3"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "dc3289e2-8f75-49fa-b710-f85d553b8c83",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/dc3289e2-8f75-49fa-b710-f85d553b8c83.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Write",
+    "tool_input": {
+      "file_path": "/Users/varunisrani/Desktop/sdq/show-case-updated/app/page.tsx",
+      "content": "\"use client\"\n\nimport { Card, CardContent, CardDescription, CardHeader, CardTitle } from \"@/components/ui/card\";\nimport { Badge } from \"@/components/ui/badge\";\nimport { Button } from \"@/components/ui/button\";\nimport { Navigation } from \"@/components/Navigation\";\nimport { ProjectSelector } from \"@/components/ProjectSelector\";\nimport { useProject } from \"@/lib/project-context\";\nimport { \n  Film, \n  Clock, \n  FileText, \n  Users,\n  MapPin,\n  Camera,\n  Mic,\n  Palette,\n  Download,\n  Eye,\n  BookOpen\n} from \"lucide-react\";\n\nexport default function ScriptPage() {\n  const { selectedProject } = useProject();\n\n  // Sample script content\n  const scriptContent = `FADE IN:\n\nEXT. WAKANDA - DAWN OF TIME - DAY\n\nOVER BLACK. The distant thunder of drums. Growing stronger, closer. The black gives way to BEAUTIFUL SWIRLING NEBULAE...\n\nA meteor, glowing with otherworldly energy, hurtles through space toward a lush, green continent. Africa.\n\n                    NARRATOR (V.O.)\n          Millions of years ago, a meteorite \n          made of vibranium, the strongest \n          substance in the universe, struck \n          the continent of Africa, affecting \n          the plant life around it.\n\nThe meteor CRASHES into the earth with tremendous force. The impact sends shockwaves rippling outward...\n\nOver time, five tribes settled on it and called it Wakanda. The tribes lived in constant war with each other until a warrior shaman received a vision from the panther goddess Bast.\n\nINT. ANCIENT WAKANDAN CAVE - DAY\n\nA WARRIOR SHAMAN kneels before a glowing, blue plant - a heart-shaped herb enhanced by vibranium. Mystical energy swirls around him.\n\n                    NARRATOR (V.O.)\n          She led him to the heart-shaped \n          herb, which granted him superhuman \n          strength, speed and instincts.\n\nThe shaman's eyes glow with power. He transforms, becoming the first BLACK PANTHER.\n\n                    NARRATOR (V.O.)\n          He became the first Black Panther, \n          and united the tribes. But one tribe, \n          the Jabari, challenged his rule and \n          chose to live in isolation in the \n          mountains.\n\nEXT. WAKANDA - VARIOUS LOCATIONS - DAY\n\nMONTAGE showing the five tribes working together, building an advanced civilization hidden from the world.\n\n                    NARRATOR (V.O.)\n          The Wakandans used vibranium to \n          develop advanced technology and \n          isolate themselves from the world \n          by posing as a third world country.\n\nCUT TO:\n\nINT. SMALL APARTMENT - OAKLAND - NIGHT (1992)\n\nTwo young boys, YOUNG N'JOBU'S SON (8) and his FRIEND (12), play with action figures on a worn carpet.\n\n                    YOUNG N'JOBU'S SON\n          Wassup, Uncle?\n\nN'JOBU (30s), enters. Despite his youth, he carries himself with the bearing of Wakandan royalty, though he's dressed like any other Oakland resident.\n\n                    N'JOBU\n          Hey. Where's your dad?\n\n                    YOUNG N'JOBU'S SON\n          He's not back yet.`;\n\n  return (\n    <div className=\"min-h-screen bg-background\">\n      {/* Header */}\n      <header className=\"border-b border-border bg-card/50 backdrop-blur\">\n        <div className=\"container mx-auto px-6 py-4\">\n          <div className=\"flex items-center justify-between\">\n            <div className=\"flex items-center space-x-4\">\n              <div className=\"flex items-center space-x-2\">\n                <BookOpen className=\"h-8 w-8 text-brand-primary\" />\n                <h1 className=\"text-2xl font-bold text-foreground\">\n                  Black Panther - Script\n                </h1>\n              </div>\n              <div className=\"flex items-center space-x-2 ml-4\">\n                <Badge variant=\"outline\">\n                  Final Draft\n                </Badge>\n                <Badge variant=\"secondary\">\n                  v2.1\n                </Badge>\n              </div>\n            </div>\n            <div className=\"flex items-center space-x-3\">\n              <Button variant=\"outline\" size=\"sm\">\n                <Eye className=\"h-4 w-4 mr-2\" />\n                Preview\n              </Button>\n              <Button variant=\"outline\" size=\"sm\">\n                <Download className=\"h-4 w-4 mr-2\" />\n                Export PDF\n              </Button>\n              <Button size=\"sm\">\n                <FileText className=\"h-4 w-4 mr-2\" />\n                Analyze Script\n              </Button>\n            </div>\n          </div>\n        </div>\n      </header>\n\n      {/* Navigation */}\n      <div className=\"border-b border-border/50\">\n        <div className=\"container mx-auto px-6 py-4\">\n          <div className=\"flex items-center justify-between\">\n            <Navigation />\n            <ProjectSelector />\n          </div>\n        </div>\n      </div>\n\n      <div className=\"container mx-auto px-6 py-8\">\n        {/* Script Stats */}\n        <div className=\"grid grid-cols-1 md:grid-cols-4 gap-6 mb-8\">\n          <Card>\n            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">\n              <CardTitle className=\"text-sm font-medium text-muted-foreground\">\n                Total Pages\n              </CardTitle>\n              <FileText className=\"h-4 w-4 text-blue-600\" />\n            </CardHeader>\n            <CardContent>\n              <div className=\"text-2xl font-bold text-foreground\">134</div>\n              <p className=\"text-xs text-muted-foreground\">Script pages</p>\n            </CardContent>\n          </Card>\n\n          <Card>\n            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">\n              <CardTitle className=\"text-sm font-medium text-muted-foreground\">\n                Runtime\n              </CardTitle>\n              <Clock className=\"h-4 w-4 text-green-600\" />\n            </CardHeader>\n            <CardContent>\n              <div className=\"text-2xl font-bold text-foreground\">2h 14m</div>\n              <p className=\"text-xs text-muted-foreground\">Estimated</p>\n            </CardContent>\n          </Card>\n\n          <Card>\n            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">\n              <CardTitle className=\"text-sm font-medium text-muted-foreground\">\n                Scenes\n              </CardTitle>\n              <Camera className=\"h-4 w-4 text-purple-600\" />\n            </CardHeader>\n            <CardContent>\n              <div className=\"text-2xl font-bold text-foreground\">196</div>\n              <p className=\"text-xs text-muted-foreground\">Total scenes</p>\n            </CardContent>\n          </Card>\n\n          <Card>\n            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">\n              <CardTitle className=\"text-sm font-medium text-muted-foreground\">\n                Characters\n              </CardTitle>\n              <Users className=\"h-4 w-4 text-red-600\" />\n            </CardHeader>\n            <CardContent>\n              <div className=\"text-2xl font-bold text-foreground\">28</div>\n              <p className=\"text-xs text-muted-foreground\">Speaking roles</p>\n            </CardContent>\n          </Card>\n        </div>\n\n        <div className=\"grid grid-cols-1 lg:grid-cols-3 gap-8\">\n          {/* Script Content */}\n          <div className=\"lg:col-span-2\">\n            <Card>\n              <CardHeader>\n                <CardTitle>Script Content</CardTitle>\n                <CardDescription>Black Panther - Opening Sequence</CardDescription>\n              </CardHeader>\n              <CardContent>\n                <div className=\"bg-muted/30 rounded-lg p-6 font-mono text-sm leading-relaxed max-h-[600px] overflow-y-auto\">\n                  <pre className=\"whitespace-pre-wrap text-foreground\">\n                    {scriptContent}\n                  </pre>\n                </div>\n              </CardContent>\n            </Card>\n          </div>\n\n          {/* Script Analysis */}\n          <div className=\"lg:col-span-1\">\n            <div className=\"space-y-6\">\n              {/* Quick Actions */}\n              <Card>\n                <CardHeader>\n                  <CardTitle>Quick Actions</CardTitle>\n                </CardHeader>\n                <CardContent className=\"space-y-3\">\n                  <Button variant=\"outline\" className=\"w-full justify-start\">\n                    <Film className=\"h-4 w-4 mr-2\" />\n                    Scene Breakdown\n                  </Button>\n                  <Button variant=\"outline\" className=\"w-full justify-start\">\n                    <Users className=\"h-4 w-4 mr-2\" />\n                    Cast Analysis\n                  </Button>\n                  <Button variant=\"outline\" className=\"w-full justify-start\">\n                    <MapPin className=\"h-4 w-4 mr-2\" />\n                    Location Scout\n                  </Button>\n                  <Button variant=\"outline\" className=\"w-full justify-start\">\n                    <Palette className=\"h-4 w-4 mr-2\" />\n                    Production Design\n                  </Button>\n                </CardContent>\n              </Card>\n\n              {/* Script Metadata */}\n              <Card>\n                <CardHeader>\n                  <CardTitle>Script Information</CardTitle>\n                </CardHeader>\n                <CardContent className=\"space-y-3\">\n                  <div>\n                    <label className=\"text-sm font-medium text-muted-foreground\">Title</label>\n                    <p className=\"font-medium\">Black Panther</p>\n                  </div>\n                  <div>\n                    <label className=\"text-sm font-medium text-muted-foreground\">Writer</label>\n                    <p className=\"font-medium\">Ryan J. Coogler & Joe Robert Cole</p>\n                  </div>\n                  <div>\n                    <label className=\"text-sm font-medium text-muted-foreground\">Genre</label>\n                    <p className=\"font-medium\">Action, Adventure, Sci-Fi</p>\n                  </div>\n                  <div>\n                    <label className=\"text-sm font-medium text-muted-foreground\">Draft Date</label>\n                    <p className=\"font-medium\">January 15, 2017</p>\n                  </div>\n                </CardContent>\n              </Card>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  );\n}"
+    },
+    "tool_response": {
+      "type": "create",
+      "filePath": "/Users/varunisrani/Desktop/sdq/show-case-updated/app/page.tsx",
+      "content": "\"use client\"\n\nimport { Card, CardContent, CardDescription, CardHeader, CardTitle } from \"@/components/ui/card\";\nimport { Badge } from \"@/components/ui/badge\";\nimport { Button } from \"@/components/ui/button\";\nimport { Navigation } from \"@/components/Navigation\";\nimport { ProjectSelector } from \"@/components/ProjectSelector\";\nimport { useProject } from \"@/lib/project-context\";\nimport { \n  Film, \n  Clock, \n  FileText, \n  Users,\n  MapPin,\n  Camera,\n  Mic,\n  Palette,\n  Download,\n  Eye,\n  BookOpen\n} from \"lucide-react\";\n\nexport default function ScriptPage() {\n  const { selectedProject } = useProject();\n\n  // Sample script content\n  const scriptContent = `FADE IN:\n\nEXT. WAKANDA - DAWN OF TIME - DAY\n\nOVER BLACK. The distant thunder of drums. Growing stronger, closer. The black gives way to BEAUTIFUL SWIRLING NEBULAE...\n\nA meteor, glowing with otherworldly energy, hurtles through space toward a lush, green continent. Africa.\n\n                    NARRATOR (V.O.)\n          Millions of years ago, a meteorite \n          made of vibranium, the strongest \n          substance in the universe, struck \n          the continent of Africa, affecting \n          the plant life around it.\n\nThe meteor CRASHES into the earth with tremendous force. The impact sends shockwaves rippling outward...\n\nOver time, five tribes settled on it and called it Wakanda. The tribes lived in constant war with each other until a warrior shaman received a vision from the panther goddess Bast.\n\nINT. ANCIENT WAKANDAN CAVE - DAY\n\nA WARRIOR SHAMAN kneels before a glowing, blue plant - a heart-shaped herb enhanced by vibranium. Mystical energy swirls around him.\n\n                    NARRATOR (V.O.)\n          She led him to the heart-shaped \n          herb, which granted him superhuman \n          strength, speed and instincts.\n\nThe shaman's eyes glow with power. He transforms, becoming the first BLACK PANTHER.\n\n                    NARRATOR (V.O.)\n          He became the first Black Panther, \n          and united the tribes. But one tribe, \n          the Jabari, challenged his rule and \n          chose to live in isolation in the \n          mountains.\n\nEXT. WAKANDA - VARIOUS LOCATIONS - DAY\n\nMONTAGE showing the five tribes working together, building an advanced civilization hidden from the world.\n\n                    NARRATOR (V.O.)\n          The Wakandans used vibranium to \n          develop advanced technology and \n          isolate themselves from the world \n          by posing as a third world country.\n\nCUT TO:\n\nINT. SMALL APARTMENT - OAKLAND - NIGHT (1992)\n\nTwo young boys, YOUNG N'JOBU'S SON (8) and his FRIEND (12), play with action figures on a worn carpet.\n\n                    YOUNG N'JOBU'S SON\n          Wassup, Uncle?\n\nN'JOBU (30s), enters. Despite his youth, he carries himself with the bearing of Wakandan royalty, though he's dressed like any other Oakland resident.\n\n                    N'JOBU\n          Hey. Where's your dad?\n\n                    YOUNG N'JOBU'S SON\n          He's not back yet.`;\n\n  return (\n    <div className=\"min-h-screen bg-background\">\n      {/* Header */}\n      <header className=\"border-b border-border bg-card/50 backdrop-blur\">\n        <div className=\"container mx-auto px-6 py-4\">\n          <div className=\"flex items-center justify-between\">\n            <div className=\"flex items-center space-x-4\">\n              <div className=\"flex items-center space-x-2\">\n                <BookOpen className=\"h-8 w-8 text-brand-primary\" />\n                <h1 className=\"text-2xl font-bold text-foreground\">\n                  Black Panther - Script\n                </h1>\n              </div>\n              <div className=\"flex items-center space-x-2 ml-4\">\n                <Badge variant=\"outline\">\n                  Final Draft\n                </Badge>\n                <Badge variant=\"secondary\">\n                  v2.1\n                </Badge>\n              </div>\n            </div>\n            <div className=\"flex items-center space-x-3\">\n              <Button variant=\"outline\" size=\"sm\">\n                <Eye className=\"h-4 w-4 mr-2\" />\n                Preview\n              </Button>\n              <Button variant=\"outline\" size=\"sm\">\n                <Download className=\"h-4 w-4 mr-2\" />\n                Export PDF\n              </Button>\n              <Button size=\"sm\">\n                <FileText className=\"h-4 w-4 mr-2\" />\n                Analyze Script\n              </Button>\n            </div>\n          </div>\n        </div>\n      </header>\n\n      {/* Navigation */}\n      <div className=\"border-b border-border/50\">\n        <div className=\"container mx-auto px-6 py-4\">\n          <div className=\"flex items-center justify-between\">\n            <Navigation />\n            <ProjectSelector />\n          </div>\n        </div>\n      </div>\n\n      <div className=\"container mx-auto px-6 py-8\">\n        {/* Script Stats */}\n        <div className=\"grid grid-cols-1 md:grid-cols-4 gap-6 mb-8\">\n          <Card>\n            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">\n              <CardTitle className=\"text-sm font-medium text-muted-foreground\">\n                Total Pages\n              </CardTitle>\n              <FileText className=\"h-4 w-4 text-blue-600\" />\n            </CardHeader>\n            <CardContent>\n              <div className=\"text-2xl font-bold text-foreground\">134</div>\n              <p className=\"text-xs text-muted-foreground\">Script pages</p>\n            </CardContent>\n          </Card>\n\n          <Card>\n            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">\n              <CardTitle className=\"text-sm font-medium text-muted-foreground\">\n                Runtime\n              </CardTitle>\n              <Clock className=\"h-4 w-4 text-green-600\" />\n            </CardHeader>\n            <CardContent>\n              <div className=\"text-2xl font-bold text-foreground\">2h 14m</div>\n              <p className=\"text-xs text-muted-foreground\">Estimated</p>\n            </CardContent>\n          </Card>\n\n          <Card>\n            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">\n              <CardTitle className=\"text-sm font-medium text-muted-foreground\">\n                Scenes\n              </CardTitle>\n              <Camera className=\"h-4 w-4 text-purple-600\" />\n            </CardHeader>\n            <CardContent>\n              <div className=\"text-2xl font-bold text-foreground\">196</div>\n              <p className=\"text-xs text-muted-foreground\">Total scenes</p>\n            </CardContent>\n          </Card>\n\n          <Card>\n            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">\n              <CardTitle className=\"text-sm font-medium text-muted-foreground\">\n                Characters\n              </CardTitle>\n              <Users className=\"h-4 w-4 text-red-600\" />\n            </CardHeader>\n            <CardContent>\n              <div className=\"text-2xl font-bold text-foreground\">28</div>\n              <p className=\"text-xs text-muted-foreground\">Speaking roles</p>\n            </CardContent>\n          </Card>\n        </div>\n\n        <div className=\"grid grid-cols-1 lg:grid-cols-3 gap-8\">\n          {/* Script Content */}\n          <div className=\"lg:col-span-2\">\n            <Card>\n              <CardHeader>\n                <CardTitle>Script Content</CardTitle>\n                <CardDescription>Black Panther - Opening Sequence</CardDescription>\n              </CardHeader>\n              <CardContent>\n                <div className=\"bg-muted/30 rounded-lg p-6 font-mono text-sm leading-relaxed max-h-[600px] overflow-y-auto\">\n                  <pre className=\"whitespace-pre-wrap text-foreground\">\n                    {scriptContent}\n                  </pre>\n                </div>\n              </CardContent>\n            </Card>\n          </div>\n\n          {/* Script Analysis */}\n          <div className=\"lg:col-span-1\">\n            <div className=\"space-y-6\">\n              {/* Quick Actions */}\n              <Card>\n                <CardHeader>\n                  <CardTitle>Quick Actions</CardTitle>\n                </CardHeader>\n                <CardContent className=\"space-y-3\">\n                  <Button variant=\"outline\" className=\"w-full justify-start\">\n                    <Film className=\"h-4 w-4 mr-2\" />\n                    Scene Breakdown\n                  </Button>\n                  <Button variant=\"outline\" className=\"w-full justify-start\">\n                    <Users className=\"h-4 w-4 mr-2\" />\n                    Cast Analysis\n                  </Button>\n                  <Button variant=\"outline\" className=\"w-full justify-start\">\n                    <MapPin className=\"h-4 w-4 mr-2\" />\n                    Location Scout\n                  </Button>\n                  <Button variant=\"outline\" className=\"w-full justify-start\">\n                    <Palette className=\"h-4 w-4 mr-2\" />\n                    Production Design\n                  </Button>\n                </CardContent>\n              </Card>\n\n              {/* Script Metadata */}\n              <Card>\n                <CardHeader>\n                  <CardTitle>Script Information</CardTitle>\n                </CardHeader>\n                <CardContent className=\"space-y-3\">\n                  <div>\n                    <label className=\"text-sm font-medium text-muted-foreground\">Title</label>\n                    <p className=\"font-medium\">Black Panther</p>\n                  </div>\n                  <div>\n                    <label className=\"text-sm font-medium text-muted-foreground\">Writer</label>\n                    <p className=\"font-medium\">Ryan J. Coogler & Joe Robert Cole</p>\n                  </div>\n                  <div>\n                    <label className=\"text-sm font-medium text-muted-foreground\">Genre</label>\n                    <p className=\"font-medium\">Action, Adventure, Sci-Fi</p>\n                  </div>\n                  <div>\n                    <label className=\"text-sm font-medium text-muted-foreground\">Draft Date</label>\n                    <p className=\"font-medium\">January 15, 2017</p>\n                  </div>\n                </CardContent>\n              </Card>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  );\n}",
+      "structuredPatch": []
+    }
+  },
+  {
+    "session_id": "dc3289e2-8f75-49fa-b710-f85d553b8c83",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/dc3289e2-8f75-49fa-b710-f85d553b8c83.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Restore the main page.tsx file",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Convert it from dashboard to script page",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Update navigation to reflect the change",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "3"
+        }
+      ]
+    },
+    "tool_response": {
+      "oldTodos": [
+        {
+          "content": "Restore the main page.tsx file",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Convert it from dashboard to script page",
+          "status": "pending",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Update navigation to reflect the change",
+          "status": "pending",
+          "priority": "high",
+          "id": "3"
+        }
+      ],
+      "newTodos": [
+        {
+          "content": "Restore the main page.tsx file",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Convert it from dashboard to script page",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Update navigation to reflect the change",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "3"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "dc3289e2-8f75-49fa-b710-f85d553b8c83",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/dc3289e2-8f75-49fa-b710-f85d553b8c83.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/varunisrani/Desktop/sdq/show-case-updated/components/Navigation.tsx"
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "/Users/varunisrani/Desktop/sdq/show-case-updated/components/Navigation.tsx",
+        "content": "\"use client\"\n\nimport Link from \"next/link\";\nimport { usePathname } from \"next/navigation\";\nimport { Film, Users, BarChart3, Calendar, Clock } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nconst navigation = [\n  { name: \"Scene Breakdown\", href: \"/scenes\", icon: Film },\n  { name: \"Departments\", href: \"/departments\", icon: Users },\n  { name: \"Eighths Agent\", href: \"/eightsagent\", icon: Clock },\n  { name: \"Budget Analysis\", href: \"/budget\", icon: BarChart3 },\n  { name: \"Schedule\", href: \"/schedule\", icon: Calendar },\n];\n\nexport function Navigation() {\n  const pathname = usePathname();\n\n  return (\n    <nav className=\"flex items-center space-x-1 bg-muted/30 rounded-lg p-1\">\n      {navigation.map((item) => {\n        const isActive = pathname === item.href;\n        return (\n          <Link\n            key={item.name}\n            href={item.href}\n            className={cn(\n              \"flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors\",\n              isActive\n                ? \"bg-background text-foreground shadow-sm\"\n                : \"text-muted-foreground hover:text-foreground hover:bg-muted/50\"\n            )}\n          >\n            <item.icon className=\"h-4 w-4\" />\n            <span>{item.name}</span>\n          </Link>\n        );\n      })}\n    </nav>\n  );\n}",
+        "numLines": 41,
+        "startLine": 1,
+        "totalLines": 41
+      }
+    }
+  },
+  {
+    "session_id": "dc3289e2-8f75-49fa-b710-f85d553b8c83",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/dc3289e2-8f75-49fa-b710-f85d553b8c83.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "MultiEdit",
+    "tool_input": {
+      "file_path": "/Users/varunisrani/Desktop/sdq/show-case-updated/components/Navigation.tsx",
+      "edits": [
+        {
+          "old_string": "import { Film, Users, BarChart3, Calendar, Clock } from \"lucide-react\";",
+          "new_string": "import { Film, Users, BarChart3, Calendar, Clock, BookOpen } from \"lucide-react\";"
+        },
+        {
+          "old_string": "const navigation = [\n  { name: \"Scene Breakdown\", href: \"/scenes\", icon: Film },\n  { name: \"Departments\", href: \"/departments\", icon: Users },\n  { name: \"Eighths Agent\", href: \"/eightsagent\", icon: Clock },\n  { name: \"Budget Analysis\", href: \"/budget\", icon: BarChart3 },\n  { name: \"Schedule\", href: \"/schedule\", icon: Calendar },\n];",
+          "new_string": "const navigation = [\n  { name: \"Script\", href: \"/\", icon: BookOpen },\n  { name: \"Scene Breakdown\", href: \"/scenes\", icon: Film },\n  { name: \"Departments\", href: \"/departments\", icon: Users },\n  { name: \"Eighths Agent\", href: \"/eightsagent\", icon: Clock },\n  { name: \"Budget Analysis\", href: \"/budget\", icon: BarChart3 },\n  { name: \"Schedule\", href: \"/schedule\", icon: Calendar },\n];"
+        }
+      ]
+    },
+    "tool_response": {
+      "filePath": "/Users/varunisrani/Desktop/sdq/show-case-updated/components/Navigation.tsx",
+      "edits": [
+        {
+          "old_string": "import { Film, Users, BarChart3, Calendar, Clock } from \"lucide-react\";",
+          "new_string": "import { Film, Users, BarChart3, Calendar, Clock, BookOpen } from \"lucide-react\";",
+          "replace_all": false
+        },
+        {
+          "old_string": "const navigation = [\n  { name: \"Scene Breakdown\", href: \"/scenes\", icon: Film },\n  { name: \"Departments\", href: \"/departments\", icon: Users },\n  { name: \"Eighths Agent\", href: \"/eightsagent\", icon: Clock },\n  { name: \"Budget Analysis\", href: \"/budget\", icon: BarChart3 },\n  { name: \"Schedule\", href: \"/schedule\", icon: Calendar },\n];",
+          "new_string": "const navigation = [\n  { name: \"Script\", href: \"/\", icon: BookOpen },\n  { name: \"Scene Breakdown\", href: \"/scenes\", icon: Film },\n  { name: \"Departments\", href: \"/departments\", icon: Users },\n  { name: \"Eighths Agent\", href: \"/eightsagent\", icon: Clock },\n  { name: \"Budget Analysis\", href: \"/budget\", icon: BarChart3 },\n  { name: \"Schedule\", href: \"/schedule\", icon: Calendar },\n];",
+          "replace_all": false
+        }
+      ],
+      "originalFileContents": "\"use client\"\n\nimport Link from \"next/link\";\nimport { usePathname } from \"next/navigation\";\nimport { Film, Users, BarChart3, Calendar, Clock } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nconst navigation = [\n  { name: \"Scene Breakdown\", href: \"/scenes\", icon: Film },\n  { name: \"Departments\", href: \"/departments\", icon: Users },\n  { name: \"Eighths Agent\", href: \"/eightsagent\", icon: Clock },\n  { name: \"Budget Analysis\", href: \"/budget\", icon: BarChart3 },\n  { name: \"Schedule\", href: \"/schedule\", icon: Calendar },\n];\n\nexport function Navigation() {\n  const pathname = usePathname();\n\n  return (\n    <nav className=\"flex items-center space-x-1 bg-muted/30 rounded-lg p-1\">\n      {navigation.map((item) => {\n        const isActive = pathname === item.href;\n        return (\n          <Link\n            key={item.name}\n            href={item.href}\n            className={cn(\n              \"flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors\",\n              isActive\n                ? \"bg-background text-foreground shadow-sm\"\n                : \"text-muted-foreground hover:text-foreground hover:bg-muted/50\"\n            )}\n          >\n            <item.icon className=\"h-4 w-4\" />\n            <span>{item.name}</span>\n          </Link>\n        );\n      })}\n    </nav>\n  );\n}",
+      "structuredPatch": [
+        {
+          "oldStart": 2,
+          "oldLines": 10,
+          "newStart": 2,
+          "newLines": 11,
+          "lines": [
+            " ",
+            " import Link from \"next/link\";",
+            " import { usePathname } from \"next/navigation\";",
+            "-import { Film, Users, BarChart3, Calendar, Clock } from \"lucide-react\";",
+            "+import { Film, Users, BarChart3, Calendar, Clock, BookOpen } from \"lucide-react\";",
+            " import { cn } from \"@/lib/utils\";",
+            " ",
+            " const navigation = [",
+            "+  { name: \"Script\", href: \"/\", icon: BookOpen },",
+            "   { name: \"Scene Breakdown\", href: \"/scenes\", icon: Film },",
+            "   { name: \"Departments\", href: \"/departments\", icon: Users },",
+            "   { name: \"Eighths Agent\", href: \"/eightsagent\", icon: Clock },"
+          ]
+        }
+      ],
+      "userModified": false
+    }
+  },
+  {
+    "session_id": "dc3289e2-8f75-49fa-b710-f85d553b8c83",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/dc3289e2-8f75-49fa-b710-f85d553b8c83.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Restore the main page.tsx file",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Convert it from dashboard to script page",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Update navigation to reflect the change",
+          "status": "completed",
+          "priority": "high",
+          "id": "3"
+        }
+      ]
+    },
+    "tool_response": {
+      "oldTodos": [
+        {
+          "content": "Restore the main page.tsx file",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Convert it from dashboard to script page",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Update navigation to reflect the change",
+          "status": "in_progress",
+          "priority": "high",
+          "id": "3"
+        }
+      ],
+      "newTodos": [
+        {
+          "content": "Restore the main page.tsx file",
+          "status": "completed",
+          "priority": "high",
+          "id": "1"
+        },
+        {
+          "content": "Convert it from dashboard to script page",
+          "status": "completed",
+          "priority": "high",
+          "id": "2"
+        },
+        {
+          "content": "Update navigation to reflect the change",
+          "status": "completed",
+          "priority": "high",
+          "id": "3"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "dc3289e2-8f75-49fa-b710-f85d553b8c83",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/dc3289e2-8f75-49fa-b710-f85d553b8c83.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/varunisrani/Desktop/sdq/show-case-updated/app/page.tsx",
+      "old_string": "\"use client\"\n\nimport { Card, CardContent, CardDescription, CardHeader, CardTitle } from \"@/components/ui/card\";\nimport { Badge } from \"@/components/ui/badge\";\nimport { Button } from \"@/components/ui/button\";\nimport { Navigation } from \"@/components/Navigation\";\nimport { ProjectSelector } from \"@/components/ProjectSelector\";\nimport { useProject } from \"@/lib/project-context\";\nimport { \n  Film, \n  Clock, \n  FileText, \n  Users,\n  MapPin,\n  Camera,\n  Mic,\n  Palette,\n  Download,\n  Eye,\n  BookOpen\n} from \"lucide-react\";\n\nexport default function ScriptPage() {",
+      "new_string": "\"use client\"\n\nimport { useEffect } from \"react\";\nimport { useRouter } from \"next/navigation\";\n\nexport default function HomePage() {\n  const router = useRouter();"
+    },
+    "tool_response": {
+      "filePath": "/Users/varunisrani/Desktop/sdq/show-case-updated/app/page.tsx",
+      "oldString": "\"use client\"\n\nimport { Card, CardContent, CardDescription, CardHeader, CardTitle } from \"@/components/ui/card\";\nimport { Badge } from \"@/components/ui/badge\";\nimport { Button } from \"@/components/ui/button\";\nimport { Navigation } from \"@/components/Navigation\";\nimport { ProjectSelector } from \"@/components/ProjectSelector\";\nimport { useProject } from \"@/lib/project-context\";\nimport { \n  Film, \n  Clock, \n  FileText, \n  Users,\n  MapPin,\n  Camera,\n  Mic,\n  Palette,\n  Download,\n  Eye,\n  BookOpen\n} from \"lucide-react\";\n\nexport default function ScriptPage() {",
+      "newString": "\"use client\"\n\nimport { useEffect } from \"react\";\nimport { useRouter } from \"next/navigation\";\n\nexport default function HomePage() {\n  const router = useRouter();",
+      "originalFile": "\"use client\"\n\nimport { Card, CardContent, CardDescription, CardHeader, CardTitle } from \"@/components/ui/card\";\nimport { Badge } from \"@/components/ui/badge\";\nimport { Button } from \"@/components/ui/button\";\nimport { Navigation } from \"@/components/Navigation\";\nimport { ProjectSelector } from \"@/components/ProjectSelector\";\nimport { useProject } from \"@/lib/project-context\";\nimport { \n  Film, \n  Clock, \n  FileText, \n  Users,\n  MapPin,\n  Camera,\n  Mic,\n  Palette,\n  Download,\n  Eye,\n  BookOpen\n} from \"lucide-react\";\n\nexport default function ScriptPage() {\n  const { selectedProject } = useProject();\n\n  // Sample script content\n  const scriptContent = `FADE IN:\n\nEXT. WAKANDA - DAWN OF TIME - DAY\n\nOVER BLACK. The distant thunder of drums. Growing stronger, closer. The black gives way to BEAUTIFUL SWIRLING NEBULAE...\n\nA meteor, glowing with otherworldly energy, hurtles through space toward a lush, green continent. Africa.\n\n                    NARRATOR (V.O.)\n          Millions of years ago, a meteorite \n          made of vibranium, the strongest \n          substance in the universe, struck \n          the continent of Africa, affecting \n          the plant life around it.\n\nThe meteor CRASHES into the earth with tremendous force. The impact sends shockwaves rippling outward...\n\nOver time, five tribes settled on it and called it Wakanda. The tribes lived in constant war with each other until a warrior shaman received a vision from the panther goddess Bast.\n\nINT. ANCIENT WAKANDAN CAVE - DAY\n\nA WARRIOR SHAMAN kneels before a glowing, blue plant - a heart-shaped herb enhanced by vibranium. Mystical energy swirls around him.\n\n                    NARRATOR (V.O.)\n          She led him to the heart-shaped \n          herb, which granted him superhuman \n          strength, speed and instincts.\n\nThe shaman's eyes glow with power. He transforms, becoming the first BLACK PANTHER.\n\n                    NARRATOR (V.O.)\n          He became the first Black Panther, \n          and united the tribes. But one tribe, \n          the Jabari, challenged his rule and \n          chose to live in isolation in the \n          mountains.\n\nEXT. WAKANDA - VARIOUS LOCATIONS - DAY\n\nMONTAGE showing the five tribes working together, building an advanced civilization hidden from the world.\n\n                    NARRATOR (V.O.)\n          The Wakandans used vibranium to \n          develop advanced technology and \n          isolate themselves from the world \n          by posing as a third world country.\n\nCUT TO:\n\nINT. SMALL APARTMENT - OAKLAND - NIGHT (1992)\n\nTwo young boys, YOUNG N'JOBU'S SON (8) and his FRIEND (12), play with action figures on a worn carpet.\n\n                    YOUNG N'JOBU'S SON\n          Wassup, Uncle?\n\nN'JOBU (30s), enters. Despite his youth, he carries himself with the bearing of Wakandan royalty, though he's dressed like any other Oakland resident.\n\n                    N'JOBU\n          Hey. Where's your dad?\n\n                    YOUNG N'JOBU'S SON\n          He's not back yet.`;\n\n  return (\n    <div className=\"min-h-screen bg-background\">\n      {/* Header */}\n      <header className=\"border-b border-border bg-card/50 backdrop-blur\">\n        <div className=\"container mx-auto px-6 py-4\">\n          <div className=\"flex items-center justify-between\">\n            <div className=\"flex items-center space-x-4\">\n              <div className=\"flex items-center space-x-2\">\n                <BookOpen className=\"h-8 w-8 text-brand-primary\" />\n                <h1 className=\"text-2xl font-bold text-foreground\">\n                  Black Panther - Script\n                </h1>\n              </div>\n              <div className=\"flex items-center space-x-2 ml-4\">\n                <Badge variant=\"outline\">\n                  Final Draft\n                </Badge>\n                <Badge variant=\"secondary\">\n                  v2.1\n                </Badge>\n              </div>\n            </div>\n            <div className=\"flex items-center space-x-3\">\n              <Button variant=\"outline\" size=\"sm\">\n                <Eye className=\"h-4 w-4 mr-2\" />\n                Preview\n              </Button>\n              <Button variant=\"outline\" size=\"sm\">\n                <Download className=\"h-4 w-4 mr-2\" />\n                Export PDF\n              </Button>\n              <Button size=\"sm\">\n                <FileText className=\"h-4 w-4 mr-2\" />\n                Analyze Script\n              </Button>\n            </div>\n          </div>\n        </div>\n      </header>\n\n      {/* Navigation */}\n      <div className=\"border-b border-border/50\">\n        <div className=\"container mx-auto px-6 py-4\">\n          <div className=\"flex items-center justify-between\">\n            <Navigation />\n            <ProjectSelector />\n          </div>\n        </div>\n      </div>\n\n      <div className=\"container mx-auto px-6 py-8\">\n        {/* Script Stats */}\n        <div className=\"grid grid-cols-1 md:grid-cols-4 gap-6 mb-8\">\n          <Card>\n            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">\n              <CardTitle className=\"text-sm font-medium text-muted-foreground\">\n                Total Pages\n              </CardTitle>\n              <FileText className=\"h-4 w-4 text-blue-600\" />\n            </CardHeader>\n            <CardContent>\n              <div className=\"text-2xl font-bold text-foreground\">134</div>\n              <p className=\"text-xs text-muted-foreground\">Script pages</p>\n            </CardContent>\n          </Card>\n\n          <Card>\n            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">\n              <CardTitle className=\"text-sm font-medium text-muted-foreground\">\n                Runtime\n              </CardTitle>\n              <Clock className=\"h-4 w-4 text-green-600\" />\n            </CardHeader>\n            <CardContent>\n              <div className=\"text-2xl font-bold text-foreground\">2h 14m</div>\n              <p className=\"text-xs text-muted-foreground\">Estimated</p>\n            </CardContent>\n          </Card>\n\n          <Card>\n            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">\n              <CardTitle className=\"text-sm font-medium text-muted-foreground\">\n                Scenes\n              </CardTitle>\n              <Camera className=\"h-4 w-4 text-purple-600\" />\n            </CardHeader>\n            <CardContent>\n              <div className=\"text-2xl font-bold text-foreground\">196</div>\n              <p className=\"text-xs text-muted-foreground\">Total scenes</p>\n            </CardContent>\n          </Card>\n\n          <Card>\n            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">\n              <CardTitle className=\"text-sm font-medium text-muted-foreground\">\n                Characters\n              </CardTitle>\n              <Users className=\"h-4 w-4 text-red-600\" />\n            </CardHeader>\n            <CardContent>\n              <div className=\"text-2xl font-bold text-foreground\">28</div>\n              <p className=\"text-xs text-muted-foreground\">Speaking roles</p>\n            </CardContent>\n          </Card>\n        </div>\n\n        <div className=\"grid grid-cols-1 lg:grid-cols-3 gap-8\">\n          {/* Script Content */}\n          <div className=\"lg:col-span-2\">\n            <Card>\n              <CardHeader>\n                <CardTitle>Script Content</CardTitle>\n                <CardDescription>Black Panther - Opening Sequence</CardDescription>\n              </CardHeader>\n              <CardContent>\n                <div className=\"bg-muted/30 rounded-lg p-6 font-mono text-sm leading-relaxed max-h-[600px] overflow-y-auto\">\n                  <pre className=\"whitespace-pre-wrap text-foreground\">\n                    {scriptContent}\n                  </pre>\n                </div>\n              </CardContent>\n            </Card>\n          </div>\n\n          {/* Script Analysis */}\n          <div className=\"lg:col-span-1\">\n            <div className=\"space-y-6\">\n              {/* Quick Actions */}\n              <Card>\n                <CardHeader>\n                  <CardTitle>Quick Actions</CardTitle>\n                </CardHeader>\n                <CardContent className=\"space-y-3\">\n                  <Button variant=\"outline\" className=\"w-full justify-start\">\n                    <Film className=\"h-4 w-4 mr-2\" />\n                    Scene Breakdown\n                  </Button>\n                  <Button variant=\"outline\" className=\"w-full justify-start\">\n                    <Users className=\"h-4 w-4 mr-2\" />\n                    Cast Analysis\n                  </Button>\n                  <Button variant=\"outline\" className=\"w-full justify-start\">\n                    <MapPin className=\"h-4 w-4 mr-2\" />\n                    Location Scout\n                  </Button>\n                  <Button variant=\"outline\" className=\"w-full justify-start\">\n                    <Palette className=\"h-4 w-4 mr-2\" />\n                    Production Design\n                  </Button>\n                </CardContent>\n              </Card>\n\n              {/* Script Metadata */}\n              <Card>\n                <CardHeader>\n                  <CardTitle>Script Information</CardTitle>\n                </CardHeader>\n                <CardContent className=\"space-y-3\">\n                  <div>\n                    <label className=\"text-sm font-medium text-muted-foreground\">Title</label>\n                    <p className=\"font-medium\">Black Panther</p>\n                  </div>\n                  <div>\n                    <label className=\"text-sm font-medium text-muted-foreground\">Writer</label>\n                    <p className=\"font-medium\">Ryan J. Coogler & Joe Robert Cole</p>\n                  </div>\n                  <div>\n                    <label className=\"text-sm font-medium text-muted-foreground\">Genre</label>\n                    <p className=\"font-medium\">Action, Adventure, Sci-Fi</p>\n                  </div>\n                  <div>\n                    <label className=\"text-sm font-medium text-muted-foreground\">Draft Date</label>\n                    <p className=\"font-medium\">January 15, 2017</p>\n                  </div>\n                </CardContent>\n              </Card>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  );\n}",
+      "structuredPatch": [
+        {
+          "oldStart": 1,
+          "oldLines": 26,
+          "newStart": 1,
+          "newLines": 10,
+          "lines": [
+            " \"use client\"",
+            " ",
+            "-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from \"@/components/ui/card\";",
+            "-import { Badge } from \"@/components/ui/badge\";",
+            "-import { Button } from \"@/components/ui/button\";",
+            "-import { Navigation } from \"@/components/Navigation\";",
+            "-import { ProjectSelector } from \"@/components/ProjectSelector\";",
+            "-import { useProject } from \"@/lib/project-context\";",
+            "-import { ",
+            "-  Film, ",
+            "-  Clock, ",
+            "-  FileText, ",
+            "-  Users,",
+            "-  MapPin,",
+            "-  Camera,",
+            "-  Mic,",
+            "-  Palette,",
+            "-  Download,",
+            "-  Eye,",
+            "-  BookOpen",
+            "-} from \"lucide-react\";",
+            "+import { useEffect } from \"react\";",
+            "+import { useRouter } from \"next/navigation\";",
+            " ",
+            "-export default function ScriptPage() {",
+            "+export default function HomePage() {",
+            "+  const router = useRouter();",
+            "   const { selectedProject } = useProject();",
+            " ",
+            "   // Sample script content"
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    }
+  },
+  {
+    "session_id": "dc3289e2-8f75-49fa-b710-f85d553b8c83",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/dc3289e2-8f75-49fa-b710-f85d553b8c83.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/varunisrani/Desktop/sdq/show-case-updated/app/page.tsx",
+      "old_string": "export default function HomePage() {\n  const router = useRouter();\n  const { selectedProject } = useProject();\n\n  // Sample script content\n  const scriptContent = `FADE IN:",
+      "new_string": "export default function HomePage() {\n  const router = useRouter();\n\n  useEffect(() => {\n    // Redirect to scene breakdown page\n    router.push(\"/scenes\");\n  }, [router]);\n\n  return null; // Component doesn't render anything since we redirect\n}"
+    },
+    "tool_response": {
+      "filePath": "/Users/varunisrani/Desktop/sdq/show-case-updated/app/page.tsx",
+      "oldString": "export default function HomePage() {\n  const router = useRouter();\n  const { selectedProject } = useProject();\n\n  // Sample script content\n  const scriptContent = `FADE IN:",
+      "newString": "export default function HomePage() {\n  const router = useRouter();\n\n  useEffect(() => {\n    // Redirect to scene breakdown page\n    router.push(\"/scenes\");\n  }, [router]);\n\n  return null; // Component doesn't render anything since we redirect\n}",
+      "originalFile": "\"use client\"\n\nimport { useEffect } from \"react\";\nimport { useRouter } from \"next/navigation\";\n\nexport default function HomePage() {\n  const router = useRouter();\n  const { selectedProject } = useProject();\n\n  // Sample script content\n  const scriptContent = `FADE IN:\n\nEXT. WAKANDA - DAWN OF TIME - DAY\n\nOVER BLACK. The distant thunder of drums. Growing stronger, closer. The black gives way to BEAUTIFUL SWIRLING NEBULAE...\n\nA meteor, glowing with otherworldly energy, hurtles through space toward a lush, green continent. Africa.\n\n                    NARRATOR (V.O.)\n          Millions of years ago, a meteorite \n          made of vibranium, the strongest \n          substance in the universe, struck \n          the continent of Africa, affecting \n          the plant life around it.\n\nThe meteor CRASHES into the earth with tremendous force. The impact sends shockwaves rippling outward...\n\nOver time, five tribes settled on it and called it Wakanda. The tribes lived in constant war with each other until a warrior shaman received a vision from the panther goddess Bast.\n\nINT. ANCIENT WAKANDAN CAVE - DAY\n\nA WARRIOR SHAMAN kneels before a glowing, blue plant - a heart-shaped herb enhanced by vibranium. Mystical energy swirls around him.\n\n                    NARRATOR (V.O.)\n          She led him to the heart-shaped \n          herb, which granted him superhuman \n          strength, speed and instincts.\n\nThe shaman's eyes glow with power. He transforms, becoming the first BLACK PANTHER.\n\n                    NARRATOR (V.O.)\n          He became the first Black Panther, \n          and united the tribes. But one tribe, \n          the Jabari, challenged his rule and \n          chose to live in isolation in the \n          mountains.\n\nEXT. WAKANDA - VARIOUS LOCATIONS - DAY\n\nMONTAGE showing the five tribes working together, building an advanced civilization hidden from the world.\n\n                    NARRATOR (V.O.)\n          The Wakandans used vibranium to \n          develop advanced technology and \n          isolate themselves from the world \n          by posing as a third world country.\n\nCUT TO:\n\nINT. SMALL APARTMENT - OAKLAND - NIGHT (1992)\n\nTwo young boys, YOUNG N'JOBU'S SON (8) and his FRIEND (12), play with action figures on a worn carpet.\n\n                    YOUNG N'JOBU'S SON\n          Wassup, Uncle?\n\nN'JOBU (30s), enters. Despite his youth, he carries himself with the bearing of Wakandan royalty, though he's dressed like any other Oakland resident.\n\n                    N'JOBU\n          Hey. Where's your dad?\n\n                    YOUNG N'JOBU'S SON\n          He's not back yet.`;\n\n  return (\n    <div className=\"min-h-screen bg-background\">\n      {/* Header */}\n      <header className=\"border-b border-border bg-card/50 backdrop-blur\">\n        <div className=\"container mx-auto px-6 py-4\">\n          <div className=\"flex items-center justify-between\">\n            <div className=\"flex items-center space-x-4\">\n              <div className=\"flex items-center space-x-2\">\n                <BookOpen className=\"h-8 w-8 text-brand-primary\" />\n                <h1 className=\"text-2xl font-bold text-foreground\">\n                  Black Panther - Script\n                </h1>\n              </div>\n              <div className=\"flex items-center space-x-2 ml-4\">\n                <Badge variant=\"outline\">\n                  Final Draft\n                </Badge>\n                <Badge variant=\"secondary\">\n                  v2.1\n                </Badge>\n              </div>\n            </div>\n            <div className=\"flex items-center space-x-3\">\n              <Button variant=\"outline\" size=\"sm\">\n                <Eye className=\"h-4 w-4 mr-2\" />\n                Preview\n              </Button>\n              <Button variant=\"outline\" size=\"sm\">\n                <Download className=\"h-4 w-4 mr-2\" />\n                Export PDF\n              </Button>\n              <Button size=\"sm\">\n                <FileText className=\"h-4 w-4 mr-2\" />\n                Analyze Script\n              </Button>\n            </div>\n          </div>\n        </div>\n      </header>\n\n      {/* Navigation */}\n      <div className=\"border-b border-border/50\">\n        <div className=\"container mx-auto px-6 py-4\">\n          <div className=\"flex items-center justify-between\">\n            <Navigation />\n            <ProjectSelector />\n          </div>\n        </div>\n      </div>\n\n      <div className=\"container mx-auto px-6 py-8\">\n        {/* Script Stats */}\n        <div className=\"grid grid-cols-1 md:grid-cols-4 gap-6 mb-8\">\n          <Card>\n            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">\n              <CardTitle className=\"text-sm font-medium text-muted-foreground\">\n                Total Pages\n              </CardTitle>\n              <FileText className=\"h-4 w-4 text-blue-600\" />\n            </CardHeader>\n            <CardContent>\n              <div className=\"text-2xl font-bold text-foreground\">134</div>\n              <p className=\"text-xs text-muted-foreground\">Script pages</p>\n            </CardContent>\n          </Card>\n\n          <Card>\n            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">\n              <CardTitle className=\"text-sm font-medium text-muted-foreground\">\n                Runtime\n              </CardTitle>\n              <Clock className=\"h-4 w-4 text-green-600\" />\n            </CardHeader>\n            <CardContent>\n              <div className=\"text-2xl font-bold text-foreground\">2h 14m</div>\n              <p className=\"text-xs text-muted-foreground\">Estimated</p>\n            </CardContent>\n          </Card>\n\n          <Card>\n            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">\n              <CardTitle className=\"text-sm font-medium text-muted-foreground\">\n                Scenes\n              </CardTitle>\n              <Camera className=\"h-4 w-4 text-purple-600\" />\n            </CardHeader>\n            <CardContent>\n              <div className=\"text-2xl font-bold text-foreground\">196</div>\n              <p className=\"text-xs text-muted-foreground\">Total scenes</p>\n            </CardContent>\n          </Card>\n\n          <Card>\n            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">\n              <CardTitle className=\"text-sm font-medium text-muted-foreground\">\n                Characters\n              </CardTitle>\n              <Users className=\"h-4 w-4 text-red-600\" />\n            </CardHeader>\n            <CardContent>\n              <div className=\"text-2xl font-bold text-foreground\">28</div>\n              <p className=\"text-xs text-muted-foreground\">Speaking roles</p>\n            </CardContent>\n          </Card>\n        </div>\n\n        <div className=\"grid grid-cols-1 lg:grid-cols-3 gap-8\">\n          {/* Script Content */}\n          <div className=\"lg:col-span-2\">\n            <Card>\n              <CardHeader>\n                <CardTitle>Script Content</CardTitle>\n                <CardDescription>Black Panther - Opening Sequence</CardDescription>\n              </CardHeader>\n              <CardContent>\n                <div className=\"bg-muted/30 rounded-lg p-6 font-mono text-sm leading-relaxed max-h-[600px] overflow-y-auto\">\n                  <pre className=\"whitespace-pre-wrap text-foreground\">\n                    {scriptContent}\n                  </pre>\n                </div>\n              </CardContent>\n            </Card>\n          </div>\n\n          {/* Script Analysis */}\n          <div className=\"lg:col-span-1\">\n            <div className=\"space-y-6\">\n              {/* Quick Actions */}\n              <Card>\n                <CardHeader>\n                  <CardTitle>Quick Actions</CardTitle>\n                </CardHeader>\n                <CardContent className=\"space-y-3\">\n                  <Button variant=\"outline\" className=\"w-full justify-start\">\n                    <Film className=\"h-4 w-4 mr-2\" />\n                    Scene Breakdown\n                  </Button>\n                  <Button variant=\"outline\" className=\"w-full justify-start\">\n                    <Users className=\"h-4 w-4 mr-2\" />\n                    Cast Analysis\n                  </Button>\n                  <Button variant=\"outline\" className=\"w-full justify-start\">\n                    <MapPin className=\"h-4 w-4 mr-2\" />\n                    Location Scout\n                  </Button>\n                  <Button variant=\"outline\" className=\"w-full justify-start\">\n                    <Palette className=\"h-4 w-4 mr-2\" />\n                    Production Design\n                  </Button>\n                </CardContent>\n              </Card>\n\n              {/* Script Metadata */}\n              <Card>\n                <CardHeader>\n                  <CardTitle>Script Information</CardTitle>\n                </CardHeader>\n                <CardContent className=\"space-y-3\">\n                  <div>\n                    <label className=\"text-sm font-medium text-muted-foreground\">Title</label>\n                    <p className=\"font-medium\">Black Panther</p>\n                  </div>\n                  <div>\n                    <label className=\"text-sm font-medium text-muted-foreground\">Writer</label>\n                    <p className=\"font-medium\">Ryan J. Coogler & Joe Robert Cole</p>\n                  </div>\n                  <div>\n                    <label className=\"text-sm font-medium text-muted-foreground\">Genre</label>\n                    <p className=\"font-medium\">Action, Adventure, Sci-Fi</p>\n                  </div>\n                  <div>\n                    <label className=\"text-sm font-medium text-muted-foreground\">Draft Date</label>\n                    <p className=\"font-medium\">January 15, 2017</p>\n                  </div>\n                </CardContent>\n              </Card>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  );\n}",
+      "structuredPatch": [
+        {
+          "oldStart": 5,
+          "oldLines": 11,
+          "newStart": 5,
+          "newLines": 15,
+          "lines": [
+            " ",
+            " export default function HomePage() {",
+            "   const router = useRouter();",
+            "-  const { selectedProject } = useProject();",
+            " ",
+            "-  // Sample script content",
+            "-  const scriptContent = `FADE IN:",
+            "+  useEffect(() => {",
+            "+    // Redirect to scene breakdown page",
+            "+    router.push(\"/scenes\");",
+            "+  }, [router]);",
+            " ",
+            "+  return null; // Component doesn't render anything since we redirect",
+            "+}",
+            "+",
+            " EXT. WAKANDA - DAWN OF TIME - DAY",
+            " ",
+            " OVER BLACK. The distant thunder of drums. Growing stronger, closer. The black gives way to BEAUTIFUL SWIRLING NEBULAE..."
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    }
+  },
+  {
+    "session_id": "dc3289e2-8f75-49fa-b710-f85d553b8c83",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/dc3289e2-8f75-49fa-b710-f85d553b8c83.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Write",
+    "tool_input": {
+      "file_path": "/Users/varunisrani/Desktop/sdq/show-case-updated/app/page.tsx",
+      "content": "\"use client\"\n\nimport { useEffect } from \"react\";\nimport { useRouter } from \"next/navigation\";\n\nexport default function HomePage() {\n  const router = useRouter();\n\n  useEffect(() => {\n    // Redirect to scene breakdown page\n    router.push(\"/scenes\");\n  }, [router]);\n\n  return null; // Component doesn't render anything since we redirect\n}"
+    },
+    "tool_response": {
+      "type": "update",
+      "filePath": "/Users/varunisrani/Desktop/sdq/show-case-updated/app/page.tsx",
+      "content": "\"use client\"\n\nimport { useEffect } from \"react\";\nimport { useRouter } from \"next/navigation\";\n\nexport default function HomePage() {\n  const router = useRouter();\n\n  useEffect(() => {\n    // Redirect to scene breakdown page\n    router.push(\"/scenes\");\n  }, [router]);\n\n  return null; // Component doesn't render anything since we redirect\n}",
+      "structuredPatch": [
+        {
+          "oldStart": 12,
+          "oldLines": 250,
+          "newStart": 12,
+          "newLines": 4,
+          "lines": [
+            "   }, [router]);",
+            " ",
+            "   return null; // Component doesn't render anything since we redirect",
+            "-}",
+            "-",
+            "-EXT. WAKANDA - DAWN OF TIME - DAY",
+            "-",
+            "-OVER BLACK. The distant thunder of drums. Growing stronger, closer. The black gives way to BEAUTIFUL SWIRLING NEBULAE...",
+            "-",
+            "-A meteor, glowing with otherworldly energy, hurtles through space toward a lush, green continent. Africa.",
+            "-",
+            "-                    NARRATOR (V.O.)",
+            "-          Millions of years ago, a meteorite ",
+            "-          made of vibranium, the strongest ",
+            "-          substance in the universe, struck ",
+            "-          the continent of Africa, affecting ",
+            "-          the plant life around it.",
+            "-",
+            "-The meteor CRASHES into the earth with tremendous force. The impact sends shockwaves rippling outward...",
+            "-",
+            "-Over time, five tribes settled on it and called it Wakanda. The tribes lived in constant war with each other until a warrior shaman received a vision from the panther goddess Bast.",
+            "-",
+            "-INT. ANCIENT WAKANDAN CAVE - DAY",
+            "-",
+            "-A WARRIOR SHAMAN kneels before a glowing, blue plant - a heart-shaped herb enhanced by vibranium. Mystical energy swirls around him.",
+            "-",
+            "-                    NARRATOR (V.O.)",
+            "-          She led him to the heart-shaped ",
+            "-          herb, which granted him superhuman ",
+            "-          strength, speed and instincts.",
+            "-",
+            "-The shaman's eyes glow with power. He transforms, becoming the first BLACK PANTHER.",
+            "-",
+            "-                    NARRATOR (V.O.)",
+            "-          He became the first Black Panther, ",
+            "-          and united the tribes. But one tribe, ",
+            "-          the Jabari, challenged his rule and ",
+            "-          chose to live in isolation in the ",
+            "-          mountains.",
+            "-",
+            "-EXT. WAKANDA - VARIOUS LOCATIONS - DAY",
+            "-",
+            "-MONTAGE showing the five tribes working together, building an advanced civilization hidden from the world.",
+            "-",
+            "-                    NARRATOR (V.O.)",
+            "-          The Wakandans used vibranium to ",
+            "-          develop advanced technology and ",
+            "-          isolate themselves from the world ",
+            "-          by posing as a third world country.",
+            "-",
+            "-CUT TO:",
+            "-",
+            "-INT. SMALL APARTMENT - OAKLAND - NIGHT (1992)",
+            "-",
+            "-Two young boys, YOUNG N'JOBU'S SON (8) and his FRIEND (12), play with action figures on a worn carpet.",
+            "-",
+            "-                    YOUNG N'JOBU'S SON",
+            "-          Wassup, Uncle?",
+            "-",
+            "-N'JOBU (30s), enters. Despite his youth, he carries himself with the bearing of Wakandan royalty, though he's dressed like any other Oakland resident.",
+            "-",
+            "-                    N'JOBU",
+            "-          Hey. Where's your dad?",
+            "-",
+            "-                    YOUNG N'JOBU'S SON",
+            "-          He's not back yet.`;",
+            "-",
+            "-  return (",
+            "-    <div className=\"min-h-screen bg-background\">",
+            "-      {/* Header */}",
+            "-      <header className=\"border-b border-border bg-card/50 backdrop-blur\">",
+            "-        <div className=\"container mx-auto px-6 py-4\">",
+            "-          <div className=\"flex items-center justify-between\">",
+            "-            <div className=\"flex items-center space-x-4\">",
+            "-              <div className=\"flex items-center space-x-2\">",
+            "-                <BookOpen className=\"h-8 w-8 text-brand-primary\" />",
+            "-                <h1 className=\"text-2xl font-bold text-foreground\">",
+            "-                  Black Panther - Script",
+            "-                </h1>",
+            "-              </div>",
+            "-              <div className=\"flex items-center space-x-2 ml-4\">",
+            "-                <Badge variant=\"outline\">",
+            "-                  Final Draft",
+            "-                </Badge>",
+            "-                <Badge variant=\"secondary\">",
+            "-                  v2.1",
+            "-                </Badge>",
+            "-              </div>",
+            "-            </div>",
+            "-            <div className=\"flex items-center space-x-3\">",
+            "-              <Button variant=\"outline\" size=\"sm\">",
+            "-                <Eye className=\"h-4 w-4 mr-2\" />",
+            "-                Preview",
+            "-              </Button>",
+            "-              <Button variant=\"outline\" size=\"sm\">",
+            "-                <Download className=\"h-4 w-4 mr-2\" />",
+            "-                Export PDF",
+            "-              </Button>",
+            "-              <Button size=\"sm\">",
+            "-                <FileText className=\"h-4 w-4 mr-2\" />",
+            "-                Analyze Script",
+            "-              </Button>",
+            "-            </div>",
+            "-          </div>",
+            "-        </div>",
+            "-      </header>",
+            "-",
+            "-      {/* Navigation */}",
+            "-      <div className=\"border-b border-border/50\">",
+            "-        <div className=\"container mx-auto px-6 py-4\">",
+            "-          <div className=\"flex items-center justify-between\">",
+            "-            <Navigation />",
+            "-            <ProjectSelector />",
+            "-          </div>",
+            "-        </div>",
+            "-      </div>",
+            "-",
+            "-      <div className=\"container mx-auto px-6 py-8\">",
+            "-        {/* Script Stats */}",
+            "-        <div className=\"grid grid-cols-1 md:grid-cols-4 gap-6 mb-8\">",
+            "-          <Card>",
+            "-            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">",
+            "-              <CardTitle className=\"text-sm font-medium text-muted-foreground\">",
+            "-                Total Pages",
+            "-              </CardTitle>",
+            "-              <FileText className=\"h-4 w-4 text-blue-600\" />",
+            "-            </CardHeader>",
+            "-            <CardContent>",
+            "-              <div className=\"text-2xl font-bold text-foreground\">134</div>",
+            "-              <p className=\"text-xs text-muted-foreground\">Script pages</p>",
+            "-            </CardContent>",
+            "-          </Card>",
+            "-",
+            "-          <Card>",
+            "-            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">",
+            "-              <CardTitle className=\"text-sm font-medium text-muted-foreground\">",
+            "-                Runtime",
+            "-              </CardTitle>",
+            "-              <Clock className=\"h-4 w-4 text-green-600\" />",
+            "-            </CardHeader>",
+            "-            <CardContent>",
+            "-              <div className=\"text-2xl font-bold text-foreground\">2h 14m</div>",
+            "-              <p className=\"text-xs text-muted-foreground\">Estimated</p>",
+            "-            </CardContent>",
+            "-          </Card>",
+            "-",
+            "-          <Card>",
+            "-            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">",
+            "-              <CardTitle className=\"text-sm font-medium text-muted-foreground\">",
+            "-                Scenes",
+            "-              </CardTitle>",
+            "-              <Camera className=\"h-4 w-4 text-purple-600\" />",
+            "-            </CardHeader>",
+            "-            <CardContent>",
+            "-              <div className=\"text-2xl font-bold text-foreground\">196</div>",
+            "-              <p className=\"text-xs text-muted-foreground\">Total scenes</p>",
+            "-            </CardContent>",
+            "-          </Card>",
+            "-",
+            "-          <Card>",
+            "-            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">",
+            "-              <CardTitle className=\"text-sm font-medium text-muted-foreground\">",
+            "-                Characters",
+            "-              </CardTitle>",
+            "-              <Users className=\"h-4 w-4 text-red-600\" />",
+            "-            </CardHeader>",
+            "-            <CardContent>",
+            "-              <div className=\"text-2xl font-bold text-foreground\">28</div>",
+            "-              <p className=\"text-xs text-muted-foreground\">Speaking roles</p>",
+            "-            </CardContent>",
+            "-          </Card>",
+            "-        </div>",
+            "-",
+            "-        <div className=\"grid grid-cols-1 lg:grid-cols-3 gap-8\">",
+            "-          {/* Script Content */}",
+            "-          <div className=\"lg:col-span-2\">",
+            "-            <Card>",
+            "-              <CardHeader>",
+            "-                <CardTitle>Script Content</CardTitle>",
+            "-                <CardDescription>Black Panther - Opening Sequence</CardDescription>",
+            "-              </CardHeader>",
+            "-              <CardContent>",
+            "-                <div className=\"bg-muted/30 rounded-lg p-6 font-mono text-sm leading-relaxed max-h-[600px] overflow-y-auto\">",
+            "-                  <pre className=\"whitespace-pre-wrap text-foreground\">",
+            "-                    {scriptContent}",
+            "-                  </pre>",
+            "-                </div>",
+            "-              </CardContent>",
+            "-            </Card>",
+            "-          </div>",
+            "-",
+            "-          {/* Script Analysis */}",
+            "-          <div className=\"lg:col-span-1\">",
+            "-            <div className=\"space-y-6\">",
+            "-              {/* Quick Actions */}",
+            "-              <Card>",
+            "-                <CardHeader>",
+            "-                  <CardTitle>Quick Actions</CardTitle>",
+            "-                </CardHeader>",
+            "-                <CardContent className=\"space-y-3\">",
+            "-                  <Button variant=\"outline\" className=\"w-full justify-start\">",
+            "-                    <Film className=\"h-4 w-4 mr-2\" />",
+            "-                    Scene Breakdown",
+            "-                  </Button>",
+            "-                  <Button variant=\"outline\" className=\"w-full justify-start\">",
+            "-                    <Users className=\"h-4 w-4 mr-2\" />",
+            "-                    Cast Analysis",
+            "-                  </Button>",
+            "-                  <Button variant=\"outline\" className=\"w-full justify-start\">",
+            "-                    <MapPin className=\"h-4 w-4 mr-2\" />",
+            "-                    Location Scout",
+            "-                  </Button>",
+            "-                  <Button variant=\"outline\" className=\"w-full justify-start\">",
+            "-                    <Palette className=\"h-4 w-4 mr-2\" />",
+            "-                    Production Design",
+            "-                  </Button>",
+            "-                </CardContent>",
+            "-              </Card>",
+            "-",
+            "-              {/* Script Metadata */}",
+            "-              <Card>",
+            "-                <CardHeader>",
+            "-                  <CardTitle>Script Information</CardTitle>",
+            "-                </CardHeader>",
+            "-                <CardContent className=\"space-y-3\">",
+            "-                  <div>",
+            "-                    <label className=\"text-sm font-medium text-muted-foreground\">Title</label>",
+            "-                    <p className=\"font-medium\">Black Panther</p>",
+            "-                  </div>",
+            "-                  <div>",
+            "-                    <label className=\"text-sm font-medium text-muted-foreground\">Writer</label>",
+            "-                    <p className=\"font-medium\">Ryan J. Coogler & Joe Robert Cole</p>",
+            "-                  </div>",
+            "-                  <div>",
+            "-                    <label className=\"text-sm font-medium text-muted-foreground\">Genre</label>",
+            "-                    <p className=\"font-medium\">Action, Adventure, Sci-Fi</p>",
+            "-                  </div>",
+            "-                  <div>",
+            "-                    <label className=\"text-sm font-medium text-muted-foreground\">Draft Date</label>",
+            "-                    <p className=\"font-medium\">January 15, 2017</p>",
+            "-                  </div>",
+            "-                </CardContent>",
+            "-              </Card>",
+            "-            </div>",
+            "-          </div>",
+            "-        </div>",
+            "-      </div>",
+            "-    </div>",
+            "-  );",
+            " }",
+            "\\ No newline at end of file"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "dc3289e2-8f75-49fa-b710-f85d553b8c83",
+    "transcript_path": "/Users/varunisrani/.claude/projects/-Users-varunisrani-Desktop-sdq-show-case-updated/dc3289e2-8f75-49fa-b710-f85d553b8c83.jsonl",
+    "cwd": "/Users/varunisrani/Desktop/sdq/show-case-updated",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/varunisrani/Desktop/sdq/show-case-updated/components/Navigation.tsx"
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "/Users/varunisrani/Desktop/sdq/show-case-updated/components/Navigation.tsx",
+        "content": "\"use client\"\n\nimport Link from \"next/link\";\nimport { usePathname } from \"next/navigation\";\nimport { Film, Users, BarChart3, Calendar, Clock, BookOpen } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nconst navigation = [\n  { name: \"Script\", href: \"/\", icon: BookOpen },\n  { name: \"Scene Breakdown\", href: \"/scenes\", icon: Film },\n  { name: \"Departments\", href: \"/departments\", icon: Users },\n  { name: \"Eighths Agent\", href: \"/eightsagent\", icon: Clock },\n  { name: \"Budget Analysis\", href: \"/budget\", icon: BarChart3 },\n  { name: \"Schedule\", href: \"/schedule\", icon: Calendar },\n];\n\nexport function Navigation() {\n  const pathname = usePathname();\n\n  return (\n    <nav className=\"flex items-center space-x-1 bg-muted/30 rounded-lg p-1\">\n      {navigation.map((item) => {\n        const isActive = pathname === item.href;\n        return (\n          <Link\n            key={item.name}\n            href={item.href}\n            className={cn(\n              \"flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors\",\n              isActive\n                ? \"bg-background text-foreground shadow-sm\"\n                : \"text-muted-foreground hover:text-foreground hover:bg-muted/50\"\n            )}\n          >\n            <item.icon className=\"h-4 w-4\" />\n            <span>{item.name}</span>\n          </Link>\n        );\n      })}\n    </nav>\n  );\n}",
+        "numLines": 42,
+        "startLine": 1,
+        "totalLines": 42
+      }
+    }
   }
 ]
