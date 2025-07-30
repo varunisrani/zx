@@ -2,11 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Film, Users, BarChart3, Calendar, Home, Clock } from "lucide-react";
+import { Film, Users, BarChart3, Calendar, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navigation = [
-  { name: "Dashboard", href: "/", icon: Home },
   { name: "Scene Breakdown", href: "/scenes", icon: Film },
   { name: "Departments", href: "/departments", icon: Users },
   { name: "Eighths Agent", href: "/eightsagent", icon: Clock },
